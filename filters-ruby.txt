@@ -99,8 +99,8 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-
-!--------------------------Wikia cosmetic filters--------------------------!
+!---------------------------------------------------------------------------!
+!-------------------------------Wikia filters-------------------------------!
 !What is this "fandom" shit and why is it all over the place
 !Please don't shove your "new and cool" shit down my throat.
 
@@ -115,8 +115,27 @@ answers.yahoo.com###yset-upsell-div
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 
+!looks like they changed the layout a bit. here's the current one (as of 2016-10-16)
+!figured that it works without writing the wikia.com part 
 
-!-------------------------------MAL filters-------------------------------!
+###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo
+###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo > .wds-global-navigation__logo-fandom
+###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-games.wds-global-navigation__link
+###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-movies.wds-global-navigation__link
+###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-tv.wds-global-navigation__link
+
+!I don't understand what these are.
+||wikia.com/wikia.php?controller=PageShare
+||wikia.com/wikia.php?controller=Optimizely
+/facebook_client_fbtags_js
+/page_share_js
+
+!I don't like the huge footer
+##.wds-global-footer
+
+!---------------------------------------------------------------------------!
+!--------------------------------MAL filters--------------------------------!
+
 !Nice ad placeholders you have there! 
 !It'd be a shame if someone hides them.
 
@@ -193,7 +212,8 @@ kissanime.to##.divCloseBut
 !---------------------------------------------------------------------------!
 
 ! boorus and stuff 
-!I haven't checked those gelbooru filters in a while...
+! I haven't checked those gelbooru filters in a while...
+! wew. shady sites
 
 ||isshiki.donmai.us/*$important
 gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
