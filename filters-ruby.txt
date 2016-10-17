@@ -1,6 +1,6 @@
 !Title: My Filters - Ruby
 !Author: Toshiya
-!Version: 0.0.0.3
+!Version: 0.0.0.4
 !This filter list is for mostly for my personal use.
 !I'm sure a lot of the filters here will actually break some useful sites.
 !Please be cautious and check ublock's logger to see what is getting filtered out,
@@ -77,7 +77,7 @@
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||google.*$beacon,important
-/searchdomaincheck$important
+*/searchdomaincheck$important
 
 ! 2016-10-10
 answers.com###video_universal-0_display
@@ -169,7 +169,7 @@ www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
 
-! because fuck this website and it's fucking obnoxious ads that doesn't get blocked for reasons
+! kys
 https://www.scribd.com/*
 
 !---------------------------------------------------------------------------!
@@ -219,6 +219,7 @@ mangastream.com##.main-body > .tips > .row
 
 ! 2016-08-09, 5:09:56 PM http://mahayoung.blog106.fc2.com/
 ! I'm confused about the syntax here.
+
 mahayoung.blog106.fc2.com###fc2_bottom_bnr
 abec.blog93.fc2.com###fc2_bottom_bnr
 ||fc2.com###fc2_bottom_bnr
