@@ -1,0 +1,238 @@
+!Title: My Filters - Ruby
+!Author: Toshiya
+!Version: 0.0.0.3
+!This filter list is for mostly for my personal use.
+!I'm sure a lot of the filters here will actually break some useful sites.
+!Please be cautious and check ublock's logger to see what is getting filtered out,
+!and comment out any problamatic filter.
+!Really, don't use this list as-is. Please. Use only the filters you're interested in.
+!You might find some useful stuff like the cosmetic filters for MAL. 
+
+!---------------------------------------------------------------------------!
+!---------------------------------------------------------------------------!
+
+||d2bnxibecyz4h5.cloudfront.net$important
+||d2mrcwg3epew1i.cloudfront.net$important
+||seal.beyondsecurity.com^$important
+||oasgames.com$important
+||104.198.198.188/*$important
+||ad-arata.com/*$important
+||ads.servebom.com/*$important
+||akismet.com/*$important
+||danshihack.com/*$important
+||angelfire.com/*$important
+||auth.curse.com/*$important
+||bit.ly/*$important
+||drivethelife.com/*$important 
+||echobot.tk/*$important 
+||eightforums.com/*$important
+||embed.ly/*$important
+||fiverr.com/*$important
+||fiverrcdn.com/*$important
+||fukugan.com/*$important
+||www.ghacks.net/*$important
+||hako.re/*$important
+||icnerd.com/*$important
+||lepinsar.com/*$important
+||licensebuttons.net/*$important
+||md5file.com/*$important
+||pcauthority.com.au/*$important
+||quantserve.com/*$important
+||www.richdadregistrations.com/*$important
+||skimresources.com/*$important
+||solvemedia.com/*$important
+||track282938.com/*$important
+||uvcdn.com/*$important
+||uservoice.com/*$important
+||vistax64.com/*$important
+||vskart.in/*$important
+||zig.iffy.studio/*$important
+||zkcdn.net/*$important
+||curse.com/*$important
+||socdm.com/*$important
+||sh.st/*$important
+||scorecardresearch.com^$important
+||ora.tv^$third-party
+||zkcdn.net$important
+||novel44.blogspot.in/*
+||msdesignbd.com^$important
+||sportsinteraction.com^$important
+||usswrite.com^$important
+||mp3juices.cc/img^$important
+||mp3juices.cc/pa/h/a.html$subdocument
+||add0n.com/*$important
+||dictionary.com/proxy$important
+||redditenhancementsuite.com/*$important
+||surveygizmobeacon.s3.amazonaws.com$important
+||myfonts.net$important
+||twitter.com^$third-party,important
+||paypalobjects.com^$third-party,important
+||paypal.com^$third-party,important
+
+!---------------------------------------------------------------------------!
+
+!--Random Google things--!
+||google-analytics.*$important
+||google.*/searchdomaincheck$important
+||doubleclick.net$important
+||csi.gstatic.com$important
+||google.*$beacon,important
+/searchdomaincheck$important
+
+! 2016-10-10
+answers.com###video_universal-0_display
+answers.com###video_universal-0_caption
+answers.yahoo.com###yset-upsell-div
+||i.imgur.com$inline-script,first-party,important
+!||imgur.com/gallery/hot/viral$important
+||imgur.com/gallery/hot$important
+||s.imgur.com/min/runSlots.js$script,importan
+||s.imgur.com/min/react15.js$script,importantt
+||s.imgur.com/min/advertising.js$script,important
+
+! I don't like this site. Just in case I lost my way in there.
+||quora.com/ajax/batched_log_POST$important
+||quora.com/security_reports$important
+||connect.facebook.net$important,third-party
+||quora.com/webnode2/server_call_POST$important
+||quora.com/up/*/updates$important
+||quora.com/up$important
+||quora.com/ajax/log_errors_3RD_PARTY_POST$important
+
+
+!--------------------------Wikia cosmetic filters--------------------------!
+!What is this "fandom" shit and why is it all over the place
+!Please don't shove your "new and cool" shit down my throat.
+
+||fandom.wikia.com/*$important
+||wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
+||wikia.com###globalNavigation > .global-navigation-container > .table-cell.wikia-logo-container > .final-url.wikia-logo[href="http://www.wikia.com/fandom"]
+||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
+||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
+||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
+||wikia.com###RECIRCULATION_RAIL
+||wikia.com/wikia.php?controller=RecirculationApi$important
+||wikimedia.org/geoiplookup$important
+||geoiplookup.wikimedia.org$important
+
+
+!-------------------------------MAL filters-------------------------------!
+!Nice ad placeholders you have there! 
+!It'd be a shame if someone hides them.
+
+myanimelist.net##.mauto
+myanimelist.net##.right_top_ad
+myanimelist.net##.left_bottom_ad
+myanimelist.net##._unit
+myanimelist.net###footer-block > .footer-link-icon-block
+myanimelist.net###headerSmall > .banner-header-anime-straming
+||cdn.myanimelist.net/images/stream_banner/*
+||myanimelist.net/static/logging.html$important
+
+!---------------------------------------------------------------------------!
+
+! wew
+www.theweathernetwork.com###cbc_widget_container
+www.theweathernetwork.com###news-slider
+www.theweathernetwork.com###sidebar
+www.theweathernetwork.com###main-footer
+www.theweathernetwork.com###gallery
+www.theweathernetwork.com###news
+www.theweathernetwork.com###map-view
+www.theweathernetwork.com###videos_brightcove-popular-right-now
+www.theweathernetwork.com###leaderboard
+www.theweathernetwork.com###fby-tab-6089
+www.theweathernetwork.com##.toolbar
+www.theweathernetwork.com###main-header
+www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
+www.theweathernetwork.com###editors_choice_news
+
+
+!---------------------------------------------------------------------------!
+
+! 2016-05-26 it seems facebook updated their site, so filters aren't working very well
+www.facebook.com###build_audience
+www.facebook.com###pages_manager_boosted_website_card
+www.facebook.com###aymt_homepage_panel_tip
+www.facebook.com###pagelet_ego_pane
+www.facebook.com###GroupsRHCSuggestionSection
+www.facebook.com###fbSearchResultsBox
+www.facebook.com###megaphone_story_3012
+www.facebook.com###mobile_mirror_banner
+
+
+! 2016-06-04
+www.4shared.com###content > .centered > .d1AdsWrapper
+www.4shared.com##.space-3260
+||rt.liftdna.com/forbes_welcome.js
+www.strawpoll.me##.featured
+www.bloomberg.com##bb-mini-player
+web2.0calc.com##.altad
+
+! because fuck this website and it's fucking obnoxious ads that doesn't get blocked for reasons
+https://www.scribd.com/*
+
+!---------------------------------------------------------------------------!
+
+! 2016-07-29  boards.4chan.org
+boards.4chan.org##body > .center:nth-of-type(10)
+boards.4chan.org##body > .center:nth-of-type(4) > div
+boards.4chan.org##body > .center:nth-of-type(4)
+boards.4chan.org##.center
+boards.4chan.org##.boardBanner
+||youtube.com/embed/49vZhQlAEyk$subdocument
+
+! 2016-07-31, 5:55:37 PM http://kissanime.to
+kissanime.to###adsIfrme6
+kissanime.to###adsIfrme8
+kissanime.to###adsIfrme7
+kissanime.to###adsIfrme10
+kissanime.to##.divCloseBut
+||kissanime.to/ads^$important
+
+!---------------------------------------------------------------------------!
+
+! boorus and stuff 
+!I haven't checked those gelbooru filters in a while...
+
+||isshiki.donmai.us/*$important
+gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
+gelbooru.com###post-list > .content > center > div
+gelbooru.com###right-col > div:nth-of-type(2) > div:nth-of-type(6)
+gelbooru.com###post-view > .sidebar > .sidebar4.sidebar2 > center > .sidebar3 > iframe
+chan.sankakucomplex.com###headerthumbs
+hitomi.la##.container > .top-content > .hitomi-horizontal
+hitomi.la##.container > .hitomi-vertical
+hitomi.la##.container > .content > .hitomi-horizontal
+||hitomi.la/hitomi-horizontal.js
+||hitomi.la/hitomi-vertical.js
+saucenao.com##img[alt="J-List!"]
+www.pixiv.net##a[href^="/premium.php"]
+
+! 2016-07-23 mangastream.com
+||mangastream.com/assets/img/block_sky_dark.png$image
+||mangastream.com##.main-body > .alert-success.alert
+||mangastream.com/assets/img/block_sky_dark.png$image
+mangastream.com##.tip
+mangastream.com##.main-body > .tips > .row
+||raw.senmanga.com/media/img/block_square.png$image
+
+! 2016-08-09, 5:09:56 PM http://mahayoung.blog106.fc2.com/
+! I'm confused about the syntax here.
+mahayoung.blog106.fc2.com###fc2_bottom_bnr
+abec.blog93.fc2.com###fc2_bottom_bnr
+||fc2.com###fc2_bottom_bnr
+###fc2_bottom_bnr
+
+!---------------------------------------------------------------------------!
+
+!I forgot why I made these
+
+|https://b.thumbs.redditmedia.com/pOq13MOCu3b7ovNzycmOccOYPVErWD6-2fMgDnL0Icc.png
+|https://b.thumbs.redditmedia.com/Ymmhs2OK2J0B6SZ_TSbiSXUljcLqJReCF9GoAgc3-1U.css
+|https://b.thumbs.redditmedia.com/pxzHs1GLn1-sLGYWUYxpqNNlKyQ0aWaPGSJlfyePKGo.png
+|https://a.thumbs.redditmedia.com/9-jufE5dru9BTXtx.gif
+|https://a.thumbs.redditmedia.com/K5xhVjUW2nNx-pepGbt6hnyX7C2pBOm599vh17K6xr0.png
+|https://b.thumbs.redditmedia.com/c9AkqSddFLfOJDUg6Zivi8ROHmbA_VIRq1jzj4prYrw.png
+|https://b.thumbs.redditmedia.com/izf3MJ8LVVftQ1dP75MfUJch5BbMOSJaVrIw8OtFeeM.css
+hikarinoakariost.info##.hidden-xs.site-header.home-jumbotron.home-link
