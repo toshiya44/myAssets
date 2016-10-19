@@ -21,12 +21,12 @@
 ||akismet.com/*$important
 ||danshihack.com/*$important
 ||angelfire.com/*$important
-||auth.curse.com/*$important
 ||bit.ly/*$important
+||embed.ly/*$important
+||sh.st/*$important
 ||drivethelife.com/*$important 
 ||echobot.tk/*$important 
 ||eightforums.com/*$important
-||embed.ly/*$important
 ||fiverr.com/*$important
 ||fiverrcdn.com/*$important
 ||fukugan.com/*$important
@@ -50,7 +50,6 @@
 ||zkcdn.net/*$important
 ||curse.com/*$important
 ||socdm.com/*$important
-||sh.st/*$important
 ||scorecardresearch.com^$important
 ||ora.tv^$third-party
 ||zkcdn.net$important
@@ -64,14 +63,27 @@
 ||dictionary.com/proxy$important
 ||redditenhancementsuite.com/*$important
 ||surveygizmobeacon.s3.amazonaws.com$important
-||myfonts.net$important
+||myfonts.net$third-party,important
 ||twitter.com^$third-party,important
+||facebook.*^$third-party,important
 ||paypalobjects.com^$third-party,important
 ||paypal.com^$third-party,important
+||fullstory.*$important
+||getsentry.com$important
+||raven.js^$important
+||raven.min.js^$important
+||newrelic.com^$important
+||optimizely.com$important
+||speed.wikia.net^$important
+||qualaroo.com$important
+||onesite.com$important
+||wikia-beacon.com$important
 
 !---------------------------------------------------------------------------!
 
-!--Random Google things--!
+!--Google things--!
+! Other popular filter lists most likely block them, but just in case they
+! whitelist these for whatever reason I couldn't care less.
 ||google-analytics.*$important
 ||google.*/searchdomaincheck$important
 ||doubleclick.net$important
@@ -99,10 +111,7 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-!---------------------------------------------------------------------------!
 !-------------------------------Wikia filters-------------------------------!
-!What is this "fandom" shit and why is it all over the place
-!Please don't shove your "new and cool" shit down my throat.
 
 ||fandom.wikia.com/*$important
 ||wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
@@ -115,8 +124,8 @@ answers.yahoo.com###yset-upsell-div
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 
-!looks like they changed the layout a bit. here's the current one (as of 2016-10-16)
-!figured that it works without writing the wikia.com part 
+! looks like they changed the layout a bit. here's the current one (as of 2016-10-16)
+! figured that it works without writing the wikia.com part 
 
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo > .wds-global-navigation__logo-fandom
@@ -124,7 +133,7 @@ answers.yahoo.com###yset-upsell-div
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-movies.wds-global-navigation__link
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-tv.wds-global-navigation__link
 
-!I don't understand what these are.
+! I don't understand what these are.
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 /facebook_client_fbtags_js
@@ -133,11 +142,10 @@ answers.yahoo.com###yset-upsell-div
 !I don't like the huge footer
 ##.wds-global-footer
 
-!---------------------------------------------------------------------------!
 !--------------------------------MAL filters--------------------------------!
 
-!Nice ad placeholders you have there! 
-!It'd be a shame if someone hides them.
+! Nice ad placeholders you have there! 
+! It'd be a shame if someone hides them.
 
 myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
@@ -147,10 +155,11 @@ myanimelist.net###footer-block > .footer-link-icon-block
 myanimelist.net###headerSmall > .banner-header-anime-straming
 ||cdn.myanimelist.net/images/stream_banner/*
 ||myanimelist.net/static/logging.html$important
+||myanimelist.cdn-dena.com/signature/*
 
 !---------------------------------------------------------------------------!
 
-! wew
+! Removing junk from a weather site
 www.theweathernetwork.com###cbc_widget_container
 www.theweathernetwork.com###news-slider
 www.theweathernetwork.com###sidebar
@@ -166,10 +175,9 @@ www.theweathernetwork.com###main-header
 www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
 www.theweathernetwork.com###editors_choice_news
 
-
 !---------------------------------------------------------------------------!
 
-! 2016-05-26 it seems facebook updated their site, so filters aren't working very well
+! 2016-05-26 it seems facebook keeps updating their site, so filters aren't working very well
 www.facebook.com###build_audience
 www.facebook.com###pages_manager_boosted_website_card
 www.facebook.com###aymt_homepage_panel_tip
@@ -178,12 +186,16 @@ www.facebook.com###GroupsRHCSuggestionSection
 www.facebook.com###fbSearchResultsBox
 www.facebook.com###megaphone_story_3012
 www.facebook.com###mobile_mirror_banner
-
+www.facebook.com##div.pagelet-group#pagelet_advertiser_panel
+www.facebook.com##div#pagelet_rhc_footer
+www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
+www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
+www.facebook.com##div.pagelet-group#pagelet_ego_pane
 
 ! 2016-06-04
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
-||rt.liftdna.com/forbes_welcome.js
+*/forbes_welcome.js
 www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
@@ -207,7 +219,7 @@ kissanime.to###adsIfrme8
 kissanime.to###adsIfrme7
 kissanime.to###adsIfrme10
 kissanime.to##.divCloseBut
-||kissanime.to/ads^$important
+||kissanime.*/ads^$important
 
 !---------------------------------------------------------------------------!
 
@@ -237,31 +249,10 @@ mangastream.com##.tip
 mangastream.com##.main-body > .tips > .row
 ||raw.senmanga.com/media/img/block_square.png$image
 
-! 2016-08-09, 5:09:56 PM http://mahayoung.blog106.fc2.com/
-! I'm confused about the syntax here.
-
-mahayoung.blog106.fc2.com###fc2_bottom_bnr
-abec.blog93.fc2.com###fc2_bottom_bnr
-||fc2.com###fc2_bottom_bnr
+! for sites like http://mahayoung.blog106.fc2.com/
 ###fc2_bottom_bnr
 
-!---------------------------------------------------------------------------!
-
-!I forgot why I made these
-
-|https://b.thumbs.redditmedia.com/pOq13MOCu3b7ovNzycmOccOYPVErWD6-2fMgDnL0Icc.png
-|https://b.thumbs.redditmedia.com/Ymmhs2OK2J0B6SZ_TSbiSXUljcLqJReCF9GoAgc3-1U.css
-|https://b.thumbs.redditmedia.com/pxzHs1GLn1-sLGYWUYxpqNNlKyQ0aWaPGSJlfyePKGo.png
-|https://a.thumbs.redditmedia.com/9-jufE5dru9BTXtx.gif
-|https://a.thumbs.redditmedia.com/K5xhVjUW2nNx-pepGbt6hnyX7C2pBOm599vh17K6xr0.png
-|https://b.thumbs.redditmedia.com/c9AkqSddFLfOJDUg6Zivi8ROHmbA_VIRq1jzj4prYrw.png
-|https://b.thumbs.redditmedia.com/izf3MJ8LVVftQ1dP75MfUJch5BbMOSJaVrIw8OtFeeM.css
-hikarinoakariost.info##.hidden-xs.site-header.home-jumbotron.home-link
-
-
-!---------------------------------------------------------------------------!
-
-!---------------shitty sites-----------------------!
+!---------------------------------shitty sites------------------------------!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" site are 120% filled with malware
 ! I'll keep you safe fampai <3 
