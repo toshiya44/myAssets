@@ -1,6 +1,6 @@
 !Title: My Filters - Ruby
 !Author: Toshiya
-!Version: 0.0.0.4
+!Version: 0.0.0.5
 !This filter list is for mostly for my personal use.
 !I'm sure a lot of the filters here will actually break some useful sites.
 !Please be cautious and check ublock's logger to see what is getting filtered out,
@@ -70,8 +70,6 @@
 ||paypal.com^$third-party,important
 ||fullstory.*$important
 ||getsentry.com$important
-||raven.js^$important
-||raven.min.js^$important
 ||newrelic.com^$important
 ||optimizely.com$important
 ||speed.wikia.net^$important
@@ -192,13 +190,15 @@ www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
 www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 www.facebook.com##div.pagelet-group#pagelet_ego_pane
 
-! 2016-06-04
+! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
 */forbes_welcome.js
 www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
+raven.js^$important
+raven.min.js^$important
 
 ! kys
 https://www.scribd.com/*
