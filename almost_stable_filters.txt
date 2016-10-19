@@ -70,8 +70,6 @@
 ||paypal.com^$third-party,important
 ||fullstory.*$important
 ||getsentry.com$important
-||raven.js^$important
-||raven.min.js^$important
 ||newrelic.com^$important
 ||optimizely.com$important
 ||speed.wikia.net^$important
@@ -81,7 +79,7 @@
 
 !---------------------------------------------------------------------------!
 
-!--Random Google things--!
+!--Google things--!
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
 
@@ -112,7 +110,6 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-!---------------------------------------------------------------------------!
 !-------------------------------Wikia filters-------------------------------!
 
 ||wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
@@ -143,7 +140,6 @@ answers.yahoo.com###yset-upsell-div
 !I don't like the huge footer
 ##.wds-global-footer
 
-!---------------------------------------------------------------------------!
 !--------------------------------MAL filters--------------------------------!
 
 ! Nice ad placeholders you have there! 
@@ -158,6 +154,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||cdn.myanimelist.net/images/stream_banner/*
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.cdn-dena.com/signature/
+
 !---------------------------------------------------------------------------!
 
 ! Removing junk from a weather site
@@ -193,13 +190,15 @@ www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
 www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 www.facebook.com##div.pagelet-group#pagelet_ego_pane
 
-! 2016-06-04
+! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
 */forbes_welcome.js
 www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
+raven.js^$important
+raven.min.js^$important
 
 ! kys
 https://www.scribd.com/*
@@ -253,9 +252,8 @@ mangastream.com##.main-body > .tips > .row
 ! for sites like http://mahayoung.blog106.fc2.com/
 ###fc2_bottom_bnr
 
-!---------------------------------------------------------------------------!
-
 !---------------shitty sites-----------------------!
+
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" site are 120% filled with malware
 
