@@ -76,6 +76,8 @@
 ||qualaroo.com$important
 ||onesite.com$important
 ||wikia-beacon.com$important
+||owlads.io$important
+||i.po.st$important
 
 !---------------------------------------------------------------------------!
 
@@ -121,7 +123,15 @@ answers.yahoo.com###yset-upsell-div
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
+||wikia.com/wikia.php?controller=PageShare
+||wikia.com/wikia.php?controller=Optimizely
+*controller=Optimizely*
+/facebook_client_fbtags_js
+*facebook_client_xfbml_js
+/page_share_js
 
+!I don't like the huge footer
+##.wds-global-footer
 ! looks like they changed the layout a bit. here's the current one (as of 2016-10-16)
 ! figured that it works without writing the wikia.com part 
 
@@ -130,16 +140,6 @@ answers.yahoo.com###yset-upsell-div
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-games.wds-global-navigation__link
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-movies.wds-global-navigation__link
 ###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-tv.wds-global-navigation__link
-
-! I don't understand what these are.
-||wikia.com/wikia.php?controller=PageShare
-||wikia.com/wikia.php?controller=Optimizely
-/facebook_client_fbtags_js
-*facebook_client_xfbml_js
-/page_share_js
-
-!I don't like the huge footer
-##.wds-global-footer
 
 !--------------------------------MAL filters--------------------------------!
 
