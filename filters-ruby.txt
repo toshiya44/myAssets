@@ -154,7 +154,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||cdn.myanimelist.net/images/stream_banner/*
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.cdn-dena.com/signature/*
-
+||myanimelist.net/manga_translation*$important
 !---------------------------------------------------------------------------!
 
 ! Removing junk from a weather site
@@ -199,6 +199,7 @@ www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
 raven.js^$important
 raven.min.js^$important
+||slotozilla.*$third-party,important
 
 ! kys
 https://www.scribd.com/*
