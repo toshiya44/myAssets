@@ -135,6 +135,7 @@ answers.yahoo.com###yset-upsell-div
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 /facebook_client_fbtags_js
+*facebook_client_xfbml_js
 /page_share_js
 
 !I don't like the huge footer
