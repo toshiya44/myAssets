@@ -233,6 +233,7 @@ gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
 gelbooru.com###post-list > .content > center > div
 gelbooru.com###right-col > div:nth-of-type(2) > div:nth-of-type(6)
 gelbooru.com###post-view > .sidebar > .sidebar4.sidebar2 > center > .sidebar3 > iframe
+danbooru.donmai.us###upgrade-account-notice
 chan.sankakucomplex.com###headerthumbs
 hitomi.la##.container > .top-content > .hitomi-horizontal
 hitomi.la##.container > .hitomi-vertical
