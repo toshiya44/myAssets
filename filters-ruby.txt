@@ -1,12 +1,9 @@
 !Title: My Filters - Ruby
 !Author: Toshiya
-!Version: 0.0.0.5
-!This filter list is for mostly for my personal use.
-!I'm sure a lot of the filters here will actually break some useful sites.
-!Please be cautious and check ublock's logger to see what is getting filtered out,
+!Version: 0.0.0.6
+!I'm sure a few of the filters here will break some sites.
+!Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
-!Really, don't use this list as-is. Please. Use only the filters you're interested in.
-!You might find some useful stuff like the cosmetic filters for MAL. 
 
 !---------------------------------------------------------------------------!
 !---------------------------------------------------------------------------!
@@ -71,6 +68,7 @@
 ||fullstory.*$important
 ||getsentry.com$important
 ||newrelic.com^$important
+||nr-data.net*$important
 ||optimizely.com$important
 ||speed.wikia.net^$important
 ||qualaroo.com$important
@@ -201,6 +199,7 @@ web2.0calc.com##.altad
 raven.js^$important
 raven.min.js^$important
 ||slotozilla.*$third-party,important
+*security-i0y8kg*$important
 
 ! kys
 https://www.scribd.com/*
