@@ -1,6 +1,6 @@
-!Title: My Filters - Ruby
+!Title: My Filters - exp
 !Author: Toshiya
-!Version: 0.0.0.6
+!Date: 2016-10-26
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
@@ -154,6 +154,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.cdn-dena.com/signature/*
 ||myanimelist.net/manga_translation*$important
+||google.com$domain=myanimelist.net,important
 !---------------------------------------------------------------------------!
 
 ! Removing junk from a weather site
@@ -204,6 +205,9 @@ raven.min.js^$important
 ! kys
 https://www.scribd.com/*
 
+! Hides the blocked message button in discord
+discordapp.com##.message-group-blocked
+
 !---------------------------------------------------------------------------!
 
 ! 2016-07-29  boards.4chan.org
@@ -213,6 +217,7 @@ boards.4chan.org##body > .center:nth-of-type(4)
 boards.4chan.org##.center
 boards.4chan.org##.boardBanner
 ||youtube.com/embed/49vZhQlAEyk$subdocument
+@@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 
 ! 2016-07-31, 5:55:37 PM http://kissanime.to
 kissanime.to###adsIfrme6
@@ -233,8 +238,8 @@ gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
 gelbooru.com###post-list > .content > center > div
 gelbooru.com###right-col > div:nth-of-type(2) > div:nth-of-type(6)
 gelbooru.com###post-view > .sidebar > .sidebar4.sidebar2 > center > .sidebar3 > iframe
-danbooru.donmai.us###upgrade-account-notice
 chan.sankakucomplex.com###headerthumbs
+danbooru.donmai.us###upgrade-account-notice
 hitomi.la##.container > .top-content > .hitomi-horizontal
 hitomi.la##.container > .hitomi-vertical
 hitomi.la##.container > .content > .hitomi-horizontal
@@ -242,6 +247,7 @@ hitomi.la##.container > .content > .hitomi-horizontal
 ||hitomi.la/hitomi-vertical.js
 saucenao.com##img[alt="J-List!"]
 www.pixiv.net##a[href^="/premium.php"]
+www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
 
 ! 2016-07-23 mangastream.com
 ||mangastream.com/assets/img/block_sky_dark.png$image
@@ -269,5 +275,4 @@ mangastream.com##.main-body > .tips > .row
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
-
 ! Always go FOSS
