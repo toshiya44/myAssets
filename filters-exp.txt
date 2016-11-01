@@ -39,8 +39,6 @@
 ||skimresources.com/*$important
 ||solvemedia.com/*$important
 ||track282938.com/*$important
-||uvcdn.com/*$important
-||uservoice.com/*$important
 ||vistax64.com/*$important
 ||vskart.in/*$important
 ||zig.iffy.studio/*$important
@@ -63,6 +61,9 @@
 ||myfonts.net$third-party,important
 ||twitter.com^$third-party,important
 ||facebook.*^$third-party,important
+||plus.google.*^$third-party,important
+||pinterest.com^$third-party,important
+||instagram.com^$third-party,important
 ||paypalobjects.com^$third-party,important
 ||paypal.com^$third-party,important
 ||fullstory.*$important
@@ -76,6 +77,11 @@
 ||wikia-beacon.com$important
 ||owlads.io$important
 ||i.po.st$important
+||gaiaonline.com$important
+
+! discord's feedback site uses uservoice for stuff
+!||uvcdn.com$third-party
+!||uservoice.com$third-party
 
 !---------------------------------------------------------------------------!
 
@@ -103,7 +109,6 @@ answers.yahoo.com###yset-upsell-div
 ! I don't like this site. Just in case I lost my way in there.
 ||quora.com/ajax/batched_log_POST$important
 ||quora.com/security_reports$important
-||connect.facebook.net$important,third-party
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/up/*/updates$important
 ||quora.com/up$important
@@ -124,8 +129,6 @@ answers.yahoo.com###yset-upsell-div
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 *controller=Optimizely*
-/facebook_client_fbtags_js
-*facebook_client_xfbml_js
 /page_share_js
 
 !I don't like the huge footer
@@ -155,6 +158,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.cdn-dena.com/signature/*
 ||myanimelist.net/manga_translation*$important
 ||google.com$domain=myanimelist.net,important
+
 !---------------------------------------------------------------------------!
 
 ! Removing junk from a weather site
@@ -173,6 +177,30 @@ www.theweathernetwork.com###main-header
 www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
 www.theweathernetwork.com###editors_choice_news
 
+! 2016-10-28 theweathernetwork.com
+/adobe_audience_manager$important
+||twnmm.com/js/*/news_slider.js$important
+||twnmm.com/thumb$important
+||twnmm.com/js/*/jquery.cookie.js$important
+||twnmm.com/js/*/web/modules/gps_location.js$important
+||twnmm.com/storage.filemobile.com$important
+||twnmm.com/js/*/lib/maps/detectizr.js$important
+||twnmm.com/js/*/web/modules/awrr$important
+||twnmm.com/js/*/video_player.js$important
+||twnmm.com/js/*/latest_news_slider.js$important
+||twnmm.com/js/*/gallery.js$important
+||twnmm.com/js/*/maps-mLgoogle.js$important
+||twnmm.com/js/*/maps/google.js$important
+||twnmm.com/js/*/getplayerevents.js$important
+||twnmm.com/js/*/getplaylist.js$important
+||twnmm.com/js/*/notifications.js$important
+||twnmm.com/js/*/recent_locations.js$important
+||twnmm.com/js/*/favorite_locations.js$important
+||twnmm.com/js/*/mylocations.js$important
+||twnmm.com/js/*/profiled.js$important
+||twnmm.com/*/coffee-break.css$important
+||twnmm.com/*/video-gallery.css$important
+
 !---------------------------------------------------------------------------!
 
 ! 2016-05-26 it seems facebook keeps updating their site, so filters aren't working very well
@@ -189,6 +217,10 @@ www.facebook.com##div#pagelet_rhc_footer
 www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
 www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 www.facebook.com##div.pagelet-group#pagelet_ego_pane
+||connect.facebook.net$important,third-party
+||facebook.com/ajax/typeahead/record_basic_metrics.php$important
+/facebook_client_fbtags_js$third-party
+*facebook_client_xfbml_js$third-party
 
 ! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
@@ -214,8 +246,10 @@ discordapp.com##.message-group-blocked
 boards.4chan.org##body > .center:nth-of-type(10)
 boards.4chan.org##body > .center:nth-of-type(4) > div
 boards.4chan.org##body > .center:nth-of-type(4)
-boards.4chan.org##.center
 boards.4chan.org##.boardBanner
+boards.4chan.org##.adg-rects
+boards.4chan.org##.ad-cnt.center.topad
+boards.4chan.org##.center.middlead
 ||youtube.com/embed/49vZhQlAEyk$subdocument
 @@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 
@@ -275,4 +309,5 @@ mangastream.com##.main-body > .tips > .row
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
+
 ! Always go FOSS
