@@ -7,6 +7,7 @@
 
 !---------------------------------------------------------------------------!
 !---------------------------------------------------------------------------!
+
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
@@ -216,6 +217,9 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 /facebook_client_fbtags_js$third-party
 *facebook_client_xfbml_js$third-party
+!options menu gets blocked due to a filter in ABP Japanese list 
+@@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
+@@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 
 ! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
@@ -296,19 +300,4 @@ fc2.com###fc2_bottom_bnr
 ||sf.net/$important
 
 ! Always go FOSS
-
-!###########################################################################!
-! from https://gist.githubusercontent.com/gorhill/ef1b62d606473c68d524/raw/c73ccfecda7c277f894e9eb2dd2f5a0806b29a82/gistfile1.txt
-! "Copy-paste the static filters below into your "My filters" pane in the dashboard.
-! These filters will cause a button labeled:
-! "Disqus blocked by uBlock Origin: click to unblock" to be embedded
-! where Disqus comments would normally be loaded. Click the button
-! to force the comments to be loaded.
-! Be sure your filter lists are up to date, new resources have been
-! added today to make these filters work."
-||disqus.com/forums/*/embed.js$script,redirect=disqus.com/forums/*/embed.js
-||disqus.com/embed.js$script,redirect=disqus.com/embed.js
-||disqus.com/count.js$script
-@@||disqus.com/embed.js?_=1457540*$script
-
 !###################################END#####################################!
