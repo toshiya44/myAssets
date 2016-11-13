@@ -1,6 +1,6 @@
 !Title: Toshiya's Filters - Experimental
 !Author: Toshiya
-!Date: 2016-11-07
+!Date: 2016-11-13
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
@@ -75,6 +75,7 @@
 ||vacwrite.com$important
 ||yahoo.com$third-party,important
 ||sharethis.com$third-party,important
+||exoclick.com$important
 
 !---------------------------------------------------------------------------!
 
@@ -257,10 +258,8 @@ boards.4chan.org##[class^="ad-"]
 ! boorus and stuff 
 
 ||isshiki.donmai.us/*$important
-gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
-gelbooru.com###post-list > .content > center > div
-gelbooru.com###right-col > div:nth-of-type(2) > div:nth-of-type(6)
-gelbooru.com###post-view > .sidebar > .sidebar4.sidebar2 > center > .sidebar3 > iframe
+||gelbooru.com/script/application.js$important
+gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
 hitomi.la##.container > .top-content > .hitomi-horizontal
