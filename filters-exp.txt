@@ -22,8 +22,7 @@
 ||embed.ly/*$important
 ||sh.st/*$important
 ||drivethelife.com/*$important 
-||echobot.tk/*$important 
-||eightforums.com/*$important
+||echobot.tk/*$important
 ||fiverr.com/*$important
 ||fiverrcdn.com/*$important
 ||fukugan.com/*$important
@@ -32,17 +31,14 @@
 ||icnerd.com/*$important
 ||lepinsar.com/*$important
 ||licensebuttons.net/*$important
-||md5file.com/*$important
-||pcauthority.com.au/*$important
 ||quantserve.com/*$important
-||www.richdadregistrations.com/*$important
+||richdadregistrations.com/*$important
 ||skimresources.com/*$important
 ||solvemedia.com/*$important
 ||track282938.com/*$important
 ||vistax64.com/*$important
 ||vskart.in/*$important
 ||zig.iffy.studio/*$important
-||zkcdn.net/*$important
 ||curse.com/*$important
 ||socdm.com/*$important
 ||scorecardresearch.com^$important
@@ -54,9 +50,7 @@
 ||usswrite.com^$important
 ||mp3juices.cc/img^$important
 ||mp3juices.cc/pa/h/a.html$subdocument
-||add0n.com/*$important
 ||dictionary.com/proxy$important
-||redditenhancementsuite.com/*$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
 ||twitter.com^$third-party,important
@@ -80,6 +74,7 @@
 ||gaiaonline.com$important
 ||vacwrite.com$important
 ||yahoo.com$third-party,important
+||sharethis.com$third-party,important
 
 !---------------------------------------------------------------------------!
 
@@ -97,8 +92,8 @@
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
+
 ||i.imgur.com$inline-script,first-party,important
-!||imgur.com/gallery/hot/viral$important
 ||imgur.com/gallery/hot$important
 ||s.imgur.com/min/runSlots.js$script,importan
 ||s.imgur.com/min/react15.js$script,importantt
@@ -132,12 +127,14 @@ wikia.com###RECIRCULATION_RAIL
 !I don't like the huge footer
 wikia.com##.wds-global-footer
 wikia.com###WikiaFooter
+
 ! looks like they changed the layout a bit. here's the current one (as of 2016-11-03)
 wikia.com##.wds-global-navigation__logo
 wikia.com##.wds-global-navigation__logo-fandom
 wikia.com##.wds-is-games.wds-global-navigation__link
 wikia.com##.wds-is-movies.wds-global-navigation__link
 wikia.com##.wds-is-tv.wds-global-navigation__link
+
 !--------------------------------MAL filters--------------------------------!
 
 ! Nice ad placeholders you have there! 
@@ -153,7 +150,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.cdn-dena.com/signature/*
 ||myanimelist.net/manga_translation*$important
-||google.com$domain=myanimelist.net,important
+||myanimelist.net/service-worker.js$important
 
 !---------------------------------------------------------------------------!
 
@@ -173,8 +170,6 @@ www.theweathernetwork.com###main-header
 www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
 www.theweathernetwork.com###editors_choice_news
 
-! 2016-10-28 theweathernetwork.com
-/adobe_audience_manager$important
 ||twnmm.com/js/*/news_slider.js$important
 ||twnmm.com/thumb$important
 ||twnmm.com/js/*/jquery.cookie.js$important
@@ -197,7 +192,7 @@ www.theweathernetwork.com###editors_choice_news
 ||twnmm.com/*/coffee-break.css$important
 ||twnmm.com/*/video-gallery.css$important
 
-!---------------------------------------------------------------------------!
+!--------------------------------facebook----------------------------------!
 
 ! 2016-05-26 it seems facebook keeps updating their site, so filters aren't working very well
 www.facebook.com###build_audience
@@ -216,10 +211,13 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||connect.facebook.net$important,third-party
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 /facebook_client_fbtags_js$third-party
-*facebook_client_xfbml_js$third-party
+/facebook_client_xfbml_js$third-party
+
 !options menu gets blocked due to a filter in ABP Japanese list 
 @@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
 @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+
+!---------------------------------------------------------------------------!
 
 ! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
@@ -232,6 +230,7 @@ raven.js^$important
 raven.min.js^$important
 ||slotozilla.*$third-party,important
 *security-i0y8kg*$important
+/adobe_audience_manager$important
 
 ! kys
 https://www.scribd.com/*
@@ -248,18 +247,14 @@ boards.4chan.org##.ad-cnt.center.topad
 boards.4chan.org##.center.middlead
 boards.4chan.org##[class^="ad-"]
 4chan.org##script:contains(initAds)
+||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/49vZhQlAEyk$subdocument
 @@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 
-! 2016-07-31, 5:55:37 PM http://kissanime.to
-kissanime.to##.divCloseBut
-||kissanime.*/ads^$important
 
 !---------------------------------------------------------------------------!
 
 ! boorus and stuff 
-! I haven't checked those gelbooru filters in a while...
-! wew. shady sites
 
 ||isshiki.donmai.us/*$important
 gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
@@ -276,16 +271,22 @@ hitomi.la##.container > .content > .hitomi-horizontal
 saucenao.com##img[alt="J-List!"]
 www.pixiv.net##a[href^="/premium.php"]
 www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+/pre-login.min.js$script,domain=www.pixiv.net
 
 ! 2016-07-23 mangastream.com
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||mangastream.com##.main-body > .alert-success.alert
 ||mangastream.com/assets/img/block_sky_dark.png$image
+||raw.senmanga.com/media/img/block_square.png$image
 mangastream.com##.tip
 mangastream.com##.main-body > .tips > .row
-||raw.senmanga.com/media/img/block_square.png$image
 
-! for sites like http://mahayoung.blog106.fc2.com/
+! http://kissanime.to
+||kissanime.*/ads$important
+||kissmanga.*/ads$important
+kissanime.to##.divCloseBut
+
+! fc2 site banners
 fc2.com###fc2_bottom_bnr
 
 !---------------------------------shitty sites------------------------------!
@@ -294,7 +295,7 @@ fc2.com###fc2_bottom_bnr
 
 ||tucows.com/*$important
 ||filehippo.com/*$important
-||cnet.com/*$important
+||download.cnet.com/*$important
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
