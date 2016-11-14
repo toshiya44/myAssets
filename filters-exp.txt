@@ -1,9 +1,11 @@
-!Title: Toshiya's Filters - Experimental
+!Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
 !Date: 2016-11-13
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
+!Almost every network filters here are marked "Important" because filters made by ABP etc. often
+!whitlists them for reasons I don't care.
 
 !---------------------------------------------------------------------------!
 !---------------------------------------------------------------------------!
@@ -76,6 +78,8 @@
 ||yahoo.com$third-party,important
 ||sharethis.com$third-party,important
 ||exoclick.com$important
+||erito.com^$important
+||slotozilla.*$third-party,important
 
 !---------------------------------------------------------------------------!
 
@@ -87,7 +91,9 @@
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||google.*$beacon,important
-*/searchdomaincheck$important
+/searchdomaincheck$important
+||safebrowsing.google.com$important
+||safebrowsing-cache.google.com$important
 
 ! 2016-10-10
 answers.com###video_universal-0_display
@@ -110,13 +116,15 @@ answers.yahoo.com###yset-upsell-div
 
 !-------------------------------Wikia filters-------------------------------!
 
-||fandom.wikia.com/*$important
+||fandom.wikia.com^$important
+
 wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
 wikia.com###globalNavigation > .global-navigation-container > .table-cell.wikia-logo-container > .final-url.wikia-logo[href="http://www.wikia.com/fandom"]
 wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
 wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
 wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
 wikia.com###RECIRCULATION_RAIL
+
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
@@ -153,45 +161,6 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
 
-!---------------------------------------------------------------------------!
-
-! Removing junk from a weather site
-www.theweathernetwork.com###cbc_widget_container
-www.theweathernetwork.com###news-slider
-www.theweathernetwork.com###sidebar
-www.theweathernetwork.com###main-footer
-www.theweathernetwork.com###gallery
-www.theweathernetwork.com###news
-www.theweathernetwork.com###map-view
-www.theweathernetwork.com###videos_brightcove-popular-right-now
-www.theweathernetwork.com###leaderboard
-www.theweathernetwork.com###fby-tab-6089
-www.theweathernetwork.com##.toolbar
-www.theweathernetwork.com###main-header
-www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
-www.theweathernetwork.com###editors_choice_news
-
-||twnmm.com/js/*/news_slider.js$important
-||twnmm.com/thumb$important
-||twnmm.com/js/*/jquery.cookie.js$important
-||twnmm.com/js/*/web/modules/gps_location.js$important
-||twnmm.com/storage.filemobile.com$important
-||twnmm.com/js/*/lib/maps/detectizr.js$important
-||twnmm.com/js/*/web/modules/awrr$important
-||twnmm.com/js/*/video_player.js$important
-||twnmm.com/js/*/latest_news_slider.js$important
-||twnmm.com/js/*/gallery.js$important
-||twnmm.com/js/*/maps-mLgoogle.js$important
-||twnmm.com/js/*/maps/google.js$important
-||twnmm.com/js/*/getplayerevents.js$important
-||twnmm.com/js/*/getplaylist.js$important
-||twnmm.com/js/*/notifications.js$important
-||twnmm.com/js/*/recent_locations.js$important
-||twnmm.com/js/*/favorite_locations.js$important
-||twnmm.com/js/*/mylocations.js$important
-||twnmm.com/js/*/profiled.js$important
-||twnmm.com/*/coffee-break.css$important
-||twnmm.com/*/video-gallery.css$important
 
 !--------------------------------facebook----------------------------------!
 
@@ -218,9 +187,8 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 @@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
 @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 
-!---------------------------------------------------------------------------!
+!-----------------------------------Misc------------------------------------!
 
-! Misc
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
 */forbes_welcome.js
@@ -229,7 +197,6 @@ www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
 raven.js^$important
 raven.min.js^$important
-||slotozilla.*$third-party,important
 *security-i0y8kg*$important
 /adobe_audience_manager$important
 
@@ -267,6 +234,7 @@ hitomi.la##.container > .hitomi-vertical
 hitomi.la##.container > .content > .hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js
 ||hitomi.la/hitomi-vertical.js
+||hitomi.la/hitomi.js
 saucenao.com##img[alt="J-List!"]
 www.pixiv.net##a[href^="/premium.php"]
 www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
@@ -288,7 +256,7 @@ kissanime.to##.divCloseBut
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
 
-!---------------------------------shitty sites------------------------------!
+!---------------------------------------------------------------------------!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" site are 120% filled with malware
 
