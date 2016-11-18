@@ -1,6 +1,6 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-13
+!Date: 2016-11-17
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
@@ -14,7 +14,7 @@
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
-||104.198.198.188/*$important
+||104.198.198.188$important
 ||ad-arata.com/*$important
 ||ads.servebom.com/*$important
 ||akismet.com/*$important
@@ -28,12 +28,11 @@
 ||fiverr.com/*$important
 ||fiverrcdn.com/*$important
 ||fukugan.com/*$important
-||ghacks.net$third-party,important
 ||hako.re/*$important
 ||icnerd.com/*$important
 ||lepinsar.com/*$important
 ||licensebuttons.net/*$important
-||quantserve.com/*$important
+||quantserve.com$important
 ||richdadregistrations.com/*$important
 ||skimresources.com/*$important
 ||solvemedia.com/*$important
@@ -41,7 +40,6 @@
 ||vistax64.com/*$important
 ||vskart.in/*$important
 ||zig.iffy.studio/*$important
-||curse.com/*$important
 ||socdm.com/*$important
 ||scorecardresearch.com^$important
 ||ora.tv^$third-party
@@ -55,11 +53,6 @@
 ||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
-||twitter.com^$third-party,important
-||facebook.*^$third-party,important
-||plus.google.*^$third-party,important
-||pinterest.com^$third-party,important
-||instagram.com^$third-party,important
 ||paypalobjects.com^$third-party,important
 ||paypal.com^$third-party,important
 ||fullstory.*$important
@@ -80,6 +73,14 @@
 ||exoclick.com$important
 ||erito.com^$important
 ||slotozilla.*$third-party,important
+||newsinc.com^$third-party
+||2mdn.net$important
+||trb.com$important
+||everesttech.net$important
+||iplogger.org$important
+||akamai.$third-party,important
+||akamaihd.$third-party,important
+||anonymousdemographics.com$important
 
 !---------------------------------------------------------------------------!
 
@@ -94,6 +95,9 @@
 /searchdomaincheck$important
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
+||imasdk.googleapis.com$important
+
+!||google.*/xjs/_/js*$script,important
 
 ! 2016-10-10
 answers.com###video_universal-0_display
@@ -155,16 +159,25 @@ myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
 myanimelist.net###footer-block > .footer-link-icon-block
 myanimelist.net###headerSmall > .banner-header-anime-straming
-||cdn.myanimelist.net/images/stream_banner/*
+
+||myanimelist.net/log/bot_filter.php$xmlhttprequest,first-party
 ||myanimelist.net/static/logging.html$important
-||myanimelist.cdn-dena.com/signature/*
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
+||myanimelist.net/images/stream_banner/*
+||myanimelist.cdn-dena.com/images/footer$image,important
+||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.cdn-dena.com/signature/*
 
+||google.com$domain=myanimelist.net,important
 
-!--------------------------------facebook----------------------------------!
+!---------------------------------social-----------------------------------!
 
-! 2016-05-26 it seems facebook keeps updating their site, so filters aren't working very well
+! Remove third-party ""social networking"" sites.
+! it seems facebook keeps updating their site, 
+! so filters aren't working very well...
+
 www.facebook.com###build_audience
 www.facebook.com###pages_manager_boosted_website_card
 www.facebook.com###aymt_homepage_panel_tip
@@ -178,20 +191,30 @@ www.facebook.com##div#pagelet_rhc_footer
 www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
 www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 www.facebook.com##div.pagelet-group#pagelet_ego_pane
-||connect.facebook.net$important,third-party
+
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 
-!options menu gets blocked due to a filter in ABP Japanese list 
-@@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
+||facebook.*^$third-party,important
+||fbcdn.*^$third-party,important,domain=~facebook.com
+||twitter.com^$third-party,important
+||twimg.com^$third-party,important,domain=~twitter.com
+||plus.google.*^$third-party,important
+||pinterest.com^$third-party,important
+||instagram.com^$third-party,important
+
+! options menu gets blocked due to a filter in ABP Japanese list 
+@@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
+@@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
 @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+
 
 !-----------------------------------Misc------------------------------------!
 
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
-*/forbes_welcome.js
+/forbes_welcome.js
 www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
@@ -199,12 +222,18 @@ raven.js^$important
 raven.min.js^$important
 *security-i0y8kg*$important
 /adobe_audience_manager$important
+/metrics/s_code_trb.js$script,important
+/metrics/s_code*$script,important
+||github.com$websocket
 
 ! kys
 https://www.scribd.com/*
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
+
+! Curse logs your IP
+||curse.com^$important
 
 !---------------------------------------------------------------------------!
 
@@ -224,7 +253,7 @@ boards.4chan.org##[class^="ad-"]
 
 ! boorus and stuff 
 
-||isshiki.donmai.us/*$important
+||isshiki.donmai.us$important,~first-party
 ||gelbooru.com/script/application.js$important
 gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
@@ -257,12 +286,20 @@ kissanime.to##.divCloseBut
 fc2.com###fc2_bottom_bnr
 
 !---------------------------------------------------------------------------!
-! Always download softwares from the actual site of the developer (official site, repository etc)
-! The so called "Free Software Download" site are 120% filled with malware
 
-||tucows.com/*$important
-||filehippo.com/*$important
-||download.cnet.com/*$important
+! Various commented out filters, just in case I need them again
+!||ghacks.net$third-party,important
+! wildcard may not be a good idea
+!@@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
+
+!---------------------------------------------------------------------------!
+! Always download softwares from the actual site of the developer (official site, repository etc)
+! The so called "Free Software Download" sites are 120% filled with malware
+! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
+
+||tucows.com/$important
+||filehippo.com/$important
+||download.cnet.com^$important
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
