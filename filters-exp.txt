@@ -1,6 +1,6 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-16
+!Date: 2016-11-18
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
