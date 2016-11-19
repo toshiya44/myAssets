@@ -1,6 +1,6 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-18
+!Date: 2016-11-16
 !I'm sure a few of the filters here will break some sites.
 !Please be cautious and check uBO's logger to see what is getting filtered out,
 !and comment out any problamatic filter.
@@ -254,14 +254,15 @@ boards.4chan.org##[class^="ad-"]
 
 ! boorus and stuff 
 
-||isshiki.donmai.us$important,domain=danbooru.donmai.us
-||gelbooru.com$script,subdocument
 gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
-! to unblock translation bubbles etc 
-! https://github.com/toshiya44/Custom-Filters-for-uBlock/issues/1
-@@||gelbooru.com/script/application.js$important
+
+||isshiki.donmai.us$important,domain=danbooru.donmai.us
+||gelbooru.com$script,subdocument
+
+! to unblock translation bubbles etc
+@@||gelbooru.com/script/application.js?
 
 hitomi.la##.container > .top-content > .hitomi-horizontal
 hitomi.la##.container > .hitomi-vertical
