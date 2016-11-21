@@ -1,0 +1,294 @@
+! Title: ABP JP white list
+! Original Source: https://github.com/k2jp/abp-japanese-filters/
+! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
+! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
+! Original Project owner: k2japan
+! Project committers: looter, lostincarnation, tanahata
+! Note: THIS LIST IS NOT MAINTAINED. Go to the original repository to access the latest list.
+
+
+! Workaround to avoid a "ReferenceError: YMAP is not defined" false positive with the script ended with meaningless "?_t=pPc" like http://map.yahoo.co.jp/js/scroll.js?_t=pPc, using ^ppc^ Pay-Per-Click filter, reported via Issue Report, Jul 15, 2014
+@@.js?_t=pPc^$script,domain=map.yahoo.co.jp
+! video-cdn.ea.com distributes mp4 videos with "&affiliateid="...
+@@.mp4?*&affiliateid=
+! Added to avoid a never-ending "loading..." gif
+@@/history/external/*$domain=amazon.ca|amazon.cn|amazon.co.jp|amazon.co.uk|amazon.com|amazon.de|amazon.es|amazon.fr|amazon.it
+! Workaroud to avoid false positives with existing ^analytics- filter, Dec 24, 2014
+@@/static/coffee/compiled/modules/clean/analytics-vflrGf3Yu.$script,domain=dropbox.com
+! False positives with theme css by adaptivethemes.com, Jun 11, 2012
+@@_Ad/css/theme/
+! False positives with Ameblo skin named "colors_ad" or "ad_viva-cutieblog", reported via Issue Report, Jan 12, 2012, Dec 29, 2011, Apr 11, 2014
+@@||ameba.jp/p_skin/
+! autoblog(AOL) sucks! It requires some trackings to render correctly, reported twice by Issue Report
+@@||aolcdn.com/js/mg2.$domain=autoblog.com
+@@||aolcdn.com/omniunih.$domain=autoblog.com
+! imdb.com sucks! To avoid false positives you have to load some AD scripts.
+@@||doubleclick.net/adj/imdb2.
+! Workaround to fix layout collapse 2011-10-17
+@@||fc2.com^*/kanasoku/advertisement.js
+! Workaround to fix false positive with a mis-named background image which cause white title and menu background, reported by edogawakuryu via [https://code.google.com/p/adblock-plus-japanese-filter/issues/detail?id=23 Issue 23], Feb 3, 2012
+@@||foreignaffairs.com^*/sitetheme/images/body-top-ad-background.$image
+! False positive at gamers-review.net . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=77 are blocked. 2012-01-05
+@@||gamers-review.net/data/js/adbg.$script
+! Many false positive with stylesheets and JavaScripts, reported via Issue Report, Jan 6, 2012
+@@||goal.com^*-ad-
+! False positives with XHRs including ,ads, in the parameter at Google Map, with ^ads^ filter, Sep 28, 2014
+@@||google.*/maps/_/js/k=maps.*,ads,$xmlhttprequest
+! False positives with Google Custom Search(.co.jp), reported via Issue Report, Mar 10, 2012
+! False positives with Google Custom Search(.com), reported via Issue Report, Feb 7, 2012
+@@||google.*/cse?*&ad=
+! False positives when you test a new filter via Gmail config, reported by pooh via blog, Jun 16, 2012
+! Another false positives when you try advanced search as a multi-user accout, reported by @mushroom080 via issue report, Mar 3, 2014
+! Another false positives causing 「システムで問題が発生しました」 after a while, reported by trineutron and sh, via blog, Oct 25, 2014
+@@||mail.google.com/mail/*?ui=*^adv^
+! A filter -ads^ causes a false positive with a [http://translate.google.com/translate/static/kcpbtI_-aDs/css/desktop_ltr.css css stylesheet] at translate.google.com and translate.google.co.jp, reported by @dullneko, July 18, 2012
+@@||translate.google.*/translate/static/*-aDs/css/*.$stylesheet
+! False positives with the existing |https:*?ip=$third-party filter at YouTube embedded pages, reported by Issue Report, Aug 17, 2015
+@@||googlevideo.com/videoplayback?ip=
+! False positives with the existing |https:*?*&ip=$third-party filter at YouTube and embedded pages, reported by baq via blog comment
+! Simplified for gaming.youtube.com and limited the domain for better performance, Nov 13, 2015
+@@||googlevideo.com^*?*&ip=$domain=youtube.com
+@@||gyoen.minpos.com/delivery/ajs.php?zoneid=76&
+@@||gyoen.minpos.com/delivery/ajs.php?zoneid=77&
+! ^urchin. filter causes false positives with the Japanese Amazon external audio player at web-cache.chocomaru.com, reporeted by 鳥 via blog, May 12, 2013
+@@||google-analytics.com/urchin.js$domain=web-cache.chocomaru.com
+! Workaround to avoid an UNABLE TO LOAD PLUGIN error with .analytics- filter, Jan 26, 2014
+@@||hitbox.tv/static/player/flowplayer/flowplayer.analytics-3.2.9*.swf
+! A ^beacon^ filter causes false positives with css sprite images below, Oct 3rd, 2012
+! http://g-ec2.images-amazon.com/images/G/09/gno/beacon/BeaconSprite-JP-02._V393500380_.png
+! http://g-ecx.images-amazon.com/images/G/01/gno/beacon/BeaconSprite-US-01._V394051227_.png
+@@||images-amazon.com^*/beacon/BeaconSprite-$image
+! A -beacon^ filter causes false positives with combined script and stylesheet below, Oct 3rd, 2012
+! http://z-ecx.images-amazon.com/images/G/01/browser-scripts/site-wide-js-1.2.6-beacon/site-wide-11878695216._V1_.js
+! http://z-ecx.images-amazon.com/images/G/01/browser-scripts/jp-site-wide-css-beacon/site-wide-7797898918._V1_.css
+! http://z-ecx.images-amazon.com/images/G/01/browser-scripts/us-site-wide-css-beacon/site-wide-7681525081._V1_.css
+@@||images-amazon.com^*/browser-scripts/*-beacon/$script,stylesheet
+! A ^beacon^ filter causes false positives with css sprite images below when used via https, Nov 14, 2012
+! https://images-na.ssl-images-amazon.com/images/G/09/gno/beacon/BeaconSprite-JP-02._V393500380_.png
+@@||ssl-images-amazon.com^*/beacon/BeaconSprite-$image
+! -beacon^ and -beacon- filters cause false positives with combined script and stylesheet below when used via https, Nov 14, 2012
+! https://images-na.ssl-images-amazon.com/images/G/01/browser-scripts/navbarCSSJP-beacon/navbarCSSJP-beacon-630467669._V401873068_.css
+! https://images-na.ssl-images-amazon.com/images/G/01/browser-scripts/navbarJS-beacon/navbarJS-beacon-4140286522._V401873127_.js
+@@||ssl-images-amazon.com^*/browser-scripts/*-beacon/$script,stylesheet
+@@||imdb.com^*/doubleclick/
+! Workaround for adblock detector, which includes "adblock = false;" only.
+@@||static.isohunt.com/js/adframe.$script
+! False positives with online office application view at skydrive.live.com, Apr 24, 2012
+! Example of a false positive: &ad=ja-JP&
+@@||officeapps.live.com^*frame.*&ad=
+! False positives at own3d.tv reported via Issue Report, Nov 21, 2011
+@@||liverail.com/crossdomain.xml|
+@@||liverail.com^*plugins/flowplayer/
+! Flase positive at twitch.tv reported and resolved via Issue Report, Dec 11, 2011
+! Another false positive found at justin.tv ,reported and resolved via Issue Report, Dec 16, 2011
+@@||vox-static.liverail.com/swf/*/admanager.$domain=justin.tv|twitch.tv
+@@||media-imdb.com^*/ads.$script
+! False positive at xbox-news.com . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=79 are blocked. 2011-09-23
+@@||gyoen.minpos.com/delivery/ajs.php?zoneid=79&
+! False positive with data used for dynamic photo slides, reported via Issue Report, Feb 28, 2012
+@@||nationalgeographic.co.jp/DynamicLead/xml/Top/promo.$xmlhttprequest
+! False positive at ndrive2.naver.jp . Login stops displaying "Loading N Drive" forever, Jan 23, 2012
+! Commented out the following obsolete filter, reported by [https://twitter.com/mushroom080/status/292261877227085826 @mushroom080], Jan 18, 2013
+! @@||ndrive.naver.jp/js/lcslog.$script
+! Japanese biggest computer vendor uses cliant-side script to display RSS titles. It seems that they don't trust server-side performance of their own servers.
+@@||nec.co.jp^*/rss.$script
+! False positives with Java SE 7u4 downloading 2012-04-27
+@@||oracleimg.com^*/assets/metrics/ora_$domain=oracle.com
+! False positive at psmk2.net . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=76 are blocked. 2011-08-29
+@@||psmk2.net/data/js/adbg.$script
+! False positives with combined script and stylesheet 2011-10-17
+@@||rottentomatoescdn.com/assets/*/ads.
+! False positive at store.steampowered.com . Layout collapse with /promo/* filter 2011-11-27
+@@||steampowered.com/public/css/promo/$stylesheet
+! Why does teacup.com use adimg.teacup.com for normal JavaScript ? (?_?)...
+@@||teacup.com/rchat-common/
+! False positive with objects on the TERMS OF SERVICE(TOS) page, reported via Issue Report, Apr 11, 2012
+@@||sp.toeic.or.jp/internetservice/promo/
+! False positives at own3d.tv reported via Issue Report, Nov 21, 2011
+@@||tubemogul.com/crossdomain.xml|
+@@||tubemogul.com/bootloader/TubeMogulFlowPlayer.
+! False positive at xbox-news.com . common.css isn't loaded if javascript is enabled, and adbg.js and gyoen.minpos.com/delivery/ajs.php?zoneid=79 are blocked. 2011-09-23
+@@||xbox-news.com/data/js/adbg.$script
+! Logo of Wikipedia uses URL including /ad/ ... reported via Issue Report, Jan 3, 2012
+@@||wikimedia.org/wikipedia/commons/*Wikipedia-logo*$image
+! False positive with non-AD images, reported via Issue Report, Mar 19, 2012
+@@||upload.wikimedia.org/wikipedia/commons/a/ad/$image
+! False positives registering for watch list, reported by koyama via blog, Mar 24, 2013
+@@||rd.yahoo.co.jp/auction/config/*http*.auctions.yahoo.co.jp/jp/config/remember?$script
+! Some elements in the main column like unread mails are missing at Yahoo Mail BETA if http://ai.yimg.jp/bdv/yahoo/darla/2-2-4_3/js/darla-dynamic-beacons-min.js or https://s.yimg.jp/bdv/yahoo/darla/2-2-4_5/js/darla-dynamic-beacons-min.js beacon generator is blocked.
+@@||yimg.jp/bdv/yahoo/darla/$domain=mail.yahoo.co.jp
+! Can NOT open other folders(no response...loading...white screen...) at Yahoo Mail if http://ai.yimg.jp/bdv/yahoo/javascript/csc/20060824/lib2obf_b7.js or https://s.yimg.jp/bdv/yahoo/javascript/csc/20060824/lib2obf_b7.js beacon generator is blocked.
+@@||yimg.jp/bdv/yahoo/javascript/csc/$domain=mail.yahoo.co.jp
+! Gyao Movie player does NOT start automatically if http://ai.yimg.jp/bdv/yahoo/javascript/gyao/clover.js is blocked.
+@@||yimg.jp/bdv/yahoo/javascript/gyao/clover.js
+! charger440.jp uses images from URLs including /promotion/* even though it's not promoting images. 2011-12-01
+@@||yimg.jp/images/promotion/charger/$domain=charger440.jp
+! ---------- Temporary white list END ----------
+
+! ########## Default white list START ##########
+@@/analytics/*$domain=dear.my.salesforce.com
+! False positive with the CONTINE DOWNLOAD button used with ^trialpay^ filter, May 20, 2016
+@@/images/trialpay/download_btn.$image
+! False positives with the WordPress lazyloading plugin, reported by Opera10years via hatena blog comment of k2jp, May 31, 2012
+@@/lazy-load/images/1x1.
+@@//player.ooyala.com^
+! Loosen a promotion image blocking criterion on a shopping site because it looked too ugly... Dec 15, 2011
+@@/promotion/*$domain=shopping.yahoo.co.jp
+! False positives with a combined stylesheet used with the ^ads^ filter, and a combined JavaScript used with -ads^ filter, reported via Issue Report, Oct 3, 2014
+@@||abc.com/*.css?*#assets=*,$stylesheet
+@@||abc.com/*.js?*#assets=*,$script
+! False postives at aguse.jp with |http:*.ad-$popup filter, Mar 20, 2014
+@@||aguse.jp^$popup
+@@||images.apple.com^*/promo_$domain=apple.com
+! False positive at bitly.com reported via Issue Report 2011-11-22
+@@||bitly.com^*/css/metrics_
+! False positives with the existing ^metrics. filter, Aug 01, 2015
+@@||chromestatus.com/static/css/metrics/$domain=chromestatus.com
+! False positives with the existing ^metrics- filter, Aug 01, 2015
+@@||chromestatus.com/static/elements/metrics-$domain=chromestatus.com
+! False positives with Adelie Penguin abbreviated to Ad, reported via Issue Report Dec 26, 2011
+@@||cloudfront.net^*/animal/obj_animal_*_Ad
+! There were False positives at www.youtube.com/oracle , which no longer exist 2011-10-11
+! Another false positive with conviva filters found at ustream.tv, which brought the past commented out whitelists back into life, reported via Issue Report 2011-12-09
+@@||conviva.com/crossdomain.xml|
+@@||conviva.com/lpconfig/cfg/
+! A new rare false positive with conviva filters found at ustream.tv 2011-12-10
+@@||livepassdl.conviva.com^*/LivePassModuleMain.$object-subrequest
+! False positives with combined scripts including "&ad=" 2012-04-06
+@@||cookpad.com/loading/all_in_one?
+! False positives with random path including /ad/, reported via Issue Report, May 3, 2014
+@@||hydra-media.cursecdn.com/*.gamepedia.com*/a/ad/$image,domain=gamepedia.com
+! Exception for its own site logo, May 31, 2013
+@@||distrowatch.com/images/jruiakuzm/dwbanner.$image
+! False positives with movie player (Daily Motion Player?) used with ^dmp.$object,script,subdocument,third-party filter, Jul 25, 2015 and Dec 04, 2015
+@@||dmcdn.net/playerv*/dmp.$object,script,domain=dailymotion.com
+! False positives with images on third-party domains, reported via Issue Report, Nov 23, 2015
+@@||pics.dmm.co.jp^$image
+! False positives with product zooming, reported by @tanahata via Issue Report
+@@||ir.ebaystatic.com^
+! False positives with combined scripts at soccernet.espn.go.com, Jan 21, 2012
+@@||espncdn.com/combiner/$script,stylesheet
+! Flase positive because EverNote calls group discount "sponsor"... reported via Issue Report, investigated by @dullneko, Jan 13, 2012
+! https://twitter.com/#!/dullneko/status/157735498884976640
+@@||evernote.com/js/evernoteClient/Sponsor.
+! False positive at support.fc2.com, reported via Issue Report, Feb 18, 2012
+@@||r.fc2.com/rss-disp/rss.$script
+! False positives with Google Reader when users search for "ads", reported by @SYuno308, July 18, 2012
+@@||google.*/reader/api/*/search/items/ids?q=
+@@||google.*/settings^$document
+! False positives with combined XML requests including ",ads," or ",log," at new Google Map, Feb 28, 2014
+@@||google.*/xjs/_/js/k=xjs.m.*,ads,$xmlhttprequest
+@@||google.*/xjs/_/js/k=xjs.m.*,log,$xmlhttprequest
+@@||google.com/adsense/$document
+@@||google.com/analytics/$document
+! False positive at config pages, reported via Issue Report, Feb 6, 2012
+! Commented out duplicated filters [https://github.com/k2jp/abp-japanese-filters/issues/9 reported] by [https://github.com/SMed79 SMed79], Jun 20, 2015
+! @@||google.com/settings/$document
+@@||accounts.google.com/ServiceLogin?service=$document
+! False positives when browsing a source tree at code.google.com, Oct 13, 2014
+@@||code.google.com^*/source/dirfeed?$xmlhttprequest,domain=code.google.com
+! False positives with a google plus image used for css sprite, reported by @zirweed, May 19, 2012
+@@||gstatic.com^*/Publisher/sprite$image
+! False positives with combined scripts including ,adsense, in the parameters at Google Map embeded pages, with ^adsense^ filter, reported via blog, Sep 30, 2014
+@@||maps.gstatic.com/cat_js/*,$script
+! False positives with combined stylesheets at guardian.co.uk, reported via Issue Report, Feb 6, 2012
+! Adjusted to limit really combined files and the new domain, Oct 25, 2014
+@@||combo.guim.co.uk^*+$script,stylesheet,domain=theguardian.com
+! False positives with combined scripts conflicting with _ads. filter and with further combined stylesheets, Aug 27, 2014
+@@||huffpost.com/assets/css.*?v=*%2C$stylesheet
+@@||huffpost.com/assets/js.*?v=*%2C$script
+@@||hulu.*/site-player/
+@@||lavasoft.com^*/ad_aware/
+! False positive with a combined scripts, reported via Issue Report, Dec 31, 2011
+@@||mapion.co.jp/f/filejoin?$script,stylesheet
+! Added whitelist to avoid false positives with combined scripts and stylesheets including Omniture and WebTrends as parameters, Aug 26th, 2012
+! SCRIPT SAMPLE: http://i2.msdn.microsoft.com/ja-jp/magazine/mtps-bn1651.js?l=ja-jp&i=magazine&ct=AlternateSelector;CCEditor;CCSection;CCTagEditor;ContentFallback;EyebrowSimple;FeedViewerBasic;InstrumentedLink;InteractiveToolbar;MtpsRating;MtViewDropDown;Omniture;RedVelvetInstrumentedLink;StoCodeHighlighter;StoFooter;StoLocaleManagementFlyout;StoMastheadMSDN;StoMtpsLoginStatus;StoProfileLink;StoSearch;StoTabStrip;SurveyLauncher;TemplatedFlyout;TransWikiPopupEditor;WebMetrix;WebTrends
+! STYLESHEET SAMPLE: http://i3.msdn.microsoft.com/ja-jp/magazine/mtps-bn1651.css?l=ja-jp&i=magazine&ct=AlternateSelector;CCEditor;CCSection;CCTagEditor;ContentFallback;EyebrowSimple;FeedViewerBasic;InstrumentedLink;InteractiveToolbar;MtpsRating;MtViewDropDown;Omniture;RedVelvetInstrumentedLink;StoCodeHighlighter;StoFooter;StoLocaleManagementFlyout;StoMastheadMSDN;StoMtpsLoginStatus;StoProfileLink;StoSearch;StoTabStrip;SurveyLauncher;TemplatedFlyout;TransWikiPopupEditor;WebMetrix;WebTrends&clustimg=1
+@@||microsoft.com/*/mtps-bn*?*;$script,stylesheet
+! False positives with combined stylesheets conflicting with ^teaser^, reported by sasami via blog, Mar 26, 2013
+@@||microsoft.com/Combined.css?resources=
+! False positives with combined scripts including Omniture and WebTrends as parameters, Dec 21, 2012
+! Sample: http://i2.msdn.microsoft.com/Combined.js?resources=0:webtrendsscript,1:omni_rsid_MSDN;/Areas/Global/Content/Webtrends/resources:0,/Areas/Global/Content/Omniture/resources/MSDN:1&amp;hashKey=16進数32桁
+@@||microsoft.com/Combined.js?resources=
+@@||mozilla.com/media/img/promo.
+! False positives with images usded at the top page of www.mozilla.org, Jun 26, 2013
+@@||mozilla.net/media/img/home/promo
+@@||mozilla.org/affiliates/
+! False positve at Collusion demo page
+@@||mozilla.org^*/collusion/demo/$document
+! False positive with auto-generated XHRs, reported via Issue Report, Feb 15, 2012
+@@||addons.mozilla.org^$xmlhttprequest
+! False positive with almost all images with a ^promotion^ filter at the top page of muji.net, reported by h.gotolee as Issue 27 at code.google.com, May 12, 2013
+@@||muji.net/portal/img/promotion/$image
+! False positive with icons of NICO2-DAIHYAKKA at live.nicovideo.jp reported via Issue Report, Jan 12, 2012, Jan 11, 2012 and Dec 29, 2011
+@@||api.nicodic.jp^*__nicopedia_api_*_AD/*%AD|
+@@||api.nicodic.jp^*__nicopedia_api_*_AD_*%AD%
+@@||uad.nicovideo.jp/assets/$domain=uad.nicovideo.jp
+! False positives with |http:*.ad^ filter when combined scripts and stylesheets include .Ad, in their url, Feb 1, 2014
+@@||store.nike.com^*?assets=$script,stylesheet
+! A false positive with dynamic header script, using the |http:*^ad_ filter, reported by MASA, Jun 10, 2013
+@@||nikkei.com/dx/async/async.do/ae=P_CM_HEADERJS_TOP;
+@@||files.nyaa.se/sukebei-download.$image,domain=nyaa.se
+@@||files.nyaa.se/sukebei-txt.$image,domain=nyaa.se
+@@||files.nyaa.se/topbar.$image,domain=nyaa.se
+@@||files.nyaa.se/topgradient.$image,domain=nyaa.se
+@@||files.nyaa.se/www-download.$image,domain=nyaa.se
+@@||files.nyaa.se/www-txt.$image,domain=nyaa.se
+@@||files.nyaa.se/sukebei-*.$image,domain=nyaa.se
+@@||files.nyaa.se/www-*.$image,domain=nyaa.se
+! False positives with harmless popup used with ^popup.$popup, reported by 神楽 via blog, Jan 21, 2015
+@@||pangya.jp/popup.html?src=$popup
+@@||researchmap.jp^*/counter/$stylesheet
+! False positive with domain names to investigate, like adv-first.ru, June 17, 2014
+@@||robtex.com^*/advisory/
+! False positives with combined scripts or stylesheets conflicting with ^teaser^ filter, May 27, 2015
+@@||s-msft.com/Combined.*?resources=*,$script,stylesheet,domain=microsoft.com
+! False positive with combined stylesheet with the ^ads. filter, reported via Issue Report, Sep 16, 2014
+@@||salon.com/combo/css?*&$stylesheet
+! False positive with combined JavaScript with the -ads.$domain=~retweet-ads.net filter, reported via Issue Report, Sep 16, 2014
+@@||salon.com/combo/js?*&$script
+! False positives with product images starting at AD- using |https:*^ad- filter, reported via issue report, Feb 2, 2014
+@@||sanwa.co.jp/product/*/AD-$image
+! False positive with management page, reported via Issue Report, Jan 27, 2012
+@@||ct*.shinobi.jp^$document
+! False positive with slide images, Nov 19, 2014
+@@||image.slidesharecdn.com^$image
+@@||spreadfirefox.jp/affiliates/
+@@||spreadthunderbird.com/files/affiliates/
+! False positives on movies with the existing |https:*^ad- filter, Oct 21, 2016
+@@||twimg.com/ext_tw_video/$domain=twitter.com
+! False positives with images used with ^analytics- filter, at analytics.twitter.com, Aug 28, 2014
+@@||twimg.com/insights/images/analytics-$domain=analytics.twitter.com
+! False positives with the existing -analytics^, at analytics.twitter.com audience view, Nov 13, 2015
+@@||twimg.com/macaw-analytics/$domain=analytics.twitter.com
+! False positives with XHR used with ^analytics. filter, at analytics.twitter.com, Aug 29, 2014
+@@||analytics.twitter.com^$xmlhttprequest,domain=analytics.twitter.com
+! False positives with |http:*^ad- filter, Mar 20, 2014
+@@||urlvoid.com/update-report/
+! False positives with analytics result pages, Oct 18th, 2012
+@@||userlocal.jp/home/analytics/$domain=userlocal.jp
+@@||virustotal.hispasecsistemas.netdna-cdn.com^*/analysis-
+! False positive with the path including /ad/ if used with |https:*^ad^ filter, reported via Issue Report, Sep 20, 2014
+@@||upload.wikimedia.org/wikipedia/commons/thumb/a/ad/$image
+! False positive with user input strings, Oct 06, 2015
+@@||urlquery.net/api/v*/post*?url=$domain=urlquery.net
+! False positives with the _ads^$popup filter, reported via Issue Report, Oct 05, 2014
+@@||wikipedia.org/wiki/$popup
+! False positive with questionnaires, reported via Issue Report, Mar 20, 2012
+@@||blog.with2.net/vote/
+! False positives with combined scripts
+@@||yahoo.*/combo?*&$script,stylesheet,domain=yahoo.co.jp|yahoo.com
+@@||yahooapis.*/combo?*&$script,stylesheet,domain=yahoo.co.jp|yahoo.com
+! False positives with HIGHLIGHT.JS scripts, reported by @dullneko via blog comment, Aug 29, 2012
+@@||yandex.st/highlightjs/
+! False positives with jQuery, reported by 誤ブロック via blog comment, May 26, 2013
+@@||yandex.st/jquery/
+! False positives with combined stylesheets or scripts at Yahoo!
+! Merged and limited the domain, Oct 25 and 26, 2014
+! Added support for flickr.com acquired by Yahoo!, Jun 09, 2015
+@@.yimg.*/combo?*&$script,stylesheet,domain=flickr.com|yahoo.co.jp|yahoo.com
+! Layout collapse and some missing images because of the URL including /ad_partner/, Jan 18, 2012
+@@||s.yimg.jp/images/webowner/ad_partner/$domain=webowner.yahoo.co.jp
+! False positives at analytics pages inside YouTube, reported via Issue Report, Feb 27, 2012
+@@||youtube.com/analytics/$document
+! ---------- Default white list END ----------
