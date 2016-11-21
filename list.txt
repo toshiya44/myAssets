@@ -1,0 +1,10 @@
+! https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
+! Copy paste the following in external filter list area. Comment out the ones you don't need.
+https://raw.githubusercontent.com/toshiya44/Custom-Filters-for-uBlock/master/filters-exp.txt
+https://raw.githubusercontent.com/toshiya44/Custom-Filters-for-uBlock/master/temp/annoyance.txt
+https://raw.githubusercontent.com/toshiya44/Custom-Filters-for-uBlock/master/disqus-placeholder.txt
+
+! imports
+https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/modified_abp_jpf.txt
+https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/abp-jp-whlist.txt
+https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/abp-jp-fragment.txt
