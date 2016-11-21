@@ -1,12 +1,12 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-19
-!I'm sure a few of the filters here will break some sites.
-!Please be cautious and check uBO's logger to see what is getting filtered out,
-!and comment out any problamatic filter.
-!Almost every network filters here are marked "Important" because filters made by ABP etc. often
-!whitlists them for reasons I don't care.
-!Currently trying to use uMatrix to mass filter third-party stuff.
+!Date: 2016-11-20
+! I'm sure a few of the filters here will break some sites.
+! Please be cautious and check uBO's logger to see what is getting filtered out,
+! and comment out any problamatic filter.
+! Almost every network filters here are marked "Important" because filters made by ABP etc. often
+! whitlists them for reasons I don't care.
+! Currently trying to use uMatrix to mass filter third-party stuff.
 
 !---------------------------------------------------------------------------!
 !---------------------------------------------------------------------------!
@@ -82,6 +82,13 @@
 ||akamai.$third-party,important
 ||akamaihd.$third-party,important
 ||anonymousdemographics.com$important
+||adnium.com$important
+||4uvjosuc.com$important
+||ccbill.com$important
+||x10host$important
+||opnlttr.com$important
+||scam.com$important
+
 
 !---------------------------------------------------------------------------!
 
@@ -89,11 +96,10 @@
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
 ||google-analytics.*$important
-||google.*/searchdomaincheck$important
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||google.*$beacon,important
-/searchdomaincheck$important
+*/searchdomaincheck$important
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||imasdk.googleapis.com$important
@@ -103,11 +109,14 @@ answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
 
-||i.imgur.com$inline-script,first-party,important
+||i.imgur.com$inline-script,important
 ||imgur.com/gallery/hot$important
-||s.imgur.com/min/runSlots.js$script,important
-||s.imgur.com/min/react15.js$script,important
-||s.imgur.com/min/advertising.js$script,important
+||imgur.com/min/runSlots.js$script,important
+||imgur.com/min/advertising.js$script,important
+||imgur.com$websocket,important
+
+! I don't see album download option when this is blocked...
+!||s.imgur.com/min/react15.js$script,important
 
 ! I don't like this site. Just in case I lost my way in there.
 ||quora.com/ajax/batched_log_POST$important
@@ -120,33 +129,33 @@ answers.yahoo.com###yset-upsell-div
 !-------------------------------Wikia filters-------------------------------!
 
 ||fandom.wikia.com^$important
-
-wikia.com##.wikia-ad
-wikia.com###RECIRCULATION_RAIL
-
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
+||dev.wikia.com/index.php?title=SocialIcons$script,important
+||wikia.com/wikia.php?controller=JSMessages$script,important
+/page_share_js
 /captcha_js$script,important,domain=wikia.com
 /visit_source_js$script,important,domain=wikia.com
 /wikia_in_your_lang_js$script,important,domain=wikia.com
 /community_page_entry_point_js$script,domain=wikia.com,important
 /insights_module_js$script,domain=wikia.com,important
-||dev.wikia.com/index.php?title=SocialIcons$script,important
-||wikia.com/wikia.php?controller=JSMessages$script,important
 *controller=Optimizely*
-/page_share_js
 
 !For what purpose? and how is it bypassing uMatrix?
 ||google.com/recaptcha$important,domain=wikia.com
+
+wikia.com##.wikia-ad
+wikia.com###RECIRCULATION_RAIL
+wikia.com##.module.community-page-entry-point-module
 
 !I don't like the huge footer
 wikia.com##.wds-global-footer
 wikia.com###WikiaFooter
 
-! looks like they changed the layout a bit. here's the current one (as of 2016-11-19)
+! looks like they changed the layout a bit. here's the current one (as of 2016-11-20)
 wikia.com##.wds-global-navigation__logo
 wikia.com##.wds-global-navigation__logo-fandom
 wikia.com##.wds-is-games.wds-global-navigation__link
@@ -209,12 +218,6 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 
-! options menu gets blocked due to a filter in ABP Japanese list 
-@@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
-@@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
-@@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
-
-
 !-----------------------------------Misc------------------------------------!
 
 ##[class$="-ads"]
@@ -225,6 +228,7 @@ www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
 giphy.com##.festive-mode-toggle
 reddit.com##.hohoho-header
+wordpress.com###wordads-preview-parent
 
 /forbes_welcome.js
 raven.js^$important
@@ -235,6 +239,8 @@ raven.min.js^$important
 /metrics/s_code*$script,important
 ||github.com$websocket
 ^analytics.
+!not sure what it does
+||github.com/_private/browser/errors$important
 
 ! kys
 ||scribd.com^
@@ -264,13 +270,16 @@ boards.4chan.org##[class^="ad-"]
 !---------------------------------------------------------------------------!
 
 ! boorus and stuff 
+! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
 
 gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
+gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
+||gelbooru.com/script/application.js.php$important
 
 ! to unblock translation bubbles etc
 @@||gelbooru.com/script/application.js?
@@ -314,6 +323,12 @@ fc2.com###fc2_bottom_bnr
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
+
+! options menu gets blocked due to a filter in ABP Japanese list 
+! Note: Exceptions are prone to abuse... use as little as possible.
+!@@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
+!@@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
+!@@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 
 !---------------------------------------------------------------------------!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
