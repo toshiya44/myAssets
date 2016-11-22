@@ -1,6 +1,6 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-20
+!Date: 2016-11-21
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -11,6 +11,7 @@
 !---------------------------------------------------------------------------!
 !---------------------------------------------------------------------------!
 
+||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
@@ -88,7 +89,9 @@
 ||x10host$important
 ||opnlttr.com$important
 ||scam.com$important
-
+||decenthat.com$important
+||fastly.net/ad$script,important
+||moat.com$important
 
 !---------------------------------------------------------------------------!
 
@@ -103,6 +106,8 @@
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||imasdk.googleapis.com$important
+||plus.google.*^$third-party,important
+||apis.google.com/js/plusone.js
 
 ! 2016-10-10
 answers.com###video_universal-0_display
@@ -136,6 +141,7 @@ answers.yahoo.com###yset-upsell-div
 ||wikia.com/wikia.php?controller=Optimizely
 ||dev.wikia.com/index.php?title=SocialIcons$script,important
 ||wikia.com/wikia.php?controller=JSMessages$script,important
+||spotlights-revive.wikia.net/spc.php$important
 /page_share_js
 /captcha_js$script,important,domain=wikia.com
 /visit_source_js$script,important,domain=wikia.com
@@ -214,9 +220,15 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||fbcdn.*^$third-party,important,domain=~facebook.com
 ||twitter.com^$third-party,important
 ||twimg.com^$third-party,important,domain=~twitter.com
-||plus.google.*^$third-party,important
+
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
+||tumblr.com^$third-party,important,domain=~media.tumblr.com
+||vk.com^$third-party,important
+||linkedin.com^$third-party
+||licdn.com^$domain=~linkedin.com
+||mixi.jp^$third-party,important
+||i.ntere.st^$third-party,important
 
 !-----------------------------------Misc------------------------------------!
 
@@ -227,8 +239,10 @@ www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
 giphy.com##.festive-mode-toggle
-reddit.com##.hohoho-header
 wordpress.com###wordads-preview-parent
+
+reddit.com##.hohoho-header
+||redditstatic.com/moat$script,important
 
 /forbes_welcome.js
 raven.js^$important
@@ -253,6 +267,10 @@ discordapp.com##.message-group-blocked
 
 ! fingerprinting using svg script?
 /svg4everybody$script
+
+! easylist messed up
+@@||adguard.com/filter-rules.html
+@@||adguard.com/en/filter-rules.html
 
 !---------------------------------------------------------------------------!
 
@@ -323,6 +341,7 @@ fc2.com###fc2_bottom_bnr
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
 !wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
+
 
 ! options menu gets blocked due to a filter in ABP Japanese list 
 ! Note: Exceptions are prone to abuse... use as little as possible.
