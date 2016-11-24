@@ -11,7 +11,8 @@ Get **uBlock Origin** from **[gorhill's github repository](https://github.com/go
 Disqus is a popular blog comment hosting service. The purpose of the Disqus placeholder filter is to prevent Disqus from loading on it's own. Doing so will load pages faster and serve to increase your privacy as well. gorhill made it some time ago, I hope it gets integrated into uBlock...
 To use it, you can simply copy paste the contents into your "My Filters" tab or add the list just like you add custom filters via URL. You can find more information in **[gorhill's gists](https://gist.github.com/gorhill)**.
 
-Recommended browser: **Mozilla Firefox**
+Recommended browser: **Firefox** (Dev-edition, Palemoon, Nightly: Any opensource maintained fork will do)
+Recommended add-ons: uBlock Origin, uMatrix, Greasemonkey, NoScript.
 
 It is highly recommended that you start to use [uMatrix](https://github.com/gorhill/uMatrix), another extension by the same develeoper, after you get the hang of using uBlock Origin. It gives you more control over your use of the internet.
 
