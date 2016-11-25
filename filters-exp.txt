@@ -1,6 +1,6 @@
 !Title: Toshiya's Filter List - Experimental
 !Author: Toshiya
-!Date: 2016-11-21
+!Date: 2016-11-24
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -92,6 +92,10 @@
 ||decenthat.com$important
 ||fastly.net/ad$script,important
 ||moat.com$important
+||bitcoinchain.com$important,third-party
+||coinser.in$script,important
+||alxsite.com$important
+||alxsite.com$important,popup
 
 !---------------------------------------------------------------------------!
 
@@ -140,14 +144,14 @@ answers.yahoo.com###yset-upsell-div
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 ||dev.wikia.com/index.php?title=SocialIcons$script,important
-||wikia.com/wikia.php?controller=JSMessages$script,important
+!||wikia.com/wikia.php?controller=JSMessages$script,important
 ||spotlights-revive.wikia.net/spc.php$important
 /page_share_js
 /captcha_js$script,important,domain=wikia.com
 /visit_source_js$script,important,domain=wikia.com
 /wikia_in_your_lang_js$script,important,domain=wikia.com
 /community_page_entry_point_js$script,domain=wikia.com,important
-/insights_module_js$script,domain=wikia.com,important
+!/insights_module_js$script,domain=wikia.com,important
 *controller=Optimizely*
 
 !For what purpose? and how is it bypassing uMatrix?
@@ -177,6 +181,7 @@ myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
+myanimelist.net##.btn-mal-service
 myanimelist.net###footer-block > .footer-link-icon-block
 myanimelist.net###headerSmall > .banner-header-anime-straming
 
@@ -230,6 +235,7 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||mixi.jp^$third-party,important
 ||i.ntere.st^$third-party,important
 
+
 !-----------------------------------Misc------------------------------------!
 
 ##[class$="-ads"]
@@ -271,6 +277,16 @@ discordapp.com##.message-group-blocked
 ! easylist messed up
 @@||adguard.com/filter-rules.html
 @@||adguard.com/en/filter-rules.html
+
+/assets/css/social-likes_classic.css$important
+/Hashing24_500x400/index.html$important
+/Hashing24_373x369/index.html$important
+||cointelegraph.com/assets/js/script.js$script,important
+||cointelegraph.com/embed$important
+||cointelegraph.com/storage/uploads/view$image,first-party
+cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
+cointelegraph.com###popup-wagga
+cointelegraph.com##.in.fade.modal-backdrop
 
 !---------------------------------------------------------------------------!
 
