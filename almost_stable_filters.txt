@@ -1,144 +1,166 @@
-!Title: My Filters - Almost Stable
-!Author: Toshiya
-!Version: 0.0.0.0
-!This filter list is for mostly for my personal use.
-!I'm sure a lot of the filters here will actually break some useful sites.
-!Please be cautious and check ublock's logger to see what is getting filtered out,
-!and comment out any problamatic filter.
-!Really, don't use this list as-is. Please. Use only the filters you're interested in.
-!You might find some useful stuff like the cosmetic filters for MAL. 
+! Title: Toshiya's Tracking and Clutter Filters
+! Author: Toshiya
+! Last updated: 2016-11-26
+! This filter list is for mostly for my personal use.
+! I'm sure a lot of the filters here will actually break some useful sites.
+! Please be cautious and check ublock's logger to see what is getting filtered out,
+! and comment out any problamatic filter.
+! I repeat, don't use this list as-is. Please. Use only the filters you're interested in.
+! You might find some useful stuff like the cosmetic filters for MAL. 
+! Almost every network filters here are marked "Important" because filters made by ABP etc. often
+! whitlists them for reasons I don't care.
+! Currently using uMatrix to mass filter third-party stuff.
 
 !-----------------------------------------------------------------------------------!
 !####### This the most stable list so far. It doesn't break any sites I use. #######!
 !-----------------------------------------------------------------------------------!
 
+||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
-||104.198.198.188/*$important
+||104.198.198.188$important
 ||ad-arata.com/*$important
 ||ads.servebom.com/*$important
 ||akismet.com/*$important
 ||danshihack.com/*$important
 ||angelfire.com/*$important
 ||bit.ly/*$important
-||sh.st/*$important
 ||embed.ly/*$important
+||sh.st/*$important
 ||drivethelife.com/*$important 
-||echobot.tk/*$important 
-||eightforums.com/*$important
+||echobot.tk/*$important
 ||fiverr.com/*$important
 ||fiverrcdn.com/*$important
 ||fukugan.com/*$important
-||www.ghacks.net/*$important
 ||hako.re/*$important
 ||icnerd.com/*$important
 ||lepinsar.com/*$important
 ||licensebuttons.net/*$important
-||md5file.com/*$important
-||pcauthority.com.au/*$important
-||quantserve.com/*$important
-||www.richdadregistrations.com/*$important
+||quantserve.com$important
+||richdadregistrations.com/*$important
 ||skimresources.com/*$important
 ||solvemedia.com/*$important
 ||track282938.com/*$important
-||uvcdn.com/*$important
-||uservoice.com/*$important
 ||vistax64.com/*$important
 ||vskart.in/*$important
 ||zig.iffy.studio/*$important
-||zkcdn.net/*$important
-||curse.com/*$important
 ||socdm.com/*$important
 ||scorecardresearch.com^$important
 ||ora.tv^$third-party
 ||zkcdn.net$important
+||novel44.blogspot.in/*
 ||msdesignbd.com^$important
 ||sportsinteraction.com^$important
 ||usswrite.com^$important
 ||mp3juices.cc/img^$important
 ||mp3juices.cc/pa/h/a.html$subdocument
-||add0n.com/*$important
 ||dictionary.com/proxy$important
-||redditenhancementsuite.com/*$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
-||twitter.com^$third-party,important
-||facebook.*^$third-party,important
 ||paypalobjects.com^$third-party,important
 ||paypal.com^$third-party,important
 ||fullstory.*$important
 ||getsentry.com$important
 ||newrelic.com^$important
+||nr-data.net*$important
 ||optimizely.com$important
 ||speed.wikia.net^$important
 ||qualaroo.com$important
 ||onesite.com$important
 ||wikia-beacon.com$important
+||owlads.io$important
+||i.po.st$important
+||gaiaonline.com$important
+||vacwrite.com$important
+||yahoo.com$third-party,important
+||sharethis.com$third-party,important
+||exoclick.com$important
+||erito.com^$important
+||slotozilla.*$third-party,important
+||newsinc.com^$third-party
+||2mdn.net$important
+||trb.com$important
+||everesttech.net$important
+||iplogger.org$important
+||akamai.$third-party,important
+||akamaihd.$third-party,important
+||anonymousdemographics.com$important
+||adnium.com$important
+||4uvjosuc.com$important
+||ccbill.com$important
+||x10host$important
+||opnlttr.com$important
+||scam.com$important
+||decenthat.com$important
+||fastly.net/ad$script,important
+||moat.com$important
+||bitcoinchain.com$important,third-party
+||coinser.in$script,important
+||alxsite.com$important
+||alxsite.com$important,popup
+||ravenjs.com^$third-party
 
 !---------------------------------------------------------------------------!
 
 !--Google things--!
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
-
 ||google-analytics.*$important
-||google.*/searchdomaincheck$important
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||google.*$beacon,important
 */searchdomaincheck$important
+||safebrowsing.google.com$important
+||safebrowsing-cache.google.com$important
+||imasdk.googleapis.com$important
+||plus.google.*^$third-party,important
+||apis.google.com/js/plusone.js
 
 ! 2016-10-10
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
-||i.imgur.com$inline-script,first-party,important
-||imgur.com/gallery/hot/viral$important
-||imgur.com/gallery/hot$important
-||s.imgur.com/min/runSlots.js$script,importan
-||s.imgur.com/min/react15.js$script,importantt
-||s.imgur.com/min/advertising.js$script,important
+
+||imgur.com/min/runSlots.js$script,important
+||imgur.com/min/advertising.js$script,important
+||imgur.com$websocket,important
 
 ! I don't like this site. Just in case I lost my way in there.
 ||quora.com/ajax/batched_log_POST$important
 ||quora.com/security_reports$important
-||connect.facebook.net$important,third-party
-||quora.com/webnode2/server_call_POST$important
-||quora.com/up/*/updates$important
-||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
 !-------------------------------Wikia filters-------------------------------!
 
-||wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
-||wikia.com###globalNavigation > .global-navigation-container > .table-cell.wikia-logo-container > .final-url.wikia-logo[href="http://www.wikia.com/fandom"]
-||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
-||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
-||wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
-||wikia.com###RECIRCULATION_RAIL
+||fandom.wikia.com^$important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
-
-! looks like they changed the layout a bit. here's the current one (as of 2016-10-16)
-! figured that it works without writing the wikia.com part 
-
-###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo
-###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__logo > .wds-global-navigation__logo-fandom
-###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-games.wds-global-navigation__link
-###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-movies.wds-global-navigation__link
-###globalNavigation > .wds-global-navigation__content-bar > .wds-global-navigation__links-and-search > .wds-is-tv.wds-global-navigation__link
-
-! I don't understand what these are.
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
-/facebook_client_fbtags_js
-/page_share_js
+||dev.wikia.com/index.php?title=SocialIcons$script,important
+||spotlights-revive.wikia.net/spc.php$important
+*controller=Optimizely*
+
+!For what purpose? and how is it bypassing uMatrix?
+||google.com/recaptcha$important,domain=wikia.com
+
+wikia.com##.wikia-ad
+wikia.com###RECIRCULATION_RAIL
+wikia.com##.module.community-page-entry-point-module
 
 !I don't like the huge footer
-##.wds-global-footer
+wikia.com##.wds-global-footer
+wikia.com###WikiaFooter
+
+! looks like they changed the layout a bit. here's the current one (as of 2016-11-20)
+wikia.com##.wds-global-navigation__logo
+wikia.com##.wds-global-navigation__logo-fandom
+wikia.com##.wds-is-games.wds-global-navigation__link
+wikia.com##.wds-is-movies.wds-global-navigation__link
+wikia.com##.wds-is-tv.wds-global-navigation__link
 
 !--------------------------------MAL filters--------------------------------!
 
@@ -149,119 +171,149 @@ myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
+myanimelist.net##.btn-mal-service
 myanimelist.net###footer-block > .footer-link-icon-block
 myanimelist.net###headerSmall > .banner-header-anime-straming
-||cdn.myanimelist.net/images/stream_banner/*
+
+||myanimelist.net/log/bot_filter.php$xmlhttprequest
 ||myanimelist.net/static/logging.html$important
-||myanimelist.cdn-dena.com/signature/
+||myanimelist.net/manga_translation*$important
+||myanimelist.net/service-worker.js$important
+||myanimelist.net/images/stream_banner/*
+||myanimelist.cdn-dena.com/images/footer$image,important
+||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.cdn-dena.com/signature/*
 
-!---------------------------------------------------------------------------!
+!---------------------------------social-----------------------------------!
+! Remove third-party ""social networking"" sites.
 
-! Removing junk from a weather site
-www.theweathernetwork.com###cbc_widget_container
-www.theweathernetwork.com###news-slider
-www.theweathernetwork.com###sidebar
-www.theweathernetwork.com###main-footer
-www.theweathernetwork.com###gallery
-www.theweathernetwork.com###news
-www.theweathernetwork.com###map-view
-www.theweathernetwork.com###videos_brightcove-popular-right-now
-www.theweathernetwork.com###leaderboard
-www.theweathernetwork.com###fby-tab-6089
-www.theweathernetwork.com##.toolbar
-www.theweathernetwork.com###main-header
-www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
-www.theweathernetwork.com###editors_choice_news
+! it seems facebook keeps updating their site, so filters aren't working very well...
+facebook.com###build_audience
+facebook.com###pages_manager_boosted_website_card
+facebook.com###aymt_homepage_panel_tip
+facebook.com###pagelet_ego_pane
+facebook.com###GroupsRHCSuggestionSection
+facebook.com###fbSearchResultsBox
+facebook.com###megaphone_story_3012
+facebook.com###mobile_mirror_banner
+facebook.com##div.pagelet-group#pagelet_advertiser_panel
+facebook.com##div#pagelet_rhc_footer
+facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
+facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
+facebook.com##div.pagelet-group#pagelet_ego_pane
+||facebook.com/ajax/typeahead/record_basic_metrics.php$important
+/facebook_client_fbtags_js$third-party
+/facebook_client_xfbml_js$third-party
 
-!---------------------------------------------------------------------------!
+||facebook.*^$third-party,important
+||fbcdn.*^$third-party,important,domain=~facebook.com
+||twitter.com^$third-party,important
+||twimg.com^$third-party,important,domain=~twitter.com
 
-! 2016-05-26 it seems facebook keeps updating their site, so filters aren't working very well
-www.facebook.com###build_audience
-www.facebook.com###pages_manager_boosted_website_card
-www.facebook.com###aymt_homepage_panel_tip
-www.facebook.com###pagelet_ego_pane
-www.facebook.com###GroupsRHCSuggestionSection
-www.facebook.com###fbSearchResultsBox
-www.facebook.com###megaphone_story_3012
-www.facebook.com###mobile_mirror_banner
-www.facebook.com##div.pagelet-group#pagelet_advertiser_panel
-www.facebook.com##div#pagelet_rhc_footer
-www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
-www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
-www.facebook.com##div.pagelet-group#pagelet_ego_pane
+||pinterest.com^$third-party,important
+||instagram.com^$third-party,important
+||tumblr.com^$third-party,important,domain=~media.tumblr.com
+||vk.com^$third-party,important
+||linkedin.com^$third-party
+||licdn.com^$domain=~linkedin.com
+||mixi.jp^$third-party,important
+||i.ntere.st^$third-party,important
 
-! Misc
-www.4shared.com###content > .centered > .d1AdsWrapper
+!-----------------------------------Misc------------------------------------!
+
+##[class$="-ads"]
 www.4shared.com##.space-3260
-*/forbes_welcome.js
 www.strawpoll.me##.featured
 www.bloomberg.com##bb-mini-player
 web2.0calc.com##.altad
+wordpress.com###wordads-preview-parent
+||redditstatic.com/moat$script,important
+
 raven.js^$important
 raven.min.js^$important
+*security-i0y8kg*$important
+/adobe_audience_manager$important
+/metrics/s_code_trb.js$script,important
+/metrics/s_code*$script,important
 
-! kys
-https://www.scribd.com/*
+! fingerprinting using svg script?
+/svg4everybody$script
+
+! easylist messed up
+@@||adguard.com/filter-rules.html
+@@||adguard.com/en/filter-rules.html
+
+/assets/css/social-likes_classic.css$important
+/Hashing24_500x400/index.html$important
+/Hashing24_373x369/index.html$important
+||cointelegraph.com/assets/js/script.js$script,important
+||cointelegraph.com/embed$important
+||cointelegraph.com/storage/uploads/view$image,first-party
+cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
+cointelegraph.com###popup-wagga
+cointelegraph.com##.in.fade.modal-backdrop
+
+||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 
 !---------------------------------------------------------------------------!
 
-! 2016-07-29  boards.4chan.org
-boards.4chan.org##body > .center:nth-of-type(10)
-boards.4chan.org##body > .center:nth-of-type(4) > div
-boards.4chan.org##body > .center:nth-of-type(4)
-boards.4chan.org##.center
+! 4chan filters 
 boards.4chan.org##.boardBanner
+boards.4chan.org##.adg-rects
+boards.4chan.org##.ad-cnt.center.topad
+boards.4chan.org##.center.middlead
+boards.4chan.org##[class^="ad-"]
+||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/49vZhQlAEyk$subdocument
-
-! 2016-07-31, 5:55:37 PM http://kissanime.to
-kissanime.to###adsIfrme6
-kissanime.to###adsIfrme8
-kissanime.to###adsIfrme7
-kissanime.to###adsIfrme10
-kissanime.to##.divCloseBut
-||kissanime.*/ads^$important
+@@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 
 !---------------------------------------------------------------------------!
 
 ! boorus and stuff 
-! I haven't checked those gelbooru filters in a while...
-! wew. shady sites
+! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
 
-||isshiki.donmai.us/*$important
-gelbooru.com###post-list > .sidebar > .sidebar4.sidebar2 > center > iframe
-gelbooru.com###post-list > .content > center > div
-gelbooru.com###right-col > div:nth-of-type(2) > div:nth-of-type(6)
-gelbooru.com###post-view > .sidebar > .sidebar4.sidebar2 > center > .sidebar3 > iframe
+gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
+danbooru.donmai.us###upgrade-account-notice
+gelbooru.com##div[style*="width:1000px"]:has(script)
+
+||isshiki.donmai.us$important,domain=danbooru.donmai.us
+||gelbooru.com$script,subdocument
+||gelbooru.com/script/application.js.php$important
+
+! to unblock translation bubbles etc
+@@||gelbooru.com/script/application.js?
+
 hitomi.la##.container > .top-content > .hitomi-horizontal
 hitomi.la##.container > .hitomi-vertical
 hitomi.la##.container > .content > .hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js
 ||hitomi.la/hitomi-vertical.js
+||hitomi.la/hitomi.js
+
 saucenao.com##img[alt="J-List!"]
 www.pixiv.net##a[href^="/premium.php"]
+www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+/pre-login.min.js$script,domain=www.pixiv.net
 
 ! 2016-07-23 mangastream.com
-||mangastream.com/assets/img/block_sky_dark.png$image
-||mangastream.com##.main-body > .alert-success.alert
-||mangastream.com/assets/img/block_sky_dark.png$image
-mangastream.com##.tip
-mangastream.com##.main-body > .tips > .row
 ||raw.senmanga.com/media/img/block_square.png$image
 
-! for sites like http://mahayoung.blog106.fc2.com/
-###fc2_bottom_bnr
+! fc2 site banners
+fc2.com###fc2_bottom_bnr
 
-!---------------shitty sites-----------------------!
-
+!---------------------------------------------------------------------------!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
-! The so called "Free Software Download" site are 120% filled with malware
+! The so called "Free Software Download" sites are 120% filled with malware
+! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
 
-||tucows.com/*$important
-||filehippo.com/*$important
-||cnet.com/*$important
+||tucows.com/$important
+||filehippo.com/$important
+||download.cnet.com^$important
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
 
 ! Always go FOSS
+!###################################END#####################################!
