@@ -1,6 +1,8 @@
-!Title: My Filters - Annoyance 
-!Removing things that annoyed me, but might not be relevant enough for the general filter.
-!this list is not maintained.
+! Title: My Filters - Annoyance 
+! Removing things that annoyed me, but might not be relevant enough for the general filter.
+! this list is not maintained and no support is availble.
+
+!---------------------------------------------------------------------------!
 
 www.theweathernetwork.com###cbc_widget_container
 www.theweathernetwork.com###news-slider
@@ -39,11 +41,18 @@ www.theweathernetwork.com###editors_choice_news
 ||twnmm.com/*/coffee-break.css$important
 ||twnmm.com/*/video-gallery.css$important
 
+!---------------------------------------------------------------------------!
+
+!@@||graph.facebook.com$script,domain=www.facebook.com
 ||facebook.com/*kappa*$important
 ||facebook.com/ads$important
+!@@||graph.facebook.com/insights?access_token=*$first-party
 
 ||google.com$domain=myanimelist.net,important
 ||redditenhancementsuite.com/*$important
 github.com##.js-mobile-preference-form
 
 www.youtube.com###feed
+boards.4chan.org###boardNavDesktopFoot
+reddit.com##.res-show-link
+reddit.com##.hohoho-header
