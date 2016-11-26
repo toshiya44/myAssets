@@ -8,3 +8,11 @@ https://raw.githubusercontent.com/toshiya44/Custom-Filters-for-uBlock/master/dis
 https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/modified_abp_jpf.txt
 https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/abp-jp-whlist.txt
 https://github.com/toshiya44/Custom-Filters-for-uBlock/raw/master/imports/abp-jp-fragment.txt
+
+! adguard https://adguard.com/en/filters.html
+https://adguard.com/en/filter-rules.html?id=1
+https://adguard.com/en/filter-rules.html?id=3
+https://adguard.com/en/filter-rules.html?id=5
+https://adguard.com/en/filter-rules.html?id=7
+https://adguard.com/en/filter-rules.html?id=14
+https://adguard.com/en/filter-rules.html?id=15
