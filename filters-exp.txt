@@ -1,6 +1,6 @@
-!Title: Toshiya's Filter List - Experimental
-!Author: Toshiya
-!Date: 2016-11-26
+! Title: Toshiya's Filter List - Experimental
+! Author: Toshiya
+! Date: 2016-11-27
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -46,10 +46,10 @@
 ||scorecardresearch.com^$important
 ||ora.tv^$third-party
 ||zkcdn.net$important
-||novel44.blogspot.in/*
 ||msdesignbd.com^$important
 ||sportsinteraction.com^$important
 ||usswrite.com^$important
+||usswrite.com^$important,popup
 ||mp3juices.cc/img^$important
 ||mp3juices.cc/pa/h/a.html$subdocument
 ||dictionary.com/proxy$important
@@ -70,6 +70,7 @@
 ||i.po.st$important
 ||gaiaonline.com$important
 ||vacwrite.com$important
+||vacwrite.com$important,popup
 ||yahoo.com$third-party,important
 ||sharethis.com$third-party,important
 ||exoclick.com$important
@@ -97,6 +98,81 @@
 ||alxsite.com$important
 ||alxsite.com$important,popup
 ||ravenjs.com^$third-party
+||pagefair.*$script,important
+||cdn.mxpnl.com$important
+||4dsply.com$important
+
+
+!-----------------------------------Misc------------------------------------!
+
+##[class$="-ads"]
+www.4shared.com###content > .centered > .d1AdsWrapper
+www.4shared.com##.space-3260
+www.strawpoll.me##.featured
+www.bloomberg.com##bb-mini-player
+web2.0calc.com##.altad
+wordpress.com###wordads-preview-parent
+answers.com###video_universal-0_display
+answers.com###video_universal-0_caption
+answers.yahoo.com###yset-upsell-div
+
+||i.imgur.com$inline-script,important
+||imgur.com/gallery/hot$important
+||imgur.com/min/runSlots.js$script,important
+||imgur.com/min/advertising.js$script,important
+||imgur.com$websocket,important
+
+! I don't like this site. Just in case I lost my way in there.
+||quora.com/ajax/batched_log_POST$important
+||quora.com/security_reports$important
+||quora.com/webnode2/server_call_POST$important
+||quora.com/up/*/updates$important
+||quora.com/up$important
+||quora.com/ajax/log_errors_3RD_PARTY_POST$important
+
+||redditstatic.com/moat$script,important
+
+^analytics.
+/forbes_welcome.js
+raven.js^$important
+raven.min.js^$important
+*security-i0y8kg*$important
+/adobe_audience_manager$important
+/metrics/s_code_trb.js$script,important
+/metrics/s_code*$script,important
+||github.com$websocket
+!not sure what it does
+||github.com/_private/browser/errors$important
+
+! Hides the blocked message button in discord
+discordapp.com##.message-group-blocked
+
+! Curse logs your IP
+||curse.com^$important
+
+! fingerprinting using svg script?
+/svg4everybody$script
+
+! easylist messed up
+@@||adguard.com/filter-rules.html
+@@||adguard.com/en/filter-rules.html
+
+/assets/css/social-likes_classic.css$important
+/Hashing24_500x400/index.html$important
+/Hashing24_373x369/index.html$important
+||cointelegraph.com/assets/js/script.js$script,important
+||cointelegraph.com/embed$important
+||cointelegraph.com/storage/uploads/view$image,first-party
+cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
+cointelegraph.com###popup-wagga
+cointelegraph.com##.in.fade.modal-backdrop
+
+||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+
+||mediafire.com/blank.html$subdocument,first-party,important
+||mediafire.com/blank.html$inline-script,first-party,important
+||mediafire.com/helper_01.swf$object,important
+||mediafire.com/templates/linkto$important
 
 !---------------------------------------------------------------------------!
 
@@ -113,28 +189,10 @@
 ||imasdk.googleapis.com$important
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js
-
-! 2016-10-10
-answers.com###video_universal-0_display
-answers.com###video_universal-0_caption
-answers.yahoo.com###yset-upsell-div
-
-||i.imgur.com$inline-script,important
-||imgur.com/gallery/hot$important
-||imgur.com/min/runSlots.js$script,important
-||imgur.com/min/advertising.js$script,important
-||imgur.com$websocket,important
-
-! I don't see album download option when this is blocked...
-!||s.imgur.com/min/react15.js$script,important
-
-! I don't like this site. Just in case I lost my way in there.
-||quora.com/ajax/batched_log_POST$important
-||quora.com/security_reports$important
-||quora.com/webnode2/server_call_POST$important
-||quora.com/up/*/updates$important
-||quora.com/up$important
-||quora.com/ajax/log_errors_3RD_PARTY_POST$important
+||translate.google.com/translate_a/element.js$important,third-party
+||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
+||google.*/xjs/_/js*$script,important
+||googlesyndication.com$script,important
 
 !-------------------------------Wikia filters-------------------------------!
 
@@ -193,7 +251,6 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/images/footer$image,important
 ||myanimelist.cdn-dena.com/images/membership$important
-||myanimelist.cdn-dena.com/images/membership$important
 ||myanimelist.cdn-dena.com/signature/*
 ! what are you doing here?
 ||google.com$domain=myanimelist.net,important
@@ -235,60 +292,6 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ||licdn.com^$domain=~linkedin.com
 ||mixi.jp^$third-party,important
 ||i.ntere.st^$third-party,important
-
-
-!-----------------------------------Misc------------------------------------!
-
-##[class$="-ads"]
-www.4shared.com###content > .centered > .d1AdsWrapper
-www.4shared.com##.space-3260
-www.strawpoll.me##.featured
-www.bloomberg.com##bb-mini-player
-web2.0calc.com##.altad
-giphy.com##.festive-mode-toggle
-wordpress.com###wordads-preview-parent
-
-||redditstatic.com/moat$script,important
-
-/forbes_welcome.js
-raven.js^$important
-raven.min.js^$important
-*security-i0y8kg*$important
-/adobe_audience_manager$important
-/metrics/s_code_trb.js$script,important
-/metrics/s_code*$script,important
-||github.com$websocket
-^analytics.
-!not sure what it does
-||github.com/_private/browser/errors$important
-
-! kys
-||scribd.com^
-
-! Hides the blocked message button in discord
-discordapp.com##.message-group-blocked
-
-! Curse logs your IP
-||curse.com^$important
-
-! fingerprinting using svg script?
-/svg4everybody$script
-
-! easylist messed up
-@@||adguard.com/filter-rules.html
-@@||adguard.com/en/filter-rules.html
-
-/assets/css/social-likes_classic.css$important
-/Hashing24_500x400/index.html$important
-/Hashing24_373x369/index.html$important
-||cointelegraph.com/assets/js/script.js$script,important
-||cointelegraph.com/embed$important
-||cointelegraph.com/storage/uploads/view$image,first-party
-cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
-cointelegraph.com###popup-wagga
-cointelegraph.com##.in.fade.modal-backdrop
-
-||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 
 !---------------------------------------------------------------------------!
 
@@ -353,18 +356,14 @@ fc2.com###fc2_bottom_bnr
 !||ghacks.net$third-party,important
 ! wildcard may not be a good idea
 !@@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
-!||google.*/xjs/_/js*$script,important
-!wikia.com###mw-content-text > .main-page-tag-rcs > .rcs-container > .alliance-module
-!wikia.com###globalNavigation > .global-navigation-container > .table-cell.wikia-logo-container > .final-url.wikia-logo[href="http://www.wikia.com/fandom"]
-!wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/games"]
-!wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/movies"]
-!wikia.com###globalNavigation > .global-navigation-container > .hubs-links.table-cell > .top-level.cell-link[href="http://fandom.wikia.com/tv"]
-
 ! options menu gets blocked due to a filter in ABP Japanese list 
 ! Note: Exceptions are prone to abuse... use as little as possible.
 !@@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
 !@@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
 !@@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+
+! I don't see album download option when this is blocked...
+!||s.imgur.com/min/react15.js$script,important
 
 !---------------------------------------------------------------------------!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
