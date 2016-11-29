@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-11-28
+! Date: 2016-11-29
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -109,6 +109,9 @@
 ||cnzz.com$important
 ||taboola.com$important
 ||axeso5.com$important
+||mooncklick.com$important
+||mooncklick.com$important,popup
+||bebi.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -185,6 +188,8 @@ cointelegraph.com##.in.fade.modal-backdrop
 
 ||discordapp.com/api/*/track$important
 ||discordapp.com/api/v6/track$xmlhttprequest,first-party,important
+
+||mozilla.org/__cspreport__$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -365,9 +370,10 @@ mangastream.com##.main-body > .tips > .row
 ||raw.senmanga.com/media/img/block_square.png$image
 
 ! http://kissanime.to
+kissanime.to##.divCloseBut
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
-kissanime.to##.divCloseBut
+||kissanime.to/xyz/check.aspx$subdocument,first-party
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
