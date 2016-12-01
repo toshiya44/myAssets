@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-11-29
+! Date: 2016-11-30
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -19,32 +19,32 @@
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
 ||104.198.198.188$important
-||ad-arata.com/*$important
-||ads.servebom.com/*$important
-||akismet.com/*$important
-||danshihack.com/*$important
-||angelfire.com/*$important
-||bit.ly/*$important
-||embed.ly/*$important
-||sh.st/*$important
-||drivethelife.com/*$important 
-||echobot.tk/*$important
-||fiverr.com/*$important
-||fiverrcdn.com/*$important
-||fukugan.com/*$important
-||hako.re/*$important
-||icnerd.com/*$important
-||lepinsar.com/*$important
-||licensebuttons.net/*$important
+||ad-arata.com$important
+||ads.servebom.com$important
+||akismet.com$important
+||danshihack.com$important
+||angelfire.com$important
+||bit.ly$important
+||embed.ly$important
+||sh.st$important
+||drivethelife.com$important 
+||echobot.tk$important
+||fiverr.com$important
+||fiverrcdn.com$important
+||fukugan.com$important
+||hako.re$important
+||icnerd.com$important
+||lepinsar.com$important
+||licensebuttons.net$important
 ||quantserve.com$important
-||richdadregistrations.com/*$important
-||skimresources.com/*$important
-||solvemedia.com/*$important
-||track282938.com/*$important
-||vistax64.com/*$important
-||vskart.in/*$important
-||zig.iffy.studio/*$important
-||socdm.com/*$important
+||richdadregistrations.com$important
+||skimresources.com$important
+||solvemedia.com$important
+||track282938.com$important
+||vistax64.com$important
+||vskart.in$important
+||zig.iffy.studio$important
+||socdm.com$important
 ||scorecardresearch.com^$important
 ||ora.tv^$third-party
 ||zkcdn.net$important
@@ -112,6 +112,8 @@
 ||mooncklick.com$important
 ||mooncklick.com$important,popup
 ||bebi.com$important
+||emetriq.de$important
+||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -127,13 +129,12 @@ answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
 
 ||i.imgur.com$inline-script,important
-||imgur.com/gallery/hot$important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
 ||imgur.com$websocket,important
 ||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 
-! I don't like this site. Just in case I lost my way in there.
+! I have no idea why it makes so many network requests when I'm just sitting on static page.
 ||quora.com/ajax/batched_log_POST$important
 ||quora.com/security_reports$important
 ||quora.com/webnode2/server_call_POST$important
@@ -151,9 +152,8 @@ raven.min.js^$important
 /adobe_audience_manager$important
 /metrics/s_code_trb.js$script,important
 /metrics/s_code*$script,important
+/prod.iqdcontroller.iqdigital$script,important
 
-!not sure what it does
-||github.com$websocket
 ||github.com/_private/browser/errors$important
 
 ! Hides the blocked message button in discord
@@ -165,7 +165,7 @@ discordapp.com##.message-group-blocked
 ! fingerprinting using svg script?
 /svg4everybody$script
 
-! easylist messed up
+! easylist blocks adguard filter list update
 @@||adguard.com/filter-rules.html
 @@||adguard.com/en/filter-rules.html
 
@@ -179,28 +179,28 @@ cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
-||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
-
-||mediafire.com/blank.html$subdocument,first-party,important
-||mediafire.com/blank.html$inline-script,first-party,important
 ||mediafire.com/helper_01.swf$object,important
 ||mediafire.com/templates/linkto$important
 
 ||discordapp.com/api/*/track$important
 ||discordapp.com/api/v6/track$xmlhttprequest,first-party,important
 
+addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
+
+! Please don't phone home behind-the-scene.
+||fasezero.com$important
+||redditenhancementsuite.com$important
 
 ! --------------------------------------------------------------------------- !
 
-! Google things
+! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
 */searchdomaincheck$important
-||google-analytics.*$important
+||google-analytics.*$important,domain=~behind-the-scene
 ||doubleclick.net$important
 ||csi.gstatic.com$important
-||google.*$beacon,important
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||imasdk.googleapis.com$important
@@ -208,18 +208,19 @@ cointelegraph.com##.in.fade.modal-backdrop
 ||apis.google.com/js/plusone.js
 ||translate.google.com/translate_a/element.js$important,third-party
 ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
-||google.*/xjs/_/js*$script,important
 ||googlesyndication.com$script,important
+! what are you doing here?
+||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
 
 ! -------------------------------Wikia filters------------------------------- !
-
+! fandumb
 ||fandom.wikia.com^$important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
-||dev.wikia.com/index.php?title=SocialIcons$script,important
+||wikia.com/index.php?title=SocialIcons$script,important
 ||spotlights-revive.wikia.net/spc.php$important
 
 /page_share_js
@@ -230,16 +231,12 @@ cointelegraph.com##.in.fade.modal-backdrop
 !/insights_module_js$script,domain=wikia.com,important
 *controller=Optimizely*
 
-! For what purpose? and how is it bypassing uMatrix?
-||google.com/recaptcha$important,domain=wikia.com
-
 wikia.com##.wikia-ad
+wikia.com###WikiaFooter
+wikia.com##.wds-global-footer
 wikia.com###RECIRCULATION_RAIL
 wikia.com##.module.community-page-entry-point-module
-
-! I don't like the huge footer
-wikia.com##.wds-global-footer
-wikia.com###WikiaFooter
+wikia.com###ShareEntryPoint
 
 ! looks like they changed the layout a bit. here's the current one (as of 2016-11-20)
 wikia.com##.wds-global-navigation__logo
@@ -252,6 +249,7 @@ wikia.com##.wds-is-tv.wds-global-navigation__link
 
 ! Nice ad placeholders you have there! 
 ! It'd be a shame if someone hides them.
+! Note: have to remove "behind-the-scene" fron whitelists to block service worker.
 
 myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
@@ -269,12 +267,8 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ||myanimelist.cdn-dena.com/images/footer$image,important
 ||myanimelist.cdn-dena.com/images/membership$important
 ||myanimelist.cdn-dena.com/signature/*
-! what are you doing here?
-||google.com$domain=myanimelist.net,important
 
 ! ---------------------------------social----------------------------------- !
-
-! Remove third-party ""social networking"" sites.
 
 ! it seems facebook keeps updating their site, 
 ! so filters aren't working very well...
@@ -292,16 +286,17 @@ www.facebook.com##div#pagelet_rhc_footer
 www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
 www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 www.facebook.com##div.pagelet-group#pagelet_ego_pane
-
+||facebook.com/ads$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
+
+! Remove third-party ""social networking"" sites.
 
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~facebook.com
 ||twitter.com^$third-party,important
 ||twimg.com^$third-party,important,domain=~twitter.com
-
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 ||tumblr.com^$third-party,important,domain=~media.tumblr.com
@@ -320,9 +315,10 @@ boards.4chan.org##.ad-cnt.center.topad
 boards.4chan.org##.center.middlead
 boards.4chan.org##[class^="ad-"]
 4chan.org##script:contains(initAds)
+4chan.org##script:contains(initAdsAG)
+4chan.org##script:contains(adglare)
 ||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/$subdocument,domain=4chan.org
-@@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
 ! --------------------------------------------------------------------------- !
@@ -344,11 +340,11 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ! not sure which one is more effective
-||idanbooru.com*$important
-||idanbooru.com*$important,popup
-||idanbooru.com*$important,document
-||idanbooru.com*$important,subdocument
-||idanbooru.com*$important,inline-script
+||idanbooru.*$important
+||idanbooru.*$important,popup
+||idanbooru.*$important,document
+||idanbooru.*$important,subdocument
+||idanbooru.*$important,inline-script
 
 hitomi.la##.container > .top-content > .hitomi-horizontal
 hitomi.la##.container > .hitomi-vertical
@@ -360,7 +356,7 @@ hitomi.la##.container > .content > .hitomi-horizontal
 saucenao.com##img[alt="J-List!"]
 www.pixiv.net##a[href^="/premium.php"]
 www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-/pre-login.min.js$script,domain=www.pixiv.net
+/pre-login.min.js$script,domain=pixiv.net
 
 ! 2016-07-23 mangastream.com
 mangastream.com##.main-body > .alert-success.alert
@@ -380,7 +376,8 @@ fc2.com###fc2_bottom_bnr
 
 ! --------------------------------------------------------------------------- !
 
-! Various commented out filters, just in case I need them again
+! Various commented out filters, just in case I need them again.
+! Will be removed once I'm sure that they're obsolete.
 ! ||ghacks.net$third-party,important
 ! wildcard may not be a good idea
 ! @@||www.facebook.com/*/options_menu/?button*$xmlhttprequest,first-party
@@ -392,11 +389,19 @@ fc2.com###fc2_bottom_bnr
 ! I don't see album download option when this is blocked...
 ! ||s.imgur.com/min/react15.js$script,important
 ! ||wikia.com/wikia.php?controller=JSMessages$script,important
+! unable to perform image reverse search.
+! ||google.*/xjs/_/js*$script,important
+! can't login with these blocked
+! ||mediafire.com/blank.html$subdocument,first-party,important
+! ||mediafire.com/blank.html$inline-script,first-party,important
+! i don't see this getting triggered anymore for some reason 
+! @@https://www.google.com/recaptcha$subdocument,domain=boards.4chan.org
 
 ! --------------------------------------------------------------------------- !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" sites are 120% filled with malware
 ! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
+! I can't stress this enough.
 
 ||tucows.com/$important
 ||filehippo.com/$important
