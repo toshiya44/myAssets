@@ -1,10 +1,10 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-11-30
+! Date: 2016-12-06
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
-! Almost every network filters here are marked "Important" because filters made by ABP etc. often
+! Almost every network filters here are marked "Important" because filters made by/for ABP etc. often
 ! whitlists them for reasons I don't care.
 ! Currently trying to use uMatrix to mass filter third-party stuff.
 
@@ -114,6 +114,17 @@
 ||bebi.com$important
 ||emetriq.de$important
 ||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+||5.39.27.226*$important
+||kenduktur.com$important
+||clmbtech.com$script,important,third-party
+||gravatar.com^$third-party,important
+||trkgt.com^$important
+||trkgt.com^$document,important
+||otaserve.net$important
+||puserving.com$important
+||exrapidleech.info$important
+||olark.com$script,important
+||juicyads.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -142,6 +153,7 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
+||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
 
 ^analytics.
@@ -181,6 +193,7 @@ cointelegraph.com##.in.fade.modal-backdrop
 
 ||mediafire.com/helper_01.swf$object,important
 ||mediafire.com/templates/linkto$important
+|http://$third-party,domain=mediafire.com
 
 ||discordapp.com/api/*/track$important
 ||discordapp.com/api/v6/track$xmlhttprequest,first-party,important
@@ -207,10 +220,18 @@ addons.mozilla.org###promos
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js
 ||translate.google.com/translate_a/element.js$important,third-party
-||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
+||fonts.googleapis.com$stylesheet,important
 ||googlesyndication.com$script,important
-! what are you doing here?
+
+! what are you doing here? Update: most likely to provide captcha service 
+! which gets triggered when there's suspicions of bot activity.
+! I'll keep it for now.
 ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
+||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
+
+! I think, this will break embeded videos.
+||youtube.com*$third-party,important,domain=~google.com
+||ytimg.com*$important,domain=~youtube.com|~google.com
 
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
