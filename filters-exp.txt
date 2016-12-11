@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-06
+! Date: 2016-12-10
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -37,6 +37,7 @@
 ||lepinsar.com$important
 ||licensebuttons.net$important
 ||quantserve.com$important
+||quantcast.comimportant
 ||richdadregistrations.com$important
 ||skimresources.com$important
 ||solvemedia.com$important
@@ -123,8 +124,20 @@
 ||otaserve.net$important
 ||puserving.com$important
 ||exrapidleech.info$important
-||olark.com$script,important
+||olark.com$important
 ||juicyads.com$important
+||inspectlet.com$important
+||techradar.com$important
+||cricbuzz.com$important
+||gadgetsnow.com$important
+||azurewebsites.net$important
+||adglare.net$important
+||owlanalytics.io$important
+||otakumode.com/widget$important,third-party
+||rightstufanime.com$important,third-party
+||rightstufanime.com$important,subdocument
+||rightstufanime.com$popup,important
+||4nn.cx$popup,important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -153,11 +166,15 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
+reddit.com###ad_main_top
+reddit.com##.survey-overlay
+reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
 
 ^analytics.
 /forbes_welcome.js
+/sponsor/click.php
 raven.js^$important
 raven.min.js^$important
 *security-i0y8kg*$important
@@ -205,6 +222,29 @@ addons.mozilla.org###promos
 ||fasezero.com$important
 ||redditenhancementsuite.com$important
 
+||pixel.wp.com$important
+
+||theguardian.com$subdocument,first-party,important
+
+! Much effort
+animenewsnetwork.com##.full-image
+animenewsnetwork.com##.middle-area > div:nth-of-type(1)
+animenewsnetwork.com##.herald-boxes
+animenewsnetwork.com##a[href*="/sponsor/click.php"]
+animenewsnetwork.com##a[href*="4NN.cx"]
+animenewsnetwork.com##a[href*="rightstufanime.com"]
+||animenewsnetwork.com/assets$subdocument,important
+||animenewsnetwork.com/logger.pageperf$xmlhttprequest,important
+||animenewsnetwork.com/javascripts/advertisement.js$important
+||animenewsnetwork.com/assets$xmlhttprequest,first-party
+||animenewsnetwork.com/javascripts/prototype.js$important
+||animenewsnetwork.com/assets$image
+||animenewsnetwork.com/images/s$image,first-party
+! not sure what these are for but the page loads fine without em
+||ajax.googleapis.com/ajax/libs/prototype$script,domain=animenewsnetwork.com,important
+||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
+||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
+
 ! --------------------------------------------------------------------------- !
 
 ! Google, GOOGLE EVERYWHERE
@@ -220,15 +260,15 @@ addons.mozilla.org###promos
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js
 ||translate.google.com/translate_a/element.js$important,third-party
-||fonts.googleapis.com$stylesheet,important
+||fonts.googleapis.com$stylesheet,important,domain=~google.com
 ||googlesyndication.com$script,important
+||googleadservices.com$important
 
 ! what are you doing here? Update: most likely to provide captcha service 
 ! which gets triggered when there's suspicions of bot activity.
 ! I'll keep it for now.
 ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
 ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
-
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
 ||ytimg.com*$important,domain=~youtube.com|~google.com
@@ -294,19 +334,19 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 ! it seems facebook keeps updating their site, 
 ! so filters aren't working very well...
 
-www.facebook.com###build_audience
-www.facebook.com###pages_manager_boosted_website_card
-www.facebook.com###aymt_homepage_panel_tip
-www.facebook.com###pagelet_ego_pane
-www.facebook.com###GroupsRHCSuggestionSection
-www.facebook.com###fbSearchResultsBox
-www.facebook.com###megaphone_story_3012
-www.facebook.com###mobile_mirror_banner
-www.facebook.com##div.pagelet-group#pagelet_advertiser_panel
-www.facebook.com##div#pagelet_rhc_footer
-www.facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
-www.facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
-www.facebook.com##div.pagelet-group#pagelet_ego_pane
+facebook.com###build_audience
+facebook.com###pages_manager_boosted_website_card
+facebook.com###aymt_homepage_panel_tip
+facebook.com###pagelet_ego_pane
+facebook.com###GroupsRHCSuggestionSection
+facebook.com###fbSearchResultsBox
+facebook.com###megaphone_story_3012
+facebook.com###mobile_mirror_banner
+facebook.com##div.pagelet-group#pagelet_advertiser_panel
+facebook.com##div#pagelet_rhc_footer
+facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
+facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
+facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ads$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 /facebook_client_fbtags_js$third-party
@@ -315,12 +355,12 @@ www.facebook.com##div.pagelet-group#pagelet_ego_pane
 ! Remove third-party ""social networking"" sites.
 
 ||facebook.*^$third-party,important
-||fbcdn.*^$third-party,important,domain=~facebook.com
+||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||twitter.com^$third-party,important
-||twimg.com^$third-party,important,domain=~twitter.com
+||twimg.com^$third-party,important,domain=~behind-the-scene|~twitter.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
-||tumblr.com^$third-party,important,domain=~media.tumblr.com
+||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
 ||licdn.com^$domain=~linkedin.com
@@ -352,6 +392,7 @@ chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
 gelbooru.com##div[style*="width:1000px"]:has(script)
 
+||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
@@ -394,6 +435,10 @@ kissanime.to##.divCloseBut
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
+
+! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
+! baka-tsuki.org#@#img[width="88"][height="31"]
+@@||baka-tsuki.org^$generichide
 
 ! --------------------------------------------------------------------------- !
 
