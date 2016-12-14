@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-10
+! Date: 2016-12-14
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -101,7 +101,8 @@
 ||alxsite.com$important,popup
 ||ravenjs.com^$third-party
 ||pagefair.*$script,important
-||cdn.mxpnl.com$important
+||mixpanel.com$important
+||mxpnl.com$important
 ||4dsply.com$important
 ||cdn.bidadx.com$important
 ||gaiaonline.com$important
@@ -114,7 +115,6 @@
 ||mooncklick.com$important,popup
 ||bebi.com$important
 ||emetriq.de$important
-||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||5.39.27.226*$important
 ||kenduktur.com$important
 ||clmbtech.com$script,important,third-party
@@ -138,6 +138,10 @@
 ||rightstufanime.com$important,subdocument
 ||rightstufanime.com$popup,important
 ||4nn.cx$popup,important
+||tapjoy.com$important
+||thankswrite.com$important
+!||p.d.rpts.org$important
+||rpts.org$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -178,6 +182,7 @@ reddit.com###siteTable_organic
 raven.js^$important
 raven.min.js^$important
 *security-i0y8kg*$important
+://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
 /metrics/s_code_trb.js$script,important
 /metrics/s_code*$script,important
@@ -218,32 +223,41 @@ cointelegraph.com##.in.fade.modal-backdrop
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
 
-! Please don't phone home behind-the-scene.
+! to block add-ons' behind-the-scene activity.
 ||fasezero.com$important
 ||redditenhancementsuite.com$important
+||kkapsner.de
 
 ||pixel.wp.com$important
 
 ||theguardian.com$subdocument,first-party,important
 
 ! Much effort
+animenewsnetwork.com##.gutter
 animenewsnetwork.com##.full-image
 animenewsnetwork.com##.middle-area > div:nth-of-type(1)
 animenewsnetwork.com##.herald-boxes
 animenewsnetwork.com##a[href*="/sponsor/click.php"]
 animenewsnetwork.com##a[href*="4NN.cx"]
 animenewsnetwork.com##a[href*="rightstufanime.com"]
+animenewsnetwork.com##iframe[src="javascript:void(0)"]
+!||animenewsnetwork.com$inline-script,important
 ||animenewsnetwork.com/assets$subdocument,important
 ||animenewsnetwork.com/logger.pageperf$xmlhttprequest,important
 ||animenewsnetwork.com/javascripts/advertisement.js$important
 ||animenewsnetwork.com/assets$xmlhttprequest,first-party
 ||animenewsnetwork.com/javascripts/prototype.js$important
-||animenewsnetwork.com/assets$image
 ||animenewsnetwork.com/images/s$image,first-party
 ! not sure what these are for but the page loads fine without em
 ||ajax.googleapis.com/ajax/libs/prototype$script,domain=animenewsnetwork.com,important
 ||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 ||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
+
+! what are these for? i see them in a lot of places.
+||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$script,important
+
+||*/afr.php$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -356,8 +370,8 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
-||twitter.com^$third-party,important
-||twimg.com^$third-party,important,domain=~behind-the-scene|~twitter.com
+||twitter.com^$important,~first-party
+||twimg.com^$~first-party,domain=~behind-the-scene|~twitter.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 ||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
@@ -366,6 +380,8 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||licdn.com^$domain=~linkedin.com
 ||mixi.jp^$third-party,important
 ||i.ntere.st^$third-party,important
+||spot.im$third-party,important
+||chatango.com$third-party,important
 
 ! --------------------------------------------------------------------------- !
 
@@ -404,7 +420,6 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 ! not sure which one is more effective
 ||idanbooru.*$important
 ||idanbooru.*$important,popup
-||idanbooru.*$important,document
 ||idanbooru.*$important,subdocument
 ||idanbooru.*$important,inline-script
 
@@ -416,8 +431,9 @@ hitomi.la##.container > .content > .hitomi-horizontal
 ||hitomi.la/hitomi.js
 
 saucenao.com##img[alt="J-List!"]
-www.pixiv.net##a[href^="/premium.php"]
-www.pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+pixiv.net##.ads-top-info
+pixiv.net##a[href^="/premium.php"]
+pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 
 ! 2016-07-23 mangastream.com
