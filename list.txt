@@ -16,3 +16,12 @@ https://adguard.com/en/filter-rules.html?id=5
 https://adguard.com/en/filter-rules.html?id=7
 https://adguard.com/en/filter-rules.html?id=14
 https://adguard.com/en/filter-rules.html?id=15
+
+! hpHosts 
+https://hosts-file.net/ad_servers.txt
+https://hosts-file.net/exp.txt
+https://hosts-file.net/emd.txt
+https://hosts-file.net/hfs.txt
+https://hosts-file.net/psh.txt
+https://hosts-file.net/mmt.txt
+https://hosts-file.net/hjk.txt
