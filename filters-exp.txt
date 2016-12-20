@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-14
+! Date: 2016-12-19
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -16,6 +16,7 @@
 ||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
+||d3pkae9owd2lcf.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
 ||104.198.198.188$important
@@ -142,10 +143,15 @@
 ||thankswrite.com$important
 !||p.d.rpts.org$important
 ||rpts.org$important
+||superjobs.xyz$important
+||kiosked.com$important
+||bet365.com$important
+||xmaswrite.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
 ##[class$="-ads"]
+crunchyroll.com#@#[class^="ad-"]
 www.4shared.com###content > .centered > .d1AdsWrapper
 www.4shared.com##.space-3260
 www.strawpoll.me##.featured
@@ -187,6 +193,7 @@ raven.min.js^$important
 /metrics/s_code_trb.js$script,important
 /metrics/s_code*$script,important
 /prod.iqdcontroller.iqdigital$script,important
+/js/tracking/ga_initial_visit*.js$script,important
 
 ||github.com/_private/browser/errors$important
 
@@ -259,6 +266,18 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 
 */afr.php?$important
 ?zoneid=
+||*write.com/Redirect*$important
+||*write.com/fp.rb?*$important
+||*write.com/*&referrerUrl=*$important
+||*write.com/*&res=*$important
+||*write.com/*mediafire.com*$important
+
+! Note: Cancer.
+##a[href*="zamimg.com"]
+##a[href*="wowhead.com"]
+wowhead.com##a[href="/premium"]
+||zamimg.com$important
+||wowhead.com$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -414,7 +433,9 @@ gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(trw_domain)
+
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
+||cstats.sankakucomplex.com$important
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
