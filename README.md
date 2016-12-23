@@ -23,3 +23,7 @@ Recommended add-ons: uBlock Origin, uMatrix, Greasemonkey, NoScript.
 It is highly recommended that you start to use [uMatrix](https://github.com/gorhill/uMatrix), another extension by the same develeoper, after you get the hang of using uBlock Origin. It gives you more control over your use of the internet.
 
 #### Note: *uBlock Origin* is NOT the same as *uBlock*.
+... and the many other abomination of forks that support ads/tracking. I have no idea what's the point of that.
+* Adblock Pro - uBO rip off with added analytics hook
+* ADZbuzz - fork that replaces ads with "acceptable ads"
+* Adnauseam - fork similar to ADZbuzz
