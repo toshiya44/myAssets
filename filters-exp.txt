@@ -264,11 +264,12 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 
 */afr.php?$important
 ?zoneid=
-||*write.com/Redirect*$important
-||*write.com/fp.rb?*$important
-||*write.com/*&referrerUrl=*$important
-||*write.com/*&res=*$important
-||*write.com/*mediafire.com*$important
+*write.com/Redirect*$important
+*write.com/fp.rb?*$important
+*write.com/*&referrerUrl=*$important
+*write.com/*&res=*$important
+*write.com/*mediafire.com*$important
+*coolthing.com$important
 
 ! Note: Cancer.
 ##a[href*="zamimg.com"]
