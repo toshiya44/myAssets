@@ -21,7 +21,8 @@
 ||oasgames.com$important
 ||104.198.198.188$important
 ||ad-arata.com$important
-||ads.servebom.com$important
+! ||ads.servebom.com$important
+||servebom.com$important
 ||akismet.com$important
 ||danshihack.com$important
 ||angelfire.com$important
@@ -59,12 +60,12 @@
 ||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
-||paypalobjects.com^$third-party,important
-||paypal.com^$third-party,important
+||paypalobjects.com$third-party,important
+||paypal.com$third-party,important
 ||fullstory.*$important
 ||getsentry.com$important
 ||newrelic.com^$important
-||nr-data.net*$important
+||nr-data.net$important
 ||optimizely.com$important
 ||speed.wikia.net^$important
 ||qualaroo.com$important
@@ -77,9 +78,9 @@
 ||yahoo.com$third-party,important
 ||sharethis.com$third-party,important
 ||exoclick.com$important
-||erito.com^$important
+||erito.com$important
 ||slotozilla.*$third-party,important
-||newsinc.com^$third-party
+||newsinc.com$third-party
 ||2mdn.net$important
 ||trb.com$important
 ||everesttech.net$important
@@ -149,6 +150,8 @@
 ||kiosked.com$important
 ||bet365.com$important
 ||xmaswrite.com$important
+||marketo.*$third-party,important
+||metapelite.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -183,6 +186,8 @@ reddit.com##.survey-overlay
 reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
+||redditmedia.com/ads$subdocument,important
+||amazonaws.com/redditstatic$image,important,third-party
 
 github.com##.js-touch-events.modal-backdrop
 ||github.com/_private/browser/errors$important
@@ -294,6 +299,8 @@ raven.min.js^$important
 *&curl=http//:www.mediafire.com*
 
 ||p.d.*$script
+
+/munchkin.js$important
 
 ! --------------------------------------------------------------------------- !
 
