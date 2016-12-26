@@ -7,13 +7,20 @@
 ! Toshiya: Removed some redundant filters and moved fragment filters to a separate list due to false-positive issues.
 ! Also removed some comments to clean up a little bit.
 ! Note: THIS LIST IS NOT MAINTAINED. Go to the original repository to access the latest list.
+! Last modified/updated: 2016-12-25
 
-! ########## Top Level Domains with path START ##########
+! ########## TLD (Top Level Domain) with path START ##########
+||com^*.asp?*&s=*&v=*&m=$document
 ||com/*.asp?*=nt.v|$document
+||com^*.aspx?*&s=*&v=*&m=$document
 ||com/*.aspx?*=nt.v|$document
+||com^*.htm?*&s=*&v=*&m=$document
 ||com/*.htm?*=nt.v|$document
+||com^*.html?*&s=*&v=*&m=$document
 ||com/*.html?*=nt.v|$document
+||com^*.php?*&s=*&v=*&m=$document
 ||com/*.php?*=nt.v|$document
+
 ||com/jquery/text.$script,third-party
 ||info/*.js?dn=*&isc=$third-party
 ||net/amz/$script,third-party
@@ -21,7 +28,7 @@
 ||ru/rdr/to/$document
 ||ru/rdr/to/$popup
 ||work/w/d/$third-party
-! ---------- Top Level Domains with path END ----------
+! ---------- TLD (Top Level Domain) with path END ----------
 ! 
 ! ########## Domains optionally with path START ##########
 ||46.105.39.177^
@@ -36,9 +43,7 @@
 ||210.155.151.148^
 ||217.19.51.
 !
-! Added malicious IP Addresses reported at http://unixfreaxjp.blogspot.jp/2013/08/ocjp-119kelihos.html 
-! and http://malwaremustdie.blogspot.jp/2013/08/the-quick-report-on-48hours-in-battle.html 
-! by [https://twitter.com/unixfreaxjp @unixfreaxjp] via Changelog wiki, Aug 9, 2013
+! Added malicious IP Addresses reported at http://unixfreaxjp.blogspot.jp/2013/08/ocjp-119kelihos.html and http://malwaremustdie.blogspot.jp/2013/08/the-quick-report-on-48hours-in-battle.html by [https://twitter.com/unixfreaxjp @unixfreaxjp] via Changelog wiki, Aug 9, 2013
 ! START
 ||58.0.83.121^
 ||58.1.146.36^
@@ -74,11 +79,13 @@
 ||219.121.156.187^
 ||223.133.68.174^
 ! END
-
+! Added malicious IP Addresses reported at http://unixfreaxjp.blogspot.jp/2013/08/ocjp-119kelihos.html and http://malwaremustdie.blogspot.jp/2013/08/the-quick-report-on-48hours-in-battle.html by [https://twitter.com/unixfreaxjp @unixfreaxjp] via Changelog wiki, Aug 9, 2013
 !
 ||*-aaa.net^$third-party
+||*-adsterra.com^$document
 ||*-mmm.net^
 ||*-mmm.net^$popup
+||*-terraclicks.com^$document
 ||*adexchange.com^$document
 ||*adexchange.com^$popup
 ||*tab.com/?*&subid=
@@ -243,6 +250,7 @@
 ||actuvoyance.com^
 ||acwebconnecting.com^$third-party
 ||acxiom-online.com^
+||ad-ch.jp^
 ||ad-cloud.jp^$third-party
 ||ad-hatena.jp^
 ||ad-hub.biz^
@@ -257,6 +265,8 @@
 ||ad-sys.com^$third-party
 ||ad-traffic.jp^
 ||ad-trak2.jp^$third-party
+|http:*.ad-v.jp^
+|https:*.ad-v.jp^
 ||ad-ya.net^
 |http:*.ad.ru^$third-party
 |https:*.ad.ru^$third-party
@@ -306,6 +316,7 @@
 ||ad2games.com^$third-party
 ||ad4game.com^
 ||ad4game.com^$popup
+||ad4mat.$third-party
 ||ad6media.fr^
 ||ad6media.fr^$popup
 ||adaccess.$third-party
@@ -346,6 +357,8 @@
 ||adexcite.com^$third-party
 ||adexprt.com^
 ||adextent.com^$third-party
+! Moved to the paranoid subscription, Mar 9, 2013
+! ||adf.ly^$third-party
 ||adfoc.us^$popup
 ||adforce.ru^$third-party
 ||adforgeinc.com^$third-party
@@ -500,6 +513,7 @@
 ||adserver.org^
 ||adserver01.de^$third-party
 ||adserverplus.com^
+! Dropped a third-party option because adwares or malwares open it directly, Apr 2, 2012
 ||adserverpub.com^
 ||adserverpub.com^$popup
 ||adservone.com^$popup
@@ -569,6 +583,7 @@
 ||adultrewardsurvey.com^$popup
 ||adultrewardsurvey.com^$third-party
 ||adurr.com^
+||adv-adserver.com^$third-party
 ||adv-first.ru^
 |http://adv2*.ru^
 |https://adv2*.ru^
@@ -659,6 +674,7 @@
 ||a-img.afpbb.com^
 ||afterdownload.com^$third-party
 ||afy11.net^
+||ag-affiliate.com^$third-party
 ||agag.tw^$third-party
 ||agift-ad.com^$third-party
 ||agilemedia.jp^$third-party
@@ -677,6 +693,8 @@
 ||aiueo.bz^
 ||ajaxcdn.org^
 ||akamaihd.net^$popup
+! Commented out this duplicated filter with /gsd.html?d=$third-party , Jul 26, 2015
+! ||akamaihd.net/gsd.html?
 ||adaptv-a.akamaihd.net^
 ||apiappenableinfo-a.akamaihd.net^
 ||apibrowsesmartne-a.akamaihd.net^
@@ -732,6 +750,8 @@
 ||img00.allabout.co.jp/withabout/
 ||imp.allabout.co.jp^
 ||mtx.allabout.co.jp^
+! False positives with stylesheet, Jan 4, 2013
+! ||pts.allabout.co.jp^
 ||allanalpass.com^
 ||allmyvideos.$third-party
 ||smart.allocine.fr^
@@ -758,6 +778,7 @@
 ||amazonaws.com^$popup
 ||amazonaws.com/*.cetrk.com/
 ||amazonaws.com/*.inspectlet.com/
+||amazonaws.com/*.kissinsights.com/
 ||amazonaws.com/*.kissmetrics.com/
 ||amazonaws.com/*.megacpm.com/
 ||amazonaws.com/*.pagefair.com/
@@ -791,6 +812,7 @@
 ||videosfr.s3.amazonaws.com^
 ||amazon-cornerstone.com^
 ||ameba.jp/adcross/
+||ameba.jp/analytics/
 ||ameba.jp/common_style/js/user/dropdown*$script
 ||act.ameba.jp^
 ||ad.ameba.jp^
@@ -831,6 +853,9 @@
 ||anuntis.info^
 ||info.aol.jp^$third-party
 ||aolcdn.com^*/banner/
+||aolcdn.com^*/beacon.
+||aolcdn.com^*/moat/
+||aolcdn.com/ads/
 ||aolcdn.com/js/mg1.$script
 ||aolcdn.com/js/mg2.$script
 ||aondenamoro.com^
@@ -844,6 +869,7 @@
 ||appgiga.jp/files/*/sample
 ||appgiga.jp/files/*/eb3e7affbcbcddd74b2c6125a008d5f2.jpg
 ||appier.net^
+||apple.com/metrics/
 ||autolinkmaker.itunes.apple.com^$third-party
 ||metrics.apple.com^
 ||securemetrics.apple.com^
@@ -933,6 +959,7 @@
 ||avazudsp.net^$third-party
 ||avenseo.com^$third-party
 ||avenue-des-credits.com^
+||avira.com^$third-party
 ||avulu.com^$popup
 ||aweber.com^
 ||awempire.com^$third-party
@@ -1027,6 +1054,8 @@
 ||bigcommerce.com^$third-party
 ||biglion.ru^$popup
 ||biglion.ru^$third-party
+||biglobe.ne.jp/affiliate/
+||biglobe.ne.jp/beacon/
 ||biglobe.ne.jp/img/bn/
 ||go.biglobe.ne.jp^
 ||bigmining.com^$third-party
@@ -1104,6 +1133,8 @@
 ||bonzuna.com^$popup
 ||boo-box.com^$third-party
 ||boostsaves.com^
+! Moved to the Paranoid subscription to avoid false positives, Feb 1, 2014
+! ||bootstrapcdn.com^$third-party
 ||bop-bop-bam.com^
 ||bouncebidder.com^
 ||bounceexchange.com^$third-party
@@ -1117,6 +1148,7 @@
 ||brazzers.com^$third-party
 ||brealtime.com^$third-party
 ||breedac.com^
+! Note: Probably, blocking the whole domain is too strict, Apr 29, 2012
 ||brightcove.$third-party
 ||brightcove.com/1pix.
 ||brightonclick.com^
@@ -1390,7 +1422,7 @@
 ||collective-media.net^
 ||colpory.com^
 ||adlog.com.com^
-! ||ads.com.com^
+||ads.com.com^
 ||dw.com.com^$third-party
 ||dw-eu.com.com^$third-party
 ||img.com.com/b.$image,object,subdocument
@@ -1433,6 +1465,11 @@
 ||conversionruler.com^$third-party
 ||convertfilesforfree.com^$third-party
 ||convertro.com^$third-party
+! False positive at http://www.youtube.com/oracle reported by @dullneko 2011-10-03
+! => Resolved with whitelists  @@||conviva.com/crossdomain.xml and @@||conviva.com/lpconfig/cfg/ 2011-10-06
+! => Commented out whitelists above because these false positives has gone, somehow 2011-10-11
+! Another false positives at ustream.tv , reported via Issue Report 2011-12-09
+! => Resolved with the past commented out whitelists above 2011-12-09
 ||conviva.com^$third-party
 ||livepass.conviva.com^
 ||banpro.in.coocan.jp^$third-party
@@ -1546,6 +1583,7 @@
 ||dailymotion.com*/masscast/
 ||dailymotion.com/behavior/
 ||dailymotion.com/history/
+||dailymotion.com/logger/
 ||dailymotion.com/sense/
 ||dailymotion.com/track/
 ||sense.dailymotion.com^
@@ -1557,6 +1595,7 @@
 ||darangi.ru^
 ||daredac.com^
 ||dartimyl.com^
+||data-ero-advertising.com^
 ||datacardbar.info^
 ||datafastguru.info^
 ||datamind.ru^$third-party
@@ -1596,6 +1635,10 @@
 ||deobp.com^
 ||deolerton.ru^
 ||deplayer.net^$third-party
+! Possibly false positive disabling "Regular download" button, reported by leaies.hotmail at [https://code.google.com/p/adblock-plus-japanese-filter/issues/detail?id=33]
+! ||depositfiles.com/js/df_utils.$script
+! False positive with 無料ダウンロード, reported by 通りすがりの火狐ユーザー via blog, Jun 1, 2013
+! ||depositfiles.com/js/gold_offer.$script
 ||deqwas.net^
 ||derploime.com^
 ||designedy.com^
@@ -1635,7 +1678,8 @@
 ||disqusads.com^
 ||disterme.com^
 ||distributique.com^
-||distrowatch.com/images/jruiakuzm/
+||distrowatch.com/images/jruiakuzm/$domain=distrowatch.com
+||distrowatch.com/images/k/$domain=distrowatch.com
 ||divertura.com^
 ||divxporno.net^
 ||dizzyac.com^
@@ -1643,6 +1687,8 @@
 ||dlqm.net^$third-party
 ||dlsite.com^$third-party
 ||dmcdn.net/behavior/
+! False positives at dailymotion.com reported via Issue Report 2011-11-30
+! ||dmcdn.net/flash/dmplayer*/plugins/
 ||dmcdn.net/js/gen/lib/feature_promotion.
 ||dmm-rank.com^$third-party
 ||dmm.co.jp^$domain=~dmm.co.jp|~dmm.com
@@ -1705,6 +1751,9 @@
 ||dt08.net^
 ||dti-ranker.com^$third-party
 ||dtiblog.com/aa/
+||dtiblog.com/blog_ppv/
+||dtiblog.com/dti_se.$script
+||dtiblog.com/hist_count.
 ||dtiblog.com/pr_ad/
 ||dtiblog.com/pv.
 ||dtiblog.com/search.$image
@@ -1814,6 +1863,7 @@
 ||eravage.com^
 ||ergodob.ru^
 ||ergoledo.com^
+||ero-advertising.com^$third-party
 ||ero-tube.jp^$third-party
 ||erovation.com^$third-party
 ||erovinmo.com^
@@ -1936,6 +1986,8 @@
 ||fidel.to^$third-party
 ||fightxgirls.com^
 ||promo.fileforum.com^
+! The following filter blocks banner change showing CAPTCHA. JavaScript is required. Dec 16, 2011
+! ||fileserve.com/script/bannerTimer.$script
 ||filesonic.com/images/banners/
 ||fimserve.com^
 ||finance-ecolo.com^
@@ -2020,6 +2072,7 @@
 ||gagnifie.com^
 ||galleyn.com^
 ||gambling-france.com^$third-party
+||game-advertising-online.com^$third-party
 ||game8.vn^$third-party
 ||gamefeat.net/api/
 ||gameforge.de^$third-party
@@ -2111,6 +2164,7 @@
 ||gnst.jp/st.$script
 ||gnst.jp/uh/$script
 ||go-mpulse.net^
+||go2cloud.org^
 ||go60.ru^
 ||goallurl.ru^
 ||gogorithm.com^
@@ -2131,6 +2185,11 @@
 ||goodgamestudios.com^$popup
 ||goodpic.com^$third-party
 ||goodsbrowser.com^
+! False positive: No google custom search result. 2011-08-18
+! ||google.*/afsonline/
+||google.*/jsapi?autoload=*%22ads%22
+! false positive 2011-02-26
+! ||google.*/realtimepts?
 ||google.*/uds/afs/
 ||id.google.*/verify/
 ||video-stats.video.google.com^
@@ -2524,6 +2583,7 @@
 ||jadedi.com^
 ||jaoohqvqda.ru^
 ||japanmetrix.jp^
+! [http://www.urlvoid.com/scan/java-se.com/ notorious] domain reported at [http://did2memo.net/2014/10/17/java-se-com-b-st-hatena-com/ はてなブックマークボタンが改ざんされマルウェア感染を媒介していた可能性について], Oct 18, 2014
 ||java-se.com^
 ||javadriver.net^
 ||javhd.com^$third-party
@@ -2599,6 +2659,7 @@
 ||kaizentraffic.com^
 ||kakaku.com^*/Rdm
 ||kakaku.com/images/rex-card/
+||kakaku.com/script/analytics/
 ||kakaku.com/script/kakakuad/
 ||kakaku.com/tracker.py/
 ||fp.kakaku.com^
@@ -2666,6 +2727,7 @@
 ||kurysbjs.info^
 ||kusham.net^
 ||kutsulog.net^$third-party
+||kyoto-np.co.jp/koukoku/
 ||la-bonne-idee.com^
 ||la-meilleure-solution-credit.com^
 ||labadon.com^
@@ -2747,6 +2809,9 @@
 ||like18.info/image/
 ||likemastr.com^$third-party
 ||likondok.com^
+! Commented out to avoid false positives because more subdomains are used than expected like cdn-matome.line-apps.com at matome.naver.jp, Nov 19, 2016
+! Need exact subdomain or path
+! ||line-apps.com^$third-party
 ||lineni.ru^
 ||linezing.com^$third-party
 ||link-a.net^$third-party
@@ -2847,6 +2912,7 @@
 ||loveloves.com^
 ||loveme.fr^
 ||loveplanet.ru^$third-party
+||campus.lovepop.jp^
 ||loveraz.com^
 ||lovinuk.com^
 ||lovin-uk.com^
@@ -2875,6 +2941,7 @@
 ||ludostart.com^
 ||luisardo.com^
 ||luminate.com^$third-party
+||luocbao.com/adv/
 ||luredac.com^
 ||luxadv.com^
 ||luxcdn.com^
@@ -2919,6 +2986,7 @@
 ||marketgid.
 ||marketo.com^$third-party
 ||marketo.net^$third-party
+||marsflag.com/adimg/
 ||mash-pot.com^$popup
 ||master-quiz.nl^$popup
 ||masudel.com^
@@ -2996,6 +3064,8 @@
 ||megapopads.com^
 ||megapopads.com^$popup
 ||megaporn.com/*/onhover.$script
+! Commented out to avoid false positives @ third-party embeded web sites. July 28, 2011
+! ||megaupload.com^$third-party
 ||megaupload.com/*/onhover.$script
 ||megaupload.com/mc.
 ||megavideo.com/ad_
@@ -3178,6 +3248,7 @@
 ||mxptint.net^
 ||mxtads.com^
 ||mxtrac.com^$popup
+||my-affiliate.com^$third-party
 ||my1.ru^
 ||myactivestats.com^
 ||myadsrv04.com^
@@ -3219,6 +3290,13 @@
 ||n-mobile.net^$popup
 ||na-secure.com^
 ||naiadsystems.com^$third-party
+! Merged into one filter because nakanohito.jp no longer exists, Mar 29, 2014
+! ||nakanohito.jp/ap/
+! ||nakanohito.jp/b
+! ||nakanohito.jp/ua/
+! ||bsap.nakanohito.jp^
+! ||f*.nakanohito.jp^$script
+! ||le.nakanohito.jp^
 ||nakanohito.jp^
 ||nan-net.com^$third-party
 ||nan.co.jp^$third-party
@@ -3249,6 +3327,8 @@
 ||netaxle.com^$third-party
 ||netbiscuits.$third-party
 ||netdna.com^$third-party
+! Moved to the Paranoid subscription to avoid false positives, Feb 1, 2014
+! ||netdna-cdn.com^$third-party
 ||netdna-cdn.com/scores/
 ||adperformance.netdna-cdn.com
 ||petametricsinc.netdna-cdn.com^
@@ -3266,7 +3346,8 @@
 ||netu.tv^$third-party
 ||network-media.mobi^$third-party
 ||neudesicmediagroup.com^$third-party
-||new-akiba.com/special/
+||new-akiba.com/images/banner/$domain=new-akiba.com
+||new-akiba.com/special/$domain=new-akiba.com
 ||newdopoln.ru^
 ||newpoptab.com^
 ||newpoptab.com^$popup
@@ -3295,8 +3376,11 @@
 ||nicovideo.jp/flog.
 ||nicovideo.jp/Uads$script,domain=~uad.nicovideo.jp
 ||ad.nicovideo.jp^
+||ads.nicovideo.jp^
 ||enquete.nicovideo.jp^$domain=~enquete.nicovideo.jp
 ||ichiba.nicovideo.jp/img/bnrIchiba
+! Commented out to avoid closing connection 2011-10-23
+! ||ow.live.nicovideo.jp^
 ||urc.live.nicovideo.jp^
 ||uad-api.nicovideo.jp^
 ||api.uad.nicovideo.jp^$domain=~uad.nicovideo.jp
@@ -3334,6 +3418,7 @@
 ||nimg.jp/img/index/top/nsen/
 ||nimg.jp/js/*_uad_
 ||nimg.jp/js/index.$script
+! ||nimg.jp/swf/appli/ cause false positives at app.nicovideo.jp
 ||nimg.jp/swf/appli/$domain=~app.nicovideo.jp
 ||ninjasoftwarellc.com^
 ||nizigenero.com^$third-party
@@ -3382,6 +3467,8 @@
 ||nxnxcaqicm.ru^
 ||nxtck.com^
 ||files.nyaa.se^$image,domain=nyaa.se
+! Commented out a YouTube HTML5 false positive filter, reported as Issue 22. 2011-08-09
+! ||o-o.preferred.
 ||obnale.ru^
 ||obtenir-de-l-argent.com^
 ||obvdjs.info^
@@ -3389,6 +3476,8 @@
 ||oclasrv.com^
 ||octopuspop.com^
 ||oculussoft.net^
+! Possibly false positive, commented out, Mar 3, 2012
+! ||odnoklassniki.ru^*scriptToolbar.$script
 ||offerland.info^
 ||offermatica.com^
 ||offerssuperior.com^$popup
@@ -3439,6 +3528,7 @@
 ||opbandit.com^$third-party
 ||open-mind.vc^
 ||openads.org^
+! Dropped a third-party option because adwares or malwares open it directly, Apr 2, 2012
 ||openadserving.com^
 ||openadserving.com^$popup
 ||openetray.com^
@@ -3519,6 +3609,8 @@
 ||perfectaudience.com^$third-party
 ||perfectmarket.com^$third-party
 ||perfectnavigator.com^
+! False positives at goal.com with eplayer modules, May 18, 2012
+! ||performgroup.com^$third-party
 ||periodicodeldia.com^$popup
 ||petametrics.com^
 ||pgmediaserve.com^
@@ -3537,10 +3629,13 @@
 ||pictorz.com^
 ||pijoto.net^
 ||pillendienst.com^$third-party
+||ads.pimote.net^
 ||ping33.com^
 ||pingdom.net^$third-party
 ||pingoo.jp^$third-party
+||pinimg.com/ct/
 ||pinoyfullmovies.com^$third-party
+||ct.pinterest.com^
 ||log.pinterest.com^
 ||pip-pip-pop.com^
 ||pipe-ejac.net^
@@ -3594,7 +3689,7 @@
 ||popads.net^$popup
 ||popadscdn.net^
 ||popander.
-||popcash.net^$third-party
+||popcash.net^
 ||popin.cc^$third-party
 ||popmyads.com^
 ||popmyads.com^$popup
@@ -3657,6 +3752,7 @@
 ||projectwonderful.com^$third-party
 ||proligtb.com^
 ||proncar.ru^
+||proparm.jp^
 ||propellerpops.com^
 ||propermediadeals.com^
 ||prpops.com^
@@ -3718,6 +3814,8 @@
 ||quiz4cash.nl^$popup
 ||quizogvinn.com^$popup
 ||r1fclick.com^
+! Commented out a vague filter to avoid false positives, reported via Issue Repoort, Mar 11, 2014
+! ||rackcdn.com^$third-party
 ||radarurl.com^,domain=~radarurl.com
 ||radeant.com^$popup
 ||radeant.com^$third-party
@@ -3734,6 +3832,9 @@
 ||rakuten.co.jp/com/img/home/t.$image,object,subdocument
 ||rakuten.co.jp/common00/
 ||rakuten.co.jp/content/news/bunner/
+||rakuten.co.jp/js/adjs/
+||rakuten.co.jp/js/catalyst/
+||rakuten.co.jp/js/p_code.$script
 ||rakuten.co.jp/js/pr/
 ||rakuten.co.jp/share/wat/
 ||afl.rakuten.co.jp/hsb/
@@ -3941,6 +4042,7 @@
 ||samuraiworks.com^$third-party
 ||samvinva.info^
 ||adcl.sankei.co.jp^
+||smp.sankei.co.jp/js/analytics/
 ||sarenza.com^$popup
 ||sascentral.com^
 ||savevalet.com^$third-party
@@ -4148,6 +4250,7 @@
 ||sitetag.us^$third-party
 ||sitetagger.$third-party
 ||sitewebred.info^
+||ads.sixapart.com^
 ||skeettools.com^
 ||skillupjapan.net^$third-party
 ||skimlinks.com^$third-party
@@ -4156,6 +4259,8 @@
 ||skyglue.com^$third-party
 ||slash-7.com^$third-party
 ||slfpu.com^
+! Commented out to avoid ugly layout collapse, Feb 19, 2016
+! ||slidesharecdn.com^*/combined_experiments.$domain=slideshare.net
 ||slidesharecdn.com^*/combined_player_clipping.$domain=slideshare.net
 ||slidesharecdn.com^*/proCtaBox.$domain=slideshare.net
 ||slimspots.com^
@@ -4184,6 +4289,8 @@
 ||snapze.com^
 ||snyu.com^$third-party
 ||so-net.ne.jp/advertisement
+||so-net.ne.jp/omn-js/
+||so-net.ne.jp/tv/advertisement/
 ||so-net.ne.jp/tv/gtv/img/banner/
 ||smr.so-net.ne.jp^
 ||socdm.com^
@@ -4275,6 +4382,7 @@
 ||st00.net^
 ||stackcommerce.com^$third-party
 ||standadv.com^
+||star-advertising.com^
 ||startnewtab.com^
 ||startnewtab.com^$popup
 ||starwebnet.com^
@@ -4307,6 +4415,7 @@
 ||striere.com^
 ||striete.com^
 ||stringenfolie.com^
+||stripe.com^$third-party
 ||sublimeskinz.com^$third-party
 ||sumapo.org^
 ||sumome.com^$third-party
@@ -4335,7 +4444,8 @@
 ||swcs.jp^$third-party
 ||swebdpjs.info^
 ||swebjs.info^
-||sweet-adult.com^
+||sweet-adult.com^$popup
+||swi-adserver.com^$third-party
 ||swiki.com^$third-party
 ||swtog.com^
 ||swtresync.net^
@@ -4350,10 +4460,11 @@
 ||r.tabelog.com/contents/index?
 ||taboola.com^$third-party
 ||taboolasyndication.com^
-||tacdn.com^
+||tacdn.com^$domain=~tripadvisor.at|~tripadvisor.be|~tripadvisor.ca|~tripadvisor.ch|~tripadvisor.cl|~tripadvisor.co|~tripadvisor.co.id|~tripadvisor.co.il|~tripadvisor.co.kr|~tripadvisor.co.nz|~tripadvisor.co.uk|~tripadvisor.co.za|~tripadvisor.com|~tripadvisor.com.ar|~tripadvisor.com.au|~tripadvisor.com.br|~tripadvisor.com.eg|~tripadvisor.com.gr|~tripadvisor.com.mx|~tripadvisor.com.my|~tripadvisor.com.pe|~tripadvisor.com.ph|~tripadvisor.com.sg|~tripadvisor.com.tr|~tripadvisor.com.tw|~tripadvisor.com.ve|~tripadvisor.com.vn|~tripadvisor.cz|~tripadvisor.de|~tripadvisor.dk|~tripadvisor.es|~tripadvisor.fi|~tripadvisor.fr|~tripadvisor.ie|~tripadvisor.in|~tripadvisor.it|~tripadvisor.jp|~tripadvisor.nl|~tripadvisor.pt|~tripadvisor.rs|~tripadvisor.ru|~tripadvisor.se|~tripadvisor.sk
 ||tacoda.net^$third-party
 ||tacrater.com^
 ||tafla.ru^
+! Third-party redirecting scripts, reported at http://labs.sucuri.net/?note=2015-08-31 , Sep 01, 2015
 ||tag-cloud-generator.com^
 ||takealldir.ru^
 ||takensparks.com^$third-party
@@ -4562,12 +4673,14 @@
 ||tubejs.info^
 ||tubemogul.com^$third-party
 ||tuigoo.com^$third-party
+||tumblr.com/analytics.
 ||turboloves.net^
 ||turboplugin.ru^
 ||turn.com^$third-party
 ||twenga.de^
 ||twinplan.$third-party
 ||countess.twitch.tv^
+||twitter.com/i/users/prompts^$domain=twitter.com
 ||scribe.twitter.com^
 ||syndication.twitter.com^
 ||twitteranalyzer.com/FBSiteClient/
@@ -4584,7 +4697,8 @@
 ||ucoz.$popup
 ||ucoz.$third-party
 ||udmserve.net^
-||ui-portal.de^
+! This rough filter occasionally causes false positives, reported via Issue Report , Jan 26, 2012
+! ||ui-portal.de^
 ||undertone.com^$third-party
 ||ubcpm.com^
 ||udarem.com^
@@ -4636,7 +4750,10 @@
 ||urlgalleries.net^
 ||urlgalleries.net^$popup
 ||usagc.org^$third-party
+||use-way-ad.com^
 ||usercycle.com^$third-party
+! nakanohito.jp is no longer active and alternative userlocal.jp does not share public data. That is why the third-party userlocal.jp is blocked, Mar 29, 2014
+! ||userlocal.jp/b
 ||userlocal.jp^$third-party
 ||api.social.userlocal.jp/apis/
 ||ushopcomp.com^
@@ -4647,6 +4764,10 @@
 ||ustream.tv/fukuyama/
 ||d.ustream.tv^
 ||d-ssl.ustream.tv^
+! Integrated into ||ox-d. , Jun 2, 2012
+! ||ox-d.ustream.tv
+! Integrated into ||ox-i. , Jun 2, 2012
+! ||ox-i.ustream.tv
 ||usualmedia.com^
 ||usadserver.com^
 ||utamap.com/banner/
@@ -4678,6 +4799,8 @@
 ||vcm.jp^$third-party
 ||vcmedia.vn^$third-party
 ||vdna-assets.com^
+||vector.co.jp/adinfo/
+||vector.co.jp/advertise/
 ||vector.co.jp/vpack/*banner
 ||veinteractive.com^$third-party
 ||velmedia.net^
@@ -4699,6 +4822,8 @@
 ||veryselect.com^
 ||verzala.ru^
 ||videoegg.com^
+! False positive at vgtv.no . More concrete rule is required: 2011-07-23
+! ||videoplaza.tv^
 -advideum.videoplaza.tv^
 ||videos-de-facebook.com^$third-party
 ||videoclick.ru^$third-party
@@ -4783,6 +4908,7 @@
 ||we-spread.com^
 ||web-stat.com^$third-party
 ||web3-ads.com^
+||web3-ads.com^$popup
 ||webantenna.info^$third-party
 ||webcam-facile.com^
 ||webcam-folie.com^
@@ -4832,6 +4958,9 @@
 ||wife-board.net^$third-party
 ||wigetmedia.com^$popup
 ||wigetmedia.com^$third-party
+||wikia-beacon.com/__track/
+! Commented out to avoid a false positive with combined script loader, reported via Issue Report, Sep 8, 2014
+! ||wikimedia.org/*.wikipedia.org/load.php?*&modules=ext.centralNotice.
 ||meta.wikimedia.org/wiki/Special:
 ||wikiodeliv.com^
 ||wikipedia.org^*&cache=/cn.js^
@@ -4863,6 +4992,7 @@
 ||stats.wordpress.com^
 ||worldlogger.com^
 ||worldnow.com/global/js/vendor/
+! ||worldssl.net^$third-party
 ||icm.r.worldssl.net^
 ||worthathousandwords.com^$third-party
 ||wowzio.com^$third-party
@@ -4956,6 +5086,8 @@
 ||yahoo.*/mc/md.$subdocument
 ||amp.yahoo.
 ||analytics.yahoo.$third-party
+||by.analytics.yahoo.
+||by.i.analytics.yahoo.
 ||bn.auctions.yahoo.
 ||b0*.yahoo.
 ||b1*.yahoo.
@@ -4976,9 +5108,14 @@
 ||bc.geocities.yahoo.
 ||bc.ipv6.yahoo.
 ||logoole.yahoo.$third-party
+! Moved to the Paranoid subscription to avoid false positives on the multiple Yahoo! Japan serveces, Jun 05, 2015
+! ||logql.yahoo.
+! False positives with mail folders, Nov 30, 2012
+! ||mail.yahoo.co.jp/neo/socialmailtop_neo/js/soc.$script
 ||pclick.yahoo.
 ||wa.marketingsolutions.yahoo.
 ||ov.yahoo.
+||rtb.pclick.yahoo.
 ||geo.query.yahoo.
 ||rd.yahoo.
 ||rdsig.yahoo.$image,object,subdocument
@@ -5026,9 +5163,15 @@
 ||yimg.*/images/*/point$domain=yahoo.co.jp|yahoo.com
 ||yimg.*/images/*/pr/
 ||yimg.*/images/account/sp/*/reg/ccc/
+||yimg.*/images/analytics/
+! Moved to the Paranoid subscription to avoid a false positive blocking loading comments on each news at headlines.yahoo.co.jp. I think this is a tight-coupled bug because the filter is correctly blocking beacons or loggings. YAHOO JAPAN is essentially responsible for fixing it, May 16, 2015
+! ||yimg.*/images/ds/
 ||yimg.*/images/listing/
 ||yimg.*/images/market/
 ||yimg.*/images/news/newsSearch/
+! Commented out a filter for beacon generator to avoid ReferenceError: YAHOO is not defined @ http://i.yimg.jp/lib/news/ult_1_1-min.js:1 , Jan 17, 2014
+! Even though this filter is commented out, the beacon server ybx.yahoo.co.jp is still blocked ;-)
+! ||yimg.*/images/rapid/
 ||yimg.*/images/settlecomtd/yjbfp/
 ||yimg.*/images/ycd/
 ||yimg.*/images/yjcard/$domain=yahoo.co.jp|yahoo.com
@@ -5045,6 +5188,7 @@
 ||yimg.jp/iv/
 ||yimg.jp/qb/
 ||yimg.jp/rq/
+||ads.yimg.
 ||yiqiwin.com^$third-party
 ||yldbt.com^
 ||yldmgrimg.net^
@@ -5063,6 +5207,8 @@
 ||youradslab.com^
 ||yourjavascript.com^$third-party
 ||youtopry.com^
+! Commented out to avoid the false positive preventing users from change its playing position on the progress bar of HTML5 player, reported by zanderzhng, May 01, 2015
+! ||youtube.com/annotations_invideo?
 ||youtube.com/get_video?
 ||youtube.com/ptracking?
 ||youtube.com/set_awesome?
@@ -5070,6 +5216,10 @@
 ||s2.youtube.com^
 ||youwatchtab.com^
 ||youwatchtab.com^$popup
+!False Positives with dammy 1x1 placeholders for css spriting
+! ||ytimg.com/yt/img/pixel-
+! ||ytimg.com^*/swfbin/ad-
+||ytimg.com^*/swfbin/ad3-
 ||ytimg.com^*_background_$image,object,subdocument
 ||ytimg.com^*_banner.$image,object,subdocument
 ||ytimg.com^*_banner_$image,object,subdocument
@@ -5080,6 +5230,7 @@
 ||zanox.com^$third-party
 ||zanox.ws^
 ||api.zanox.
+||zanox-affiliate.de^$third-party
 ||zdenochary.com^
 ||bwp.zdnet.com^
 ||japan.zdnet.com/media/*/banner/jinzai_*.gif
@@ -5157,6 +5308,12 @@
 ||jp/Zen?$third-party
 ||net/Zen?$third-party
 ||org/Zen?$third-party
+! Expanded because these filters are too generic, reported by Wladimir( Thanks ).
+! ||biz/bin/$third-party
+! ||com/bin/$third-party
+! ||jp/bin/$third-party
+! ||net/bin/$third-party
+! ||org/bin/$third-party
 ! .biz
 ||ongaeshi.biz/bin/
 ! .com
@@ -5503,5 +5660,6 @@
 ||oiran.org/bin/
 ||ukime.org/bin/
 ! ---------- Samurai Factory END ----------
-
+! 
+! ---------- Domains optionally with path END ----------
 ! ######################### END ############################
