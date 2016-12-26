@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-25
+! Date: 2016-12-26
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -21,7 +21,6 @@
 ||oasgames.com$important
 ||104.198.198.188$important
 ||ad-arata.com$important
-! ||ads.servebom.com$important
 ||servebom.com$important
 ||akismet.com$important
 ||danshihack.com$important
@@ -34,7 +33,6 @@
 ||fiverr.com$important
 ||fiverrcdn.com$important
 ||fukugan.com$important
-||hako.re$important
 ||icnerd.com$important
 ||lepinsar.com$important
 ||licensebuttons.net$important
@@ -306,6 +304,7 @@ raven.min.js^$important
 *&curl=http//:www.mediafire.com*
 
 ||p.d.*$script
+||ox-d.*
 
 /munchkin.js$important
 
@@ -505,10 +504,29 @@ mangastream.com##.main-body > .tips > .row
 ||raw.senmanga.com/media/img/block_square.png$image
 
 ! http://kissanime.to
-kissanime.to##.divCloseBut
+kissanime.ru##.divCloseBut
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
-||kissanime.to/xyz/check.aspx$subdocument,first-party
+||kissanime.*/check.aspx$first-party
+
+! block fake kiss sites 
+! last checked: 2016-12-26
+||kiss-anime.*$important
+||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
+||kissmanga.*$important,domain=~kissmanga.com
+||kissasian.*$important,domain=~kissasian.com
+||kisscartoon.*$important,domain=~kisscartoon.me
+
+! plain list of fake kiss sites
+||kissanime.ro
+||kissanime.io
+||kiss-anime.me
+||kisscartoon.so
+||kissasian.xyz
+||kissmanga.us
+||kissmanga.io
+||kissmanga.pro
+||anime8.
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
@@ -532,7 +550,8 @@ fc2.com###fc2_bottom_bnr
 ! unable to perform image reverse search.
 ! ||google.*/xjs/_/js*$script,important
 ! /insights_module_js$script,domain=wikia.com,important
-
+! False flag
+! ||hako.re$important
 ! --------------------------------------------------------------------------- !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" sites are 120% filled with malware
