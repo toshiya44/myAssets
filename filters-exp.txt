@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-24
+! Date: 2016-12-25
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -48,14 +48,14 @@
 ||vskart.in$important
 ||zig.iffy.studio$important
 ||socdm.com$important
-||scorecardresearch.com^$important
+||scorecardresearch.com$important
 ||ora.tv^$third-party
 ||zkcdn.net$important
-||msdesignbd.com^$important
-||sportsinteraction.com^$important
-||usswrite.com^$important
-||usswrite.com^$important,popup
-||mp3juices.cc/img^$important
+||msdesignbd.com$important
+||sportsinteraction.com$important
+||usswrite.com$important
+||usswrite.com$important,popup
+||mp3juices.cc/img$important
 ||mp3juices.cc/pa/h/a.html$subdocument
 ||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
@@ -67,7 +67,7 @@
 ||newrelic.com^$important
 ||nr-data.net$important
 ||optimizely.com$important
-||speed.wikia.net^$important
+||speed.wikia.net$important
 ||qualaroo.com$important
 ||onesite.com$important
 ||wikia-beacon.com$important
@@ -152,6 +152,7 @@
 ||xmaswrite.com$important
 ||marketo.*$third-party,important
 ||metapelite.com$important
+||breezybath.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -260,6 +261,12 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 wowhead.com##a[href="/premium"]
 ||zamimg.com$important
 ||wowhead.com$important
+
+! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
+! example.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+androidcentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
