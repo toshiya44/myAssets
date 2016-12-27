@@ -1,0 +1,20 @@
+# Global scope blacklist for uMatrix
+# hpHosts https://hosts-file.net/?s=Download
+https://hosts-file.net/ad_servers.txt
+# Exploit
+https://hosts-file.net/exp.txt
+# Malware
+https://hosts-file.net/emd.txt
+# Spam
+https://hosts-file.net/hfs.txt
+https://hosts-file.net/grm.txt
+# Phishing
+https://hosts-file.net/psh.txt
+# Misleading marketing
+https://hosts-file.net/mmt.txt
+# Hijack
+https://hosts-file.net/hjk.txt
+# Fraud
+https://hosts-file.net/fsa.txt
+# stevenblack
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
