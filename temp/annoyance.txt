@@ -57,22 +57,33 @@ breitbart.com##.Hmobi.ad
 
 !---------------------------------------------------------------------------!
 
-||facebook.com/*kappa*$important
-||facebook.com/ads$important
+||indiatimes.com/featuredblock_travel_slide.cms$important
+||indiatimes.com/js/pgtrackingV8.js$important
+||indiatimes.com/mitr.cms$script,important
+||indiatimes.com/breakingnews$xmlhttprequest,important
+||indiatimes.com/videos/geocode.cms$important
+||indiatimes.com/toi_js/version-49,minify-1.cms$script,important
+||indiatimes.com/*/analytics$script,important
+||indiatimes.com/*/logger.js$script,important
+||indiatimes.com/*/cookie.js$script,important
+||indiatimes.com/*/lazy.js$script,important
+||indiatimes.com/*/pgtrack.js$script,important
+||indiatimes.com/*/breakingnews$important
+||indiatimes.com/toiyfn/notify.htm$important
 
-!@@||graph.facebook.com$script,domain=www.facebook.com
-!@@||graph.facebook.com/insights?access_token=*$first-party
+!---------------------------------------------------------------------------!
 
 ##donate-banner
 ###donate-banner
 youtube.com###feed
-facebook.com###u_0_33
 strawpoll.me##.featured
 reddit.com###hsts_pixel
 reddit.com##.promotedlink
 reddit.com##.hohoho-header
 reddit.com##.res-show-link
 reddit.com###thing_t3_44tasx
+reddit.com##.login-required.add.active.option
+reddit.com##.goldvertisement
 addons.mozilla.org###promos
 google.ca##.gb_g.gb_Bc.gb_8c
 google.com##.gb_g.gb_Bc.gb_8c
@@ -82,29 +93,59 @@ giphy.com##.festive-mode-toggle
 boards.4chan.org###boardNavDesktopFoot
 github.com##.js-mobile-preference-form
 discordapp.com##.message-group-blocked
+!businessinsider.in##STYLE[type="text/css"]:first-child + [class]
+github.com##.js-touch-events.modal-backdrop
+crunchyroll.com##.left.container-shadow-dark.portrait-desc
+
+archive.org##a[href="https://archive.org/donate/"]
+archive.org##a[href*="donate"]
+web.archive.org###__wb_record_content_done
+
+*.svg$domain=reddit.com
 
 ! kys
 ||scribd.com^
-||novel44.blogspot.in/
 
-||.swf$important
+.swf$object,important
 ||github.com$websocket
 
-||www.facebook.com/ajax/bz$xmlhttprequest,first-party,important
-||www.facebook.com/images/emoji.php$first-party,important
-||www.facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
-||www.facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
-||imgur.com$xmlhttprequest,domain=behind-the-scene,important
+||facebook.com/*kappa*$important
+||facebook.com/ads$important
+||facebook.com/images/emoji.php$first-party,important
+||facebook.com/ajax/bz$xmlhttprequest,first-party,important
+||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
+||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
 
+||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 ||imgur.com/gallery/hot$important
-||kissanime.to/CheckHasUnread$xmlhttprequest,first-party
-||kissanime.to/Scripts/google.js$script,first-party
+||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
+||kissanime.*/Scripts/google.js$script,first-party
 
 ||addons-discovery.cdn.mozilla.net/*.webm$media,domain=mozilla.org,important
 
 ||desu-usergeneratedcontent.xyz/a/*/1471299460290*.jpg$image,important
+desuarchive.org###\31 34710081
+
+! 2016-12-26, urlchecker.org
+||urlchecker.org/ajax/proxy_parser.php$first-party
+||urlchecker.org/ajax/proxy_limit.php$first-party
 
 !$websocket
 !@@||discordapp.com$websocket
 !@@||gateway.discord.gg$websocket
-!www.reddit.com##.toggle.subscribe-button.fancy-toggle-button
+!reddit.com##.toggle.subscribe-button.fancy-toggle-button
+
+!@@||graph.facebook.com$script,domain=facebook.com
+!@@||graph.facebook.com/insights?access_token=*$first-party
+
+!###########################################################################!
+
+! wikia script fractions
+! moved here because they'll probably break the site.
+/page_share_js$domain=wikia.com
+/captcha_js$script,important,domain=wikia.com
+/visit_source_js$script,important,domain=wikia.com
+/wikia_in_your_lang_js$script,important,domain=wikia.com
+/community_page_entry_point_js$script,domain=wikia.com,important
+
+!##################################END######################################!
