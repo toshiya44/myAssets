@@ -151,6 +151,7 @@
 ||marketo.*$third-party,important
 ||metapelite.com$important
 ||breezybath.com$important
+||pixel.wp.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -165,6 +166,7 @@ wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
+jolinfile.com###bd74
 
 ||i.imgur.com$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
@@ -176,7 +178,6 @@ answers.yahoo.com###yset-upsell-div
 ||quora.com/ajax/batched_log_POST$important
 ||quora.com/security_reports$important
 ||quora.com/webnode2/server_call_POST$important
-||quora.com/up/*/updates$important
 ||quora.com/up$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
@@ -193,6 +194,8 @@ github.com##.js-touch-events.modal-backdrop
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
+
+||discordapp.com/api/*/track$xmlhttprequest,important
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -213,9 +216,6 @@ cointelegraph.com##.in.fade.modal-backdrop
 ||mediafire.com/templates/linkto$important
 |http://$third-party,domain=mediafire.com
 
-||discordapp.com/api/*/track$important
-||discordapp.com/api/v6/track$xmlhttprequest,first-party,important
-
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
 
@@ -223,8 +223,6 @@ addons.mozilla.org###promos
 ||fasezero.com$important
 ||redditenhancementsuite.com$important
 ||kkapsner.de
-
-||pixel.wp.com$important
 
 ||theguardian.com$subdocument,first-party,important
 
@@ -272,8 +270,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ! may case false positives.
 
 /assets/css/social-likes_classic.css$important
-/Hashing24_500x400/index.html$important
-/Hashing24_373x369/index.html$important
+/Hashing24_*/index.html$important
 
 ^analytics.
 /forbes_welcome.js
@@ -290,6 +287,7 @@ raven.min.js^$important
 /prod.iqdcontroller.iqdigital$script,important
 /js/tracking/ga_initial_visit*.js$script,important
 
+! for blocking some of the redirects in mediafire download pages
 */afr.php?$important
 ?zoneid=
 *write.com$important
@@ -328,11 +326,6 @@ raven.min.js^$important
 ||googleadservices.com$important
 ||google.*/gen_204?$important
 
-! what are you doing here? Update: most likely to provide captcha service 
-! which gets triggered when there's suspicions of bot activity.
-! I'll keep it for now.
-||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
-||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
 ||ytimg.com*$important,domain=~youtube.com|~google.com
@@ -348,19 +341,12 @@ raven.min.js^$important
 ||wikia.com/index.php?title=SocialIcons$script,important
 ||spotlights-revive.wikia.net/spc.php$important
 
-! wikia script fractions
-/page_share_js$domain=wikia.com
-/captcha_js$script,important,domain=wikia.com
-/visit_source_js$script,important,domain=wikia.com
-/wikia_in_your_lang_js$script,important,domain=wikia.com
-/community_page_entry_point_js$script,domain=wikia.com,important
-
 wikia.com##.wikia-ad
 wikia.com###WikiaFooter
+wikia.com###ShareEntryPoint
 wikia.com##.wds-global-footer
 wikia.com###RECIRCULATION_RAIL
 wikia.com##.module.community-page-entry-point-module
-wikia.com###ShareEntryPoint
 
 ! looks like they changed the layout a bit. here's the current one (as of 2016-11-20)
 wikia.com##.wds-global-navigation__logo
@@ -374,6 +360,7 @@ wikia.com##.wds-is-tv.wds-global-navigation__link
 ! Nice ad placeholders you have there! 
 ! It'd be a shame if someone hides them.
 ! Note: have to remove "behind-the-scene" fron whitelists to block service worker.
+! Note2: Disable service worker entirely => user_pref("dom.serviceWorkers.enabled",			false);
 
 myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
@@ -394,9 +381,7 @@ myanimelist.net###headerSmall > .banner-header-anime-straming
 
 ! ---------------------------------social----------------------------------- !
 
-! it seems facebook keeps updating their site, 
-! so filters aren't working very well...
-
+! it seems facebook keeps updating their site, so filters aren't working very well...
 facebook.com###build_audience
 facebook.com###pages_manager_boosted_website_card
 facebook.com###aymt_homepage_panel_tip
@@ -424,7 +409,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/pages/presence/$xmlhttprequest,first-party,important
 
 ! Remove third-party ""social networking"" sites.
-
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||twitter.com^$important,~first-party
@@ -492,8 +476,8 @@ hitomi.la##.hitomi-horizontal
 saucenao.com##img[alt="J-List!"]
 pixiv.net##.ads-top-info
 !pixiv.net##a[href^="/premium.php"]
-pixiv.net##a[href*="premium.php"]
 !pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 
 ! 2016-07-23 mangastream.com ...no idea if these still work
@@ -503,13 +487,12 @@ mangastream.com##.main-body > .tips > .row
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||raw.senmanga.com/media/img/block_square.png$image
 
-! http://kissanime.to
 kissanime.ru##.divCloseBut
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
 ||kissanime.*/check.aspx$first-party
 
-! block fake kiss sites 
+! block fake kiss sites https://redd.it/5jtzj9
 ! last checked: 2016-12-26
 ||kiss-anime.*$important
 ||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
@@ -517,7 +500,7 @@ kissanime.ru##.divCloseBut
 ||kissasian.*$important,domain=~kissasian.com
 ||kisscartoon.*$important,domain=~kisscartoon.me
 
-! plain list of fake kiss sites
+! plain list of fake sites
 ||kissanime.ro
 ||kissanime.io
 ||kiss-anime.me
@@ -544,14 +527,13 @@ fc2.com###fc2_bottom_bnr
 ! @@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
 ! @@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
 ! @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
-! I don't see album download option when this is blocked...
-! ||s.imgur.com/min/react15.js$script,important
 ! ||wikia.com/wikia.php?controller=JSMessages$script,important
 ! unable to perform image reverse search.
 ! ||google.*/xjs/_/js*$script,important
-! /insights_module_js$script,domain=wikia.com,important
-! False flag
-! ||hako.re$important
+! what are you doing here? Update: most likely to provide captcha service 
+! which gets triggered when there's suspicions of bot activity. Just use uMatrix for this.
+! ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
+! ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
 ! --------------------------------------------------------------------------- !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" sites are 120% filled with malware
