@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-03
+! Date: 2017-01-04
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -508,7 +508,7 @@ fc2.com###fc2_bottom_bnr
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
-! last checked: 2017-01-01
+! last checked: 2017-01-04
 
 kissanime.ru##.divCloseBut
 ||kissanime.*/ads$important
@@ -520,7 +520,7 @@ kissanime.ru##.divCloseBut
 ||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
 ||kissmanga.*$important,domain=~kissmanga.com
 ||kissasian.*$important,domain=~kissasian.com
-||kisscartoon.*$important,domain=~kisscartoon.me
+||kisscartoon.*$important,domain=~kisscartoon.se
 ||readcomiconline.*$important,domain=~readcomiconline.to
 
 ! plain list of fake sites (phishing site)
