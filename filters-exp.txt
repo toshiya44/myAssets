@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2016-12-26
+! Date: 2017-01-03
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -152,6 +152,8 @@
 ||metapelite.com$important
 ||breezybath.com$important
 ||pixel.wp.com$important
+||go-mpulse.net$important
+||noembed.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -173,6 +175,7 @@ jolinfile.com###bd74
 ||imgur.com/min/advertising.js$script,important
 ||imgur.com$websocket,important
 ||imgur.com$xmlhttprequest,domain=behind-the-scene,important
+||sen.imgur.com$first-party
 
 ! I have no idea why it makes so many network requests when I'm just sitting on static page.
 ||quora.com/ajax/batched_log_POST$important
@@ -211,10 +214,9 @@ cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
-!||mediafire.com/helper_01.swf$object,important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
-|http://$third-party,domain=mediafire.com
+!|http://$third-party,domain=mediafire.com
 
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
@@ -223,8 +225,6 @@ addons.mozilla.org###promos
 ||fasezero.com$important
 ||redditenhancementsuite.com$important
 ||kkapsner.de
-
-||theguardian.com$subdocument,first-party,important
 
 ! Much effort
 animenewsnetwork.com##.gutter
@@ -264,6 +264,13 @@ androidcentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 
+||theguardian.com$subdocument,first-party,important
+||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
+||dailymail.co.uk/weather.html?$important
+||i.dailymail.co.uk/i/pix$image,first-party
+||scripts.dailymail.co.uk/static/videoplayer$first-party,important
+||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
+
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
@@ -272,6 +279,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 /assets/css/social-likes_classic.css$important
 /Hashing24_*/index.html$important
 
+*?zoneid=*
 ^analytics.
 /forbes_welcome.js
 /sponsor/click.php
@@ -289,7 +297,6 @@ raven.min.js^$important
 
 ! for blocking some of the redirects in mediafire download pages
 */afr.php?$important
-?zoneid=
 *write.com$important
 *write.com/Redirect*$important
 *write.com/fp.rb?*$important
@@ -325,10 +332,14 @@ raven.min.js^$important
 ||googlesyndication.com$script,important
 ||googleadservices.com$important
 ||google.*/gen_204?$important
+||google.com/ads$first-party,important
+||google.*/jsapi?autoload=*$script,important
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
 ||ytimg.com*$important,domain=~youtube.com|~google.com
+||youtube.com/api/stats/watchtime$first-party,important
+||youtube.com/api/stats$first-party,important
 
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
@@ -398,15 +409,15 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 
-||facebook.com/ads$important
+||facebook.com/ads*$important
 ||facebook.com/*/record_basic_metrics.php$important
-||facebook.com/ajax/bz$xmlhttprequest,first-party,important
+||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
 ||fbcdn.net/safe_image.php$important,domain=facebook.com
 ||facebook.com/*/?ref=bookmarks*$inline-script,first-party,important
-||facebook.com/ajax/pagelet/generic.php/WebEgoPane$first-party,important
-||facebook.com/pages/show_live_insights/?trigger_surface$xmlhttprequest,first-party,important
-||facebook.com/pages/presence/$xmlhttprequest,first-party,important
+||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
+||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
+||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
 
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
@@ -469,9 +480,9 @@ gelbooru.com##script:contains(trw_domain)
 
 hitomi.la##.hitomi-vertical
 hitomi.la##.hitomi-horizontal
+||hitomi.la/hitomi.js$important
 ||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
-||hitomi.la/hitomi.js$important
 
 saucenao.com##img[alt="J-List!"]
 pixiv.net##.ads-top-info
@@ -487,30 +498,6 @@ mangastream.com##.main-body > .tips > .row
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||raw.senmanga.com/media/img/block_square.png$image
 
-kissanime.ru##.divCloseBut
-||kissanime.*/ads$important
-||kissmanga.*/ads$important
-||kissanime.*/check.aspx$first-party
-
-! block fake kiss sites https://redd.it/5jtzj9
-! last checked: 2016-12-26
-||kiss-anime.*$important
-||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
-||kissmanga.*$important,domain=~kissmanga.com
-||kissasian.*$important,domain=~kissasian.com
-||kisscartoon.*$important,domain=~kisscartoon.me
-
-! plain list of fake sites
-||kissanime.ro
-||kissanime.io
-||kiss-anime.me
-||kisscartoon.so
-||kissasian.xyz
-||kissmanga.us
-||kissmanga.io
-||kissmanga.pro
-||anime8.
-
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
 
@@ -520,6 +507,35 @@ fc2.com###fc2_bottom_bnr
 
 ! --------------------------------------------------------------------------- !
 
+! block fake kiss sites https://redd.it/5jtzj9
+! last checked: 2017-01-01
+
+kissanime.ru##.divCloseBut
+||kissanime.*/ads$important
+||kissmanga.*/ads$important
+||kissanime.*/check.aspx$first-party
+
+! Allow known sites only.
+||kiss-anime.*$important
+||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
+||kissmanga.*$important,domain=~kissmanga.com
+||kissasian.*$important,domain=~kissasian.com
+||kisscartoon.*$important,domain=~kisscartoon.me
+||readcomiconline.*$important,domain=~readcomiconline.to
+
+! plain list of fake sites (phishing site)
+||kissanime.ro$important
+||kissanime.io$important
+||kiss-anime.me$important
+||kisscartoon.so$important
+||kissasian.xyz$important
+||kissmanga.us$important
+||kissmanga.io$important
+||kissmanga.pro$important
+||anime8.*$important
+
+! --------------------------------------------------------------------------- !
+!
 ! Various commented out filters, just in case I need them again.
 ! Will be removed once I'm sure that they're obsolete.
 ! options menu gets blocked due to a filter in ABP Japanese list 
@@ -535,17 +551,18 @@ fc2.com###fc2_bottom_bnr
 ! ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
 ! ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
 ! --------------------------------------------------------------------------- !
+!
 ! Always download softwares from the actual site of the developer (official site, repository etc)
 ! The so called "Free Software Download" sites are 120% filled with malware
 ! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
 ! I can't stress this enough.
-
+!
 ||tucows.com/$important
 ||filehippo.com/$important
 ||download.cnet.com^$important
 ||nonags.com/*$important
 ||sourceforge.net/$important
 ||sf.net/$important
-
+!
 ! Always go FOSS
 ! ################################## END #################################### !
