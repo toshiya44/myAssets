@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-04
+! Date: 2017-01-07
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -17,6 +17,7 @@
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
+||d2j1fszo1axgmp.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
 ||104.198.198.188$important
@@ -154,6 +155,20 @@
 ||pixel.wp.com$important
 ||go-mpulse.net$important
 ||noembed.com$important
+||4dbl0ckd3t3ct0r.net$important
+||popads.net$important
+||amazon-adsystem.com$important
+||go.com$important
+||tagboard.com$important
+||qualtrics.com$important
+||prizma.tv$important,third-party
+||uplynk.com$script,important
+||d2j1fszo1axgmp.cloudfront.net$important
+||adexchangeprediction.com$important
+||parserwords.info$important
+||parserwords.info$popup,important
+||adsjudo.com$important
+||185.2.83.87$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -199,6 +214,7 @@ github.com##.js-touch-events.modal-backdrop
 discordapp.com##.message-group-blocked
 
 ||discordapp.com/api/*/track$xmlhttprequest,important
+||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -271,6 +287,11 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
 
+||wp.com/*/devicepx-jetpack.js
+
+||s3.amazonaws.com/*/secure.js$script,important
+||faye.getstream.io/faye$websocket,domain=kitsu.io
+
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
@@ -280,7 +301,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 /Hashing24_*/index.html$important
 
 *?zoneid=*
-^analytics.
+*/ga.js$script
 /forbes_welcome.js
 /sponsor/click.php
 raven.js^$important
@@ -334,6 +355,7 @@ raven.min.js^$important
 ||google.*/gen_204?$important
 ||google.com/ads$first-party,important
 ||google.*/jsapi?autoload=*$script,important
+||googleapis.com/*/swfobject$script,important
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
@@ -513,7 +535,10 @@ fc2.com###fc2_bottom_bnr
 kissanime.ru##.divCloseBut
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
-||kissanime.*/check.aspx$first-party
+||kissasian.*/ads$important
+||kisscartoon.*/ads$important
+||readcomiconline.*/ads$important
+||kissanime.*/check.aspx$important
 
 ! Allow known sites only.
 ||kiss-anime.*$important
@@ -533,6 +558,10 @@ kissanime.ru##.divCloseBut
 ||kissmanga.io$important
 ||kissmanga.pro$important
 ||anime8.*$important
+
+
+||kisshentai.net/Error$script
+||kisshentai.net/Content/script/swfobject.js$script
 
 ! --------------------------------------------------------------------------- !
 !
