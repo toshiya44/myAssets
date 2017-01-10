@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-09
+! Date: 2017-01-10
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -52,8 +52,6 @@
 ||zkcdn.net$important
 ||msdesignbd.com$important
 ||sportsinteraction.com$important
-||usswrite.com$important
-||usswrite.com$important,popup
 ||mp3juices.cc/img$important
 ||mp3juices.cc/pa/h/a.html$subdocument
 ||dictionary.com/proxy$important
@@ -72,8 +70,6 @@
 ||wikia-beacon.com$important
 ||owlads.io$important
 ||i.po.st$important
-||vacwrite.com$important
-||vacwrite.com$important,popup
 ||yahoo.com$third-party,important
 ||sharethis.com$third-party,important
 ||exoclick.com$important
@@ -141,7 +137,6 @@
 ||rightstufanime.com$popup,important
 ||4nn.cx$popup,important
 ||tapjoy.com$important
-||thankswrite.com$important
 ||rpts.org$important
 ||0fmm.com$important
 ||0mme.com$important
@@ -149,7 +144,6 @@
 ||superjobs.xyz$important
 ||kiosked.com$important
 ||bet365.com$important
-||xmaswrite.com$important
 ||marketo.*$third-party,important
 ||metapelite.com$important
 ||breezybath.com$important
@@ -170,6 +164,19 @@
 ||adsjudo.com$important
 ||185.2.83.87$important
 ||site24x7rum.com$important
+||media.net$important
+||torpsol.com$important
+||new17write.com$important
+||new17write.com$important,popup
+||usswrite.com$important
+||usswrite.com$important,popup
+||vacwrite.com$important
+||vacwrite.com$important,popup
+||xmaswrite.com$important
+||xmaswrite.com$important,popup
+||thankswrite.com$important
+||thankswrite.com$important,popup
+||ensighten.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -296,7 +303,8 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
 
 ||go.com$important,third-party
-
+||mirrorcreator.com/js/rightad.js$important
+||mirrorcreator.com/mstats.php$important
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
