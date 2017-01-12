@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-10
+! Date: 2017-01-12
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -177,6 +177,11 @@
 ||thankswrite.com$important
 ||thankswrite.com$important,popup
 ||ensighten.com$important
+||btstatic.com$important
+||rubiconproject.com
+||play-asia.com$important,third-party
+||*.mail.ru$script,important
+||aolcdn.com$script,important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -229,10 +234,6 @@ discordapp.com##.message-group-blocked
 ! Curse logs your IP
 ||curse.com^$important
 
-! easylist blocks adguard filter list update
-@@||adguard.com/filter-rules.html
-@@||adguard.com/en/filter-rules.html
-
 ||cointelegraph.com/assets/js/script.js$script,important
 ||cointelegraph.com/embed$important
 ||cointelegraph.com/storage/uploads/view$image,first-party
@@ -240,6 +241,7 @@ cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
+||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
 !|http://$third-party,domain=mediafire.com
@@ -275,7 +277,7 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 
 ! what are these for? i see them in a lot of places.
 ||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
-||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$script,important
+!||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$script,important
 
 ! Note: Cancer.
 ##a[href*="zamimg.com"]
@@ -305,6 +307,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||go.com$important,third-party
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
+
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
@@ -446,6 +449,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 
+||pixel.facebook.com$important
 ||facebook.com/ads*$important
 ||facebook.com/*/record_basic_metrics.php$important
 ||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
@@ -509,9 +513,6 @@ gelbooru.com##script:contains(trw_domain)
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
 
-! to unblock translation bubbles etc
-@@||gelbooru.com/script/application.js?
-
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
 
@@ -523,8 +524,6 @@ hitomi.la##.hitomi-horizontal
 
 saucenao.com##img[alt="J-List!"]
 pixiv.net##.ads-top-info
-!pixiv.net##a[href^="/premium.php"]
-!pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
 pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 
@@ -537,10 +536,6 @@ mangastream.com##.main-body > .tips > .row
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
-
-! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
-! baka-tsuki.org#@#img[width="88"][height="31"]
-@@||baka-tsuki.org^$generichide
 
 ! --------------------------------------------------------------------------- !
 
@@ -574,10 +569,24 @@ kissanime.ru##.divCloseBut
 ||kissmanga.pro$important
 ||anime8.*$important
 
-
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
 
+! --------------------------------------------------------------------------- !
+! ########## Necessary generic whitelists, with reason(s) specified ##########
+!
+! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
+! baka-tsuki.org#@#img[width="88"][height="31"]
+@@||baka-tsuki.org^$generichide
+! images with filename partially matching with a URL fragment filter gets blocked
+@@||baka-tsuki.org$image,first-party
+! again, generic cosmetic filters are hiding random stuff.
+@@||pixiv.net^$generichide
+! easylist blocks filter list
+@@||adguard.com/filter-rules.html
+@@||adguard.com/en/filter-rules.html
+@@||hosts-file.net/ad_servers.txt‎
+!
 ! --------------------------------------------------------------------------- !
 !
 ! Various commented out filters, just in case I need them again.
@@ -594,6 +603,9 @@ kissanime.ru##.divCloseBut
 ! which gets triggered when there's suspicions of bot activity. Just use uMatrix for this.
 ! ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
 ! ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
+! Replaced with a more generic filter for pixiv
+! pixiv.net##a[href^="/premium.php"]
+! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
 ! --------------------------------------------------------------------------- !
 !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
@@ -601,12 +613,12 @@ kissanime.ru##.divCloseBut
 ! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
 ! I can't stress this enough.
 !
-||tucows.com/$important
-||filehippo.com/$important
-||download.cnet.com^$important
-||nonags.com/*$important
-||sourceforge.net/$important
-||sf.net/$important
+||tucows.com$important
+||filehippo.com$important
+||download.cnet.com$important
+||nonags.com$important
+||sourceforge.net$important
+||sf.net$important
 !
 ! Always go FOSS
 ! ################################## END #################################### !
