@@ -1,12 +1,12 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-12
+! Date: 2017-01-14
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
-! Almost every network filters here are marked "Important" because filters made by/for ABP etc. often
-! whitlists them for reasons I don't care.
-! Currently trying to use uMatrix to mass filter third-party stuff.
+! Almost every network filters here are marked "Important" because filters 
+! made by/for ABP etc. often whitlists them for reasons I don't care.
+! Currently trying to use uMatrix to mass filter third-party stuff. 
 
 ! --------------------------------------------------------------------------- !
 ! --------------------------------------------------------------------------- !
@@ -17,6 +17,7 @@
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
+||d2j1fszo1axgmp.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
@@ -71,8 +72,11 @@
 ||owlads.io$important
 ||i.po.st$important
 ||yahoo.com$third-party,important
-||sharethis.com$third-party,important
+||sharethis.com$important
 ||exoclick.com$important
+||exoclick.com$important,popup
+||exoclick.com$important,popunder
+||exoclick.com$redirect=nooptext
 ||erito.com$important
 ||slotozilla.*$third-party,important
 ||newsinc.com$third-party
@@ -157,12 +161,12 @@
 ||qualtrics.com$important
 ||prizma.tv$important,third-party
 ||uplynk.com$script,important
-||d2j1fszo1axgmp.cloudfront.net$important
 ||adexchangeprediction.com$important
 ||parserwords.info$important
 ||parserwords.info$popup,important
 ||adsjudo.com$important
 ||185.2.83.87$important
+||192.168.*$important
 ||site24x7rum.com$important
 ||media.net$important
 ||torpsol.com$important
@@ -178,20 +182,32 @@
 ||thankswrite.com$important,popup
 ||ensighten.com$important
 ||btstatic.com$important
-||rubiconproject.com
+||rubiconproject.com$important
 ||play-asia.com$important,third-party
 ||*.mail.ru$script,important
 ||aolcdn.com$script,important
+||bluekai.com$important
+||casalemedia.com$important
+||contextweb.com$important
+||advertising.com$important
+||adnxs.com$important
+||ziffdavis.com$important
+||zdbb.net$important
+||zergnet.com$important
+||imrworldwide.com$important
+||sharethrough.com$important
+||openx.net$important
+||truste.com$important
+||tyxo.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
-##[class$="-ads"]
 crunchyroll.com#@#[class^="ad-"]
-www.4shared.com###content > .centered > .d1AdsWrapper
-www.4shared.com##.space-3260
-www.strawpoll.me##.featured
-www.bloomberg.com##bb-mini-player
-web2.0calc.com##.altad
+4shared.com###content > .centered > .d1AdsWrapper
+4shared.com##.space-3260
+strawpoll.me##.featured
+bloomberg.com##bb-mini-player
+0calc.com##.altad
 wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
@@ -225,8 +241,7 @@ github.com##.js-touch-events.modal-backdrop
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
-
-||discordapp.com/api/*/track$xmlhttprequest,important
+||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ||disqus.com/count.js$script,important
@@ -263,7 +278,6 @@ animenewsnetwork.com##a[href*="/sponsor/click.php"]
 animenewsnetwork.com##a[href*="4NN.cx"]
 animenewsnetwork.com##a[href*="rightstufanime.com"]
 animenewsnetwork.com##iframe[src="javascript:void(0)"]
-!||animenewsnetwork.com$inline-script,important
 ||animenewsnetwork.com/assets$subdocument,important
 ||animenewsnetwork.com/logger.pageperf$xmlhttprequest,important
 ||animenewsnetwork.com/javascripts/advertisement.js$important
@@ -276,8 +290,8 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
 
 ! what are these for? i see them in a lot of places.
-||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
-!||ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$script,important
+||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~horriblesubs.info|~jcafe24.net
 
 ! Note: Cancer.
 ##a[href*="zamimg.com"]
@@ -300,13 +314,13 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
 
 ||wp.com/*/devicepx-jetpack.js
-
 ||s3.amazonaws.com/*/secure.js$script,important
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
-
 ||go.com$important,third-party
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
+||cu.cc/main.php$important,first-party
+||4archive.org/neverBme.php$first-party,important
 
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
@@ -315,6 +329,10 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 
 /assets/css/social-likes_classic.css$important
 /Hashing24_*/index.html$important
+
+##[class$="-ads"]
+##script:contains(ExoLoader)
+##a[href*="exoclick."]
 
 *?zoneid=*
 */ga.js$script
@@ -349,7 +367,9 @@ raven.min.js^$important
 ||p.d.*$script
 ||ox-d.*
 
-/munchkin.js$important
+/munchkin.$important
+/urchin.$important
+
 
 ! --------------------------------------------------------------------------- !
 
@@ -367,7 +387,8 @@ raven.min.js^$important
 ||apis.google.com/js/plusone.js
 ||translate.google.com/translate_a/element.js$important,third-party
 ||fonts.googleapis.com$stylesheet,important,domain=~google.com
-||googlesyndication.com$script,important
+||googlesyndication.com$important
+||googletagmanager.com$important
 ||googleadservices.com$important
 ||google.*/gen_204?$important
 ||google.com/ads$first-party,important
@@ -383,6 +404,7 @@ raven.min.js^$important
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
 ||fandom.wikia.com^$important
+||fandommetrics.com$important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
@@ -463,8 +485,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
-||twitter.com^$important,~first-party
-||twimg.com^$~first-party,domain=~behind-the-scene|~twitter.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 ||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
@@ -475,6 +495,17 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||i.ntere.st^$third-party,important
 ||spot.im$third-party,important
 ||chatango.com$third-party,important
+
+||twitter.com^$important,~first-party
+||twimg.com^$important,~first-party,domain=~behind-the-scene|~twitter.com
+||o.twimg.com$important
+||twimg.com/*/proxy.jpg$important
+||ton.twimg.com$important
+||twitter.com/*/csp_report$important
+||twitter.com$csp_report,important
+||twitter.com/*/toast_poll$important
+||twitter.com/*/trends$important
+||twitter.com/*/live_video_home_module$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -606,6 +637,9 @@ kissanime.ru##.divCloseBut
 ! Replaced with a more generic filter for pixiv
 ! pixiv.net##a[href^="/premium.php"]
 ! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+! cards are the link preview thingy
+! ||twitter.com/*/cards$important
+! ||twitter.com/*/cards$inline-script,important
 ! --------------------------------------------------------------------------- !
 !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
