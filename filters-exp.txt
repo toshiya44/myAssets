@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-14
+! Date: 2017-01-15
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -180,6 +180,8 @@
 ||xmaswrite.com$important,popup
 ||thankswrite.com$important
 ||thankswrite.com$important,popup
+||belwrite.com$important
+||belwrite.com$important,popup
 ||ensighten.com$important
 ||btstatic.com$important
 ||rubiconproject.com$important
@@ -199,6 +201,12 @@
 ||openx.net$important
 ||truste.com$important
 ||tyxo.com$important
+||outbrain.com$important
+||rackcdn.com$important
+||content.ad$important
+||pdn-1.com$important
+||grabo.bg$important
+||profitshare.bg$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -317,6 +325,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||s3.amazonaws.com/*/secure.js$script,important
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
 ||go.com$important,third-party
+||go.com/*/DisneyID.js$important
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
 ||cu.cc/main.php$important,first-party
@@ -369,7 +378,8 @@ raven.min.js^$important
 
 /munchkin.$important
 /urchin.$important
-
+quant.js$important
+raven.js$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -567,7 +577,10 @@ mangastream.com##.main-body > .tips > .row
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
-
+||static.fc2.com/js/blog/headbar_ad_rotate.js$script,first-party,important
+||static.fc2.com/js/blog/ad_ref.js$script,first-party,important
+||static.fc2.com/js/blog/headbar_ad_load.js$script,first-party,important
+||fc2.com/counter*.php$important
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
