@@ -204,9 +204,29 @@
 ||outbrain.com$important
 ||rackcdn.com$important
 ||content.ad$important
-||pdn-1.com$important
 ||grabo.bg$important
 ||profitshare.bg$important
+||pdn-1.com$important
+||pdn-2.com$important
+||pdn-3.com$important
+||activerevenue.com$important
+||adfclick1.com$important
+||adoptim.com$important
+||adpile.net$important
+||adsparkmedia.net$important
+||adventurefeeds.com$important
+||adventurefeeds.net$important
+||bluemediappc.com$important
+||clk1013.com$important
+||cpcfeed.com$important
+||dollario.com$important
+||looksmartppc.com$important
+||native||com$important
+||online-adnetwork.com$important
+||onwardclick.com$important
+||revenuehits.com$important
+||trustedpubs.com$important
+||wowconversions.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -396,7 +416,7 @@ raven.js$important
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js
 ||translate.google.com/translate_a/element.js$important,third-party
-||fonts.googleapis.com$stylesheet,important,domain=~google.com
+||fonts.googleapis.com$stylesheet,domain=~google.com
 ||googlesyndication.com$important
 ||googletagmanager.com$important
 ||googleadservices.com$important
