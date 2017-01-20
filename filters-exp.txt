@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-15
+! Date: 2017-01-20
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -221,12 +221,13 @@
 ||cpcfeed.com$important
 ||dollario.com$important
 ||looksmartppc.com$important
-||native||com$important
+||nativexml.com$important
 ||online-adnetwork.com$important
 ||onwardclick.com$important
 ||revenuehits.com$important
 ||trustedpubs.com$important
 ||wowconversions.com$important
+||limbik.io$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -287,7 +288,6 @@ cointelegraph.com##.in.fade.modal-backdrop
 ||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
-!|http://$third-party,domain=mediafire.com
 
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
@@ -324,7 +324,7 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ! Note: Cancer.
 ##a[href*="zamimg.com"]
 ##a[href*="wowhead.com"]
-wowhead.com##a[href="/premium"]
+wowhead.com##a[href*="/premium"]
 ||zamimg.com$important
 ||wowhead.com$important
 
@@ -359,11 +359,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 /assets/css/social-likes_classic.css$important
 /Hashing24_*/index.html$important
 
-##[class$="-ads"]
-##script:contains(ExoLoader)
-##a[href*="exoclick."]
-
-*?zoneid=*
+*?zoneid=*$important
 */ga.js$script
 /forbes_welcome.js
 /sponsor/click.php
@@ -511,6 +507,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
 ||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
+||facebook.com/ajax/ads/media/log$important
 
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
@@ -601,6 +598,7 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/ad_ref.js$script,first-party,important
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,first-party,important
 ||fc2.com/counter*.php$important
+
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
@@ -646,7 +644,7 @@ kissanime.ru##.divCloseBut
 @@||baka-tsuki.org$image,first-party
 ! again, generic cosmetic filters are hiding random stuff.
 @@||pixiv.net^$generichide
-! easylist blocks filter list
+! easylist blocks filter list due to a url fragment filter
 @@||adguard.com/filter-rules.html
 @@||adguard.com/en/filter-rules.html
 @@||hosts-file.net/ad_servers.txt‎
