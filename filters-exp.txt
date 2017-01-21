@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-20
+! Date: 2017-01-21
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -19,6 +19,7 @@
 ||d3pkae9owd2lcf.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
+||d3alijertxiv6b.cloudfront.net$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
 ||104.198.198.188$important
@@ -100,7 +101,7 @@
 ||coinser.in$script,important
 ||alxsite.com$important
 ||alxsite.com$important,popup
-||ravenjs.com^$third-party
+||ravenjs.com^$important
 ||pagefair.*$script,important
 ||mixpanel.com$important
 ||mxpnl.com$important
@@ -228,6 +229,21 @@
 ||trustedpubs.com$important
 ||wowconversions.com$important
 ||limbik.io$important
+||criteo.com$important
+||adrunnr.com$important
+||yldbt.com$important
+||zqtk.net$important
+||indexww.com$important
+||condenastdigital.com$important
+||adobedtm.com$important
+||exponential.com$important
+||wodizapt.com$important
+||intercom.io$important
+||hwcdn.net$important
+||adzerk.net$important
+||fonderredd.info$important
+||educing.info$important
+||directrev.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -350,6 +366,15 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||mirrorcreator.com/mstats.php$important
 ||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$first-party,important
+
+||typekit.net
+
+! https://github.com/uBlockOrigin/uAssets/issues/262
+||watchers.to/code15.html$important
+watchers.to##script:contains(ppu_main)
+watchers.to##script:contains(ActiveXObject)
+watchers.to##script:contains(beginMainCheckerAB)
+watchers.to##[onclick*="mainWidget_globalTm"]
 
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
@@ -503,7 +528,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
 ||fbcdn.net/safe_image.php$important,domain=facebook.com
-||facebook.com/*/?ref=bookmarks*$inline-script,first-party,important
+!||facebook.com/*/?ref=bookmarks*$inline-script,first-party,important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
 ||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
