@@ -10,12 +10,13 @@ https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-whlist.txt
 https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt
 
 ! adguard https://adguard.com/en/filters.html
-https://adguard.com/en/filter-rules.html?id=1
-https://adguard.com/en/filter-rules.html?id=3
-https://adguard.com/en/filter-rules.html?id=5
-https://adguard.com/en/filter-rules.html?id=7
-https://adguard.com/en/filter-rules.html?id=14
-https://adguard.com/en/filter-rules.html?id=15
+! https://github.com/gorhill/uBlock/issues/2294
+https://filters.adtidy.org/extension/chromium/filters/1.txt
+https://filters.adtidy.org/extension/chromium/filters/3.txt
+https://filters.adtidy.org/extension/chromium/filters/5.txt
+https://filters.adtidy.org/extension/chromium/filters/7.txt
+https://filters.adtidy.org/extension/chromium/filters/14.txt
+https://filters.adtidy.org/extension/chromium/filters/15.txt
 
 ! hpHosts 
 https://hosts-file.net/ad_servers.txt
