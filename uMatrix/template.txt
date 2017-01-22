@@ -25,9 +25,6 @@ addons.about-scheme * other block
 addons.about-scheme * script block
 archived.moe ajax.googleapis.com * allow
 archived.moe cloudflare.com * allow
-ceddit.com reddit.com * allow
-ceddit.com redditmedia.com * allow
-ceddit.com redditstatic.com * allow
 dengekibunko.jp ajax.googleapis.com * allow
 desuarchive.org ajax.googleapis.com * allow
 discordapp.com discord.gg * allow
