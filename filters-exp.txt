@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-21
+! Date: 2017-01-22
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -20,9 +20,12 @@
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d3alijertxiv6b.cloudfront.net$important
+||185.2.83.87$important
+||192.168.*$important
+||104.198.198.188$important
+||5.39.27.226*$important
 ||seal.beyondsecurity.com^$important
 ||oasgames.com$important
-||104.198.198.188$important
 ||ad-arata.com$important
 ||servebom.com$important
 ||akismet.com$important
@@ -50,12 +53,10 @@
 ||zig.iffy.studio$important
 ||socdm.com$important
 ||scorecardresearch.com$important
-||ora.tv^$third-party
+||ora.tv$third-party
 ||zkcdn.net$important
 ||msdesignbd.com$important
 ||sportsinteraction.com$important
-||mp3juices.cc/img$important
-||mp3juices.cc/pa/h/a.html$subdocument
 ||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
@@ -79,7 +80,7 @@
 ||exoclick.com$important,popunder
 ||exoclick.com$redirect=nooptext
 ||erito.com$important
-||slotozilla.*$third-party,important
+||slotozilla.*$important
 ||newsinc.com$third-party
 ||2mdn.net$important
 ||trb.com$important
@@ -109,7 +110,6 @@
 ||cdn.bidadx.com$important
 ||gaiaonline.com$important
 ||gaiaonline.com$important,popup
-||gaiaonline.com$important,document
 ||cnzz.com$important
 ||taboola.com$important
 ||axeso5.com$important
@@ -117,10 +117,9 @@
 ||mooncklick.com$important,popup
 ||bebi.com$important
 ||emetriq.de$important
-||5.39.27.226*$important
 ||kenduktur.com$important
-||clmbtech.com$script,important,third-party
-||gravatar.com^$third-party,important
+||clmbtech.com$important,third-party,script
+||gravatar.com^$important,third-party
 ||trkgt.com^$important
 ||trkgt.com^$document,important
 ||otaserve.net$important
@@ -137,9 +136,6 @@
 ||owlanalytics.io$important
 ||liveperson.net$important
 ||otakumode.com/widget$important,third-party
-||rightstufanime.com$important,third-party
-||rightstufanime.com$important,subdocument
-||rightstufanime.com$popup,important
 ||4nn.cx$popup,important
 ||tapjoy.com$important
 ||rpts.org$important
@@ -166,8 +162,6 @@
 ||parserwords.info$important
 ||parserwords.info$popup,important
 ||adsjudo.com$important
-||185.2.83.87$important
-||192.168.*$important
 ||site24x7rum.com$important
 ||media.net$important
 ||torpsol.com$important
@@ -244,6 +238,10 @@
 ||fonderredd.info$important
 ||educing.info$important
 ||directrev.com$important
+||footprint.net$important
+||tribdss.com$important
+||trbas.com$important
+||atdmt.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -258,6 +256,7 @@ answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
 jolinfile.com###bd74
+novelupdates.com##.ad_336
 
 ||i.imgur.com$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
@@ -266,7 +265,7 @@ jolinfile.com###bd74
 ||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 ||sen.imgur.com$first-party
 
-! I have no idea why it makes so many network requests when I'm just sitting on static page.
+! I have no idea why it makes so many network requests when I'm just sitting on a static page.
 ||quora.com/ajax/batched_log_POST$important
 ||quora.com/security_reports$important
 ||quora.com/webnode2/server_call_POST$important
@@ -279,9 +278,11 @@ reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
-||amazonaws.com/redditstatic$image,important,third-party
+!||amazonaws.com/redditstatic$image,important,third-party
+||amazonaws.com/redditstatic$important
 
-github.com##.js-touch-events.modal-backdrop
+!github.com##.js-touch-events.modal-backdrop
+github.com##.modal-backdrop
 ||github.com/_private/browser/errors$important
 
 ! Hides the blocked message button in discord
@@ -338,8 +339,6 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~horriblesubs.info|~jcafe24.net
 
 ! Note: Cancer.
-##a[href*="zamimg.com"]
-##a[href*="wowhead.com"]
 wowhead.com##a[href*="/premium"]
 ||zamimg.com$important
 ||wowhead.com$important
@@ -376,13 +375,17 @@ watchers.to##script:contains(ActiveXObject)
 watchers.to##script:contains(beginMainCheckerAB)
 watchers.to##[onclick*="mainWidget_globalTm"]
 
+||mp3juices.cc/img$important
+||mp3juices.cc/pa/h/a.html$subdocument
+
+||rightstufanime.com$important,third-party
+||rightstufanime.com$important,subdocument
+||rightstufanime.com$important,popup
+
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
 ! may case false positives.
-
-/assets/css/social-likes_classic.css$important
-/Hashing24_*/index.html$important
 
 *?zoneid=*$important
 */ga.js$script
