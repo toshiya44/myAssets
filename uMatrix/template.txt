@@ -1,0 +1,50 @@
+https-strict: * true
+matrix-off: about-scheme false
+matrix-off: addons.about-scheme false
+matrix-off: behind-the-scene true
+matrix-off: chrome-extension-scheme false
+matrix-off: chrome-scheme false
+matrix-off: localhost true
+matrix-off: opera-scheme false
+referrer-spoof: * true
+ua-spoof: * true
+* * * block
+* * css allow
+* * frame block
+* * image allow
+* 1st-party * allow
+* 1st-party frame allow
+kissanime.ru disqus.com * allow
+kissanime.ru disqus.com frame allow
+kissanime.ru disquscdn.com * allow
+dengekibunko.jp ajax.googleapis.com * allow
+desuarchive.org ajax.googleapis.com * allow
+archived.moe ajax.googleapis.com * allow
+archived.moe cloudflare.com * allow
+kissmanga.com disqus.com * allow
+kissmanga.com disqus.com frame allow
+kissmanga.com disquscdn.com * allow
+addons.about-scheme * * allow
+addons.about-scheme * cookie block
+addons.about-scheme * frame inherit
+addons.about-scheme * other block
+addons.about-scheme * script block
+pixiv.net google.com * block
+pixiv.net pixiv.org * allow
+4chan.org 4cdn.org * allow
+4chan.org desuarchive.org * allow
+4chan.org mayhemydg.github.io xhr allow
+4plebs.org ajax.googleapis.com script allow
+pixiv.net www.google.com * block
+wikia.com nocookie.net * allow
+youtube.com g.doubleclick.net * block
+youtube.com google.com * allow
+youtube.com googlevideo.com * allow
+youtube.com gstatic.com * allow
+youtube.com ytimg.com * allow
+twitter.com twimg.com * allow
+github.com github-cloud.s3.amazonaws.com * allow
+github.com github.com * allow
+facebook.com fbcdn.net * allow
+discordapp.com discord.gg * allow
+disqus.com disquscdn.com * allow
