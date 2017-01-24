@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-22
+! Date: 2017-01-24
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -242,6 +242,7 @@
 ||tribdss.com$important
 ||trbas.com$important
 ||atdmt.com$important
+||adlantis.jp$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -363,8 +364,6 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||go.com/*/DisneyID.js$important
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
-||cu.cc/main.php$important,first-party
-||4archive.org/neverBme.php$first-party,important
 
 ||typekit.net
 
@@ -577,6 +576,12 @@ boards.4chan.org##[class^="ad-"]
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
+desuarchive.org##script:contains(quantserve)
+desuarchive.org##script:contains(_gaq)
+
+||cu.cc/main.php$important,first-party
+||4archive.org/neverBme.php$first-party,important
+
 ! --------------------------------------------------------------------------- !
 
 ! boorus and stuff 
@@ -592,6 +597,7 @@ gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(trw_domain)
+gelbooru.com##script:contains(adsbyjuicy)
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
@@ -661,6 +667,23 @@ kissanime.ru##.divCloseBut
 
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
+
+! --------------------------------------------------------------------------- !
+
+kobatochan.com###supplementary
+kobatochan.com##.jetpack-image-container
+
+nepustation.com##script:contains(KillAdBlock)
+nepustation.com##script:contains(logHuman)
+nepustation.com##script:contains(_stq)
+nepustation.com##script:contains(_gaq)
+nepustation.com##script:contains(clickTrackerInit)
+
+kobatochan.com##script:contains(KillAdBlock)
+kobatochan.com##script:contains(logHuman)
+kobatochan.com##script:contains(_stq)
+kobatochan.com##script:contains(_gaq)
+kobatochan.com##script:contains(clickTrackerInit)
 
 ! --------------------------------------------------------------------------- !
 ! ########## Necessary generic whitelists, with reason(s) specified ##########
