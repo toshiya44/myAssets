@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-24
+! Date: 2017-01-26
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -243,6 +243,18 @@
 ||trbas.com$important
 ||atdmt.com$important
 ||adlantis.jp$important
+||linkpaid.net$important
+||buysiteads.com$important
+||spoutable.com$important
+||adoverlay.net$important
+||poptm.com$important
+||adswizz.com$important
+||linkbucks.com$important
+||linkbucks.com$important,popup
+||2mdnsys.com$important
+||adclerks.com$important
+||coinzilla.io$important
+||fuglekos.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -358,12 +370,13 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
 
 ||wp.com/*/devicepx-jetpack.js
-||s3.amazonaws.com/*/secure.js$script,important
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
 ||go.com$important,third-party
 ||go.com/*/DisneyID.js$important
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
+||s3.amazonaws.com/*/secure.js$script,important
+||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 
 ||typekit.net
 
@@ -380,6 +393,10 @@ watchers.to##[onclick*="mainWidget_globalTm"]
 ||rightstufanime.com$important,third-party
 ||rightstufanime.com$important,subdocument
 ||rightstufanime.com$important,popup
+
+way2earning.com##a[href*="adoverlay.net"]
+way2earning.com##a[href*="poptm.com"]
+||way2earning.com/xmlrpc.php$important
 
 ! --------------------------------------------------------------------------- !
 ! --------------------------------fragments---------------------------------- !
@@ -530,11 +547,13 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
 ||fbcdn.net/safe_image.php$important,domain=facebook.com
-!||facebook.com/*/?ref=bookmarks*$inline-script,first-party,important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
 ||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
 ||facebook.com/ajax/ads/media/log$important
+||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
+||facebook.com/video/autoplay$xmlhttprequest,first-party,important
+||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
 
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
@@ -576,9 +595,6 @@ boards.4chan.org##[class^="ad-"]
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
-desuarchive.org##script:contains(quantserve)
-desuarchive.org##script:contains(_gaq)
-
 ||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$first-party,important
 
@@ -598,6 +614,7 @@ gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
+sankakucomplex.com##script:contains(pagespeed)
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
@@ -614,15 +631,19 @@ hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
 
-saucenao.com##img[alt="J-List!"]
+!saucenao.com##img[alt="J-List!"]
 pixiv.net##.ads-top-info
 pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 
-! 2016-07-23 mangastream.com ...no idea if these still work
-mangastream.com##.main-body > .alert-success.alert
-mangastream.com##.tip
-mangastream.com##.main-body > .tips > .row
+! mangastream.com
+!mangastream.com##.main-body > .alert-success.alert
+!mangastream.com##.tip
+!mangastream.com##.main-body > .tips > .row
+mangastream.com###reader-sky
+mangastream.com##.paypal
+mangastream.com##.bitcoin
+||mangastream.com/assets/img/block_sky.png$image
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||raw.senmanga.com/media/img/block_square.png$image
 
@@ -639,6 +660,9 @@ fc2.com###fc2_bottom_bnr
 ! last checked: 2017-01-04
 
 kissanime.ru##.divCloseBut
+kissanime.ru##script:contains(DoAdsPosition)
+kissmanga.com##script:contains(DoAdsPosition)
+
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
 ||kissasian.*/ads$important
@@ -670,15 +694,19 @@ kissanime.ru##.divCloseBut
 
 ! --------------------------------------------------------------------------- !
 
+||nepustation.com$media,first-party
+
 kobatochan.com###supplementary
 kobatochan.com##.jetpack-image-container
 
+nepustation.com##a[href*="linkbucks.com"]
 nepustation.com##script:contains(KillAdBlock)
 nepustation.com##script:contains(logHuman)
 nepustation.com##script:contains(_stq)
 nepustation.com##script:contains(_gaq)
 nepustation.com##script:contains(clickTrackerInit)
 
+kobatochan.com##a[href*="linkbucks.com"]
 kobatochan.com##script:contains(KillAdBlock)
 kobatochan.com##script:contains(logHuman)
 kobatochan.com##script:contains(_stq)
@@ -702,6 +730,20 @@ kobatochan.com##script:contains(clickTrackerInit)
 !
 ! --------------------------------------------------------------------------- !
 !
+! Always download softwares from the actual site of the developer (official site, repository etc)
+! The so called "Free Software Download" sites are 120% filled with malware
+! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
+! I can't stress this enough.
+!
+||tucows.com$important
+||filehippo.com$important
+||download.cnet.com$important
+||nonags.com$important
+||sourceforge.net$important
+||sf.net$important
+!
+! Always go FOSS
+! --------------------------------------------------------------------------- !
 ! Various commented out filters, just in case I need them again.
 ! Will be removed once I'm sure that they're obsolete.
 ! options menu gets blocked due to a filter in ABP Japanese list 
@@ -722,19 +764,8 @@ kobatochan.com##script:contains(clickTrackerInit)
 ! cards are the link preview thingy
 ! ||twitter.com/*/cards$important
 ! ||twitter.com/*/cards$inline-script,important
+! unnecessary
+! desuarchive.org##script:contains(quantserve)
+! desuarchive.org##script:contains(_gaq)
 ! --------------------------------------------------------------------------- !
-!
-! Always download softwares from the actual site of the developer (official site, repository etc)
-! The so called "Free Software Download" sites are 120% filled with malware
-! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
-! I can't stress this enough.
-!
-||tucows.com$important
-||filehippo.com$important
-||download.cnet.com$important
-||nonags.com$important
-||sourceforge.net$important
-||sf.net$important
-!
-! Always go FOSS
 ! ################################## END #################################### !
