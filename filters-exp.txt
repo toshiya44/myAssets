@@ -77,7 +77,6 @@
 ||sharethis.com$important
 ||exoclick.com$important
 ||exoclick.com$important,popup
-||exoclick.com$important,popunder
 ||exoclick.com$redirect=nooptext
 ||erito.com$important
 ||slotozilla.*$important
@@ -86,6 +85,9 @@
 ||trb.com$important
 ||everesttech.net$important
 ||iplogger.org$important
+||iplogger.com$important
+||iplogger.ru$important
+||iplogger.info$important
 ||akamai.$third-party,important
 ||akamaihd.$third-party,important
 ||anonymousdemographics.com$important
@@ -258,7 +260,6 @@
 
 ! -----------------------------------Misc------------------------------------ !
 
-crunchyroll.com#@#[class^="ad-"]
 4shared.com###content > .centered > .d1AdsWrapper
 4shared.com##.space-3260
 strawpoll.me##.featured
@@ -275,15 +276,7 @@ novelupdates.com##.ad_336
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
 ||imgur.com$websocket,important
-||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 ||sen.imgur.com$first-party
-
-! I have no idea why it makes so many network requests when I'm just sitting on a static page.
-||quora.com/ajax/batched_log_POST$important
-||quora.com/security_reports$important
-||quora.com/webnode2/server_call_POST$important
-||quora.com/up$important
-||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
@@ -302,6 +295,7 @@ github.com##.modal-backdrop
 discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
+||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
 
 ||disqus.com/count.js$script,important
 
@@ -349,7 +343,7 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
-||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~horriblesubs.info|~jcafe24.net
+||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
 
 ! Note: Cancer.
 wowhead.com##a[href*="/premium"]
@@ -407,10 +401,8 @@ way2earning.com##a[href*="poptm.com"]
 */ga.js$script
 /forbes_welcome.js
 /sponsor/click.php
-raven.js^$important
 /svg4everybody$script
 *controller=Optimizely*
-raven.min.js^$important
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
@@ -440,7 +432,9 @@ raven.min.js^$important
 /urchin.$important
 quant.js$important
 raven.js$important
+raven.min.js$important
 
+^img-dot.gif$third-party
 ! --------------------------------------------------------------------------- !
 
 ! Google, GOOGLE EVERYWHERE
@@ -607,11 +601,9 @@ gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
 gelbooru.com##div[style*="width:1000px"]:has(script)
-gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(ExoLoader)
-gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
 sankakucomplex.com##script:contains(pagespeed)
@@ -723,6 +715,7 @@ kobatochan.com##script:contains(clickTrackerInit)
 @@||baka-tsuki.org$image,first-party
 ! again, generic cosmetic filters are hiding random stuff.
 @@||pixiv.net^$generichide
+@@||crunchyroll.com^$generichide
 ! easylist blocks filter list due to a url fragment filter
 @@||adguard.com/filter-rules.html
 @@||adguard.com/en/filter-rules.html
