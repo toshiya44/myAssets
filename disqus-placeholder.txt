@@ -3,16 +3,20 @@
 ! Author: Gorhill
 ! From https://gist.github.com/gorhill/ef1b62d606473c68d524
 ! Check above link for update and samples as well.
-! "Purpose is to load Disqus comments on demand only, so that no connection
+! [[ Purpose is to load Disqus comments on demand only, so that no connection
 ! to `disqus.com` occurs by default when you land on a site which uses
 ! Disqus comments widget.
-! Copy-paste the static filters below into your "My filters" pane in the dashboard.
+! Not connecting to Disqus by default is a good thing for such a
+! ubiquitous server as `disqus.com`, which can be used to build a
+! profile of your browsing habits, even if you have no account with
+! Disqus. This also helps web pages containing the Disqus widget to
+! load faster.
 ! These filters will cause a button labeled:
 ! "Disqus blocked by uBlock Origin: click to unblock" to be embedded
 ! where Disqus comments would normally be loaded. Click the button
 ! to force the comments to be loaded.
 ! Be sure your filter lists are up to date, new resources have been
-! added today [Mar 9, 2016] to make these filters work."
+! added today [Mar 9, 2016] to make these filters work.]]
 
 ||disqus.com/forums/*/embed.js$script,redirect=disqus.com/forums/*/embed.js
 ||disqus.com/embed.js$script,redirect=disqus.com/embed.js
