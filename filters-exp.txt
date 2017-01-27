@@ -729,6 +729,7 @@ kobatochan.com##script:contains(clickTrackerInit)
 @@||hosts-file.net/ad_servers.txt‎
 ! unbreak tl notes and other functionality
 @@||gelbooru.com/script/application.js?
+@@||gelbooru.com/thumbnails/*/ad/thumbnail_*.jpg$image,first-party
 ! --------------------------------------------------------------------------- !
 !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
