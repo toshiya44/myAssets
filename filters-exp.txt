@@ -8,7 +8,7 @@
 ! made by/for ABP etc. often whitlists them for reasons I don't care.
 ! Currently trying to use uMatrix to mass filter third-party stuff. 
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 ! --------------------------------------------------------------------------- !
 
 ! List of general malicious and tracking domains.
@@ -296,8 +296,7 @@ discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 ||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
-
-||disqus.com/count.js$script,important
+||discordapp.com/api/v6/channels/*/ack$xmlhttprequest,first-party
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -392,7 +391,14 @@ way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
 ||way2earning.com/xmlrpc.php$important
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
+! Disqus click-to-load
+! From https://gist.github.com/gorhill/ef1b62d606473c68d524
+||disqus.com/forums/*/embed.js$script,redirect=disqus.com/forums/*/embed.js
+||disqus.com/embed.js$script,redirect=disqus.com/embed.js
+||disqus.com/count.js$script,important
+@@||disqus.com/embed.js?_=1457540*$script
+
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
 ! may case false positives.
@@ -403,6 +409,7 @@ way2earning.com##a[href*="poptm.com"]
 /sponsor/click.php
 /svg4everybody$script
 *controller=Optimizely*
+^img-dot.gif$third-party
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
@@ -434,8 +441,8 @@ quant.js$important
 raven.js$important
 raven.min.js$important
 
-^img-dot.gif$third-party
-! --------------------------------------------------------------------------- !
+
+! ########################################################################### !
 
 ! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
@@ -574,7 +581,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 
 ! 4chan filters 
 boards.4chan.org##.boardBanner
@@ -705,7 +712,7 @@ kobatochan.com##script:contains(_stq)
 kobatochan.com##script:contains(_gaq)
 kobatochan.com##script:contains(clickTrackerInit)
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 ! ########## Necessary generic whitelists, with reason(s) specified ##########
 !
 ! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
@@ -736,7 +743,7 @@ kobatochan.com##script:contains(clickTrackerInit)
 ||sf.net$important
 !
 ! Always go FOSS
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 ! Various commented out filters, just in case I need them again.
 ! Will be removed once I'm sure that they're obsolete.
 ! options menu gets blocked due to a filter in ABP Japanese list 
