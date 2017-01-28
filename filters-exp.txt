@@ -1,13 +1,15 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-26
+! Date: 2017-01-27
+! Requirement: uBlock Origin 1.10.6+
+! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
 ! Almost every network filters here are marked "Important" because filters 
 ! made by/for ABP etc. often whitlists them for reasons I don't care.
 ! Currently trying to use uMatrix to mass filter third-party stuff. 
-
+!
 ! ########################################################################### !
 ! --------------------------------------------------------------------------- !
 
@@ -153,6 +155,7 @@
 ||pixel.wp.com$important
 ||go-mpulse.net$important
 ||noembed.com$important
+||4dbl0ck.info$important
 ||4dbl0ckd3t3ct0r.net$important
 ||popads.net$important
 ||amazon-adsystem.com$important
@@ -257,6 +260,11 @@
 ||adclerks.com$important
 ||coinzilla.io$important
 ||fuglekos.com$important
+||licdn.com$important
+||adsplay.net$important
+||gigya.com$important
+||easylist.club$important
+||onclickads.net$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -296,7 +304,6 @@ discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 ||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
-||discordapp.com/api/v6/channels/*/ack$xmlhttprequest,first-party
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -361,6 +368,9 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||i.dailymail.co.uk/i/pix$image,first-party
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
+||fng-ads.fox.com$important
+||fox.com$important,third-party
+||tpfeed.cbc.ca$xmlhttprequest,important
 
 ||wp.com/*/devicepx-jetpack.js
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
@@ -403,18 +413,19 @@ way2earning.com##a[href*="poptm.com"]
 ! fragments that doesn't really belong in other sections, such as wikia/google.
 ! may case false positives.
 
-*?zoneid=*$important
+/lumbar.gif?
 */ga.js$script
-/forbes_welcome.js
 /sponsor/click.php
+/forbes_welcome.js
+*?zoneid=*$important
 /svg4everybody$script
 *controller=Optimizely*
 ^img-dot.gif$third-party
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
-/metrics/s_code_trb.js$script,important
 /metrics/s_code*$script,important
+/metrics/s_code_trb.js$script,important
 /prod.iqdcontroller.iqdigital$script,important
 /js/tracking/ga_initial_visit*.js$script,important
 
@@ -441,6 +452,8 @@ quant.js$important
 raven.js$important
 raven.min.js$important
 
+/adContent.aspx
+/adProtect.aspx
 
 ! ########################################################################### !
 
@@ -465,6 +478,7 @@ raven.min.js$important
 ||google.com/ads$first-party,important
 ||google.*/jsapi?autoload=*$script,important
 ||googleapis.com/*/swfobject$script,important
+||mail.google.com/mail/*/cleardot.gif$important
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
@@ -562,6 +576,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 ||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
+||px.srvcs.tumblr.com/impixu?
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
 ||licdn.com^$domain=~linkedin.com
@@ -576,7 +591,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||twimg.com/*/proxy.jpg$important
 ||ton.twimg.com$important
 ||twitter.com/*/csp_report$important
-||twitter.com$csp_report,important
+!||twitter.com$csp_report,important
 ||twitter.com/*/toast_poll$important
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
@@ -614,6 +629,10 @@ gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
 sankakucomplex.com##script:contains(pagespeed)
+
+! unbreak tl bubbles and other functionality
+@@||gelbooru.com/script/application.js?
+@@||gelbooru.com/thumbnails/*/ad/thumbnail_*.jpg$image,first-party
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
@@ -656,7 +675,7 @@ fc2.com###fc2_bottom_bnr
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
-! last checked: 2017-01-04
+! last checked: 2017-01-24
 
 kissanime.ru##.divCloseBut
 kissanime.ru##script:contains(DoAdsPosition)
@@ -727,9 +746,7 @@ kobatochan.com##script:contains(clickTrackerInit)
 @@||adguard.com/filter-rules.html
 @@||adguard.com/en/filter-rules.html
 @@||hosts-file.net/ad_servers.txt‎
-! unbreak tl notes and other functionality
-@@||gelbooru.com/script/application.js?
-@@||gelbooru.com/thumbnails/*/ad/thumbnail_*.jpg$image,first-party
+!
 ! --------------------------------------------------------------------------- !
 !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
@@ -766,8 +783,5 @@ kobatochan.com##script:contains(clickTrackerInit)
 ! cards are the link preview thingy
 ! ||twitter.com/*/cards$important
 ! ||twitter.com/*/cards$inline-script,important
-! unnecessary
-! desuarchive.org##script:contains(quantserve)
-! desuarchive.org##script:contains(_gaq)
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
