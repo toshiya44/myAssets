@@ -1,8 +1,11 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-27
+! Date: 2017-01-29
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
+! Get uBlock Origin from github https://github.com/gorhill/uBlock
+! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
+! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
@@ -22,6 +25,7 @@
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d3alijertxiv6b.cloudfront.net$important
+||d10psrq44igbex.cloudfront.net$important
 ||185.2.83.87$important
 ||192.168.*$important
 ||104.198.198.188$important
@@ -265,6 +269,10 @@
 ||gigya.com$important
 ||easylist.club$important
 ||onclickads.net$important
+||wwwpromoter.com$important
+||iwant.lt$important
+||yxdown.com$important
+||madokami.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -292,7 +300,6 @@ reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
-!||amazonaws.com/redditstatic$image,important,third-party
 ||amazonaws.com/redditstatic$important
 
 !github.com##.js-touch-events.modal-backdrop
@@ -347,6 +354,8 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 ||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
 
+||cloudfront.net^$domain=moviex.in|moviex.org
+||cloudflare.com^$domain=moviex.in|moviex.org
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
@@ -403,10 +412,11 @@ way2earning.com##a[href*="poptm.com"]
 
 ! ########################################################################### !
 ! Disqus click-to-load
-! From https://gist.github.com/gorhill/ef1b62d606473c68d524
+! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
 ||disqus.com/forums/*/embed.js$script,redirect=disqus.com/forums/*/embed.js
 ||disqus.com/embed.js$script,redirect=disqus.com/embed.js
 ||disqus.com/count.js$script,important
+||referrer.disqus.com$important
 @@||disqus.com/embed.js?_=1457540*$script
 
 ! --------------------------------fragments---------------------------------- !
@@ -415,6 +425,7 @@ way2earning.com##a[href*="poptm.com"]
 
 /lumbar.gif?
 */ga.js$script
+/clientprofiler
 /sponsor/click.php
 /forbes_welcome.js
 *?zoneid=*$important
@@ -454,6 +465,8 @@ raven.min.js$important
 
 /adContent.aspx
 /adProtect.aspx
+
+||seal.*.com^
 
 ! ########################################################################### !
 
@@ -591,7 +604,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||twimg.com/*/proxy.jpg$important
 ||ton.twimg.com$important
 ||twitter.com/*/csp_report$important
-!||twitter.com$csp_report,important
 ||twitter.com/*/toast_poll$important
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
@@ -628,6 +640,7 @@ gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
+danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
 
 ! unbreak tl bubbles and other functionality
@@ -639,6 +652,7 @@ sankakucomplex.com##script:contains(pagespeed)
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
+||gelbooru.com/*/intermission.php$important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
@@ -743,8 +757,6 @@ kobatochan.com##script:contains(clickTrackerInit)
 @@||pixiv.net^$generichide
 @@||crunchyroll.com^$generichide
 ! easylist blocks filter list due to a url fragment filter
-@@||adguard.com/filter-rules.html
-@@||adguard.com/en/filter-rules.html
 @@||hosts-file.net/ad_servers.txt‎
 !
 ! --------------------------------------------------------------------------- !
@@ -783,5 +795,10 @@ kobatochan.com##script:contains(clickTrackerInit)
 ! cards are the link preview thingy
 ! ||twitter.com/*/cards$important
 ! ||twitter.com/*/cards$inline-script,important
+! looks like it's no longer a valid filter (as of 2017-01-27)
+! ||twitter.com$csp_report,important
+! not using these links for adguard filters anymore (now at adtidy)
+! @@||adguard.com/filter-rules.html
+! @@||adguard.com/en/filter-rules.html
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
