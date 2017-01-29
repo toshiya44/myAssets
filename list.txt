@@ -2,7 +2,6 @@
 ! Copy paste the following in external filter list area. Comment out the ones you don't need.
 https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt
 https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt
-https://raw.githubusercontent.com/toshiya44/myAssets/master/disqus-placeholder.txt
 
 ! imports
 https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt
@@ -18,11 +17,5 @@ https://filters.adtidy.org/extension/chromium/filters/7.txt
 https://filters.adtidy.org/extension/chromium/filters/14.txt
 https://filters.adtidy.org/extension/chromium/filters/15.txt
 
-! hpHosts 
-https://hosts-file.net/ad_servers.txt
-https://hosts-file.net/exp.txt
-https://hosts-file.net/emd.txt
-https://hosts-file.net/hfs.txt
-https://hosts-file.net/psh.txt
-https://hosts-file.net/mmt.txt
-https://hosts-file.net/hjk.txt
+! disqus is already part of the main list (filters-exp.txt)
+! https://gist.githubusercontent.com/gorhill/ef1b62d606473c68d524/raw/f8181faac18cb5172c7c9bca8e5a3b22f0c925d0/gistfile1.txt
