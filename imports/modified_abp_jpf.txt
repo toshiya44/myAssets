@@ -1610,6 +1610,7 @@
 ||datropy.com^$third-party
 ||daum.net^$subdocument,third-party
 ||davarello.com^
+||davebestdeals.com
 ||dcbfjs.info^
 ||ddestiny.ru^$third-party
 ||dealally.com^$popup
@@ -2106,6 +2107,7 @@
 ||gerbara.com^
 ||germanbankersecrets.org$popup
 ||gestionpub.com^$third-party
+||get-my-ads.com^
 ||getchu.com/*banner^
 ||getclicky.com^$third-party
 ||getdrip.com^$third-party
