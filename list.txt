@@ -11,9 +11,15 @@ https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt
 ! adguard https://adguard.com/en/filters.html
 ! https://github.com/gorhill/uBlock/issues/2294
 https://filters.adtidy.org/extension/chromium/filters/1.txt
+https://filters.adtidy.org/extension/chromium/filters/2.txt
 https://filters.adtidy.org/extension/chromium/filters/3.txt
+https://filters.adtidy.org/extension/chromium/filters/4.txt
 https://filters.adtidy.org/extension/chromium/filters/5.txt
+https://filters.adtidy.org/extension/chromium/filters/6.txt
 https://filters.adtidy.org/extension/chromium/filters/7.txt
+https://filters.adtidy.org/extension/chromium/filters/8.txt
+https://filters.adtidy.org/extension/chromium/filters/9.txt
+https://filters.adtidy.org/extension/chromium/filters/12.txt
 https://filters.adtidy.org/extension/chromium/filters/14.txt
 https://filters.adtidy.org/extension/chromium/filters/15.txt
 
