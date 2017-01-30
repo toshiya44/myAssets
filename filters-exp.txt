@@ -37,9 +37,6 @@
 ||akismet.com$important
 ||danshihack.com$important
 ||angelfire.com$important
-||bit.ly$important
-||embed.ly$important
-||sh.st$important
 ||drivethelife.com$important 
 ||echobot.tk$important
 ||fiverr.com$important
@@ -276,7 +273,7 @@
 
 ! -----------------------------------Misc------------------------------------ !
 
-4shared.com###content > .centered > .d1AdsWrapper
+4shared.com##.d1AdsWrapper
 4shared.com##.space-3260
 strawpoll.me##.featured
 bloomberg.com##bb-mini-player
@@ -367,9 +364,7 @@ wowhead.com##a[href*="/premium"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
 ! example.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-androidcentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 
 ||theguardian.com$subdocument,first-party,important
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
@@ -380,6 +375,7 @@ crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 ||fng-ads.fox.com$important
 ||fox.com$important,third-party
 ||tpfeed.cbc.ca$xmlhttprequest,important
+||howtogeek.com/*/blank.gif$important
 
 ||wp.com/*/devicepx-jetpack.js
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
@@ -409,6 +405,10 @@ watchers.to##[onclick*="mainWidget_globalTm"]
 way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
 ||way2earning.com/xmlrpc.php$important
+
+! 2017-01-29 http://www.whosampled.com/
+@@||whosampled.com^$generichide
+whosampled.com##script:contains(detectAdBlocker)
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -473,6 +473,7 @@ raven.min.js$important
 ! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
+google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
 */searchdomaincheck$important
 ||google-analytics.*$important,domain=~behind-the-scene
 ||doubleclick.net$important
@@ -537,8 +538,8 @@ myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
 myanimelist.net##.btn-mal-service
-myanimelist.net###footer-block > .footer-link-icon-block
-myanimelist.net###headerSmall > .banner-header-anime-straming
+myanimelist.net##.footer-link-icon-block
+myanimelist.net##.banner-header-anime-straming
 
 ||myanimelist.net/log/bot_filter.php$xmlhttprequest
 ||myanimelist.net/static/logging.html$xmlhttprequest,first-party,redirect=nooptext
@@ -692,8 +693,7 @@ fc2.com###fc2_bottom_bnr
 ! last checked: 2017-01-24
 
 kissanime.ru##.divCloseBut
-kissanime.ru##script:contains(DoAdsPosition)
-kissmanga.com##script:contains(DoAdsPosition)
+kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
 
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
@@ -731,19 +731,12 @@ kissmanga.com##script:contains(DoAdsPosition)
 kobatochan.com###supplementary
 kobatochan.com##.jetpack-image-container
 
-nepustation.com##a[href*="linkbucks.com"]
-nepustation.com##script:contains(KillAdBlock)
-nepustation.com##script:contains(logHuman)
-nepustation.com##script:contains(_stq)
-nepustation.com##script:contains(_gaq)
-nepustation.com##script:contains(clickTrackerInit)
-
-kobatochan.com##a[href*="linkbucks.com"]
-kobatochan.com##script:contains(KillAdBlock)
-kobatochan.com##script:contains(logHuman)
-kobatochan.com##script:contains(_stq)
-kobatochan.com##script:contains(_gaq)
-kobatochan.com##script:contains(clickTrackerInit)
+nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
+nepustation.com,kobatochan.com##script:contains(KillAdBlock)
+nepustation.com,kobatochan.com##script:contains(logHuman)
+nepustation.com,kobatochan.com##script:contains(_stq)
+nepustation.com,kobatochan.com##script:contains(_gaq)
+nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 
 ! ########################################################################### !
 ! ########## Necessary generic whitelists, with reason(s) specified ##########
@@ -800,5 +793,12 @@ kobatochan.com##script:contains(clickTrackerInit)
 ! not using these links for adguard filters anymore (now at adtidy)
 ! @@||adguard.com/filter-rules.html
 ! @@||adguard.com/en/filter-rules.html
+! Apparently I could use commas to separate domains on cosmetic filters.
+! kobatochan.com##a[href*="linkbucks.com"]
+! kobatochan.com##script:contains(KillAdBlock)
+! kobatochan.com##script:contains(logHuman)
+! kobatochan.com##script:contains(_stq)
+! kobatochan.com##script:contains(_gaq)
+! kobatochan.com##script:contains(clickTrackerInit)
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
