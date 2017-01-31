@@ -1,23 +1,23 @@
 ! Title: Toshiya's Filter List - Annoyance 
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
-! this list is not maintained and no support is availble.
-! Also, includes various filters accumulated as a result of trying to solve issues where I often go overboard.
+! this list is not maintained and no support is availble. I myself disable it if I'm having any issues.
+! Also, includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
 !---------------------------------------------------------------------------!
 
-www.theweathernetwork.com###cbc_widget_container
-www.theweathernetwork.com###news-slider
-www.theweathernetwork.com###sidebar
-www.theweathernetwork.com###main-footer
-www.theweathernetwork.com###gallery
-www.theweathernetwork.com###news
-www.theweathernetwork.com###map-view
-www.theweathernetwork.com###videos_brightcove-popular-right-now
-www.theweathernetwork.com###leaderboard
-www.theweathernetwork.com###fby-tab-6089
-www.theweathernetwork.com##.toolbar
-www.theweathernetwork.com###main-header
-www.theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
-www.theweathernetwork.com###editors_choice_news
+theweathernetwork.com###cbc_widget_container
+theweathernetwork.com###news-slider
+theweathernetwork.com###sidebar
+theweathernetwork.com###main-footer
+theweathernetwork.com###gallery
+theweathernetwork.com###news
+theweathernetwork.com###map-view
+theweathernetwork.com###videos_brightcove-popular-right-now
+theweathernetwork.com###leaderboard
+theweathernetwork.com###fby-tab-6089
+theweathernetwork.com##.toolbar
+theweathernetwork.com###main-header
+theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
+theweathernetwork.com###editors_choice_news
 
 ||twnmm.com/js/*/news_slider.js$important
 ||twnmm.com/thumb$important
@@ -81,14 +81,9 @@ breitbart.com##.Hmobi.ad
 
 !---------------------------------------------------------------------------!
 
-##donate-banner
 ##.donate-banner
 ###donate-banner
 youtube.com###feed
-google.ca##.gb_g.gb_Bc.gb_8c
-google.com##.gb_g.gb_Bc.gb_8c
-
-strawpoll.me##.featured
 
 reddit.com###hsts_pixel
 reddit.com##.promotedlink
@@ -98,53 +93,57 @@ reddit.com##.embed-comment
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
 reddit.com##.give-gold-button
-*.svg$domain=reddit.com
-!reddit.com##.login-required.add.active.option
 
 addons.mozilla.org###promos
+boards.4chan.org##.boardBanner
 animenewsnetwork.com###sidebar
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
-myanimelist.net##.christmas.pt0
-myanimelist.net###nav > .christmas
-myanimelist.net##a[href*="/stats"]
 boards.4chan.org###boardNavDesktopFoot
 github.com##.js-mobile-preference-form
 developer.mozilla.org##.notification-tray
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 archive.org##a[href="https://archive.org/donate/"]
-archive.org##a[href*="donate"]
+archive.org##a[href*="/donate"]
 web.archive.org###__wb_record_content_done
 
-! kys
-||scribd.com^
+myanimelist.net##.christmas
+!myanimelist.net##a[href*="/stats"]
+myanimelist.net##script:contains(googletag)
+myanimelist.net###menu:style(width: 100% !important;)
+myanimelist.net###myanimelist:style(width: 99% !important;)
+myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
 
-!*.swf$object,important
-||github.com$websocket
-
+||facebook.com/ads*$important
+||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
+||facebook.com/ajax/photos/logging/session_logging.php$xmlhttprequest,important
 ||facebook.com/*kappa*$important
 ||facebook.com/images/emoji.php$first-party,important
-||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
 
 ||plus.google.com$subdocument,important
 ||jcafe24.net/Smileys/*$image
 ||twimg.com/emoji$important
 ||twitter.com/*/recommendations$important
 
+@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
+||mail.google.com^*&view=ad&$important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
-||youtube.com/api/stats/watchtime$first-party,important
-||youtube.com/api/stats$first-party,important
 
 imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
-||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 ||imgur.com/gallery/hot$important
+
+! 2017-01-27 tumblr.com
+||tumblr.com/services/cslog$xmlhttprequest,important
+||tumblr.com/hsts$first-party,important
 
 kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
 ||kissanime.*/Scripts/google.js$script,first-party
+||kissanime.ru/Content/images/tpl_box_shading2.png$image
 ||addons-discovery.cdn.mozilla.net$media,domain=mozilla.org,important
+
 
 desuarchive.org###\31 34710081
 ||desu-usergeneratedcontent.xyz/a/*/1471299460290*.jpg$image,important
@@ -152,9 +151,9 @@ desuarchive.org###\31 34710081
 ! 2016-12-26, urlchecker.org
 ||urlchecker.org/ajax/proxy_parser.php$first-party
 ||urlchecker.org/ajax/proxy_limit.php$first-party
+||urlchecker.org/*/proxy-checker.js$important
 
 ||discordapp.com/avatars/*.gif$image,first-party
-
 
 !$websocket
 !@@||discordapp.com$websocket
@@ -162,10 +161,21 @@ desuarchive.org###\31 34710081
 !@@||graph.facebook.com$script,domain=facebook.com
 !@@||graph.facebook.com/insights?access_token=*$first-party
 !reddit.com##[data-author="AutoModerator"]
+!padding-left: 10% !important;padding-right: 10% !important;
+!||imgur.com$xmlhttprequest,domain=behind-the-scene,important
+!*.svg$domain=reddit.com
+||eu.static.mega.co.nz/3/update.rdf$xmlhttprequest,domain=behind-the-scene,important
 
+addons.mozilla.org##.avatar
+||github.com$websocket
+||githubusercontent.com/u/155710$image
+
+! kys
+||scribd.com^
 !###########################################################################!
 ! wikia script fractions
 ! moved here because they'll probably break the site.
+@@/oasis_$script,domain=wikia.com
 /page_share_js$domain=wikia.com
 /captcha_js$script,important,domain=wikia.com
 /visit_source_js$script,important,domain=wikia.com
@@ -242,6 +252,8 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||dr.tl^
 ||bit.do^
 ||taveo.net^
-
+||bit.ly$important
+||embed.ly$important
+||sh.st$important
 !###########################################################################!
 !##################################END######################################!
