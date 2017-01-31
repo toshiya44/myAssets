@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-29
+! Date: 2017-01-31
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -315,7 +315,8 @@ discordapp.com##.message-group-blocked
 ||cointelegraph.com/assets/js/script.js$script,important
 ||cointelegraph.com/embed$important
 ||cointelegraph.com/storage/uploads/view$image,first-party
-cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
+cointelegraph.com##iframe[src*="/img/banners/"]
+cointelegraph.com##iframe[src*="/Hashing24_"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
@@ -432,6 +433,7 @@ whosampled.com##script:contains(detectAdBlocker)
 /svg4everybody$script
 *controller=Optimizely*
 ^img-dot.gif$third-party
+1x1_transparent.gif$image
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
@@ -473,8 +475,8 @@ raven.min.js$important
 ! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
-google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
-*/searchdomaincheck$important
+google.*##.gb_g.gb_Bc.gb_8cx
+/searchdomaincheck$important
 ||google-analytics.*$important,domain=~behind-the-scene
 ||doubleclick.net$important
 ||csi.gstatic.com$important
@@ -538,17 +540,17 @@ myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
 myanimelist.net##.btn-mal-service
+myanimelist.net##.js-share-button-popup
 myanimelist.net##.footer-link-icon-block
 myanimelist.net##.banner-header-anime-straming
 
 ||myanimelist.net/log/bot_filter.php$xmlhttprequest
-||myanimelist.net/static/logging.html$xmlhttprequest,first-party,redirect=nooptext
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
-||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/images/footer$image,important
 ||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/signature/*
 
 ! ---------------------------------social----------------------------------- !
@@ -612,7 +614,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ! ########################################################################### !
 
 ! 4chan filters 
-boards.4chan.org##.boardBanner
 boards.4chan.org##.adg-rects
 boards.4chan.org##.ad-cnt.center.topad
 boards.4chan.org##.center.middlead
@@ -645,8 +646,10 @@ danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
 
 ! unbreak tl bubbles and other functionality
-@@||gelbooru.com/script/application.js?
-@@||gelbooru.com/thumbnails/*/ad/thumbnail_*.jpg$image,first-party
+@@||gelbooru.com/script/application.js?$domain=gelbooru.com
+! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
+! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+@@/ad/$image,domain=gelbooru.com|sankakucomplex.com
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
@@ -664,7 +667,8 @@ hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
 
-!saucenao.com##img[alt="J-List!"]
+pixiv.net#@#.bookmark-container
+pixiv.net##.share-button
 pixiv.net##.ads-top-info
 pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
@@ -772,9 +776,9 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 ! Will be removed once I'm sure that they're obsolete.
 ! options menu gets blocked due to a filter in ABP Japanese list 
 ! Note: Exceptions are prone to abuse... use as little as possible.
-! @@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
-! @@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
-! @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+! @@||facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
+! @@||facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
+! @@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 ! ||wikia.com/wikia.php?controller=JSMessages$script,important
 ! unable to perform image reverse search.
 ! ||google.*/xjs/_/js*$script,important
@@ -793,12 +797,7 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 ! not using these links for adguard filters anymore (now at adtidy)
 ! @@||adguard.com/filter-rules.html
 ! @@||adguard.com/en/filter-rules.html
-! Apparently I could use commas to separate domains on cosmetic filters.
-! kobatochan.com##a[href*="linkbucks.com"]
-! kobatochan.com##script:contains(KillAdBlock)
-! kobatochan.com##script:contains(logHuman)
-! kobatochan.com##script:contains(_stq)
-! kobatochan.com##script:contains(_gaq)
-! kobatochan.com##script:contains(clickTrackerInit)
+! google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
+! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
