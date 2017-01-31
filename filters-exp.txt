@@ -10,9 +10,9 @@
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
 ! Almost every network filters here are marked "Important" because filters 
-! made by/for ABP etc. often whitlists them for reasons I don't care.
+! made by/for ABP etc. often whitlists them due to limitation in ABP's filter
+! syntax and other reasons I don't care.
 ! Currently trying to use uMatrix to mass filter third-party stuff. 
-!
 ! ########################################################################### !
 ! --------------------------------------------------------------------------- !
 
@@ -270,6 +270,11 @@
 ||iwant.lt$important
 ||yxdown.com$important
 ||madokami.com$important
+||criteo.net$important
+||sitelock.com$important
+||adbutler-meson.com$important
+||visualwebsiteoptimizer.com$important
+||wkgaqvvwvqjg.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -464,7 +469,7 @@ whosampled.com##script:contains(detectAdBlocker)
 quant.js$important
 raven.js$important
 raven.min.js$important
-
+fingerprint.js$important
 /adContent.aspx
 /adProtect.aspx
 
@@ -495,6 +500,8 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||google.*/jsapi?autoload=*$script,important
 ||googleapis.com/*/swfobject$script,important
 ||mail.google.com/mail/*/cleardot.gif$important
+||google.*/promos$important
+
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
@@ -554,7 +561,7 @@ myanimelist.net##.banner-header-anime-straming
 ||myanimelist.cdn-dena.com/signature/*
 
 ! ---------------------------------social----------------------------------- !
-
+! facebook
 ! it seems facebook keeps updating their site, so filters aren't working very well...
 facebook.com###build_audience
 facebook.com###pages_manager_boosted_website_card
@@ -571,21 +578,40 @@ facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 facebook.com##div.pagelet-group#pagelet_ego_pane
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
+/xfbml.ad.js$important
 
 ||pixel.facebook.com$important
-||facebook.com/ads*$important
+||facebook.com/ads
 ||facebook.com/*/record_basic_metrics.php$important
-||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
+||facebook.com/ajax/ads$important
+!||facebook.com/ajax/ads/media/log$important
+||facebook.com/ajax/bz$xmlhttprequest,first-party,important
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
-||fbcdn.net/safe_image.php$important,domain=facebook.com
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
-||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
-||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
-||facebook.com/ajax/ads/media/log$important
 ||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
-||facebook.com/video/autoplay$xmlhttprequest,first-party,important
 ||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
+||facebook.com/pages/presence$xmlhttprequest,first-party,important
+||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
+||facebook.com/pubcontent/feed_chaining$important
+||facebook.com/video/autoplay$xmlhttprequest,first-party,important
+||fbcdn.net/safe_image.php$important,domain=facebook.com
 
+! https://github.com/toshiya44/myAssets/issues/3
+! To allow Facebook retrieved data (that silently saved your preferences) of 
+! how many categories and/or advert companies into your account.
+@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
+
+! Allow those requests below to sent request to Facebook that you really want to delete those categories and companies.
+@@||facebook.com/ads/preferences/advertiser_hideall$first-party
+@@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
+
+! And counter the exception to prevent accidentally (re)added, such as undo.
+||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
+||facebook.com/ads/preferences/edit_interests/?action=add$important
+
+! ---------------------------------
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
@@ -610,6 +636,7 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||twitter.com/*/toast_poll$important
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
+||twitter.com/i/cards/*?advertiser_name$important
 
 ! ########################################################################### !
 
@@ -735,6 +762,7 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 kobatochan.com###supplementary
 kobatochan.com##.jetpack-image-container
 
+! Apparently I could use commas to separate domains on cosmetic filters.
 nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
 nepustation.com,kobatochan.com##script:contains(KillAdBlock)
 nepustation.com,kobatochan.com##script:contains(logHuman)
@@ -743,7 +771,7 @@ nepustation.com,kobatochan.com##script:contains(_gaq)
 nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 
 ! ########################################################################### !
-! ########## Necessary generic whitelists, with reason(s) specified ##########
+! ######### Necessary generic whitelists, with reason(s) specified ########## !
 !
 ! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
 ! baka-tsuki.org#@#img[width="88"][height="31"]
@@ -774,11 +802,6 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 ! ########################################################################### !
 ! Various commented out filters, just in case I need them again.
 ! Will be removed once I'm sure that they're obsolete.
-! options menu gets blocked due to a filter in ABP Japanese list 
-! Note: Exceptions are prone to abuse... use as little as possible.
-! @@||facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
-! @@||facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
-! @@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 ! ||wikia.com/wikia.php?controller=JSMessages$script,important
 ! unable to perform image reverse search.
 ! ||google.*/xjs/_/js*$script,important
@@ -799,5 +822,7 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 ! @@||adguard.com/en/filter-rules.html
 ! google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
 ! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
+! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
+! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
