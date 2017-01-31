@@ -4161,6 +4161,7 @@
 ||shinobi.jp/analyze/
 ||shinobi.jp/asumi/
 ||shinobi.jp/tadaima/
+||shisuh.com^
 ||adm.shinobi.jp^
 ||analysis.shinobi.jp^$domain=~analysis.shinobi.jp
 ||asumi.shinobi.jp
