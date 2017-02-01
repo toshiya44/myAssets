@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-31
+! Date: 2017-02-01
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -15,9 +15,10 @@
 ! Currently trying to use uMatrix to mass filter third-party stuff. 
 ! ########################################################################### !
 ! --------------------------------------------------------------------------- !
-
+!
 ! List of general malicious and tracking domains.
 
+||dpb3g4kqr8xz.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
@@ -30,7 +31,8 @@
 ||192.168.*$important
 ||104.198.198.188$important
 ||5.39.27.226*$important
-||seal.beyondsecurity.com^$important
+||com.com$important
+||beyondsecurity.com^$important
 ||oasgames.com$important
 ||ad-arata.com$important
 ||servebom.com$important
@@ -275,6 +277,14 @@
 ||adbutler-meson.com$important
 ||visualwebsiteoptimizer.com$important
 ||wkgaqvvwvqjg.com$important
+||mx.b-io.co$important
+||bounce.io$important
+||crazyegg.com$important
+||sf14g.com$important
+||engagio.com$important
+||purch.com$important,third-party
+||onesignal.com$important
+||onderlea.info$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -461,8 +471,11 @@ whosampled.com##script:contains(detectAdBlocker)
 *&curl=http//:www.mediafire.com*
 /fp.rb?id=
 
+.b-io.
 ||p.d.*$script
 ||ox-d.*
+||seal.*.com^
+*.com.com$important
 
 /munchkin.$important
 /urchin.$important
@@ -472,8 +485,6 @@ raven.min.js$important
 fingerprint.js$important
 /adContent.aspx
 /adProtect.aspx
-
-||seal.*.com^
 
 ! ########################################################################### !
 
@@ -824,5 +835,6 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 ! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+! ||seal.beyondsecurity.com^$important
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
