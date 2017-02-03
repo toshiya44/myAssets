@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-01
+! Date: 2017-02-02
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -37,14 +37,8 @@
 ||ad-arata.com$important
 ||servebom.com$important
 ||akismet.com$important
-||danshihack.com$important
-||angelfire.com$important
 ||drivethelife.com$important 
 ||echobot.tk$important
-||fiverr.com$important
-||fiverrcdn.com$important
-||fukugan.com$important
-||icnerd.com$important
 ||lepinsar.com$important
 ||licensebuttons.net$important
 ||quantserve.com$important
@@ -60,9 +54,7 @@
 ||scorecardresearch.com$important
 ||ora.tv$third-party
 ||zkcdn.net$important
-||msdesignbd.com$important
 ||sportsinteraction.com$important
-||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
 ||paypalobjects.com$third-party,important
@@ -286,6 +278,7 @@
 ||onesignal.com$important
 ||onderlea.info$important
 ||ekansovi.com$important
+||perimeterx.net$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -336,9 +329,13 @@ cointelegraph.com##iframe[src*="/Hashing24_"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
+mediafire.com#@##shareMenu
 ||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
+
+! https://github.com/easylist/easylist/issues/270
+@@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
 
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
@@ -426,6 +423,8 @@ way2earning.com##a[href*="poptm.com"]
 ! 2017-01-29 http://www.whosampled.com/
 @@||whosampled.com^$generichide
 whosampled.com##script:contains(detectAdBlocker)
+
+||dictionary.com/proxy$important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -627,6 +626,8 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
+!||fb.*^$third-party,important,domain=~behind-the-scene|~facebook.com
+||fb.com^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
 ||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
@@ -842,5 +843,16 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! ||seal.beyondsecurity.com^$important
+! ########################################################################### !
+! Some really old filters who were made based on stored cookies.
+! Might remove them.
+! doesn't seem suspicious
+! ||angelfire.com$important
+! ||fiverr.com$important
+! ||fiverrcdn.com$important
+! ||danshihack.com$important
+! ||msdesignbd.com$important
+! ||icnerd.com$important
+! ||fukugan.com$important
 ! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
