@@ -285,6 +285,7 @@
 ||purch.com$important,third-party
 ||onesignal.com$important
 ||onderlea.info$important
+||ekansovi.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -768,10 +769,12 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 
 ! --------------------------------------------------------------------------- !
 
-||nepustation.com$media,first-party
-
 kobatochan.com###supplementary
+kobatochan.com###mobile-header-left-nav
 kobatochan.com##.jetpack-image-container
+kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
+
+||nepustation.com$media,first-party
 
 ! Apparently I could use commas to separate domains on cosmetic filters.
 nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
@@ -780,6 +783,9 @@ nepustation.com,kobatochan.com##script:contains(logHuman)
 nepustation.com,kobatochan.com##script:contains(_stq)
 nepustation.com,kobatochan.com##script:contains(_gaq)
 nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
+nepustation.com,kobatochan.com##script:contains(WPGroHo)
+nepustation.com,kobatochan.com##script:contains(randpubc)
+nepustation.com,kobatochan.com##script:contains(randpubc)
 
 ! ########################################################################### !
 ! ######### Necessary generic whitelists, with reason(s) specified ########## !
