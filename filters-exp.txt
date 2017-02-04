@@ -795,6 +795,8 @@ kobatochan.com##.jetpack-image-container
 kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
 
 ||nepustation.com$media,first-party
+@@||nepustation.com$generichide
+nepustation.com##body:style(visibility: visible !important;)
 
 ! Apparently I could use commas to separate domains on cosmetic filters.
 nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
@@ -804,7 +806,6 @@ nepustation.com,kobatochan.com##script:contains(_stq)
 nepustation.com,kobatochan.com##script:contains(_gaq)
 nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 nepustation.com,kobatochan.com##script:contains(WPGroHo)
-nepustation.com,kobatochan.com##script:contains(randpubc)
 nepustation.com,kobatochan.com##script:contains(randpubc)
 
 ! ########################################################################### !
