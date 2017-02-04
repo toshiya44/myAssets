@@ -123,6 +123,7 @@ myanimelist.net##html:style(background-color: white !important; border: 1px soli
 ||facebook.com/images/emoji.php$first-party,important
 ||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
 ||facebook.com/ajax/photos/logging/session_logging.php$xmlhttprequest,important
+!||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
 
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys/*$image
@@ -145,6 +146,7 @@ kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
 ||kissanime.*/Scripts/google.js$script,first-party
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
+
 ||addons-discovery.cdn.mozilla.net$media,domain=mozilla.org,important
 
 ||discordapp.com/avatars/*.gif$image,first-party
@@ -156,6 +158,18 @@ desuarchive.org###\31 34710081
 ||urlchecker.org/ajax/proxy_parser.php$first-party
 ||urlchecker.org/ajax/proxy_limit.php$first-party
 ||urlchecker.org/*/proxy-checker.js$important
+
+||scribd.com^
+
+! hope this works
+! update: not working ;-;
+/blank.gif$image,important,third-party,redirect=1x1-transparent.gif
+/spacer.gif$image,important,third-party,redirect=1x1-transparent.gif
+/lumbar.gif?$image,important,third-party,redirect=1x1-transparent.gif
+/img-dot.gif$image,important,third-party,redirect=1x1-transparent.gif
+/clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
+/transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
+/1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
 
 !###########################################################################!
 ! wikia script fractions
@@ -242,6 +256,7 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||sh.st$important
 !###########################################################################!
 !$websocket
+!||github.com$websocket
 !@@||discordapp.com$websocket
 !@@||gateway.discord.gg$websocket
 !@@||graph.facebook.com$script,domain=facebook.com
@@ -252,4 +267,5 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !*.svg$domain=reddit.com
 !youtube.com###feed
 !myanimelist.net##a[href*="/stats"]
+! --------------------------------------------------------------------------- !
 !##################################END######################################!
