@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-02
+! Date: 2017-02-03
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -401,6 +401,7 @@ androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-d
 ||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 
 ||typekit.net
+||p.typekit.net/p.gif$important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/262
 ||watchers.to/code15.html$important
@@ -600,7 +601,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
 ||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
-||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
 ||facebook.com/pages/presence$xmlhttprequest,first-party,important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
 ||facebook.com/pubcontent/feed_chaining$important
@@ -844,15 +844,4 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! ||seal.beyondsecurity.com^$important
 ! ########################################################################### !
-! Some really old filters who were made based on stored cookies.
-! Might remove them.
-! doesn't seem suspicious
-! ||angelfire.com$important
-! ||fiverr.com$important
-! ||fiverrcdn.com$important
-! ||danshihack.com$important
-! ||msdesignbd.com$important
-! ||icnerd.com$important
-! ||fukugan.com$important
-! --------------------------------------------------------------------------- !
 ! ################################## END #################################### !
