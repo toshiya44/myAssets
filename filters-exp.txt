@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-03
+! Date: 2017-02-04
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -279,6 +279,12 @@
 ||onderlea.info$important
 ||ekansovi.com$important
 ||perimeterx.net$important
+||cedexis.com$important
+||cedexis.net$important
+||cedexis-radar.net$important
+||zedo.com$important
+||tiwi.kiwi$important
+||pubmine.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -409,6 +415,11 @@ watchers.to##script:contains(ppu_main)
 watchers.to##script:contains(ActiveXObject)
 watchers.to##script:contains(beginMainCheckerAB)
 watchers.to##[onclick*="mainWidget_globalTm"]
+
+tinypic.com##script:contains(PopSettings)
+tinypic.com##script:contains(ClientProfilingLog)
+tinypic.com##script:contains(renderAd)
+tinypic.com##script:contains(SWFObject)
 
 ||mp3juices.cc/img$important
 ||mp3juices.cc/pa/h/a.html$subdocument
@@ -667,6 +678,8 @@ boards.4chan.org##[class^="ad-"]
 
 ||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$first-party,important
+cu.cc##script:contains(TyxoObject)
+cu.cc##script:contains(ExoLoader)
 
 ! --------------------------------------------------------------------------- !
 
@@ -730,6 +743,12 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/ad_ref.js$script,first-party,important
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,first-party,important
 ||fc2.com/counter*.php$important
+
+hentaihaven.org##script:contains(Pukka)
+hentaihaven.org##script:contains(BetterJsPop)
+! honeypots used to detect blockers
+@@||hentaihaven.org$generichide
+@@||hentaihaven.org/basement/js/adshow.js$script,first-party
 
 ! --------------------------------------------------------------------------- !
 
