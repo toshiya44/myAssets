@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-04
+! Date: 2017-02-05
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -285,6 +285,8 @@
 ||zedo.com$important
 ||tiwi.kiwi$important
 ||pubmine.com$important
+||infolinks.com$important
+||feedbackify.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -789,17 +791,15 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 
 ! --------------------------------------------------------------------------- !
 
+@@||nepustation.com$generichide
 nepustation.com###babasbmsgx
 kobatochan.com###supplementary
 kobatochan.com###mobile-header-left-nav
 kobatochan.com##.jetpack-image-container
 kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
 
-@@||nepustation.com$generichide
-||nepustation.com$media,first-party
-
 ! https://github.com/gorhill/uBlock/issues/2354
-nepustation.com##body:style(visibility: visible !important;)
+nepustation.com,kobatochan.com##body:style(visibility: visible !important;)
 nepustation.com,kobatochan.com##script:inject(bab-defuser.js)
 nepustation.com,kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
 
@@ -815,7 +815,7 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 
 ! ########################################################################### !
 ! ######### Necessary generic whitelists, with reason(s) specified ########## !
-!
+! 
 ! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
 ! baka-tsuki.org#@#img[width="88"][height="31"]
 @@||baka-tsuki.org^$generichide
