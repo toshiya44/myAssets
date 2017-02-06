@@ -114,9 +114,10 @@ myanimelist.net##.christmas
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
 myanimelist.net##script:contains(amzn_assoc_tracking_id)
-myanimelist.net###menu:style(width: 100% !important;)
-myanimelist.net###myanimelist:style(width: 99% !important;)
-myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
+!myanimelist.net###menu:style(width: 100% !important;)
+!myanimelist.net###myanimelist:style(width: 99% !important;)
+!myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
+!myanimelist.net###topSearchText:style(width: 400px !important;)
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
@@ -170,6 +171,16 @@ desuarchive.org###\31 34710081
 /clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
 /transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
 /1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
+
+nepustation.com###jetpack_remote_comment
+||nepustation.com$media,first-party
+nepustation.com##script:contains(eval)
+
+
+! The expand button is broken for some reason, so I'm manually doing it. 
+! this is not a bypass btw. it is equivalent to clicking the spoiler tag
+jcafe24.net##.sp-body:style(display: block !important;)
+||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important
 
 !###########################################################################!
 ! wikia script fractions
@@ -256,7 +267,6 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||sh.st$important
 !###########################################################################!
 !$websocket
-!||github.com$websocket
 !@@||discordapp.com$websocket
 !@@||gateway.discord.gg$websocket
 !@@||graph.facebook.com$script,domain=facebook.com
@@ -267,5 +277,16 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !*.svg$domain=reddit.com
 !youtube.com###feed
 !myanimelist.net##a[href*="/stats"]
+!###########################################################################!
+! Some really old filters who were made based on stored cookies.
+! Might remove them.
+! doesn't seem suspicious
+! ||angelfire.com$important
+! ||fiverr.com$important
+! ||fiverrcdn.com$important
+! ||danshihack.com$important
+! ||msdesignbd.com$important
+! ||icnerd.com$important
+! ||fukugan.com$important
 ! --------------------------------------------------------------------------- !
 !##################################END######################################!
