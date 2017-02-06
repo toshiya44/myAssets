@@ -1,37 +1,44 @@
 ! Title: Toshiya's Tracking and Clutter Filters
 ! Author: Toshiya
-! Last updated: 2017-01-20
+! Date: 2017-02-05
+! Requirement: uBlock Origin 1.10.6+
+! Recommended: Firefox 52+ (Regular/Dev/Nightly)
+! Get uBlock Origin from github https://github.com/gorhill/uBlock
+! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
+! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
 ! and comment out any problamatic filter.
 ! Almost every network filters here are marked "Important" because filters 
-! made by/for ABP etc. often whitlists them for reasons I don't care.
+! made by/for ABP etc. often whitlists them due to limitation in ABP's filter
+! syntax and other reasons I don't care.
 ! Currently trying to use uMatrix to mass filter third-party stuff. 
+! ########################################################################### !
 ! --------------------------------------------------------------------------- !
-! --------------------------------------------------------------------------- !
-
+!
 ! List of general malicious and tracking domains.
 
+||dpb3g4kqr8xz.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
-||seal.beyondsecurity.com^$important
-||oasgames.com$important
+||d3alijertxiv6b.cloudfront.net$important
+||d10psrq44igbex.cloudfront.net$important
+||185.2.83.87$important
+||192.168.*$important
 ||104.198.198.188$important
+||5.39.27.226*$important
+||com.com$important
+||beyondsecurity.com^$important
+||oasgames.com$important
 ||ad-arata.com$important
 ||servebom.com$important
 ||akismet.com$important
-||danshihack.com$important
-||angelfire.com$important
 ||drivethelife.com$important 
 ||echobot.tk$important
-||fiverr.com$important
-||fiverrcdn.com$important
-||fukugan.com$important
-||icnerd.com$important
 ||lepinsar.com$important
 ||licensebuttons.net$important
 ||quantserve.com$important
@@ -45,13 +52,9 @@
 ||zig.iffy.studio$important
 ||socdm.com$important
 ||scorecardresearch.com$important
-||ora.tv^$third-party
+||ora.tv$third-party
 ||zkcdn.net$important
-||msdesignbd.com$important
 ||sportsinteraction.com$important
-||mp3juices.cc/img$important
-||mp3juices.cc/pa/h/a.html$subdocument
-||dictionary.com/proxy$important
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
 ||paypalobjects.com$third-party,important
@@ -71,15 +74,19 @@
 ||sharethis.com$important
 ||exoclick.com$important
 ||exoclick.com$important,popup
-||exoclick.com$important,popunder
 ||exoclick.com$redirect=nooptext
 ||erito.com$important
-||slotozilla.*$third-party,important
+||slotozilla.*$important
 ||newsinc.com$third-party
 ||2mdn.net$important
 ||trb.com$important
 ||everesttech.net$important
 ||iplogger.org$important
+||iplogger.com$important
+||iplogger.ru$important
+||iplogger.info$important
+||akamai.$third-party,important
+||akamaihd.$third-party,important
 ||anonymousdemographics.com$important
 ||adnium.com$important
 ||4uvjosuc.com$important
@@ -102,7 +109,6 @@
 ||cdn.bidadx.com$important
 ||gaiaonline.com$important
 ||gaiaonline.com$important,popup
-||gaiaonline.com$important,document
 ||cnzz.com$important
 ||taboola.com$important
 ||axeso5.com$important
@@ -110,10 +116,9 @@
 ||mooncklick.com$important,popup
 ||bebi.com$important
 ||emetriq.de$important
-||5.39.27.226*$important
 ||kenduktur.com$important
-||clmbtech.com$script,important,third-party
-||gravatar.com^$third-party,important
+||clmbtech.com$important,third-party,script
+||gravatar.com^$important,third-party
 ||trkgt.com^$important
 ||trkgt.com^$document,important
 ||otaserve.net$important
@@ -130,9 +135,6 @@
 ||owlanalytics.io$important
 ||liveperson.net$important
 ||otakumode.com/widget$important,third-party
-||rightstufanime.com$important,third-party
-||rightstufanime.com$important,subdocument
-||rightstufanime.com$popup,important
 ||4nn.cx$popup,important
 ||tapjoy.com$important
 ||rpts.org$important
@@ -148,6 +150,7 @@
 ||pixel.wp.com$important
 ||go-mpulse.net$important
 ||noembed.com$important
+||4dbl0ck.info$important
 ||4dbl0ckd3t3ct0r.net$important
 ||popads.net$important
 ||amazon-adsystem.com$important
@@ -159,8 +162,6 @@
 ||parserwords.info$important
 ||parserwords.info$popup,important
 ||adsjudo.com$important
-||185.2.83.87$important
-||192.168.*$important
 ||site24x7rum.com$important
 ||media.net$important
 ||torpsol.com$important
@@ -222,9 +223,75 @@
 ||trustedpubs.com$important
 ||wowconversions.com$important
 ||limbik.io$important
+||criteo.com$important
+||adrunnr.com$important
+||yldbt.com$important
+||zqtk.net$important
+||indexww.com$important
+||condenastdigital.com$important
+||adobedtm.com$important
+||exponential.com$important
+||wodizapt.com$important
+||intercom.io$important
+||hwcdn.net$important
+||adzerk.net$important
+||fonderredd.info$important
+||educing.info$important
+||directrev.com$important
+||footprint.net$important
+||tribdss.com$important
+||trbas.com$important
+||atdmt.com$important
+||adlantis.jp$important
+||linkpaid.net$important
+||buysiteads.com$important
+||spoutable.com$important
+||adoverlay.net$important
+||poptm.com$important
+||adswizz.com$important
+||linkbucks.com$important
+||linkbucks.com$important,popup
+||2mdnsys.com$important
+||adclerks.com$important
+||coinzilla.io$important
+||fuglekos.com$important
+||licdn.com$important
+||adsplay.net$important
+||gigya.com$important
+||easylist.club$important
+||onclickads.net$important
+||wwwpromoter.com$important
+||iwant.lt$important
+||yxdown.com$important
+||madokami.com$important
+||criteo.net$important
+||sitelock.com$important
+||adbutler-meson.com$important
+||visualwebsiteoptimizer.com$important
+||wkgaqvvwvqjg.com$important
+||mx.b-io.co$important
+||bounce.io$important
+||crazyegg.com$important
+||sf14g.com$important
+||engagio.com$important
+||purch.com$important,third-party
+||onesignal.com$important
+||onderlea.info$important
+||ekansovi.com$important
+||perimeterx.net$important
+||cedexis.com$important
+||cedexis.net$important
+||cedexis-radar.net$important
+||zedo.com$important
+||tiwi.kiwi$important
+||pubmine.com$important
+||infolinks.com$important
+||feedbackify.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
+4shared.com##.d1AdsWrapper
+4shared.com##.space-3260
 strawpoll.me##.featured
 bloomberg.com##bb-mini-player
 0calc.com##.altad
@@ -233,54 +300,45 @@ answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 answers.yahoo.com###yset-upsell-div
 jolinfile.com###bd74
+novelupdates.com##.ad_336
 
-||i.imgur.com$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
 ||sen.imgur.com$first-party
 
 reddit.com###ad_main_top
-reddit.com##.survey-overlay
 reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
-||amazonaws.com/redditstatic$image,important,third-party
 
-github.com##.js-touch-events.modal-backdrop
-||github.com/_private/browser/errors$important
+github.com##.modal-backdrop
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
-||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
-||disqus.com/count.js$script,important
-
-! Curse logs your IP
-||curse.com^$important
-
 ||cointelegraph.com/assets/js/script.js$script,important
-||cointelegraph.com/embed$important
 ||cointelegraph.com/storage/uploads/view$image,first-party
-cointelegraph.com##iframe[src="/img/banners/Hashing24_500x400/index.html"]
+cointelegraph.com##iframe[src*="/img/banners/"]
+cointelegraph.com##iframe[src*="/Hashing24_"]
 cointelegraph.com###popup-wagga
 cointelegraph.com##.in.fade.modal-backdrop
 
+mediafire.com#@##shareMenu
 ||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
 
+! https://github.com/easylist/easylist/issues/270
+@@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
+
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
 
-! to block add-ons' behind-the-scene activity.
-||fasezero.com$important
-||redditenhancementsuite.com$important
-||kkapsner.de
-
 ! Much effort
 animenewsnetwork.com##.gutter
+animenewsnetwork.com##.full-image
 animenewsnetwork.com##.middle-area > div:nth-of-type(1)
 animenewsnetwork.com##.herald-boxes
 animenewsnetwork.com##a[href*="/sponsor/click.php"]
@@ -296,42 +354,88 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 ||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
 
+||cloudfront.net^$domain=moviex.in|moviex.org
+||cloudflare.com^$domain=moviex.in|moviex.org
+! what are these for? i see them in a lot of places.
+||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
+
 ! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
 ! example.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-androidcentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-crackberry.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
 
 ||theguardian.com$subdocument,first-party,important
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
-||dailymail.co.uk/weather.html?$important
-||i.dailymail.co.uk/i/pix$image,first-party
-||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
+||fng-ads.fox.com$important
+||fox.com$important,third-party
+||tpfeed.cbc.ca$xmlhttprequest,important
+||howtogeek.com/*/blank.gif$important
 
-||go.com$important,third-party
+||wp.com/*/devicepx-jetpack.js
+||faye.getstream.io/faye$websocket,domain=kitsu.io
 ||go.com/*/DisneyID.js$important
 ||mirrorcreator.com/js/rightad.js$important
-||cu.cc/main.php$important,first-party
-||4archive.org/neverBme.php$first-party,important
+||mirrorcreator.com/mstats.php$important
+||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 
-! --------------------------------------------------------------------------- !
+||typekit.net
+||p.typekit.net/p.gif$important
+
+! https://github.com/uBlockOrigin/uAssets/issues/262
+||watchers.to/code15.html$important
+watchers.to##script:contains(ppu_main)
+watchers.to##script:contains(ActiveXObject)
+watchers.to##script:contains(beginMainCheckerAB)
+watchers.to##[onclick*="mainWidget_globalTm"]
+
+tinypic.com##script:contains(PopSettings)
+tinypic.com##script:contains(ClientProfilingLog)
+tinypic.com##script:contains(renderAd)
+tinypic.com##script:contains(SWFObject)
+
+||mp3juices.cc/img$important
+||mp3juices.cc/pa/h/a.html$subdocument
+
+||rightstufanime.com$important,third-party
+||rightstufanime.com$important,subdocument
+||rightstufanime.com$important,popup
+
+way2earning.com##a[href*="adoverlay.net"]
+way2earning.com##a[href*="poptm.com"]
+||way2earning.com/xmlrpc.php$important
+
+! 2017-01-29 http://www.whosampled.com/
+@@||whosampled.com^$generichide
+whosampled.com##script:contains(detectAdBlocker)
+
+! ########################################################################### !
+! Disqus click-to-load
+! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
+||disqus.com/forums/*/embed.js$script,redirect=disqus.com/forums/*/embed.js
+||disqus.com/embed.js$script,redirect=disqus.com/embed.js
+||disqus.com/count.js$script,important
+||referrer.disqus.com$important
+@@||disqus.com/embed.js?_=1457540*$script
+
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections, such as wikia/google.
 ! may case false positives.
 
-/assets/css/social-likes_classic.css$important
-/Hashing24_*/index.html$important
-
-*?zoneid=*
+/lumbar.gif?
+*/ga.js$script
+/clientprofiler
 /sponsor/click.php
+/forbes_welcome.js
+*?zoneid=*$important
 *controller=Optimizely*
-raven.min.js^$important
+^img-dot.gif$third-party
+1x1_transparent.gif$image
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
 /adobe_audience_manager$important
-/metrics/s_code_trb.js$script,important
 /metrics/s_code*$script,important
+/metrics/s_code_trb.js$script,important
 /prod.iqdcontroller.iqdigital$script,important
 /js/tracking/ga_initial_visit*.js$script,important
 
@@ -349,46 +453,50 @@ raven.min.js^$important
 *&curl=http//:www.mediafire.com*
 /fp.rb?id=
 
+.b-io.
 ||p.d.*$script
 ||ox-d.*
+*.com.com$important
 
 /munchkin.$important
 /urchin.$important
 quant.js$important
 raven.js$important
+raven.min.js$important
+fingerprint.js$important
+/adContent.aspx
+/adProtect.aspx
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 
 ! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
-*/searchdomaincheck$important
-||google-analytics.*$important
+google.*##.gb_g.gb_Bc.gb_8cx
+/searchdomaincheck$important
+||google-analytics.*$important,domain=~behind-the-scene
 ||doubleclick.net$important
 ||csi.gstatic.com$important
-||safebrowsing.google.com$important
-||safebrowsing-cache.google.com$important
-||imasdk.googleapis.com$important
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js
-||translate.google.com/translate_a/element.js$important,third-party
 ||googlesyndication.com$important
 ||googletagmanager.com$important
 ||googleadservices.com$important
 ||google.*/gen_204?$important
 ||google.com/ads$first-party,important
 ||google.*/jsapi?autoload=*$script,important
+||googleapis.com/*/swfobject$script,important
+||mail.google.com/mail/*/cleardot.gif$important
+||google.*/promos$important
 
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
-||fandom.wikia.com^$important
 ||fandommetrics.com$important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
-||wikia.com/index.php?title=SocialIcons$script,important
 ||spotlights-revive.wikia.net/spc.php$important
 
 wikia.com##.wikia-ad
@@ -417,21 +525,21 @@ myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##._unit
 myanimelist.net##.btn-mal-service
-myanimelist.net###footer-block > .footer-link-icon-block
-myanimelist.net###headerSmall > .banner-header-anime-straming
+myanimelist.net##.js-share-button-popup
+myanimelist.net##.footer-link-icon-block
+myanimelist.net##.banner-header-anime-straming
 
 ||myanimelist.net/log/bot_filter.php$xmlhttprequest
-||myanimelist.net/static/logging.html$xmlhttprequest,first-party,redirect=nooptext
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
+||myanimelist.cdn-dena.com/images/footer$image
+||myanimelist.cdn-dena.com/images/membership
 ||myanimelist.net/images/stream_banner/*
-||myanimelist.cdn-dena.com/images/footer$image,important
-||myanimelist.cdn-dena.com/images/membership$important
 ||myanimelist.cdn-dena.com/signature/*
 
 ! ---------------------------------social----------------------------------- !
-
+! facebook
 ! it seems facebook keeps updating their site, so filters aren't working very well...
 facebook.com###build_audience
 facebook.com###pages_manager_boosted_website_card
@@ -448,24 +556,45 @@ facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
 facebook.com##div.pagelet-group#pagelet_ego_pane
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
+/xfbml.ad.js$important
 
 ||pixel.facebook.com$important
-||facebook.com/ads*$important
+||facebook.com/ads
 ||facebook.com/*/record_basic_metrics.php$important
-||facebook.com/ajax/bz*$xmlhttprequest,first-party,important
+||facebook.com/ajax/ads$important
+||facebook.com/ajax/bz$xmlhttprequest,first-party,important
 ||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
-||fbcdn.net/safe_image.php$important,domain=facebook.com
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
+||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
+||facebook.com/pages/presence$xmlhttprequest,first-party,important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
-||facebook.com/pages/presence/*$xmlhttprequest,first-party,important
-||facebook.com/ajax/ads/media/log$important
+||facebook.com/pubcontent/feed_chaining$important
+||facebook.com/video/autoplay$xmlhttprequest,first-party,important
+||fbcdn.net/safe_image.php$important,domain=facebook.com
 
+! https://github.com/toshiya44/myAssets/issues/3
+! To allow Facebook retrieved data (that silently saved your preferences) of 
+! how many categories and/or advert companies into your account.
+@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
+
+! Allow those requests below to sent request to Facebook that you really want to delete those categories and companies.
+@@||facebook.com/ads/preferences/advertiser_hideall$first-party
+@@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
+
+! And counter the exception to prevent accidentally (re)added, such as undo.
+||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
+||facebook.com/ads/preferences/edit_interests/?action=add$important
+
+! ---------------------------------
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
+||fb.com^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
-||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
+||px.srvcs.tumblr.com/impixu?
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
 ||licdn.com^$domain=~linkedin.com
@@ -475,23 +604,24 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ||chatango.com$third-party,important
 
 ||twitter.com^$important,~first-party
-||twimg.com^$important,~first-party,domain=~behind-the-scene|~twitter.com
 ||twimg.com/*/proxy.jpg$important
 ||twitter.com/*/csp_report$important
-||twitter.com$csp_report,important
+||twitter.com/*/toast_poll$important
+||twitter.com/*/trends$important
+||twitter.com/i/cards/*?advertiser_name$important
 
-! --------------------------------------------------------------------------- !
+! ########################################################################### !
 
 ! 4chan filters 
 boards.4chan.org##.adg-rects
 boards.4chan.org##.ad-cnt.center.topad
-boards.4chan.org##.middlead
-4chan.org##script:contains(initAds)
-4chan.org##script:contains(initAdsAG)
-4chan.org##script:contains(adglare)
-||4cdn.org/image/skeletons*$important
-||youtube.com/embed/$subdocument,domain=4chan.org
-||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
+boards.4chan.org##.center.middlead
+boards.4chan.org##[class^="ad-"]
+
+||cu.cc/main.php$important,first-party
+||4archive.org/neverBme.php$first-party,important
+cu.cc##script:contains(TyxoObject)
+cu.cc##script:contains(ExoLoader)
 
 ! --------------------------------------------------------------------------- !
 
@@ -502,18 +632,24 @@ gelbooru.com##.noticeError
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
 gelbooru.com##div[style*="width:1000px"]:has(script)
-gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adnOpt)
-gelbooru.com##script:contains(ExoLoader)
-gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(trw_domain)
+danbooru.com##script:contains(errorBeacon)
+sankakucomplex.com##script:contains(pagespeed)
+
+! unbreak tl bubbles and other functionality
+@@||gelbooru.com/script/application.js?$domain=gelbooru.com
+! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
+! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+@@/ad/$image,domain=gelbooru.com|sankakucomplex.com
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
+||gelbooru.com/*/intermission.php$important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
@@ -524,10 +660,19 @@ hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
 
-saucenao.com##img[alt="J-List!"]
+pixiv.net#@#.bookmark-container
+pixiv.net##.share-button
 pixiv.net##.ads-top-info
 pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
+
+! mangastream.com
+mangastream.com###reader-sky
+mangastream.com##.paypal
+mangastream.com##.bitcoin
+||mangastream.com/assets/img/block_sky.png$image
+||mangastream.com/assets/img/block_sky_dark.png$image
+||raw.senmanga.com/media/img/block_square.png$image
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
@@ -536,26 +681,26 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,first-party,important
 ||fc2.com/counter*.php$important
 
+hentaihaven.org##script:contains(Pukka)
+hentaihaven.org##script:contains(BetterJsPop)
+! honeypots used to detect blockers
+@@||hentaihaven.org$generichide
+@@||hentaihaven.org/basement/js/adshow.js$script,first-party
+
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
-! last checked: 2017-01-04
+! last checked: 2017-01-24
 
 kissanime.ru##.divCloseBut
+kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
+
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
 ||kissasian.*/ads$important
 ||kisscartoon.*/ads$important
 ||readcomiconline.*/ads$important
 ||kissanime.*/check.aspx$important
-
-! Allow known sites only.
-||kiss-anime.*$important
-||kissanime.*$important,domain=~kissanime.ru|~forum.kissanime.com
-||kissmanga.*$important,domain=~kissmanga.com
-||kissasian.*$important,domain=~kissasian.com
-||kisscartoon.*$important,domain=~kisscartoon.se
-||readcomiconline.*$important,domain=~readcomiconline.to
 
 ! plain list of fake sites (phishing site)
 ||kissanime.ro$important
@@ -572,8 +717,28 @@ kissanime.ru##.divCloseBut
 ||kisshentai.net/Content/script/swfobject.js$script
 
 ! --------------------------------------------------------------------------- !
-! ########## Necessary generic whitelists, with reason(s) specified ##########
-!
+
+@@||nepustation.com$generichide
+nepustation.com###babasbmsgx
+kobatochan.com##.jetpack-image-container
+kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
+
+! https://github.com/gorhill/uBlock/issues/2354
+nepustation.com##body:style(visibility: visible !important;)
+nepustation.com,kobatochan.com##script:inject(bab-defuser.js)
+nepustation.com,kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
+
+! Apparently I could use commas to separate domains on cosmetic filters.
+nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
+nepustation.com,kobatochan.com##script:contains(KillAdBlock)
+nepustation.com,kobatochan.com##script:contains(logHuman)
+nepustation.com,kobatochan.com##script:contains(_stq)
+nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
+nepustation.com,kobatochan.com##script:contains(randpubc)
+
+! ########################################################################### !
+! ######### Necessary generic whitelists, with reason(s) specified ########## !
+! 
 ! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
 ! baka-tsuki.org#@#img[width="88"][height="31"]
 @@||baka-tsuki.org^$generichide
@@ -581,33 +746,10 @@ kissanime.ru##.divCloseBut
 @@||baka-tsuki.org$image,first-party
 ! again, generic cosmetic filters are hiding random stuff.
 @@||pixiv.net^$generichide
+@@||crunchyroll.com^$generichide
 ! easylist blocks filter list due to a url fragment filter
-@@||adguard.com/filter-rules.html
-@@||adguard.com/en/filter-rules.html
 @@||hosts-file.net/ad_servers.txt‎
 !
-! --------------------------------------------------------------------------- !
-!
-! Various commented out filters, just in case I need them again.
-! Will be removed once I'm sure that they're obsolete.
-! options menu gets blocked due to a filter in ABP Japanese list 
-! Note: Exceptions are prone to abuse... use as little as possible.
-! @@||www.facebook.com/timeline/feed/options_menu/$xmlhttprequest,first-party
-! @@||www.facebook.com/pages/feed/options_menu/$xmlhttprequest,first-party
-! @@||www.facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
-! ||wikia.com/wikia.php?controller=JSMessages$script,important
-! unable to perform image reverse search.
-! ||google.*/xjs/_/js*$script,important
-! what are you doing here? Update: most likely to provide captcha service 
-! which gets triggered when there's suspicions of bot activity. Just use uMatrix for this.
-! ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
-! ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
-! Replaced with a more generic filter for pixiv
-! pixiv.net##a[href^="/premium.php"]
-! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-! cards are the link preview thingy
-! ||twitter.com/*/cards$important
-! ||twitter.com/*/cards$inline-script,important
 ! --------------------------------------------------------------------------- !
 !
 ! Always download softwares from the actual site of the developer (official site, repository etc)
@@ -623,4 +765,5 @@ kissanime.ru##.divCloseBut
 ||sf.net$important
 !
 ! Always go FOSS
-!##################################END######################################!
+! ########################################################################### !
+! ################################## END #################################### !
