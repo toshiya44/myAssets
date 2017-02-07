@@ -721,7 +721,8 @@ sankakucomplex.com##script:contains(pagespeed)
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
-||gelbooru.com/*/intermission.php$important
+!||gelbooru.com/*/intermission.php$important
+||gelbooru.com/intermission.php$subdocument,frame,important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
