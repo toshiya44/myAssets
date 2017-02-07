@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-05
+! Date: 2017-02-07
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -70,11 +70,9 @@
 ||wikia-beacon.com$important
 ||owlads.io$important
 ||i.po.st$important
-||yahoo.com$third-party,important
 ||sharethis.com$important
 ||exoclick.com$important
 ||exoclick.com$important,popup
-||exoclick.com$redirect=nooptext
 ||erito.com$important
 ||slotozilla.*$important
 ||newsinc.com$third-party
@@ -95,7 +93,7 @@
 ||opnlttr.com$important
 ||scam.com$important
 ||decenthat.com$important
-||fastly.net/ad$script,important
+||fastly.net/ad$important
 ||moat.com$important
 ||bitcoinchain.com$important,third-party
 ||coinser.in$script,important
@@ -134,7 +132,6 @@
 ||adglare.net$important
 ||owlanalytics.io$important
 ||liveperson.net$important
-||otakumode.com/widget$important,third-party
 ||4nn.cx$popup,important
 ||tapjoy.com$important
 ||rpts.org$important
@@ -287,6 +284,11 @@
 ||pubmine.com$important
 ||infolinks.com$important
 ||feedbackify.com$important
+||pages03.net$important
+||crwdcntrl.net$important
+||cvtr.io$important
+||intellitxt.com$important
+||beeftransmission.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -429,6 +431,7 @@ tinypic.com##script:contains(SWFObject)
 ||rightstufanime.com$important,third-party
 ||rightstufanime.com$important,subdocument
 ||rightstufanime.com$important,popup
+||otakumode.com/widget$important,third-party
 
 way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
@@ -439,6 +442,12 @@ way2earning.com##a[href*="poptm.com"]
 whosampled.com##script:contains(detectAdBlocker)
 
 ||dictionary.com/proxy$important
+
+!||itpro.co.uk$inline-script
+!itpro.co.uk##script:contains(_sp_)
+@@||itpro.co.uk$generichide
+itpro.co.uk###dennis-newsletter-newsletter-form
+itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -460,6 +469,7 @@ whosampled.com##script:contains(detectAdBlocker)
 /forbes_welcome.js
 *?zoneid=*$important
 /svg4everybody$script
+!/advagg_js*$important
 *controller=Optimizely*
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
@@ -793,13 +803,14 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 
 @@||nepustation.com$generichide
 nepustation.com###babasbmsgx
+nepustation.com##.sd-sharing-enabled
 kobatochan.com###supplementary
 kobatochan.com###mobile-header-left-nav
 kobatochan.com##.jetpack-image-container
 kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
 
 ! https://github.com/gorhill/uBlock/issues/2354
-nepustation.com,kobatochan.com##body:style(visibility: visible !important;)
+nepustation.com##body:style(visibility: visible !important;)
 nepustation.com,kobatochan.com##script:inject(bab-defuser.js)
 nepustation.com,kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
 
