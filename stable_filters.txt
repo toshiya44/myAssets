@@ -1,6 +1,6 @@
 ! Title: Toshiya's Tracking and Clutter Filters
 ! Author: Toshiya
-! Date: 2017-02-05
+! Date: 2017-02-07
 ! Requirement: uBlock Origin 1.10.6+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -287,6 +287,11 @@
 ||pubmine.com$important
 ||infolinks.com$important
 ||feedbackify.com$important
+||pages03.net$important
+||crwdcntrl.net$important
+||cvtr.io$important
+||intellitxt.com$important
+||beeftransmission.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -408,6 +413,10 @@ way2earning.com##a[href*="poptm.com"]
 ! 2017-01-29 http://www.whosampled.com/
 @@||whosampled.com^$generichide
 whosampled.com##script:contains(detectAdBlocker)
+
+@@||itpro.co.uk$generichide
+itpro.co.uk###dennis-newsletter-newsletter-form
+itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -649,7 +658,8 @@ sankakucomplex.com##script:contains(pagespeed)
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
-||gelbooru.com/*/intermission.php$important
+!||gelbooru.com/*/intermission.php$important
+||gelbooru.com/intermission.php$subdocument,frame,important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
