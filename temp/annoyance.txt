@@ -182,6 +182,11 @@ nepustation.com##script:contains(eval)
 jcafe24.net##.sp-body:style(display: block !important;)
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important
 
+! Note: Cancer.
+wowhead.com##a[href*="/premium"]
+||zamimg.com$important
+||wowhead.com$important
+
 !###########################################################################!
 ! wikia script fractions
 ! moved here because they'll probably break the site.
