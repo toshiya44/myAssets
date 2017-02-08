@@ -1,7 +1,7 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
 ! Date: 2017-02-07
-! Requirement: uBlock Origin 1.10.6+
+! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -344,9 +344,6 @@ mediafire.com#@##shareMenu
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
 
-! https://github.com/easylist/easylist/issues/270
-@@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
-
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
 
@@ -380,11 +377,6 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
-
-! Note: Cancer.
-wowhead.com##a[href*="/premium"]
-||zamimg.com$important
-||wowhead.com$important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
 ! example.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
@@ -442,6 +434,7 @@ way2earning.com##a[href*="poptm.com"]
 whosampled.com##script:contains(detectAdBlocker)
 
 ||dictionary.com/proxy$important
+||yahoo.com$third-party,important
 
 !||itpro.co.uk$inline-script
 !itpro.co.uk##script:contains(_sp_)
@@ -469,7 +462,6 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 /forbes_welcome.js
 *?zoneid=*$important
 /svg4everybody$script
-!/advagg_js*$important
 *controller=Optimizely*
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
@@ -510,6 +502,8 @@ fingerprint.js$important
 /adContent.aspx
 /adProtect.aspx
 
+!/advagg_js
+
 ! ########################################################################### !
 
 ! Google, GOOGLE EVERYWHERE
@@ -536,7 +530,6 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||googleapis.com/*/swfobject$script,important
 ||mail.google.com/mail/*/cleardot.gif$important
 ||google.*/promos$important
-
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
@@ -880,5 +873,8 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! ||seal.beyondsecurity.com^$important
+! https://github.com/easylist/easylist/issues/270
+! they changed it back
+! @@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
 ! ########################################################################### !
 ! ################################## END #################################### !
