@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-08
+! Date: 2017-02-09
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -55,7 +55,6 @@
 ||ora.tv$third-party
 ||zkcdn.net$important
 ||sportsinteraction.com$important
-||surveygizmobeacon.s3.amazonaws.com$important
 ||myfonts.net$third-party,important
 ||fullstory.*$important
 ||getsentry.com$important
@@ -319,6 +318,11 @@ reddit.com###siteTable_organic
 ||redditmedia.com/ads$subdocument,important
 ||amazonaws.com/redditstatic$important
 
+||surveygizmobeacon.s3.amazonaws.com$important
+||s3.amazonaws.com/*/secure.js$script,important
+||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
+||amazonaws.com/703a80648f8f74c6a637ac48fc23d00ba8dc4bb12ead3d0075872b2d623fe7$important
+
 !github.com##.js-touch-events.modal-backdrop
 github.com##.modal-backdrop
 ||github.com/_private/browser/errors$important
@@ -403,8 +407,6 @@ androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-d
 ||go.com/*/DisneyID.js$important
 ||mirrorcreator.com/js/rightad.js$important
 ||mirrorcreator.com/mstats.php$important
-||s3.amazonaws.com/*/secure.js$script,important
-||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 
 ||typekit.net
 ||p.typekit.net/p.gif$important
@@ -466,6 +468,7 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 /forbes_welcome.js
 *?zoneid=*$important
 /svg4everybody$script
+/ngx_pagespeed_beacon
 *controller=Optimizely*
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
@@ -705,15 +708,14 @@ sankakucomplex.com##script:contains(pagespeed)
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
-! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
-@@/ad/$image,domain=gelbooru.com|sankakucomplex.com
+@@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
+||amazonaws.com$important,domain=sankakucomplex.com
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
-!||gelbooru.com/*/intermission.php$important
 ||gelbooru.com/intermission.php$subdocument,frame,important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
@@ -849,19 +851,15 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! ########################################################################### !
 ! Various commented out filters, just in case I need them again.
 ! Will be removed once I'm sure that they're obsolete.
-! ||wikia.com/wikia.php?controller=JSMessages$script,important
 ! unable to perform image reverse search.
 ! ||google.*/xjs/_/js*$script,important
-! what are you doing here? Update: most likely to provide captcha service 
+! most likely to provide captcha service 
 ! which gets triggered when there's suspicions of bot activity. Just use uMatrix for this.
 ! ||google.com$important,domain=myanimelist.net|mozilla.net|mozila.org|wikia.com
 ! ||ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js$script,important
 ! Replaced with a more generic filter for pixiv
 ! pixiv.net##a[href^="/premium.php"]
 ! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-! cards are the link preview thingy
-! ||twitter.com/*/cards$important
-! ||twitter.com/*/cards$inline-script,important
 ! looks like it's no longer a valid filter (as of 2017-01-27)
 ! ||twitter.com$csp_report,important
 ! not using these links for adguard filters anymore (now at adtidy)
@@ -869,8 +867,6 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! @@||adguard.com/en/filter-rules.html
 ! google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
 ! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
-! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
-! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! ||seal.beyondsecurity.com^$important
 ! https://github.com/easylist/easylist/issues/270
 ! they changed it back
@@ -879,5 +875,11 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! 4chan.org##script:contains(initAds)
 ! 4chan.org##script:contains(initAdsAG)
 ! 4chan.org##script:contains(adglare)
+! ||gelbooru.com/*/intermission.php$important
+! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
+! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+! @@/ad/$image,domain=gelbooru.com|sankakucomplex.com
+! @@||sankakucomplex.com/data/preview/*/ad/*.jpg$image,domain=sankakucomplex.com
 ! ########################################################################### !
 ! ################################## END #################################### !
