@@ -24,7 +24,6 @@
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
 ||d2j1fszo1axgmp.cloudfront.net$important
-||d2j1fszo1axgmp.cloudfront.net$important
 ||d3alijertxiv6b.cloudfront.net$important
 ||d10psrq44igbex.cloudfront.net$important
 ||185.2.83.87$important
@@ -92,6 +91,7 @@
 ||decenthat.com$important
 ||fastly.net/ad$important
 ||moat.com$important
+||moatads.com$important
 ||bitcoinchain.com$important,third-party
 ||coinser.in$script,important
 ||alxsite.com$important
@@ -289,6 +289,10 @@
 ||mailchimp.com$important
 ||waframedia8.com$important
 ||onclkds.com$important
+||krxd.net$important
+||dynamicyield.com$important
+||cmdotgwjhpqf.com$important
+||xgzybmbwfmjd.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -400,6 +404,9 @@ androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-d
 ||fox.com$important,third-party
 ||tpfeed.cbc.ca$xmlhttprequest,important
 ||howtogeek.com/*/blank.gif$important
+||newsvine.com$important,third-party
+||nbcuni.com$important
+!||pix.nbcuni.com$important
 
 ||wp.com/*/devicepx-jetpack.js
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
@@ -474,8 +481,9 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 1x1_transparent.gif$image
 *security-i0y8kg*$important
 ://go.*?zoneid=$popup,important
-/adobe_audience_manager$important
+adobe_audience_manager$important
 /metrics/s_code*$script,important
+adobe-audience-manager.js$important
 /metrics/s_code_trb.js$script,important
 /prod.iqdcontroller.iqdigital$script,important
 /js/tracking/ga_initial_visit*.js$script,important
@@ -604,11 +612,10 @@ facebook.com###GroupsRHCSuggestionSection
 facebook.com###fbSearchResultsBox
 facebook.com###megaphone_story_3012
 facebook.com###mobile_mirror_banner
-facebook.com##div.pagelet-group#pagelet_advertiser_panel
+facebook.com###pagelet_advertiser_panel
 facebook.com##div#pagelet_rhc_footer
-facebook.com##div.pagelet-group#work_mobile_upsell_pagelet
-facebook.com##div.pagelet-group#pagelet_trending_tags_and_topics
-facebook.com##div.pagelet-group#pagelet_ego_pane
+facebook.com###work_mobile_upsell_pagelet
+facebook.com###pagelet_trending_tags_and_topics
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 /xfbml.ad.js$important
@@ -647,7 +654,6 @@ facebook.com##div.pagelet-group#pagelet_ego_pane
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
 ||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
-!||fb.*^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||fb.com^$third-party,important,domain=~behind-the-scene|~facebook.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
@@ -684,9 +690,15 @@ boards.4chan.org##[class^="ad-"]
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
 ||cu.cc/main.php$important,first-party
-||4archive.org/neverBme.php$first-party,important
+||4archive.org/neverBme.php$important
+||4archive.org/nbme_main.php$important
+||thebarchive.com/neverRBb.php$important
+||randomarchive.com/nbme_main.php$important
 cu.cc##script:contains(TyxoObject)
 cu.cc##script:contains(ExoLoader)
+
+/nbme_main.php$script
+.php$script,domain=4archive.org|randomarchive.com|thebarchive.com
 
 ! --------------------------------------------------------------------------- !
 
@@ -716,7 +728,7 @@ sankakucomplex.com##script:contains(pagespeed)
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
-||gelbooru.com/intermission.php$subdocument,frame,important
+||gelbooru.com/intermission.php$subdocument,important
 
 ! possible fake/scam/phishing site danbooru.idanbooru.com 
 ||idanbooru.*$important
