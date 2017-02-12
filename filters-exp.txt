@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-10
+! Date: 2017-02-11
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -172,6 +172,8 @@
 ||thankswrite.com$important,popup
 ||belwrite.com$important
 ||belwrite.com$important,popup
+||gloomwrite.com$important
+||gloomwrite.com$important,popup
 ||ensighten.com$important
 ||btstatic.com$important
 ||rubiconproject.com$important
@@ -294,6 +296,8 @@
 ||dynamicyield.com$important
 ||cmdotgwjhpqf.com$important
 ||xgzybmbwfmjd.com$important
+||friendlyduck.com$important
+||friendlyduck.com$important,popup
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -365,9 +369,9 @@ addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
 
 ! to block add-ons' behind-the-scene activity.
-||fasezero.com$important
-||redditenhancementsuite.com$important
 ||kkapsner.de
+||fasezero.com
+||redditenhancementsuite.com
 
 ! Much effort
 animenewsnetwork.com##.gutter
@@ -416,8 +420,11 @@ androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-d
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
 ||go.com$important,third-party
 ||go.com/*/DisneyID.js$important
-||mirrorcreator.com/js/rightad.js$important
-||mirrorcreator.com/mstats.php$important
+
+! this is actually the uh... ||mirrorcreator.com/mstats.php$important
+! rightad.js is a honeypot (as of 2017-01-11)
+@@||mirrorcreator.com/js/rightad.js$important,domain=mirrorcreator.com
+mirrorcreator.com##script:has(pageTracker)
 
 ||typekit.net
 ||p.typekit.net/p.gif$important
@@ -429,17 +436,17 @@ watchers.to##script:contains(ActiveXObject)
 watchers.to##script:contains(beginMainCheckerAB)
 watchers.to##[onclick*="mainWidget_globalTm"]
 
-tinypic.com##script:contains(PopSettings)
-tinypic.com##script:contains(ClientProfilingLog)
 tinypic.com##script:contains(renderAd)
 tinypic.com##script:contains(SWFObject)
+tinypic.com##script:contains(PopSettings)
+tinypic.com##script:contains(ClientProfilingLog)
 
 ||mp3juices.cc/img$important
 ||mp3juices.cc/pa/h/a.html$subdocument
 
+||rightstufanime.com$important,popup
 ||rightstufanime.com$important,third-party
 ||rightstufanime.com$important,subdocument
-||rightstufanime.com$important,popup
 ||otakumode.com/widget$important,third-party
 
 way2earning.com##a[href*="adoverlay.net"]
@@ -458,6 +465,8 @@ whosampled.com##script:contains(detectAdBlocker)
 @@||itpro.co.uk$generichide
 itpro.co.uk###dennis-newsletter-newsletter-form
 itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
+
+||ooyala.com$subdocument,important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -543,9 +552,9 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||googletagmanager.com$important
 ||googleadservices.com$important
 ||googlesyndication.com$important
+||google.*/ads$important
 ||google.*/promos$important
 ||google.*/gen_204?$important
-||google.*/ads$first-party,important
 ||google.*/jsapi?autoload=*$script,important
 ||mail.google.com/*&view=ad&$important
 ||mail.google.com/mail/*/cleardot.gif$important
@@ -561,7 +570,6 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
 ||fandom.wikia.com^$important,~first-party
-!||fandommetrics.com$important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
@@ -689,6 +697,7 @@ facebook.com###pagelet_trending_tags_and_topics
 ! ########################################################################### !
 
 ! 4chan filters 
+@@||4chan.org$generichide
 boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
 boards.4chan.org##.middlead
@@ -747,6 +756,7 @@ hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
 
+@@||pixiv.net^$generichide
 pixiv.net#@#.bookmark-container
 pixiv.net##.share-button
 pixiv.net##.ads-top-info
@@ -773,6 +783,11 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
 @@||hentaihaven.org$generichide
 @@||hentaihaven.org/basement/js/adshow.js$script,first-party
+
+! blocking baka-tsuki's logo
+@@||baka-tsuki.org^$generichide
+! images with filename partially matching with a URL fragment filter gets blocked
+@@||baka-tsuki.org$image,first-party
 
 ! --------------------------------------------------------------------------- !
 
@@ -839,14 +854,9 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! ########################################################################### !
 ! ######### Necessary generic whitelists, with reason(s) specified ########## !
 ! 
-! some generic cosmetic filters on other lists are blocking baka-tsuki's logo
-! baka-tsuki.org#@#img[width="88"][height="31"]
-@@||baka-tsuki.org^$generichide
-! images with filename partially matching with a URL fragment filter gets blocked
-@@||baka-tsuki.org$image,first-party
-! again, generic cosmetic filters are hiding random stuff.
-@@||pixiv.net^$generichide
+! generic cosmetic filters are hiding random stuff.
 @@||crunchyroll.com^$generichide
+@@||tsundora.com^$generichide
 ! easylist blocks filter list due to a url fragment filter
 @@||hosts-file.net/ad_servers.txt‎
 !
@@ -889,5 +899,7 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! @@/ad/$image,domain=gelbooru.com|sankakucomplex.com
 ! @@||sankakucomplex.com/data/preview/*/ad/*.$image,first-party
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
+! boards.4chan.org##.ad-cnt.center.topad
+! boards.4chan.org##.center.middlead
 ! ########################################################################### !
 ! ################################## END #################################### !
