@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-11
+! Date: 2017-02-12
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -298,6 +298,8 @@
 ||xgzybmbwfmjd.com$important
 ||friendlyduck.com$important
 ||friendlyduck.com$important,popup
+||amung.us$important
+||puhtml.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -345,7 +347,7 @@ discordapp.com##.message-group-blocked
 ||curse.com^$important
 
 ||paypal.com$third-party,important
-||paypalobjects.com$third-party,important,domain=~paypal.com
+||paypalobjects.com$important,domain=~paypal.com
 
 ||cointelegraph.com/assets/js/script.js$script,important
 ||cointelegraph.com/embed$important
@@ -397,6 +399,7 @@ animenewsnetwork.com##iframe[src="javascript:void(0)"]
 ||cloudflare.com^$domain=moviex.in|moviex.org
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
+! jacafe needs the script to function.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
 
 ! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
@@ -792,7 +795,7 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! --------------------------------------------------------------------------- !
 
 ! block fake kiss sites https://redd.it/5jtzj9
-! last checked: 2017-01-24
+! last checked: 2017-02-12
 
 kissanime.ru##.divCloseBut
 kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
@@ -813,13 +816,16 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 ||readcomiconline.*$important,domain=~readcomiconline.to
 
 ! plain list of fake sites (phishing site)
-||kissanime.ro$important
 ||kissanime.io$important
+||kissanime.ro$important
+||kissanime.pro$important
 ||kiss-anime.me$important
 ||kisscartoon.so$important
 ||kissasian.xyz$important
 ||kissmanga.us$important
 ||kissmanga.io$important
+||kissmanga.ru$important
+||kissmanga.ro$important
 ||kissmanga.pro$important
 ||anime8.*$important
 
@@ -857,6 +863,7 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! generic cosmetic filters are hiding random stuff.
 @@||crunchyroll.com^$generichide
 @@||tsundora.com^$generichide
+@@||adblock.mozdev.org$generichide
 ! easylist blocks filter list due to a url fragment filter
 @@||hosts-file.net/ad_servers.txt‎
 !
