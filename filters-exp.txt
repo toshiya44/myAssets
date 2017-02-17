@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-13
+! Date: 2017-02-17
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -300,6 +300,7 @@
 ||friendlyduck.com$important,popup
 ||amung.us$important
 ||puhtml.com$important
+||vindicosuite.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -425,8 +426,11 @@ androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-d
 ||go.com/*/DisneyID.js$important
 
 ! rightad.js is a honeypot (as of 2017-01-11)
+@@||mirrorcreator.com$generichide
 @@||mirrorcreator.com/js/rightad.js$important,domain=mirrorcreator.com
 mirrorcreator.com##script:has(pageTracker)
+mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
+||mirrorcreator.com/images/MBTAnimateddownloadbutton.gif$image
 
 ||typekit.net
 ||p.typekit.net/p.gif$important
@@ -625,15 +629,16 @@ myanimelist.net##.banner-header-anime-straming
 facebook.com###build_audience
 facebook.com###pages_manager_boosted_website_card
 facebook.com###aymt_homepage_panel_tip
-facebook.com###pagelet_ego_pane
 facebook.com###GroupsRHCSuggestionSection
 facebook.com###fbSearchResultsBox
 facebook.com###megaphone_story_3012
 facebook.com###mobile_mirror_banner
-facebook.com###pagelet_advertiser_panel
-facebook.com##div#pagelet_rhc_footer
 facebook.com###work_mobile_upsell_pagelet
+facebook.com###pagelet_advertiser_panel
+facebook.com###pagelet_rhc_footer
+facebook.com###pagelet_ego_pane
 facebook.com###pagelet_trending_tags_and_topics
+facebook.com###pagelet_growth_expanding_cta
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 /xfbml.ad.js$important
@@ -704,6 +709,8 @@ boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
 boards.4chan.org##.middlead
 boards.4chan.org##[class^="ad-"]
+boards.4chan.org##script:contains(prototype)
+boards.4chan.org##script:contains(window.upManager)
 ||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
