@@ -2,6 +2,7 @@
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
 ! this list is not maintained and no support is availble. I myself disable it if I'm having any issues.
 ! Also, includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
+! Many filters in here are completely unnecessary but I made them anyway.
 !---------------------------------------------------------------------------!
 
 theweathernetwork.com###cbc_widget_container
@@ -110,7 +111,6 @@ archive.org##a[href="https://archive.org/donate/"]
 archive.org##a[href*="/donate"]
 web.archive.org###__wb_record_content_done
 
-myanimelist.net##.christmas
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
 myanimelist.net##script:contains(amzn_assoc_tracking_id)
@@ -130,9 +130,9 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||jcafe24.net/Smileys/*$image
 ||twitter.com/*/recommendations$important
 ||plus.google.com$subdocument,important
-||mail.google.com^*&view=ad&$important
+!||mail.google.com^*&view=ad&$important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
-@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
+!@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
 
 imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
@@ -160,8 +160,6 @@ desuarchive.org###\31 34710081
 ||urlchecker.org/ajax/proxy_limit.php$first-party
 ||urlchecker.org/*/proxy-checker.js$important
 
-||scribd.com^
-
 ! hope this works
 ! update: not working ;-;
 /blank.gif$image,important,third-party,redirect=1x1-transparent.gif
@@ -176,16 +174,19 @@ nepustation.com###jetpack_remote_comment
 ||nepustation.com$media,first-party
 nepustation.com##script:contains(eval)
 
-
+||sankakucomplex.com/logo.png$image
 ! The expand button is broken for some reason, so I'm manually doing it. 
 ! this is not a bypass btw. it is equivalent to clicking the spoiler tag
 jcafe24.net##.sp-body:style(display: block !important;)
-||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important
 
 ! Note: Cancer.
 wowhead.com##a[href*="/premium"]
 ||zamimg.com$important
 ||wowhead.com$important
+||fandom.wikia.com$important
+||scribd.com$important
+
+||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 
 !###########################################################################!
 ! wikia script fractions
@@ -282,6 +283,7 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !*.svg$domain=reddit.com
 !youtube.com###feed
 !myanimelist.net##a[href*="/stats"]
+!||fb.*^$third-party,important,domain=~behind-the-scene|~facebook.com
 !###########################################################################!
 ! Some really old filters who were made based on stored cookies.
 ! Might remove them.
@@ -295,3 +297,4 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ! ||fukugan.com$important
 ! --------------------------------------------------------------------------- !
 !##################################END######################################!
+! iu – nu – fb – a – wuh – ei –kx – eu – pl – vjz
