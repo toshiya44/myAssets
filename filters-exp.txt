@@ -178,7 +178,7 @@
 ||btstatic.com$important
 ||rubiconproject.com$important
 ||play-asia.com$important,third-party
-||*.mail.ru$script,important
+||.mail.ru$script,important
 ||aolcdn.com$script,important
 ||bluekai.com$important
 ||casalemedia.com$important
@@ -636,6 +636,8 @@ facebook.com###pagelet_rhc_footer
 facebook.com###pagelet_ego_pane
 facebook.com###pagelet_trending_tags_and_topics
 facebook.com###pagelet_growth_expanding_cta
+facebook.com##._5hn6:has(div a[role="button"][href^="/r.php?"])
+facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 /facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
 /xfbml.ad.js$important
