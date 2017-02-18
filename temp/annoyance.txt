@@ -100,7 +100,6 @@ reddit.com##.give-gold-button
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
 boards.4chan.org##.boardBanner
-animenewsnetwork.com###sidebar
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
 boards.4chan.org###boardNavDesktopFoot
@@ -127,12 +126,10 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 !||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
 
 ||twimg.com/emoji$important
-||jcafe24.net/Smileys/*$image
+||jcafe24.net/Smileys$image
 ||twitter.com/*/recommendations$important
 ||plus.google.com$subdocument,important
-!||mail.google.com^*&view=ad&$important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
-!@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
 
 imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
@@ -162,13 +159,13 @@ desuarchive.org###\31 34710081
 
 ! hope this works
 ! update: not working ;-;
-/blank.gif$image,important,third-party,redirect=1x1-transparent.gif
-/spacer.gif$image,important,third-party,redirect=1x1-transparent.gif
-/lumbar.gif?$image,important,third-party,redirect=1x1-transparent.gif
-/img-dot.gif$image,important,third-party,redirect=1x1-transparent.gif
-/clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
-/transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
-/1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/blank.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/spacer.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/lumbar.gif?$image,important,third-party,redirect=1x1-transparent.gif
+!/img-dot.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
 
 nepustation.com###jetpack_remote_comment
 ||nepustation.com$media,first-party
@@ -180,7 +177,6 @@ nepustation.com##script:contains(eval)
 jcafe24.net##.sp-body:style(display: block !important;)
 
 ! Note: Cancer.
-wowhead.com##a[href*="/premium"]
 ||zamimg.com$important
 ||wowhead.com$important
 ||fandom.wikia.com$important
@@ -284,6 +280,19 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !youtube.com###feed
 !myanimelist.net##a[href*="/stats"]
 !||fb.*^$third-party,important,domain=~behind-the-scene|~facebook.com
+!||mail.google.com^*&view=ad&$important
+!@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
+!animenewsnetwork.com##.gutter
+!animenewsnetwork.com###sidebar
+!animenewsnetwork.com##.full-image
+!animenewsnetwork.com##.middle-area > div:nth-of-type(1)
+!animenewsnetwork.com##.herald-boxes
+! not sure what these are for but the page loads fine without em
+!||ajax.googleapis.com/ajax/libs/prototype$script,domain=animenewsnetwork.com,important
+!||animenewsnetwork.com/assets$subdocument,important
+!||animenewsnetwork.com/assets$xmlhttprequest,first-party
+!||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
+!||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
 !###########################################################################!
 ! Some really old filters who were made based on stored cookies.
 ! Might remove them.
@@ -297,4 +306,4 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ! ||fukugan.com$important
 ! --------------------------------------------------------------------------- !
 !##################################END######################################!
-! iu – nu – fb – a – wuh – ei –kx – eu – pl – vjz
+! iu – nu – fb – a – wuh – ei – kx – eu – pl – vjz
