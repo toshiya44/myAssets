@@ -1,4 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance 
+! Date: 2017-02-18
+! Requirement: Patience 
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
 ! this list is not maintained and no support is availble. I myself disable it if I'm having any issues.
 ! Also, includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
@@ -99,24 +101,26 @@ reddit.com##.give-gold-button
 
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
-boards.4chan.org##.boardBanner
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
-boards.4chan.org###boardNavDesktopFoot
 github.com##.js-mobile-preference-form
 developer.mozilla.org##.notification-tray
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 archive.org##a[href="https://archive.org/donate/"]
-archive.org##a[href*="/donate"]
 web.archive.org###__wb_record_content_done
+archive.org##a[href*="/donate"]
+
+boards.4chan.org##.boardBanner
+boards.4chan.org###boardNavDesktopFoot
 
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
 myanimelist.net##script:contains(amzn_assoc_tracking_id)
 !myanimelist.net###menu:style(width: 100% !important;)
 !myanimelist.net###myanimelist:style(width: 99% !important;)
-!myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
 !myanimelist.net###topSearchText:style(width: 400px !important;)
+!myanimelist.net###content:style(background-color: grey !important;)
+!myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
@@ -124,6 +128,7 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
 ||facebook.com/ajax/photos/logging/session_logging.php$xmlhttprequest,important
 !||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
+!||facebook.com/ajax/ads/media/log$important
 
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys$image
@@ -140,6 +145,7 @@ imgur.com###cta-container
 ||tumblr.com/services/cslog$xmlhttprequest,important
 !||tumblr.com/hsts$first-party,important
 
+animenewsnetwork.com##fieldset
 kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
 ||kissanime.*/Scripts/google.js$script,first-party
@@ -156,16 +162,6 @@ desuarchive.org###\31 34710081
 ||urlchecker.org/ajax/proxy_parser.php$first-party
 ||urlchecker.org/ajax/proxy_limit.php$first-party
 ||urlchecker.org/*/proxy-checker.js$important
-
-! hope this works
-! update: not working ;-;
-!/blank.gif$image,important,third-party,redirect=1x1-transparent.gif
-!/spacer.gif$image,important,third-party,redirect=1x1-transparent.gif
-!/lumbar.gif?$image,important,third-party,redirect=1x1-transparent.gif
-!/img-dot.gif$image,important,third-party,redirect=1x1-transparent.gif
-!/clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
-!/transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
-!/1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
 
 nepustation.com###jetpack_remote_comment
 ||nepustation.com$media,first-party
@@ -240,11 +236,11 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||parlament.usa.cc
 ||gov.hs.vc
 ||community.hackersclub.net
-||login.anal-porn.info
-||paypal.sellbitcoins.com
+||anal-porn.info
+||sellbitcoins.com
 ||panel.teamspeak.bz	
 ||files.uploads.ws
-||vip.cubeupload.com
+||cubeupload.com
 ||media-bo.appspot.com
 
 ||orcahub.com
@@ -273,8 +269,6 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !@@||gateway.discord.gg$websocket
 !@@||graph.facebook.com$script,domain=facebook.com
 !@@||graph.facebook.com/insights?access_token=*$first-party
-!reddit.com##[data-author="AutoModerator"]
-!padding-left: 10% !important;padding-right: 10% !important;
 !||imgur.com$xmlhttprequest,domain=behind-the-scene,important
 !*.svg$domain=reddit.com
 !youtube.com###feed
@@ -293,17 +287,19 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !||animenewsnetwork.com/assets$xmlhttprequest,first-party
 !||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 !||animenewsnetwork.com/assets/60ca95ce6f72ad7466020a869fdac256e98dbc9d.js
+!reddit.com###header-img
+!reddit.com##[data-author="PCMRBot"]
+!reddit.com##[data-author="AutoModerator"]
 !###########################################################################!
-! Some really old filters who were made based on stored cookies.
-! Might remove them.
-! doesn't seem suspicious
-! ||angelfire.com$important
-! ||fiverr.com$important
-! ||fiverrcdn.com$important
-! ||danshihack.com$important
-! ||msdesignbd.com$important
-! ||icnerd.com$important
-! ||fukugan.com$important
 ! --------------------------------------------------------------------------- !
+! hope this works
+! update: not working ;-;
+!/blank.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/spacer.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/lumbar.gif?$image,important,third-party,redirect=1x1-transparent.gif
+!/img-dot.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/clear1x1.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
+!/1x1_transparent.gif$image,important,third-party,redirect=1x1-transparent.gif
 !##################################END######################################!
 ! iu – nu – fb – a – wuh – ei – kx – eu – pl – vjz
