@@ -7,17 +7,22 @@
 ! Toshiya: Removed some redundant filters and moved fragment filters to a separate list due to false-positive issues.
 ! Also removed some comments to clean up a little bit.
 ! Note: THIS LIST IS NOT MAINTAINED. Go to the original repository to access the latest list.
-! Last modified/updated: 2016-12-25
+! Last modified/updated: 2017-02-18
 
 ! ########## TLD (Top Level Domain) with path START ##########
+||com^*.asp?*&r=&p=&g=|$document
 ||com^*.asp?*&s=*&v=*&m=$document
 ||com/*.asp?*=nt.v|$document
+||com^*.aspx?*&r=&p=&g=|$document
 ||com^*.aspx?*&s=*&v=*&m=$document
 ||com/*.aspx?*=nt.v|$document
+||com^*.htm?*&r=&p=&g=|$document
 ||com^*.htm?*&s=*&v=*&m=$document
 ||com/*.htm?*=nt.v|$document
+||com^*.html?*&r=&p=&g=|$document
 ||com^*.html?*&s=*&v=*&m=$document
 ||com/*.html?*=nt.v|$document
+||com^*.php?*&r=&p=&g=|$document
 ||com^*.php?*&s=*&v=*&m=$document
 ||com/*.php?*=nt.v|$document
 
@@ -402,6 +407,7 @@
 ||adman.gr^$third-party
 ||admarvel.com^$third-party
 ||admaster.net^$third-party
+||admatrix.jp$third-party
 ||admaxasia.com^
 ||admeld.com^$third-party
 ||admin6.com^$third-party
@@ -1303,7 +1309,8 @@
 ||clickppcbuzz.com^
 ||clickreport.com^$third-party
 ||clicks4ads.com^$third-party
-||clicksor.com^$third-party
+||clicksor.$document
+||clicksor.$third-party
 ||clicksvenue.com^$third-party
 ||clicktale.net^$third-party
 ||clicktrace.info^
@@ -1668,6 +1675,7 @@
 ||directerp.ru^
 ||direction-du-credit.com^
 ||direction-x.com^$third-party
+||directrev.$document
 ||directrev.$popup
 ||directrev.$third-party
 ||directtrack.com^$third-party
@@ -2674,6 +2682,7 @@
 ||kau.li^$third-party
 ||kavanga.ru^$third-party
 ||kazeo.com^$third-party
+||kccsrecommend.
 ||recommend.kbmj.com^
 ||keen.io^$third-party
 ||keertn.com^
@@ -4369,6 +4378,7 @@
 ||spotx.tv^
 ||spotxcdn.com^
 ||spotxchange.com^$third-party
+||spoutable.com^$third-party
 ||news020.sppd.ne.jp/blog/html/rss$subdocument
 ||sprintrade.com^$third-party
 ||spylog.com^
