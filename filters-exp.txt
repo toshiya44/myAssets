@@ -560,6 +560,8 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||google-analytics.*$important,domain=~behind-the-scene
 ||doubleclick.net$important
 ||csi.gstatic.com$important
+||metric.gstatic.com$important
+||gstatic.com/*/cleardot.gif$important
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||plus.google.*^$third-party,important
@@ -572,13 +574,19 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||googleadservices.com$important
 ||googlesyndication.com$important
 ||google.*/ads$important
+||google.*/pagead$important
 ||google.*/promos$important
 ||google.*/gen_204?$important
+||google.*/cspreport$important
 ||google.*/jsapi?autoload=*$script,important
 ||mail.google.com/*&view=ad&$important
 ||mail.google.com/mail/*/cleardot.gif$important
+||google.com/setgmail$important
+||google.com/availability/$important
 ! the request is sometimes blocked by url fragment filters
 @@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
+
+
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
