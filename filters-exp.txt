@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-18
+! Date: 2017-02-19
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -308,6 +308,22 @@
 ||exitexchange.com$important
 ||eibiuaeronoticias.net$important
 ||thenexxus.org$important
+||clicksor.$important
+||cleverdata.
+||cleverdata.ru$important
+||cleverdata.io$important
+||cleverdata.is$important
+||1dmp.io$important
+||proper.io$important
+||gamefragger.com$important,third-party
+||theringreport.com$important,third-party
+||animemojo.com$important,third-party
+||mobisla.com$important
+||canada.com$important,third-party
+||clickiocdn.com$important
+||ad4game.com$important
+||foresee.com$important,third-party
+||foreseeresults.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -483,6 +499,7 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 ! fragments that doesn't really belong in other sections, such as wikia/google.
 ! may case false positives.
 
+/atrk.js
 /lumbar.gif?
 */ga.js$script
 /clientprofiler
