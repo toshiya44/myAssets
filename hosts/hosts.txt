@@ -471,11 +471,11 @@ fe80::1%lo0 localhost
 0.0.0.0 mob.adwhirl.com
 
 # [Doubleclick (Google)]
-0.0.0.0 ad-g.doubleclick.net
-0.0.0.0 ad.doubleclick.net
-0.0.0.0 ad.mo.doubleclick.net
-0.0.0.0 doubleclick.net
-0.0.0.0 googleads.g.doubleclick.net
+# 0.0.0.0 ad-g.doubleclick.net
+# 0.0.0.0 ad.doubleclick.net
+# 0.0.0.0 ad.mo.doubleclick.net
+# 0.0.0.0 doubleclick.net
+# 0.0.0.0 googleads.g.doubleclick.net
 
 # [Google]
 0.0.0.0 pagead.googlesyndication.com
@@ -534,7 +534,7 @@ fe80::1%lo0 localhost
 0.0.0.0 t.medialytics.com
 
 # [Google]
-0.0.0.0 google-analytics.com
+
 0.0.0.0 googlesyndication.com
 
 # [applift]
@@ -8787,7 +8787,7 @@ fe80::1%lo0 localhost
 0.0.0.0 media.adfrontiers.com
 0.0.0.0 www.adgitize.com
 0.0.0.0 code.ad-gbn.com
-0.0.0.0 findadvertise.engine.adglare.net
+# 0.0.0.0 findadvertise.engine.adglare.net
 0.0.0.0 www.ad-groups.com
 0.0.0.0 adhall.com
 0.0.0.0 pool.adhese.be
@@ -15156,14 +15156,14 @@ fe80::1%lo0 localhost
 0.0.0.0 fls.au.doubleclick.net
 0.0.0.0 www.doubleclickbygoogle.com
 0.0.0.0 video-stats.video.google.com
-0.0.0.0 ssl.google-analytics.com
-0.0.0.0 www.google-analytics.com
+
+
 0.0.0.0 4.afs.googleadservices.com
 0.0.0.0 pagead2.googleadservices.com
 0.0.0.0 partner.googleadservices.com
 0.0.0.0 www.googleadservices.com
 0.0.0.0 domains.googlesyndication.com
-0.0.0.0 www.googletagservices.com
+
 0.0.0.0 www.linksalpha.com
 # [Gossamer][AS36483][208.70.244.0 - 208.70.247.255]
 0.0.0.0 web.acumenpi.com
@@ -16199,7 +16199,7 @@ fe80::1%lo0 localhost
 0.0.0.0 www.statsforever.com
 0.0.0.0 www.widebanner.com
 # [Leaseweb][AS30633][108.59.0.0 - 108.59.15.255]
-0.0.0.0 reactads.engine.adglare.net
+# 0.0.0.0 reactads.engine.adglare.net
 0.0.0.0 p491.atemda.com
 # [Leaseweb][AS16265][109.237.208.0 - 109.237.219.255]
 0.0.0.0 feeds.wise-click.com
@@ -22203,29 +22203,16 @@ fe80::1%lo0 localhost
 # may provide you with services you like.
 
 #<maybe-spy>
-#0.0.0.0 auto.search.msn.com  # Microsoft uses this server to redirect
-                                # mistyped URLs to search engines. They
-                                # log all such errors.
-#0.0.0.0 sitefinder.verisign.com	# Verisign has joined the game
-#0.0.0.0 sitefinder-idn.verisign.com	# of trying to hijack mistyped
-					# URLs to their site.
-					# May break iOS Game Center.
+#0.0.0.0 auto.search.msn.com  
+# Microsoft uses this server to redirect mistyped URLs to search engines. 
+# They log all such errors.
+0.0.0.0 sitefinder.verisign.com	
+# Verisign has joined the game
+0.0.0.0 sitefinder-idn.verisign.com	
+# of trying to hijack mistyped
+# URLs to their site.
+# May break iOS Game Center.
 
-#0.0.0.0 s0.2mdn.net		# This may interfere with some streaming
-				# video on sites such as cbc.ca
-#0.0.0.0 ad.doubleclick.net   # This may interefere with www.sears.com
-				# and potentially other sites.
-0.0.0.0 media.fastclick.net
-#0.0.0.0 ebay.doubleclick.net		# may interfere with ebay
-#0.0.0.0 google-analytics.com			# breaks some sites
-#0.0.0.0 ssl.google-analytics.com
-#0.0.0.0 www.google-analytics.l.google.com
-#0.0.0.0 stat.livejournal.com		# There are reports that this may mess
- 					# up CSS on livejournal
-#0.0.0.0 stats.surfaid.ihost.com	# This has been known cause
-					# problems with NPR.org
-#0.0.0.0 www.google-analytics.com		# breaks some sites
-#0.0.0.0 ads.imeem.com		# Seems to interfere with the functioning of imeem.com
 #</maybe-spy>
 
 0.0.0.0 006.freecounters.co.uk
@@ -22561,7 +22548,7 @@ fe80::1%lo0 localhost
 0.0.0.0 go-in-search.net
 0.0.0.0 goldstats.com
 0.0.0.0 googfle.com
-0.0.0.0 googletagservices.com
+
 0.0.0.0 g-wizzads.net
 0.0.0.0 highscanprotect.com
 0.0.0.0 hit37.chark.dk
@@ -23318,7 +23305,6 @@ fe80::1%lo0 localhost
 0.0.0.0 www.fxcounters.com
 0.0.0.0 www.gator.com
 0.0.0.0 www.googkle.com
-#0.0.0.0 www.googletagservices.com		#interferes with techrepublic
 0.0.0.0 www.iccee.com
 0.0.0.0 www.iesnare.com
 0.0.0.0 www.iesnare.co.uk
