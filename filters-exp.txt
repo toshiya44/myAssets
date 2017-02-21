@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-20
+! Date: 2017-02-21
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -178,7 +178,7 @@
 ||btstatic.com$important
 ||rubiconproject.com$important
 ||play-asia.com$important,third-party
-||.mail.ru$script,important
+||*.mail.ru$script,important,third-party
 ||aolcdn.com$script,important
 ||bluekai.com$important
 ||casalemedia.com$important
@@ -564,6 +564,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||csi.gstatic.com$important
 ||metric.gstatic.com$important
 ||gstatic.com/*/cleardot.gif$important
+||gstatic.com/docs/common/cleardot.gif$image,domain=google.com,redirect=1x1-transparent.gif
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||plus.google.*^$third-party,important
@@ -576,19 +577,20 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||googleadservices.com$important
 ||googlesyndication.com$important
 ||google.*/ads$important
+||google.*/promo.$important
 ||google.*/pagead$important
 ||google.*/promos$important
 ||google.*/gen_204?$important
 ||google.*/cspreport$important
+||google.*/logImpressions?$important
 ||google.*/jsapi?autoload=*$script,important
 ||mail.google.com/*&view=ad&$important
 ||mail.google.com/mail/*/cleardot.gif$important
 ||google.com/setgmail$important
 ||google.com/availability/$important
 ! the request is sometimes blocked by url fragment filters
-@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
-
-
+!@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
+@@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
 
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
@@ -769,12 +771,13 @@ gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
-! unbreak tl bubbles and other functionality
-@@||gelbooru.com/script/application.js?$domain=gelbooru.com
 ||gelbooru.com/x/$image,first-party
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
+
+! unbreak tl bubbles and other functionality
+@@||gelbooru.com/script/application.js?$domain=gelbooru.com
 
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
 @@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
@@ -930,14 +933,10 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! Replaced with a more generic filter for pixiv
 ! pixiv.net##a[href^="/premium.php"]
 ! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-! not using these links for adguard filters anymore (now at adtidy)
-! @@||adguard.com/filter-rules.html
-! @@||adguard.com/en/filter-rules.html
 ! google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
 ! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
-! ||gelbooru.com/*/intermission.php$important
+! ||gelbooru.com/*intermission.php$important
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
-! @@/ad/$image,domain=gelbooru.com|sankakucomplex.com
 ! @@||sankakucomplex.com/data/preview/*/ad/*.$image,first-party
 ! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
 ! boards.4chan.org##.ad-cnt.center.topad
