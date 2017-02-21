@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-19
+! Date: 2017-02-20
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -500,7 +500,9 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 ! may case false positives.
 
 /atrk.js
+/cspreport
 /lumbar.gif?
+__cspreport__
 */ga.js$script
 /clientprofiler
 /sponsor/click.php
@@ -755,30 +757,37 @@ desuarchive.org##script:contains(_qevents)
 ! boorus and stuff 
 ! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
 
+!gelbooru.com#@#ad
+@@||gelbooru.com$generichide
 gelbooru.com##.noticeError
-chan.sankakucomplex.com###headerthumbs
-danbooru.donmai.us###upgrade-account-notice
+gelbooru.com##.twitter-share-button
+gelbooru.com##a[href^="http://gelbooru.com/redirect.html"]
 gelbooru.com##div[style*="width:1000px"]:has(script)
-gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adnOpt)
+gelbooru.com##script:contains(advertVar)
+gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(adsbyjuicy)
-danbooru.com##script:contains(errorBeacon)
-sankakucomplex.com##script:contains(pagespeed)
-
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
+||gelbooru.com/x/$image,first-party
+||gelbooru.com$script,subdocument
+||gelbooru.com/script/application.js.php$important
+||gelbooru.com/intermission.php$subdocument,important
+
 ! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
 @@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
+
+chan.sankakucomplex.com###headerthumbs
+danbooru.donmai.us###upgrade-account-notice
+danbooru.com##script:contains(errorBeacon)
+sankakucomplex.com##script:contains(pagespeed)
 
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
 ||amazonaws.com$important,domain=sankakucomplex.com
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
-||gelbooru.com$script,subdocument
-||gelbooru.com/script/application.js.php$important
-||gelbooru.com/intermission.php$subdocument,important
 
 ! possible fake/scam/phishing site "danbooru.idanbooru.com"
 ||idanbooru.*$important
