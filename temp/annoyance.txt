@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-02-18
+! Date: 2017-02-21
 ! Requirement: Patience 
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
 ! this list is not maintained and no support is availble. I myself disable it if I'm having any issues.
@@ -88,7 +88,6 @@ breitbart.com##.Hmobi.ad
 ###donate-banner
 
 reddit.com##.grippy
-reddit.com##.contents
 reddit.com###hsts_pixel
 reddit.com##.initialized
 reddit.com##.promotedlink
@@ -121,6 +120,7 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 !myanimelist.net###topSearchText:style(width: 400px !important;)
 !myanimelist.net###content:style(background-color: grey !important;)
 !myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
+||myanimelist.cdn-dena.com/images/event$image
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
@@ -133,7 +133,9 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys$image
 ||twitter.com/*/recommendations$important
+||clients2.google.com$important
 ||plus.google.com$subdocument,important
+||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
 
 imgur.com###cta-container
@@ -177,6 +179,7 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||wowhead.com$important
 ||fandom.wikia.com$important
 ||scribd.com$important
+||proxus.se$important
 
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 
@@ -273,6 +276,7 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !*.svg$domain=reddit.com
 !youtube.com###feed
 !myanimelist.net##a[href*="/stats"]
+!reddit.com##.contents
 !||fb.*^$third-party,important,domain=~behind-the-scene|~facebook.com
 !||mail.google.com^*&view=ad&$important
 !@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
