@@ -324,6 +324,9 @@
 ||ad4game.com$important
 ||foresee.com$important,third-party
 ||foreseeresults.com$important
+||adskeeper.co.uk$important
+||mnfclub.com$important
+||contentabc.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -765,12 +768,13 @@ gelbooru.com##.noticeError
 gelbooru.com##.twitter-share-button
 gelbooru.com##a[href^="http://gelbooru.com/redirect.html"]
 gelbooru.com##div[style*="width:1000px"]:has(script)
-gelbooru.com##script:contains(adnOpt)
-gelbooru.com##script:contains(advertVar)
-gelbooru.com##script:contains(ad_idzone)
-gelbooru.com##script:contains(ExoLoader)
-gelbooru.com##script:contains(trw_domain)
-gelbooru.com##script:contains(adsbyjuicy)
+gelbooru.com,thedoujin.com##noscript
+gelbooru.com,thedoujin.com##script:contains(adnOpt)
+gelbooru.com,thedoujin.com##script:contains(advertVar)
+gelbooru.com,thedoujin.com##script:contains(ad_idzone)
+gelbooru.com,thedoujin.com##script:contains(ExoLoader)
+gelbooru.com,thedoujin.com##script:contains(trw_domain)
+gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/x/$image,first-party
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
@@ -779,7 +783,7 @@ gelbooru.com##script:contains(adsbyjuicy)
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
 
-! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
+! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
 
 chan.sankakucomplex.com###headerthumbs
