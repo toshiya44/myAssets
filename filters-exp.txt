@@ -779,6 +779,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
+||thedoujin.com/bload.php$important
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
@@ -914,7 +915,7 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 @@||adblock.mozdev.org$generichide
 
 ! easylist blocks filter list due to a url fragment filter
-@@||hosts-file.net/ad_servers.txt‎
+@@||hosts-file.net/ad_servers.txt
 
 ! --------------------------------------------------------------------------- !
 !
