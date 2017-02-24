@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-21
+! Date: 2017-02-23
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -19,6 +19,7 @@
 ! List of general malicious and tracking domains.
 
 ||dpb3g4kqr8xz.cloudfront.net$important
+||d5nxst8fruw4z.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
@@ -327,6 +328,20 @@
 ||adskeeper.co.uk$important
 ||mnfclub.com$important
 ||contentabc.com$important
+||klickthru.com$important
+||lexads.net$important
+||lexads.com$important
+||weheartstats.com$important
+||valuecommerce.com$important
+||akamaized.net$important
+||getpocket.com$important
+||ipbunsan-server.net$important
+||pubvantage.com$important
+||blutonic-ads.com$important
+||headbidding.net$important
+||firstimpression.io$important
+||boomtrain.com$important
+||unknowntray.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -394,6 +409,7 @@ mediafire.com#@#.ico30share
 ||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
+
 ! https://github.com/easylist/easylist/issues/270
 ! they changed it back
 ! @@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
@@ -888,6 +904,7 @@ kobatochan.com###supplementary
 kobatochan.com###mobile-header-left-nav
 kobatochan.com##.jetpack-image-container
 kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
+gravitytales.com##.widget:if(.widget-title:has-text(Advert))
 
 ! https://github.com/gorhill/uBlock/issues/2354
 nepustation.com##body:style(visibility: visible !important;)
