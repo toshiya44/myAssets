@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-23
+! Date: 2017-02-24
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -140,6 +140,7 @@
 ||superjobs.xyz$important
 ||kiosked.com$important
 ||bet365.com$important
+||marketo.net$important
 ||marketo.*$third-party,important
 ||metapelite.com$important
 ||breezybath.com$important
@@ -342,6 +343,9 @@
 ||firstimpression.io$important
 ||boomtrain.com$important
 ||unknowntray.com$important
+||fast.eager.io$important
+||swiftypecdn.com$important
+||app.link$important
 
 ! -----------------------------------Misc------------------------------------ !
 
