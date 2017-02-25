@@ -298,6 +298,8 @@
 ||dynamicyield.com$important
 ||cmdotgwjhpqf.com$important
 ||xgzybmbwfmjd.com$important
+||rllvjujeyeuy.com$important
+||wabxsybclllz.com$important
 ||friendlyduck.com$important
 ||friendlyduck.com$important,popup
 ||amung.us$important
@@ -346,6 +348,10 @@
 ||fast.eager.io$important
 ||swiftypecdn.com$important
 ||app.link$important
+||dynsrvaba.com$important
+||mywot.com$important
+||dynsrvaba.com$important
+||revcontent.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -771,11 +777,24 @@ desuarchive.org##script:contains(_qevents)
 ||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$important
 ||4archive.org/nbme_main.php$important
+||4archive.org/nevaaaaah.js$important
+||4archive.org/616020.js$important
 ||thebarchive.com/neverRBb.php$important
 ||randomarchive.com/nbme_main.php$important
 
 /nbme_main.php$script
 .php$script,domain=4archive.org|randomarchive.com|thebarchive.com
+
+! The following filter from easylist breaks site functionality (such as backlinks)
+!|https://$script,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
+! easy fix
+!@@||4archive.org/js/$script,first-party
+!@@||4archive.org/stats/js/$script,first-party
+! specific fix
+@@||4archive.org/js/extension.min.js$script,first-party
+@@||4archive.org/js/linkify-jquery.min.js$script,first-party
+@@||4archive.org/js/jquery.min.js$script,first-party
+@@||4archive.org/js/linkify.min.js$script,first-party
 
 ! --------------------------------------------------------------------------- !
 
