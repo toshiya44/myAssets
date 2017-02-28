@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-24
+! Date: 2017-02-28
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -352,6 +352,7 @@
 ||mywot.com$important
 ||dynsrvaba.com$important
 ||revcontent.com$important
+||i-mobile.co.jp$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -540,6 +541,7 @@ __cspreport__
 /svg4everybody$script
 /ngx_pagespeed_beacon
 *controller=Optimizely*
+s_retargeting.js$script
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
 *security-i0y8kg*$important
@@ -826,13 +828,15 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
 
+chan.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
 danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
 
-||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||cstats.sankakucomplex.com$important
+||sankakucomplex.com/ngx_pagespeed_beacon$important
+||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com
 ||amazonaws.com$important,domain=sankakucomplex.com
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 
@@ -867,6 +871,7 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,important
 ||fc2.com/counter*.php$important
 
+nhentai.net##script:contains(show_popunders)
 hentaihaven.org##script:contains(Pukka)
 hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
