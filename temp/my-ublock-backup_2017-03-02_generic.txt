@@ -1,0 +1,275 @@
+{
+  "timeStamp": 1488504510000,
+  "version": "1.11.1rc0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "alwaysDetachLogger": false,
+    "autoUpdate": true,
+    "cloudStorageEnabled": false,
+    "collapseBlocked": true,
+    "colorBlindFriendly": false,
+    "contextMenuEnabled": true,
+    "dynamicFilteringEnabled": true,
+    "externalLists": "https://filters.adtidy.org/extension/chromium/filters/14.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/2.txt\nhttps://filters.adtidy.org/extension/chromium/filters/3.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://filters.adtidy.org/extension/chromium/filters/6.txt\nhttps://filters.adtidy.org/extension/chromium/filters/7.txt\nhttps://filters.adtidy.org/extension/chromium/filters/9.txt\nhttps://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt\nhttps://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt\nhttps://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt\nhttps://raw.githubusercontent.com/zpacman/Blockzilla/master/Blockzilla.txt",
+    "firewallPaneMinimized": false,
+    "hyperlinkAuditingDisabled": true,
+    "ignoreGenericCosmeticFilters": false,
+    "largeMediaSize": 50,
+    "parseAllABPHideFilters": true,
+    "prefetchingDisabled": true,
+    "requestLogMaxEntries": 1000,
+    "showIconBadge": false,
+    "tooltipsDisabled": false,
+    "webrtcIPAddressHidden": true
+  },
+  "selectedFilterLists": [
+    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/3.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/9.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/4.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/15.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/7.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/6.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/2.txt",
+    "https://raw.githubusercontent.com/zpacman/Blockzilla/master/Blockzilla.txt",
+    "https://filters.adtidy.org/extension/chromium/filters/14.txt",
+    "https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt",
+    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt",
+    "VIE-0",
+    "TUR-0",
+    "SWE-0",
+    "SVN-0",
+    "spa-0",
+    "RUS-0",
+    "RUS-1",
+    "RUS-2",
+    "POL-0",
+    "NLD-0",
+    "LVA-0",
+    "KOR-1",
+    "KOR-0",
+    "KOR-2",
+    "ITA-0",
+    "ITA-1",
+    "ISR-0",
+    "IDN-0",
+    "HUN-0",
+    "GRC-0",
+    "FRA-0",
+    "EU-prebake",
+    "DNK-0",
+    "DEU-0",
+    "CZE-0",
+    "CHN-0",
+    "CHN-2",
+    "ara-0",
+    "plowe-0",
+    "mvps-0",
+    "hphosts",
+    "dpollock-0",
+    "spam404-0",
+    "malware-2",
+    "malware-1",
+    "malware-0",
+    "fanboy-enhanced",
+    "easyprivacy",
+    "easylist",
+    "awrl-0",
+    "ublock-unbreak",
+    "ublock-privacy",
+    "ublock-experimental",
+    "ublock-badware",
+    "ublock-filters",
+    "user-filters",
+    "https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt",
+    "https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt"
+  ],
+  "hiddenSettingsString": "assetFetchTimeout 30\nautoUpdateAssetFetchPeriod 120\nautoUpdatePeriod 7\nignoreRedirectFilters false\nignoreScriptInjectFilters false\nmanualUpdateAssetFetchPeriod 2000\npopupFontSize unset\nsuspendTabsUntilReady false",
+  "netWhitelist": "behind-the-scene",
+  "dynamicFilteringString": "behind-the-scene * 3p-frame noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-remote-fonts: * true",
+  "userFilters": "",
+  "filterLists": {
+    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/3.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/9.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/4.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/15.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/7.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/6.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/2.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/zpacman/Blockzilla/master/Blockzilla.txt": {
+      "off": false
+    },
+    "https://filters.adtidy.org/extension/chromium/filters/14.txt": {
+      "off": false
+    },
+    "https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt": {
+      "off": false
+    },
+    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt": {
+      "off": false
+    },
+    "https://www.fanboy.co.nz/fanboy-vietnam.txt": {
+      "off": false
+    },
+    "https://adguard.com/filter-rules.html?id=13": {
+      "off": false
+    },
+    "https://www.fanboy.co.nz/fanboy-swedish.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/easylistspanish.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/advblock.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/bitblock.txt": {
+      "off": false
+    },
+    "https://adguard.com/en/filter-rules.html?id=1": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/easylistdutch.txt": {
+      "off": false
+    },
+    "https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/gfmaster/adblock-korea-contrib/master/filter.txt": {
+      "off": false
+    },
+    "https://www.fanboy.co.nz/fanboy-korean.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/easylistitaly.txt": {
+      "off": false
+    },
+    "https://dl.dropboxusercontent.com/u/1289327/abpxfiles/filtri.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/szpeter80/hufilter/master/hufilter.txt": {
+      "off": false
+    },
+    "https://www.void.gr/kargig/void-gr-filters.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/liste_fr.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/liamja/Prebake/master/obtrusive.txt": {
+      "off": false
+    },
+    "https://adblock.dk/block.csv": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/easylistgermany.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/easylistchina.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/Liste_AR.txt": {
+      "off": false
+    },
+    "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
+      "off": false
+    },
+    "http://winhelp2002.mvps.org/hosts.txt": {
+      "off": false
+    },
+    "http://hosts-file.net/.%5Cad_servers.txt": {
+      "off": false
+    },
+    "http://someonewhocares.org/hosts/hosts": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt": {
+      "off": false
+    },
+    "http://malwaredomains.lehigh.edu/files/immortal_domains.txt": {
+      "off": false
+    },
+    "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
+      "off": false
+    },
+    "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
+      "off": false
+    },
+    "https://www.fanboy.co.nz/enhancedstats.txt": {
+      "off": false
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easyprivacy.txt": {
+      "off": false
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easylist.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt": {
+      "off": false
+    },
+    "assets/ublock/unbreak.txt": {
+      "off": false
+    },
+    "assets/ublock/privacy.txt": {
+      "off": false
+    },
+    "assets/ublock/experimental.txt": {
+      "off": false
+    },
+    "assets/ublock/badware.txt": {
+      "off": false
+    },
+    "assets/ublock/filters.txt": {
+      "off": false
+    },
+    "assets/user/filters.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt": {
+      "off": false
+    }
+  }
+}
