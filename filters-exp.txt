@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-02-28
+! Date: 2017-03-06
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -137,6 +137,8 @@
 ||0fmm.com$important
 ||0mme.com$important
 ||0emn.com$important
+||mdf91.com$important
+||m80fg.com$important
 ||superjobs.xyz$important
 ||kiosked.com$important
 ||bet365.com$important
@@ -282,7 +284,6 @@
 ||cedexis.net$important
 ||cedexis-radar.net$important
 ||zedo.com$important
-||tiwi.kiwi$important
 ||pubmine.com$important
 ||infolinks.com$important
 ||feedbackify.com$important
@@ -300,6 +301,9 @@
 ||xgzybmbwfmjd.com$important
 ||rllvjujeyeuy.com$important
 ||wabxsybclllz.com$important
+||ihflwxrsptqz.com$important
+||pmgmbpuiblak.com$important
+||ocydwjnqasrn.com$important
 ||friendlyduck.com$important
 ||friendlyduck.com$important,popup
 ||amung.us$important
@@ -353,6 +357,13 @@
 ||dynsrvaba.com$important
 ||revcontent.com$important
 ||i-mobile.co.jp$important
+||concernrain.com$important
+||px.gfycat.com$important
+||traffichaus.com$important
+||deployads.com$important
+||ubliza.com$important
+||pro-market.net$important
+||gumgum.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -441,6 +452,8 @@ addons.mozilla.org###promos
 
 ! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
 androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+! https://github.com/uBlockOrigin/uAssets/issues/303#issuecomment-284150097
+firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
 
 ||theguardian.com$subdocument,first-party,important
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
@@ -515,6 +528,9 @@ itpro.co.uk###dennis-newsletter-newsletter-form
 itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
 ||ooyala.com$subdocument,important
+
+businessinsider.com##script:contains(setAdblockerCookie)
+||businessinsider.com$inline-script
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -816,7 +832,10 @@ gelbooru.com,thedoujin.com##script:contains(ad_idzone)
 gelbooru.com,thedoujin.com##script:contains(ExoLoader)
 gelbooru.com,thedoujin.com##script:contains(trw_domain)
 gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
-||gelbooru.com/x/$image,first-party
+||gelbooru.com/x/$important
+||gelbooru.com/y/$important
+||gelbooru.com/z/$important
+||gelbooru.com/*_xacd.$important
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
@@ -993,5 +1012,8 @@ nepustation.com,kobatochan.com##script:contains(randpubc)
 ! boards.4chan.org##.center.middlead
 ! cointelegraph.com##.in.fade.modal-backdrop
 ! github.com##.js-touch-events.modal-backdrop
+! ||p.d.mdf91.com$important
+! ||p.w.m80fg.com$important
+! ||tiwi.kiwi$important
 ! ########################################################################### !
 ! ################################## END #################################### !
