@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-06
+! Date: 2017-03-10
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -44,8 +44,9 @@
 ||echobot.tk$important
 ||lepinsar.com$important
 ||licensebuttons.net$important
-||quantserve.com$important
 ||quantcast.comimportant
+||quantcount.comimportant
+||quantserve.com$important
 ||richdadregistrations.com$important
 ||skimresources.com$important
 ||solvemedia.com$important
@@ -140,6 +141,7 @@
 ||0fmm.com$important
 ||0mme.com$important
 ||0emn.com$important
+||em0n.com$important
 ||mdf91.com$important
 ||m80fg.com$important
 ||superjobs.xyz$important
@@ -536,6 +538,9 @@ itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
 businessinsider.com##script:contains(setAdblockerCookie)
 ||businessinsider.com$inline-script
+
+! https://github.com/uBlockOrigin/uAssets/issues/312
+dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
 
 ! ########################################################################### !
 ! Disqus click-to-load
