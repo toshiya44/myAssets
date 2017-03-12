@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-10
+! Date: 2017-03-11
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.0+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -793,7 +793,7 @@ boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
 boards.4chan.org##.middlead
 boards.4chan.org##[class^="ad-"]
-boards.4chan.org##script:contains(prototype)
+!boards.4chan.org##script:contains(prototype)
 boards.4chan.org##script:contains(window.upManager)
 ||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/$subdocument,domain=4chan.org
@@ -807,7 +807,9 @@ desuarchive.org##script:contains(_qevents)
 ||4archive.org/nbme_main.php$important
 ||4archive.org/nevaaaaah.js$important
 ||4archive.org/616020.js$important
-||thebarchive.com/neverRBb.php$important
+!||thebarchive.com/neverRBb.php$important
+!||thebarchive.com/neverRBb.js$important
+||thebarchive.com/neverRBb.$important
 ||randomarchive.com/nbme_main.php$important
 
 /nbme_main.php$script
@@ -823,13 +825,15 @@ desuarchive.org##script:contains(_qevents)
 @@||4archive.org/js/linkify-jquery.min.js$script,first-party
 @@||4archive.org/js/jquery.min.js$script,first-party
 @@||4archive.org/js/linkify.min.js$script,first-party
+@@/jquery.js$script,first-party,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
 
 ! --------------------------------------------------------------------------- !
 
 ! boorus and stuff 
-! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
 
-!gelbooru.com#@#ad
+! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
+! https://github.com/toshiya44/myAssets/issues/1
+
 @@||gelbooru.com$generichide
 gelbooru.com##.noticeError
 gelbooru.com##.twitter-share-button
@@ -850,6 +854,14 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
 ||thedoujin.com/bload.php$important
+
+!@@||gelbooru.com/script/jquery*.js$script,first-party
+@@||gelbooru.com/script/jqueryMisc.js|
+@@||gelbooru.com/script/jqueryPosts.js|
+@@||gelbooru.com/script/jqueryNotes.js|
+@@||gelbooru.com/script/jqueryTimeout.js|
+@@||gelbooru.com/script/jquery-ui.min.js|
+@@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
