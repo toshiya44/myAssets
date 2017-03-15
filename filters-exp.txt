@@ -1,8 +1,8 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-11
+! Date: 2017-03-15
 ! Expires: 2 days
-! Requirement: uBlock Origin 1.11.0+
+! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -371,6 +371,9 @@
 ||gumgum.com$important
 ||optnmnstr.com$important
 ||cxadserving.com$important
+||dt07.net$important
+||adtrue.com$important
+||feedburner.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -756,6 +759,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ! And counter the exception to prevent accidentally (re)added, such as undo.
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
+!facebook.com###dialog_0
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -991,6 +995,10 @@ nepustation.com,kobatochan.com##script:contains(_gaq)
 nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 nepustation.com,kobatochan.com##script:contains(WPGroHo)
 nepustation.com,kobatochan.com##script:contains(randpubc)
+
+! ########################################################################### !
+! bad filters-------------------------------
+https:*_ad_$badfilter
 
 ! ########################################################################### !
 ! ######### Necessary generic whitelists, with reason(s) specified ########## !
