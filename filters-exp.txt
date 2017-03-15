@@ -95,7 +95,7 @@
 ||opnlttr.com$important
 ||scam.com$important
 ||decenthat.com$important
-||fastly.net/ad$important
+||fastly.net$important
 ||moat.com$important
 ||moatads.com$important
 ||bitcoinchain.com$important,third-party
@@ -230,6 +230,7 @@
 ||wowconversions.com$important
 ||limbik.io$important
 ||criteo.com$important
+||criteo.net$important
 ||adrunnr.com$important
 ||yldbt.com$important
 ||zqtk.net$important
@@ -270,7 +271,6 @@
 ||iwant.lt$important
 ||yxdown.com$important
 ||madokami.com$important
-||criteo.net$important
 ||sitelock.com$important
 ||adbutler-meson.com$important
 ||visualwebsiteoptimizer.com$important
@@ -374,6 +374,10 @@
 ||dt07.net$important
 ||adtrue.com$important
 ||feedburner.com$important
+||komoona.com$important
+||roosterfirework.com$important
+||vidible.tv$important,third-party
+||gravity.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -610,6 +614,8 @@ raven.min.js$important
 fingerprint.js$important
 /adContent.aspx
 /adProtect.aspx
+/keywee.js
+/keywee.min.js
 
 ! ########################################################################### !
 
@@ -996,9 +1002,10 @@ nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
 nepustation.com,kobatochan.com##script:contains(WPGroHo)
 nepustation.com,kobatochan.com##script:contains(randpubc)
 
-! ########################################################################### !
-! bad filters-------------------------------
+! ############################## Bad filters ################################ !
+
 https:*_ad_$badfilter
+^ad^$badfilter
 
 ! ########################################################################### !
 ! ######### Necessary generic whitelists, with reason(s) specified ########## !
