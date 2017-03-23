@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-15
+! Date: 2017-03-23
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -378,6 +378,7 @@
 ||roosterfirework.com$important
 ||vidible.tv$important,third-party
 ||gravity.com$important
+||imptestrm.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -395,7 +396,6 @@ answers.com###video_universal-0_caption
 ||i.imgur.com$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
-||imgur.com$websocket,important
 ||sen.imgur.com$first-party
 
 reddit.com###ad_main_top
@@ -422,9 +422,9 @@ github.com##.modal-backdrop
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
-||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 ||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
+!||discordapp.com/*/track$xmlhttprequest,important
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -845,6 +845,7 @@ desuarchive.org##script:contains(_qevents)
 ! https://github.com/toshiya44/myAssets/issues/1
 
 @@||gelbooru.com$generichide
+gelbooru.com#@#center > a[href]
 gelbooru.com##.noticeError
 gelbooru.com##.twitter-share-button
 gelbooru.com##a[href^="http://gelbooru.com/redirect.html"]
@@ -860,17 +861,19 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/y/$important
 ||gelbooru.com/z/$important
 ||gelbooru.com/*_xacd.$important
+||gelbooru.com/thumbnails/0A/$important
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
+||gelbooru.com/v.php$important
 ||thedoujin.com/bload.php$important
 
-!@@||gelbooru.com/script/jquery*.js$script,first-party
-@@||gelbooru.com/script/jqueryMisc.js|
-@@||gelbooru.com/script/jqueryPosts.js|
-@@||gelbooru.com/script/jqueryNotes.js|
-@@||gelbooru.com/script/jqueryTimeout.js|
-@@||gelbooru.com/script/jquery-ui.min.js|
+! @@||gelbooru.com/script/jquery*.js$script,first-party
+!@@||gelbooru.com/script/jqueryMisc.js|
+!@@||gelbooru.com/script/jqueryPosts.js|
+!@@||gelbooru.com/script/jqueryNotes.js|
+!@@||gelbooru.com/script/jqueryTimeout.js|
+!@@||gelbooru.com/script/jquery-ui.min.js|
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! unbreak tl bubbles and other functionality
