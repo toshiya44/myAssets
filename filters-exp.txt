@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-23
+! Date: 2017-03-25
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -379,6 +379,10 @@
 ||vidible.tv$important,third-party
 ||gravity.com$important
 ||imptestrm.com$important
+||parsely.com$important
+||xxlargepop.com$important
+||clicksgear.com$important
+||sh.st/3diFS$important
 
 ! -----------------------------------Misc------------------------------------ !
 
