@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-25
+! Date: 2017-03-29
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -383,6 +383,7 @@
 ||xxlargepop.com$important
 ||clicksgear.com$important
 ||sh.st/3diFS$important
+||liqwid.net$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -745,15 +746,19 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ads
 ||facebook.com/*/record_basic_metrics.php$important
 ||facebook.com/ajax/ads$important
-||facebook.com/ajax/bz$xmlhttprequest,first-party,important
-||facebook.com/ajax/browse/null_state.php$xmlhttprequest,first-party,important
+||facebook.com/ajax/bz$first-party,important
+||facebook.com/ajax/browse/null_state.php$first-party,important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
 ||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
-||facebook.com/pages/presence$xmlhttprequest,first-party,important
-||facebook.com/pages/show_live_insights/?trigger_surface*$xmlhttprequest,first-party,important
+||facebook.com/pages/presence$first-party,important
+||facebook.com/pages/show_live_insights/?trigger_surface*$first-party,important
 ||facebook.com/pubcontent/feed_chaining$important
-||facebook.com/video/autoplay$xmlhttprequest,first-party,important
-||fbcdn.net/safe_image.php$important,domain=facebook.com
+||facebook.com/video/autoplay$first-party,important
+||fbcdn.net/safe_image.php$important
+
+||facebook.com/xti.php$important
+||facebook.com/*/logging/$important
+||facebook.com/*/impression_logging/$important
 
 ! https://github.com/toshiya44/myAssets/issues/3
 ! To allow Facebook retrieved data (that silently saved your preferences) of 
@@ -774,11 +779,11 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
 ||facebook.*^$third-party,important
-||fbcdn.*^$third-party,important,domain=~behind-the-scene|~facebook.com
-||fb.com^$third-party,important,domain=~behind-the-scene|~facebook.com
+||fbcdn.*^$third-party,important,domain=~facebook.com
+||fb.com^$third-party,important,domain=~facebook.com
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important
-||tumblr.com^$third-party,important,domain=~behind-the-scene|~media.tumblr.com
+||tumblr.com^$third-party,important,domain=~media.tumblr.com
 ||px.srvcs.tumblr.com/impixu?
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
