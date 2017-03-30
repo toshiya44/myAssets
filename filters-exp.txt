@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-29
+! Date: 2017-03-30
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -384,6 +384,9 @@
 ||clicksgear.com$important
 ||sh.st/3diFS$important
 ||liqwid.net$important
+||dewsburg.info$important
+||budgement.info$important
+||maxonclick.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -755,6 +758,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/pubcontent/feed_chaining$important
 ||facebook.com/video/autoplay$first-party,important
 ||fbcdn.net/safe_image.php$important
+!||ct-m-fbx.fbsbx.com$important
+||fbsbx.com$important
 
 ||facebook.com/xti.php$important
 ||facebook.com/*/logging/$important
