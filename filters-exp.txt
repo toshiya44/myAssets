@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-03-30
+! Date: 2017-04-01
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 52+ (Regular/Dev/Nightly)
@@ -387,6 +387,10 @@
 ||dewsburg.info$important
 ||budgement.info$important
 ||maxonclick.com$important
+||1j7740kd.website$important
+||mwtpludn.review$important
+||66cpwgln.space$important
+||9icmzvn6.website$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -1036,11 +1040,8 @@ https:*_ad_$badfilter
 @@||hosts-file.net/ad_servers.txt
 
 ! --------------------------------------------------------------------------- !
-!
+! Maleware/Junkware distribution sites
 ! Always download softwares from the actual site of the developer (official site, repository etc)
-! The so called "Free Software Download" sites are 120% filled with malware
-! Also avoid ANY file hosting services that asks you to buy "Premium Membership".
-! I can't stress this enough.
 !
 ||tucows.com$important
 ||filehippo.com$important
@@ -1049,25 +1050,4 @@ https:*_ad_$badfilter
 ||sourceforge.net$important
 ||sf.net$important
 !
-! Always go FOSS
-! ########################################################################### !
-! Various commented out filters, just in case I need them again.
-! Will be removed once I'm sure that they're obsolete.
-! Replaced with a more generic filter for pixiv
-! pixiv.net##a[href^="/premium.php"]
-! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-! google.com,google.ca,google.fr##.gb_g.gb_Bc.gb_8cx
-! cointelegraph.com##iframe[src*="/img/banners/Hashing24_500x400/index.html"]
-! ||gelbooru.com/*intermission.php$important
-! due to a url fragment filter, images with /ad/ in the file directory gets blocked.
-! @@||sankakucomplex.com/data/preview/*/ad/*.$image,first-party
-! @@||gelbooru.com/thumbnails/*/ad/thumbnail_*.$image,first-party
-! boards.4chan.org##.ad-cnt.center.topad
-! boards.4chan.org##.center.middlead
-! cointelegraph.com##.in.fade.modal-backdrop
-! github.com##.js-touch-events.modal-backdrop
-! ||p.d.mdf91.com$important
-! ||p.w.m80fg.com$important
-! ||tiwi.kiwi$important
-! ########################################################################### !
 ! ################################## END #################################### !
