@@ -1,9 +1,9 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-01
+! Date: 2017-04-02
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
-! Recommended: Firefox 52+ (Regular/Dev/Nightly)
+! Recommended: Firefox 54+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
 ! Note, "Expires 2days" means that uBO will check for updates every 
@@ -405,7 +405,8 @@ wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 
-||i.imgur.com$inline-script,important
+||i.imgur.com/*.jpg$inline-script,important
+||i.imgur.com/*.png$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
 ||sen.imgur.com$first-party
@@ -784,6 +785,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
 !facebook.com###dialog_0
+! need this to view page stats
+@@||graph.facebook.com/insights?access_token=$script,domain=facebook.com
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -885,20 +888,13 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
 ||thedoujin.com/bload.php$important
-
-! @@||gelbooru.com/script/jquery*.js$script,first-party
-!@@||gelbooru.com/script/jqueryMisc.js|
-!@@||gelbooru.com/script/jqueryPosts.js|
-!@@||gelbooru.com/script/jqueryNotes.js|
-!@@||gelbooru.com/script/jqueryTimeout.js|
-!@@||gelbooru.com/script/jquery-ui.min.js|
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
-@@/ad/$image,domain=yande.re|gelbooru.com|sankakucomplex.com
+@@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re
 
 chan.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com###headerthumbs
@@ -906,6 +902,7 @@ danbooru.donmai.us###upgrade-account-notice
 danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
 
+||konachan.net$subdocument,important
 ||cstats.sankakucomplex.com$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com
@@ -1042,7 +1039,7 @@ https:*_ad_$badfilter
 ! --------------------------------------------------------------------------- !
 ! Maleware/Junkware distribution sites
 ! Always download softwares from the actual site of the developer (official site, repository etc)
-!
+! 
 ||tucows.com$important
 ||filehippo.com$important
 ||download.cnet.com$important
@@ -1050,4 +1047,5 @@ https:*_ad_$badfilter
 ||sourceforge.net$important
 ||sf.net$important
 !
+! ########################################################################### !
 ! ################################## END #################################### !
