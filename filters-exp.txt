@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-02
+! Date: 2017-04-03
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -405,11 +405,13 @@ wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 
+||sen.imgur.com$first-party
 ||i.imgur.com/*.jpg$inline-script,important
 ||i.imgur.com/*.png$inline-script,important
+||i.imgur.com/*.gif|$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
-||sen.imgur.com$first-party
+||imgur.com/imageview.gif?$image,domain=imgur.com,redirect=1x1-transparent.gif
 
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
@@ -1047,5 +1049,4 @@ https:*_ad_$badfilter
 ||sourceforge.net$important
 ||sf.net$important
 !
-! ########################################################################### !
 ! ################################## END #################################### !
