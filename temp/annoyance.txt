@@ -1,5 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-04-01
+! Date: 2017-04-03
+! Expires: 30 days
 ! Requirement: Patience 
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
 ! this list is not maintained and no support is availble. I myself disable it if I'm having any issues.
@@ -97,7 +98,7 @@ reddit.com##.embed-comment
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
 reddit.com##.give-gold-button
-
+boards.4chan.org###bannerCnt
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
 giphy.com##.festive-mode-toggle
@@ -152,6 +153,7 @@ kissmanga.com##a[href="#"]
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
 
 ||addons-discovery.cdn.mozilla.net$media,domain=mozilla.org,important
+! flickering n shit
 ||discordapp.com/avatars/*.gif$image,first-party
 
 ! 2016-12-26, urlchecker.org
@@ -177,6 +179,10 @@ jcafe24.net##.sp-body:style(display: block !important;)
 
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 
+! it seems to block the first popup ----- doesn't actually work
+!||mediafire.com$popup,domain=~mediafire.com
+||mediafire.com/images/icons/1x1_transparent.gif$image,domain=mediafire.com,redirect=1x1-transparent.gif
+
 !###########################################################################!
 ! wikia script fractions
 ! moved here because they'll probably break the site.
@@ -187,6 +193,7 @@ jcafe24.net##.sp-body:style(display: block !important;)
 /wikia_in_your_lang_js$script,important,domain=wikia.com
 /community_page_entry_point_js$script,domain=wikia.com,important
 /SiteWideMessages.tracking.js$domain=wikia.com,important
+!oasis_blocking$script,domain=wikia.com,important
 universal_analytics_js$script,domain=wikia.com,important
 adengine2_tracking_js$script,domain=wikia.com,important
 optimizely_blocking_js$script,domain=wikia.com,important
@@ -259,5 +266,5 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||bit.ly$important
 ||embed.ly$important
 ||sh.st$important
-!###########################################################################!
+!##################################END######################################!
 ! iu – nu – fb – a – wuh – ei – kx – eu – pl – vjz
