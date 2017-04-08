@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-03
+! Date: 2017-04-08
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -309,6 +309,8 @@
 ||ihflwxrsptqz.com$important
 ||pmgmbpuiblak.com$important
 ||ocydwjnqasrn.com$important
+||vhpqxkhvjgwx.com$important
+||zhabyesrdnvn.com$important
 ||friendlyduck.com$important
 ||friendlyduck.com$important,popup
 ||amung.us$important
@@ -391,6 +393,8 @@
 ||mwtpludn.review$important
 ||66cpwgln.space$important
 ||9icmzvn6.website$important
+||adserv.com$important
+||histock.info$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -401,9 +405,11 @@ strawpoll.me##.featured
 4shared.com##.d1AdsWrapper
 bloomberg.com##bb-mini-player
 answers.yahoo.com###yset-upsell-div
+secure.politico.com##.story-related
 wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
+
 
 ||sen.imgur.com$first-party
 ||i.imgur.com/*.jpg$inline-script,important
@@ -411,12 +417,13 @@ answers.com###video_universal-0_caption
 ||i.imgur.com/*.gif|$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
-||imgur.com/imageview.gif?$image,domain=imgur.com,redirect=1x1-transparent.gif
+!||imgur.com/imageview.gif?$image,domain=imgur.com,redirect=1x1-transparent.gif
 
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
 reddit.com###siteTable_organic
 ||reddit.com/api/request_promo
+||reddit.com/static/pixel.png
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
 ||amazonaws.com/redditstatic$important
@@ -443,6 +450,7 @@ discordapp.com##.message-group-blocked
 
 ! Curse logs your IP
 ||curse.com^$important
+||cursecdn.com$important
 
 ||paypal.com$third-party,important
 ||paypalobjects.com$important,domain=~paypal.com
@@ -886,6 +894,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/*_xacd.$important
 ||gelbooru.com/thumbnails/0A/$important
 ||gelbooru.com$script,subdocument
+||gelbooru.com/backend_loader.php$important
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
