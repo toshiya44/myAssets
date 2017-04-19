@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-08
+! Date: 2017-04-19
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -107,7 +107,7 @@
 ||mixpanel.com$important
 ||mxpnl.com$important
 ||4dsply.com$important
-||cdn.bidadx.com$important
+||bidadx.com$important
 ||gaiaonline.com$important
 ||gaiaonline.com$important,popup
 ||cnzz.com$important
@@ -395,6 +395,12 @@
 ||9icmzvn6.website$important
 ||adserv.com$important
 ||histock.info$important
+||zencdn.net$important
+||admedia.com$important
+||0912701309f8ce.com$important
+||f4906b7c15ba.com$important
+||2137dc12f9d8.com$important
+||media.r18.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -444,9 +450,9 @@ github.com##.modal-backdrop
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
-||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
+||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
-!||discordapp.com/*/track$xmlhttprequest,important
+||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ! Curse logs your IP
 ||curse.com^$important
@@ -951,7 +957,8 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,important
 ||fc2.com/counter*.php$important
 
-nhentai.net##script:contains(show_popunders)
+!nhentai.net##script:contains(show_popunders)
+nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 hentaihaven.org##script:contains(Pukka)
 hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
@@ -971,6 +978,7 @@ hentaihaven.org##script:contains(BetterJsPop)
 kissanime.ru##.divCloseBut
 kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
 
+||ad.kissanime.*$important
 ||kissanime.*/ads$important
 ||kissmanga.*/ads$important
 ||kissasian.*/ads$important
@@ -1002,7 +1010,7 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
-
+kissanime.*##script:inject(noeval.js)
 ! --------------------------------------------------------------------------- !
 
 @@||nepustation.com$generichide
