@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-19
+! Date: 2017-04-22
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -690,8 +690,12 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ! I think, this will break embeded videos.
 ||youtube.com*$third-party,important,domain=~google.com
 ||ytimg.com*$important,domain=~youtube.com|~google.com
-||youtube.com/api/stats/watchtime$first-party,important
+
+||youtube.com/csi_204$important
+||youtube.com/ptracking$important
+||youtube.com/set_awesome$important
 ||youtube.com/api/stats$first-party,important
+||youtube.com/api/stats/watchtime$first-party,important
 
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
@@ -898,6 +902,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/y/$important
 ||gelbooru.com/z/$important
 ||gelbooru.com/*_xacd.$important
+||gelbooru.com/r18/manga.$important
 ||gelbooru.com/thumbnails/0A/$important
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/backend_loader.php$important
