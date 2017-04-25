@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-22
+! Date: 2017-04-25
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -509,7 +509,6 @@ firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
 ||howtogeek.com/*/blank.gif$important
 ||newsvine.com$important,third-party
 ||nbcuni.com$important
-!||pix.nbcuni.com$important
 
 ||wp.com/*/devicepx-jetpack.js
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
@@ -684,7 +683,6 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||google.com/setgmail$important
 ||google.com/availability/$important
 ! the request is sometimes blocked by url fragment filters
-!@@||mail.google.com/mail/u/$xmlhttprequest,domain=mail.google.com
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
 
 ! I think, this will break embeded videos.
@@ -694,8 +692,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||youtube.com/csi_204$important
 ||youtube.com/ptracking$important
 ||youtube.com/set_awesome$important
-||youtube.com/api/stats$first-party,important
-||youtube.com/api/stats/watchtime$first-party,important
+||youtube.com/api/stats$important
 
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
@@ -791,20 +788,17 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/*/impression_logging/$important
 
 ! https://github.com/toshiya44/myAssets/issues/3
-! To allow Facebook retrieved data (that silently saved your preferences) of 
-! how many categories and/or advert companies into your account.
+! To allow saving Facebook ad preferences.
 @@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
-
-! Allow those requests below to sent request to Facebook that you really want to delete those categories and companies.
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
 
-! And counter the exception to prevent accidentally (re)added, such as undo.
+! counter the exception to prevent accidentally (re)added/undo.
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
-!facebook.com###dialog_0
+
 ! need this to view page stats
 @@||graph.facebook.com/insights?access_token=$script,domain=facebook.com
 
@@ -844,7 +838,6 @@ boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
 boards.4chan.org##.middlead
 boards.4chan.org##[class^="ad-"]
-!boards.4chan.org##script:contains(prototype)
 boards.4chan.org##script:contains(window.upManager)
 ||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/$subdocument,domain=4chan.org
@@ -858,8 +851,6 @@ desuarchive.org##script:contains(_qevents)
 ||4archive.org/nbme_main.php$important
 ||4archive.org/nevaaaaah.js$important
 ||4archive.org/616020.js$important
-!||thebarchive.com/neverRBb.php$important
-!||thebarchive.com/neverRBb.js$important
 ||thebarchive.com/neverRBb.$important
 ||randomarchive.com/nbme_main.php$important
 
@@ -902,8 +893,10 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/y/$important
 ||gelbooru.com/z/$important
 ||gelbooru.com/*_xacd.$important
-||gelbooru.com/r18/manga.$important
+||gelbooru.com/r18/$important
+||gelbooru.com/r19/$important
 ||gelbooru.com/thumbnails/0A/$important
+||gelbooru.com/thumbnails/0C/$important
 ||gelbooru.com$script,subdocument
 ||gelbooru.com/backend_loader.php$important
 ||gelbooru.com/script/application.js.php$important
@@ -911,6 +904,9 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/v.php$important
 ||thedoujin.com/bload.php$important
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
+
+! honeypot (as of 2017-04-24)
+@@||gelbooru.com/ads.js?$script
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
