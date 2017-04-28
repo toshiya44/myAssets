@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-04-03
+! Date: 2017-04-28
 ! Expires: 30 days
 ! Requirement: Patience 
 ! Removing things that annoyed me, but might not be relevant enough for the general filter.
@@ -89,6 +89,7 @@ breitbart.com##.Hmobi.ad
 ###donate-banner
 
 reddit.com##.grippy
+reddit.com###header-img
 reddit.com###hsts_pixel
 reddit.com##.initialized
 reddit.com##.promotedlink
@@ -98,6 +99,7 @@ reddit.com##.embed-comment
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
 reddit.com##.give-gold-button
+reddit.com##.happening-now-wrap
 boards.4chan.org###bannerCnt
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
@@ -125,7 +127,7 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||facebook.com/images/emoji.php$first-party,important
 ||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
 ||facebook.com/ajax/photos/logging/session_logging.php$xmlhttprequest,important
-!||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
+||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
 !||facebook.com/ajax/ads/media/log$important
 
 ||twimg.com/emoji$important
