@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-04-25
+! Date: 2017-05-02
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.11.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -401,6 +401,7 @@
 ||f4906b7c15ba.com$important
 ||2137dc12f9d8.com$important
 ||media.r18.com$important
+||sail-horizon.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -846,6 +847,7 @@ boards.4chan.org##script:contains(window.upManager)
 cu.cc##script:contains(ExoLoader)
 cu.cc##script:contains(TyxoObject)
 desuarchive.org##script:contains(_qevents)
+thebarchive.com,archived.moe##script:inject(bab-defuser.js)
 ||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$important
 ||4archive.org/nbme_main.php$important
@@ -937,11 +939,13 @@ hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi-vertical.js$important
 
 @@||pixiv.net^$generichide
+@@||pawoo.net^$generichide
 pixiv.net#@#.bookmark-container
 pixiv.net##.share-button
 pixiv.net##.ads-top-info
 pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
+@@||accounts.pixiv.net$popup,domain=pawoo.net
 
 novelupdates.com##.ad_336
 mangastream.com##.paypal
