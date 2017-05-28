@@ -155,8 +155,25 @@ kissmanga.com##a[href="#"]
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
 
 ||addons-discovery.cdn.mozilla.net$media,domain=mozilla.org,important
-! flickering n shit
-||discordapp.com/avatars/*.gif$image,first-party
+
+!@@discordapp.com/$popup,first-party
+||discordapp.com/avatars/*.gif$first-party
+||discordapp.com/emojis/279755855140749323.png
+||discordapp.com/emojis/314374772593131532.png
+||discordapp.com/emojis/314606790501203969.png
+||discordapp.com/emojis/301110789576851466.png
+||discordapp.com/emojis/217730024965537792.png
+||discordapp.com/emojis/318141804744540170.png
+||discordapp.com/emojis/260774465896448000.png
+||discordapp.com/emojis/316880803609182208.png
+||discordapp.com/emojis/318139732364099585.png
+||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
+
+discordapp.com##img[src*="/emojis/"].emoji:style(min-height: 2.8em !important;  min-width: 3.2em !important; )
+discordapp.com##img[src*="/emojis/"].emoji.jumboable:style(min-height: 6.2em !important;  min-width: 6.8em !important; )
+
+discordapp.com##img[src*="/assets/"].emoji:style(max-height: 0.8em !important; max-width: 1em !important; width: auto; height: auto;)
+discordapp.com##img[src*="/assets/"].emoji.jumboable:style(max-height: 1em !important; max-width: 1em !important; width: auto; height: auto;)
 
 ! 2016-12-26, urlchecker.org
 ||urlchecker.org/ajax/proxy_parser.php$first-party
