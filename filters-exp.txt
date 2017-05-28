@@ -1,8 +1,8 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-05-02
+! Date: 2017-05-28
 ! Expires: 2 days
-! Requirement: uBlock Origin 1.11.5+
+! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -30,6 +30,8 @@
 ||d2j1fszo1axgmp.cloudfront.net$important
 ||d3alijertxiv6b.cloudfront.net$important
 ||d10psrq44igbex.cloudfront.net$important
+||d2nz8k4xyoudsx.cloudfront.net$important
+||d3ir0rz7vxwgq5.cloudfront.net$important
 ||185.2.83.87$important
 ||192.168.*$important
 ||104.198.198.188$important
@@ -402,6 +404,10 @@
 ||2137dc12f9d8.com$important
 ||media.r18.com$important
 ||sail-horizon.com$important
+||insticator.com$important
+||howtoremoveadblock.com$important
+||syndication.exdynsrv.com$important
+||pub2srv.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -520,7 +526,7 @@ firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
 ! rightad.js is a honeypot (as of 2017-01-11)
 @@||mirrorcreator.com$generichide
 @@||mirrorcreator.com/js/rightad.js$important,domain=mirrorcreator.com
-mirrorcreator.com##script:has(pageTracker)
+mirrorcreator.com##script:contains(pageTracker)
 mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
 ||mirrorcreator.com/images/MBTAnimateddownloadbutton.gif$image
 
@@ -577,6 +583,9 @@ businessinsider.com##script:contains(setAdblockerCookie)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/312
 dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
+
+! https://github.com/uBlockOrigin/uAssets/issues/389
+anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -830,6 +839,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
 ||twitter.com/i/cards/*?advertiser_name$important
+||ads-twitter.com$important
 
 ! ########################################################################### !
 
@@ -916,6 +926,14 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re
 
+gelbooru.com#@#a[href*="//gelbooru.com/redirect.php?"]
+gelbooru.com##script:contains(abvertDar)
+gelbooru.com#@#span[class]:last-child > a img[src]
+gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
+
+! yes
+||youhate.us$important
+
 chan.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com###headerthumbs
 danbooru.donmai.us###upgrade-account-notice
@@ -947,13 +965,17 @@ pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 @@||accounts.pixiv.net$popup,domain=pawoo.net
 
+readms.net###reader-sky
 novelupdates.com##.ad_336
 mangastream.com##.paypal
 mangastream.com##.bitcoin
 mangastream.com###reader-sky
+||readms.net/assets/img/block_sky.png$important
+||readms.net/assets/img/block_sky_dark.png$important
 ||mangastream.com/assets/img/block_sky.png$image
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||raw.senmanga.com/media/img/block_square.png$image
+!mangastream.com##.hidden-xs.pull-right.message-sq
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
@@ -974,6 +996,8 @@ hentaihaven.org##script:contains(BetterJsPop)
 @@||baka-tsuki.org^$generichide
 ! images with filename partially matching with a URL fragment filter gets blocked
 @@||baka-tsuki.org$image,first-party
+
+||anilinkz.io/count.php$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -1018,9 +1042,7 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 kissanime.*##script:inject(noeval.js)
 ! --------------------------------------------------------------------------- !
 
-@@||nepustation.com$generichide
-nepustation.com###babasbmsgx
-nepustation.com##.sd-sharing-enabled
+
 kobatochan.com###supplementary
 kobatochan.com###mobile-header-left-nav
 kobatochan.com##.jetpack-image-container
@@ -1028,21 +1050,17 @@ kobatochan.com##.widget:if(.widget-title:has-text(AdBanner))
 gravitytales.com##.widget:if(.widget-title:has-text(Advert))
 
 ! https://github.com/gorhill/uBlock/issues/2354
-nepustation.com##body:style(visibility: visible !important;)
-nepustation.com,kobatochan.com##script:inject(bab-defuser.js)
-nepustation.com,kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
+kobatochan.com##script:inject(bab-defuser.js)
+kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
 
 ! Apparently I could use commas to separate domains on cosmetic filters.
-!nepustation.com##script:contains(windowOpen)
-nepustation.com,kobatochan.com##a[href*="linkbucks.com"]
-nepustation.com,kobatochan.com##a[href*="tmearn.com"]
-nepustation.com,kobatochan.com##script:contains(KillAdBlock)
-nepustation.com,kobatochan.com##script:contains(logHuman)
-nepustation.com,kobatochan.com##script:contains(_stq)
-nepustation.com,kobatochan.com##script:contains(_gaq)
-nepustation.com,kobatochan.com##script:contains(clickTrackerInit)
-nepustation.com,kobatochan.com##script:contains(WPGroHo)
-nepustation.com,kobatochan.com##script:contains(randpubc)
+kobatochan.com##script:contains(KillAdBlock)
+kobatochan.com##script:contains(logHuman)
+kobatochan.com##script:contains(_stq)
+kobatochan.com##script:contains(_gaq)
+kobatochan.com##script:contains(clickTrackerInit)
+kobatochan.com##script:contains(WPGroHo)
+kobatochan.com##script:contains(randpubc)
 
 ! ############################## Bad filters ################################ !
 
