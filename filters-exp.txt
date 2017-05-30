@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-05-28
+! Date: 2017-05-30
 ! Expires: 2 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -264,7 +264,6 @@
 ||adclerks.com$important
 ||coinzilla.io$important
 ||fuglekos.com$important
-||licdn.com$important
 ||adsplay.net$important
 ||gigya.com$important
 ||easylist.club$important
@@ -408,6 +407,13 @@
 ||howtoremoveadblock.com$important
 ||syndication.exdynsrv.com$important
 ||pub2srv.com$important
+||td583.com$important
+||candarmer.info$important
+||cpmstar.com$important
+||quierest.com$important
+||oscarlosun.com$important
+||planniver.com$important
+||roughted.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -619,6 +625,7 @@ s_retargeting.js$script
 ://go.*?zoneid=$popup,important
 adobe_audience_manager$important
 /metrics/s_code*$script,important
+/ga-activation.js$script,important
 adobe-audience-manager.js$important
 /metrics/s_code_trb.js$script,important
 /prod.iqdcontroller.iqdigital$script,important
@@ -926,10 +933,13 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re
 
+gelbooru.com#@#span[class]:last-child > a img[src]
 gelbooru.com#@#a[href*="//gelbooru.com/redirect.php?"]
 gelbooru.com##script:contains(abvertDar)
-gelbooru.com#@#span[class]:last-child > a img[src]
-gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
+gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
+!gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
+gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
+gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
 
 ! yes
 ||youhate.us$important
@@ -1089,4 +1099,5 @@ https:*_ad_$badfilter
 ||sourceforge.net$important
 ||sf.net$important
 !
+! ########################################################################### !
 ! ################################## END #################################### !
