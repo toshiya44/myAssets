@@ -1,7 +1,7 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-05-30
-! Expires: 2 days
+! Date: 2017-06-10
+! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
@@ -32,6 +32,7 @@
 ||d10psrq44igbex.cloudfront.net$important
 ||d2nz8k4xyoudsx.cloudfront.net$important
 ||d3ir0rz7vxwgq5.cloudfront.net$important
+||d2wy8f7a9ursnm.cloudfront.net$important
 ||185.2.83.87$important
 ||192.168.*$important
 ||104.198.198.188$important
@@ -414,6 +415,16 @@
 ||oscarlosun.com$important
 ||planniver.com$important
 ||roughted.com$important
+||adsend.de$important
+||adsend.info$important
+||trellian.com$important
+||audioeye.com$important
+||getsitecontrol.com$important
+||maxymiser.net$important
+||decibelinsight.net$important
+||bkrtx.com$important
+||mdotlabs.com$important
+||onscroll.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -575,6 +586,8 @@ whosampled.com##script:contains(detectAdBlocker)
 
 ||dictionary.com/proxy$important
 ||yahoo.com$third-party,important
+||bat.bing.com/bat.js$script
+||s.yimg.com/wi/ytc.js$script
 
 !||itpro.co.uk$inline-script
 !itpro.co.uk##script:contains(_sp_)
@@ -661,6 +674,10 @@ fingerprint.js$important
 /adProtect.aspx
 /keywee.js
 /keywee.min.js
+/bugsnag.js
+/bugsnag-2.js
+/bugsnag.min.js
+/bugsnag-2.min.js
 
 ! ########################################################################### !
 
@@ -931,7 +948,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
-@@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re
+@@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re|baka-tsuki.org
 
 gelbooru.com#@#span[class]:last-child > a img[src]
 gelbooru.com#@#a[href*="//gelbooru.com/redirect.php?"]
@@ -1008,6 +1025,8 @@ hentaihaven.org##script:contains(BetterJsPop)
 @@||baka-tsuki.org$image,first-party
 
 ||anilinkz.io/count.php$important
+! Owned by ad company :D
+||nyaatorrents.info$important
 
 ! --------------------------------------------------------------------------- !
 
@@ -1087,6 +1106,10 @@ https:*_ad_$badfilter
 
 ! easylist blocks filter list due to a url fragment filter
 @@||hosts-file.net/ad_servers.txt
+
+! The urls can have long string of characters that sometimes get blocked by fragment filters
+@@||mega.nz$xmlhttprequest,domain=mega.nz
+@@||mega.co.nz$xmlhttprequest,domain=mega.nz
 
 ! --------------------------------------------------------------------------- !
 ! Maleware/Junkware distribution sites
