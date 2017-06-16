@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-06-10
+! Date: 2017-06-16
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -406,7 +406,7 @@
 ||sail-horizon.com$important
 ||insticator.com$important
 ||howtoremoveadblock.com$important
-||syndication.exdynsrv.com$important
+||exdynsrv.com$important
 ||pub2srv.com$important
 ||td583.com$important
 ||candarmer.info$important
@@ -447,7 +447,6 @@ answers.com###video_universal-0_caption
 ||i.imgur.com/*.gif|$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
-!||imgur.com/imageview.gif?$image,domain=imgur.com,redirect=1x1-transparent.gif
 
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
@@ -605,6 +604,20 @@ dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.tru
 
 ! https://github.com/uBlockOrigin/uAssets/issues/389
 anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
+||anilinkz.io/count.php$important
+
+! generic cosmetic filters hiding random stuff.
+@@||crunchyroll.com^$generichide
+@@||adblock.mozdev.org$generichide
+
+! The urls can have long string of characters that sometimes get blocked by fragment filters
+@@||mega.nz$xmlhttprequest,domain=mega.nz
+@@||mega.co.nz$xmlhttprequest,domain=mega.nz
+@@||userstorage.mega.co.nz$xmlhttprequest,domain=mega.nz
+
+! request got blocked due to fragments
+@@||hosts-file.net/ad_servers.txt
+@@||who.is/api$xmlhttprequest,first-party
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -614,70 +627,6 @@ anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 ||disqus.com/count.js$script,important
 ||referrer.disqus.com$important
 @@||disqus.com/embed.js?_=1457540*$script
-
-! --------------------------------fragments---------------------------------- !
-! fragments that doesn't really belong in other sections, such as wikia/google.
-! may case false positives.
-
-/atrk.js
-/cspreport
-/lumbar.gif?
-__cspreport__
-*/ga.js$script
-/clientprofiler
-/sponsor/click.php
-/forbes_welcome.js
-*?zoneid=*$important
-/svg4everybody$script
-/ngx_pagespeed_beacon
-*controller=Optimizely*
-s_retargeting.js$script
-^img-dot.gif$third-party
-1x1_transparent.gif$image
-*security-i0y8kg*$important
-://go.*?zoneid=$popup,important
-adobe_audience_manager$important
-/metrics/s_code*$script,important
-/ga-activation.js$script,important
-adobe-audience-manager.js$important
-/metrics/s_code_trb.js$script,important
-/prod.iqdcontroller.iqdigital$script,important
-/js/tracking/ga_initial_visit*.js$script,important
-
-! for blocking some of the redirects in mediafire download pages
-*/afr.php?$important
-*write.com$important
-*write.com/Redirect*$important
-*write.com/fp.rb?*$important
-*write.com/*&referrerUrl=*$important
-*write.com/*&res=*$important
-*write.com/*mediafire.com*$important
-*coolthing.com$important
-*&referrerUrl=&*mediafire.com*
-*&curl=http%3A%2F%2Fwww.mediafire.com*
-*&curl=http//:www.mediafire.com*
-/fp.rb?id=
-
-.b-io.
-||p.d.*$script
-||ox-d.*
-||seal.*.com^
-*.com.com$important
-
-/munchkin.$important
-/urchin.$important
-quant.js$important
-raven.js$important
-raven.min.js$important
-fingerprint.js$important
-/adContent.aspx
-/adProtect.aspx
-/keywee.js
-/keywee.min.js
-/bugsnag.js
-/bugsnag-2.js
-/bugsnag.min.js
-/bugsnag-2.min.js
 
 ! ########################################################################### !
 
@@ -716,6 +665,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||mail.google.com/mail/*/cleardot.gif$important
 ||google.com/setgmail$important
 ||google.com/availability/$important
+
 ! the request is sometimes blocked by url fragment filters
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
 
@@ -834,7 +784,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
 
 ! need this to view page stats
-@@||graph.facebook.com/insights?access_token=$script,domain=facebook.com
+@@||graph.facebook.com/insights?access_token=$script,first-party
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -874,7 +824,6 @@ boards.4chan.org##.topad
 boards.4chan.org##.middlead
 boards.4chan.org##[class^="ad-"]
 boards.4chan.org##script:contains(window.upManager)
-||4cdn.org/image/skeletons*$important
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
@@ -1024,9 +973,10 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! images with filename partially matching with a URL fragment filter gets blocked
 @@||baka-tsuki.org$image,first-party
 
-||anilinkz.io/count.php$important
 ! Owned by ad company :D
 ||nyaatorrents.info$important
+
+@@||tsundora.com^$generichide
 
 ! --------------------------------------------------------------------------- !
 
@@ -1069,6 +1019,7 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
 kissanime.*##script:inject(noeval.js)
+
 ! --------------------------------------------------------------------------- !
 
 
@@ -1082,7 +1033,6 @@ gravitytales.com##.widget:if(.widget-title:has-text(Advert))
 kobatochan.com##script:inject(bab-defuser.js)
 kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
 
-! Apparently I could use commas to separate domains on cosmetic filters.
 kobatochan.com##script:contains(KillAdBlock)
 kobatochan.com##script:contains(logHuman)
 kobatochan.com##script:contains(_stq)
@@ -1094,22 +1044,73 @@ kobatochan.com##script:contains(randpubc)
 ! ############################## Bad filters ################################ !
 
 https:*_ad_$badfilter
+|https:*^ad^$badfilter
+|https:*^ad-$badfilter
 ^ad^$badfilter
 
-! ########################################################################### !
-! ######### Necessary generic whitelists, with reason(s) specified ########## !
+! --------------------------------fragments---------------------------------- !
+! fragments that doesn't really belong in other sections.
+! may case false positives. 
 
-! generic cosmetic filters are hiding random stuff.
-@@||crunchyroll.com^$generichide
-@@||tsundora.com^$generichide
-@@||adblock.mozdev.org$generichide
+/atrk.js
+/cspreport
+/lumbar.gif?
+__cspreport__
+*/ga.js$script
+/clientprofiler
+/sponsor/click.php
+/forbes_welcome.js
+*?zoneid=*$important
+/svg4everybody$script
+/ngx_pagespeed_beacon
+*controller=Optimizely*
+s_retargeting.js$script
+^img-dot.gif$third-party
+1x1_transparent.gif$image
+*security-i0y8kg*$important
+://go.*?zoneid=$popup,important
+adobe_audience_manager$important
+/metrics/s_code*$script,important
+/ga-activation.js$script,important
+adobe-audience-manager.js$important
+/metrics/s_code_trb.js$script,important
+/prod.iqdcontroller.iqdigital$script,important
+/js/tracking/ga_initial_visit*.js$script,important
 
-! easylist blocks filter list due to a url fragment filter
-@@||hosts-file.net/ad_servers.txt
+! for blocking some of the redirects in mediafire download pages
+*/afr.php?$important
+*write.com$important
+*write.com/Redirect*$important
+*write.com/fp.rb?*$important
+*write.com/*&referrerUrl=*$important
+*write.com/*&res=*$important
+*write.com/*mediafire.com*$important
+*coolthing.com$important
+*&referrerUrl=&*mediafire.com*
+*&curl=http%3A%2F%2Fwww.mediafire.com*
+*&curl=http//:www.mediafire.com*
+/fp.rb?id=
 
-! The urls can have long string of characters that sometimes get blocked by fragment filters
-@@||mega.nz$xmlhttprequest,domain=mega.nz
-@@||mega.co.nz$xmlhttprequest,domain=mega.nz
+.b-io.
+||p.d.*$script
+||ox-d.*
+||seal.*.com^
+*.com.com$important
+
+/munchkin.$important
+/urchin.$important
+quant.js$important
+raven.js$important
+raven.min.js$important
+fingerprint.js$important
+/adContent.aspx
+/adProtect.aspx
+/keywee.js
+/keywee.min.js
+/bugsnag.js
+/bugsnag-2.js
+/bugsnag.min.js
+/bugsnag-2.min.js
 
 ! --------------------------------------------------------------------------- !
 ! Maleware/Junkware distribution sites
