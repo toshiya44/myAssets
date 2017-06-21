@@ -88,8 +88,8 @@
 ||iplogger.com$important
 ||iplogger.ru$important
 ||iplogger.info$important
-||akamai.$third-party,important
-||akamaihd.$third-party,important
+||akamai.$third-party,important,domain=~steamcommunity.com|~steampowered.com
+||akamaihd.$third-party,important,domain=~steamcommunity.com|~steampowered.com
 ||anonymousdemographics.com$important
 ||adnium.com$important
 ||4uvjosuc.com$important
@@ -425,6 +425,7 @@
 ||bkrtx.com$important
 ||mdotlabs.com$important
 ||onscroll.com$important
+||redirect2719.ws$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -763,6 +764,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/pages/show_live_insights/?trigger_surface*$first-party,important
 ||facebook.com/pubcontent/feed_chaining$important
 ||facebook.com/video/autoplay$first-party,important
+||facebook.com/rtc/callability$first-party
 ||fbcdn.net/safe_image.php$important
 !||ct-m-fbx.fbsbx.com$important
 ||fbsbx.com$important
@@ -813,6 +815,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||twitter.com/*/trends$important
 ||twitter.com/*/live_video_home_module$important
 ||twitter.com/i/cards/*?advertiser_name$important
+||twitter.com/i/promoted_content$important
 ||ads-twitter.com$important
 
 ! ########################################################################### !
