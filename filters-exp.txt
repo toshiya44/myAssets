@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-06-16
+! Date: 2017-06-25
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -33,6 +33,7 @@
 ||d2nz8k4xyoudsx.cloudfront.net$important
 ||d3ir0rz7vxwgq5.cloudfront.net$important
 ||d2wy8f7a9ursnm.cloudfront.net$important
+||d1z2jf7jlzjs58.cloudfront.net$important
 ||185.2.83.87$important
 ||192.168.*$important
 ||104.198.198.188$important
@@ -315,6 +316,8 @@
 ||zhabyesrdnvn.com$important
 ||friendlyduck.com$important
 ||friendlyduck.com$important,popup
+||goacestnzgrd.com$important
+||sfzcbcrwxhic.com$important
 ||amung.us$important
 ||puhtml.com$important
 ||vindicosuite.com$important
@@ -426,6 +429,12 @@
 ||mdotlabs.com$important
 ||onscroll.com$important
 ||redirect2719.ws$important
+||kqtu1a03.top$important
+||adspeed.net$important
+||seclists.org$important
+||acunetix.com$important
+||mediavoice.com$important
+||chartbeat.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -785,8 +794,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
 
-! need this to view page stats
-@@||graph.facebook.com/insights?access_token=$script,first-party
+! need this to view page stats and other stuff
+@@||graph.facebook.com/*?access_token=$first-party
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -830,11 +839,13 @@ boards.4chan.org##script:contains(window.upManager)
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
-cu.cc##script:contains(ExoLoader)
-cu.cc##script:contains(TyxoObject)
 desuarchive.org##script:contains(_qevents)
-thebarchive.com,archived.moe##script:inject(bab-defuser.js)
-||cu.cc/main.php$important,first-party
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(ExoLoader)
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(TyxoObject)
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(noeval.js)
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(bab-defuser.js)
+archiveofsins.com##script:contains(BlockAdblock)
+!||cu.cc/main.php$important,first-party
 ||4archive.org/neverBme.php$important
 ||4archive.org/nbme_main.php$important
 ||4archive.org/nevaaaaah.js$important
@@ -843,7 +854,10 @@ thebarchive.com,archived.moe##script:inject(bab-defuser.js)
 ||randomarchive.com/nbme_main.php$important
 
 /nbme_main.php$script
-.php$script,domain=4archive.org|randomarchive.com|thebarchive.com
+/neverRBb.js$script
+/neverRBb.php$script
+/neverBme.php$script
+.php$script,domain=4archive.org|randomarchive.com|thebarchive.com|archiveofsins.com
 
 ! The following filter from easylist breaks site functionality (such as backlinks)
 !|https://$script,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
@@ -907,7 +921,7 @@ gelbooru.com#@#a[href*="//gelbooru.com/redirect.php?"]
 gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
-gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
+!gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
 gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
 
 ! yes
@@ -920,10 +934,13 @@ danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
 
 ||konachan.net$subdocument,important
+||amazonaws.com$important,domain=sankakucomplex.com
 ||cstats.sankakucomplex.com$important
+||sankakucomplex.com/*/afr.php$important
+||sankakucomplex.com/javascripts/ls.12.js$important
+||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com
-||amazonaws.com$important,domain=sankakucomplex.com
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 
 ! possible fake/scam/phishing site "danbooru.idanbooru.com"
