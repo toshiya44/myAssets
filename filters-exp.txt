@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-06-25
+! Date: 2017-07-06
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -318,6 +318,7 @@
 ||friendlyduck.com$important,popup
 ||goacestnzgrd.com$important
 ||sfzcbcrwxhic.com$important
+||fnkyyrgraizy.com$important
 ||amung.us$important
 ||puhtml.com$important
 ||vindicosuite.com$important
@@ -431,10 +432,13 @@
 ||redirect2719.ws$important
 ||kqtu1a03.top$important
 ||adspeed.net$important
-||seclists.org$important
 ||acunetix.com$important
 ||mediavoice.com$important
 ||chartbeat.com$important
+||padstm.com$important
+||ti553.com$important
+||ns1p.net$important
+||ml314.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -466,6 +470,10 @@ reddit.com###siteTable_organic
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
 ||amazonaws.com/redditstatic$important
+||analytics.slashdotmedia.com$important
+||slashdotmedia.com/www/delivery/lg.php$important
+! what
+||e.reddit.com$first-party
 
 ||angelfire.com$important,third-party
 ||fiverr.com$important,third-party
@@ -629,6 +637,9 @@ anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 @@||hosts-file.net/ad_servers.txt
 @@||who.is/api$xmlhttprequest,first-party
 
+! ??
+||seclists.org$third-party
+
 ! ########################################################################### !
 ! Disqus click-to-load
 ! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
@@ -738,6 +749,7 @@ myanimelist.net##.banner-header-anime-straming
 ||myanimelist.cdn-dena.com/images/membership$important
 ||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/signature/*
+||crunchyroll.com$important,domain=myanimelist.net
 
 ! ---------------------------------social----------------------------------- !
 ! facebook
@@ -1081,6 +1093,9 @@ __cspreport__
 /sponsor/click.php
 /forbes_welcome.js
 *?zoneid=*$important
+*&zoneid=*$important
+*?zone_id=*$important
+*&zone_id=*$important
 /svg4everybody$script
 /ngx_pagespeed_beacon
 *controller=Optimizely*
@@ -1138,10 +1153,14 @@ fingerprint.js$important
 ! 
 ||tucows.com$important
 ||filehippo.com$important
+||download.com$important
+||cnet.com$third-party,important
 ||download.cnet.com$important
 ||nonags.com$important
-||sourceforge.net$important
-||sf.net$important
+! apparently they're trying to imporove (?) need more compelling evidence than what their PR says.
+! leaving these at third party for now in order to browse the site and evaluate.
+||sourceforge.net$third-party,important
+||sf.net$third-party,important
 !
 ! ########################################################################### !
 ! ################################## END #################################### !
