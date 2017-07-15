@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-07-06
+! Date: 2017-07-15
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -89,8 +89,6 @@
 ||iplogger.com$important
 ||iplogger.ru$important
 ||iplogger.info$important
-||akamai.$third-party,important,domain=~steamcommunity.com|~steampowered.com
-||akamaihd.$third-party,important,domain=~steamcommunity.com|~steampowered.com
 ||anonymousdemographics.com$important
 ||adnium.com$important
 ||4uvjosuc.com$important
@@ -353,7 +351,6 @@
 ||lexads.com$important
 ||weheartstats.com$important
 ||valuecommerce.com$important
-||akamaized.net$important
 ||getpocket.com$important
 ||ipbunsan-server.net$important
 ||pubvantage.com$important
@@ -439,6 +436,13 @@
 ||ti553.com$important
 ||ns1p.net$important
 ||ml314.com$important
+||bannertrack.net$important
+||earnify.com$important
+||intergi.com$important
+||bizographics.com$important
+||3lift.com$important
+||viglink.com$important
+||sonobi.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -465,8 +469,9 @@ answers.com###video_universal-0_caption
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
 reddit.com###siteTable_organic
-||reddit.com/api/request_promo
 ||reddit.com/static/pixel.png
+||reddit.com/api/request_promo
+||reddit.com/api/request_recommended_link$important
 ||redditstatic.com/moat$script,important
 ||redditmedia.com/ads$subdocument,important
 ||amazonaws.com/redditstatic$important
@@ -605,6 +610,9 @@ whosampled.com##script:contains(detectAdBlocker)
 ||yahoo.com$third-party,important
 ||bat.bing.com/bat.js$script
 ||s.yimg.com/wi/ytc.js$script
+||otf.msn.com$important
+||c.msn.com$important
+||c.bing.com$important
 
 !||itpro.co.uk$inline-script
 !itpro.co.uk##script:contains(_sp_)
@@ -613,6 +621,7 @@ itpro.co.uk###dennis-newsletter-newsletter-form
 itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
 ||ooyala.com$subdocument,important
+||openload.co$object,important
 
 businessinsider.com##script:contains(setAdblockerCookie)
 ||businessinsider.com$inline-script
