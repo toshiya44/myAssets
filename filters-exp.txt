@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-07-15
+! Date: 2017-07-23
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.12.5+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -443,6 +443,11 @@
 ||3lift.com$important
 ||viglink.com$important
 ||sonobi.com$important
+||anothing.info$important
+||unformse.com$important
+||dlyads.com$important
+||exosrv.com$important
+||noadblock.net$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -810,10 +815,19 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 @@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
+@@||facebook.com/ads/preferences/edit_sensitive_topics$xmlhttprequest,first-party
+@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest,first-party
 
 ! counter the exception to prevent accidentally (re)added/undo.
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
+
+! https://github.com/toshiya44/myAssets/issues/3#issuecomment-317239095
+||facebook.com/async/social_good/$xmlhttprequest
+||facebook.com/video/tahoe/upnext/$important
+||facebook.com/video/quality_survey$important
+||facebook.com/pubcontent/local_news_chaining$important
+||facebook.com/pubcontent/related_share$importan
 
 ! need this to view page stats and other stuff
 @@||graph.facebook.com/*?access_token=$first-party
@@ -859,6 +873,9 @@ boards.4chan.org##[class^="ad-"]
 boards.4chan.org##script:contains(window.upManager)
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
+
+! https://github.com/ccd0/4chan-x/issues/1417
+@@||4chan.org^*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval'
 
 desuarchive.org##script:contains(_qevents)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(ExoLoader)
