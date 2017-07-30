@@ -1,13 +1,14 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-07-23
+! Date: 2017-07-30
 ! Expires: 4 days
-! Requirement: uBlock Origin 1.12.5+
+! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
-! Note, "Expires 2days" means that uBO will check for updates every 
-! two days for this list, which is the minimum interval.
+! Note, "Expires n days" means that uBO will check for updates every n days.
+! Upcoming uBO/webext changes (some filters will not work and stuff)
+! https://github.com/gorhill/uBlock/wiki/Firefox-WebExtensions
 ! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is getting filtered out,
@@ -448,6 +449,11 @@
 ||dlyads.com$important
 ||exosrv.com$important
 ||noadblock.net$important
+||bounceexchange.com$important
+||about.com$important
+||us.to$important
+||netvaluator.com$important
+||siteprice.org$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -477,7 +483,8 @@ reddit.com###siteTable_organic
 ||reddit.com/static/pixel.png
 ||reddit.com/api/request_promo
 ||reddit.com/api/request_recommended_link$important
-||redditstatic.com/moat$script,important
+||redditstatic.com/moat$important
+||redditstatic.com/recommended-link.*.js$important
 ||redditmedia.com/ads$subdocument,important
 ||amazonaws.com/redditstatic$important
 ||analytics.slashdotmedia.com$important
@@ -562,6 +569,8 @@ firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
 ||nbcuni.com$important
 
 ||wp.com/*/devicepx-jetpack.js
+||wordpress.com/pinghub/*$important
+||wordpress.com/pinghub/*$websocket
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
 ||go.com$important,third-party
 ||go.com/*/DisneyID.js$important
@@ -767,7 +776,7 @@ myanimelist.net##.banner-header-anime-straming
 
 ! ---------------------------------social----------------------------------- !
 ! facebook
-! it seems facebook keeps updating their site, so filters aren't working very well...
+! their site updates frequently, so filters get outdated fast.
 facebook.com###build_audience
 facebook.com###pages_manager_boosted_website_card
 facebook.com###aymt_homepage_panel_tip
@@ -791,15 +800,17 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ads
 ||facebook.com/*/record_basic_metrics.php$important
 ||facebook.com/ajax/ads$important
-||facebook.com/ajax/bz$first-party,important
-||facebook.com/ajax/browse/null_state.php$first-party,important
-||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$first-party,important
-||facebook.com/ajax/mutual_friends/tooltip.php$xmlhttprequest,first-party,important
-||facebook.com/pages/presence$first-party,important
-||facebook.com/pages/show_live_insights/?trigger_surface*$first-party,important
+||facebook.com/ajax/bz$important
+||facebook.com/ajax/browse/null_state.php$important
+||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$important
+||facebook.com/ajax/mutual_friends/tooltip.php$important
+||facebook.com/pages/presence$important
+||facebook.com/pages/show_live_insights/?trigger_surface*$important
+||facebook.com/pages/profile/cover_video_data/*$important
 ||facebook.com/pubcontent/feed_chaining$important
-||facebook.com/video/autoplay$first-party,important
-||facebook.com/rtc/callability$first-party
+||facebook.com/video/autoplay$important
+||facebook.com/video/channel/view/async/*/?caller=channel_view_from_page_video_tab$important
+||facebook.com/rtc/callability$important
 ||fbcdn.net/safe_image.php$important
 !||ct-m-fbx.fbsbx.com$important
 ||fbsbx.com$important
@@ -826,8 +837,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/video/tahoe/upnext/$important
 ||facebook.com/video/quality_survey$important
+||facebook.com/pubcontent/related_share$important
 ||facebook.com/pubcontent/local_news_chaining$important
-||facebook.com/pubcontent/related_share$importan
 
 ! need this to view page stats and other stuff
 @@||graph.facebook.com/*?access_token=$first-party
@@ -943,6 +954,8 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
 ||thedoujin.com/bload.php$important
+||gelbooru.com^$first-party,image,badfilter
+@@||gelbooru.com/thumbnails/*$image,first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! honeypot (as of 2017-04-24)
@@ -967,6 +980,7 @@ gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thum
 
 chan.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com###headerthumbs
+chan.sankakucomplex.com##cloudflare-app
 danbooru.donmai.us###upgrade-account-notice
 danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
@@ -1000,6 +1014,7 @@ pixiv.net##a[href*="premium.php"]
 @@||accounts.pixiv.net$popup,domain=pawoo.net
 
 readms.net###reader-sky
+bato.to###register_notice
 novelupdates.com##.ad_336
 mangastream.com##.paypal
 mangastream.com##.bitcoin
