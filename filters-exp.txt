@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-07-30
+! Date: 2017-08-08
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -25,6 +25,7 @@
 ||dpb3g4kqr8xz.cloudfront.net$important
 ||d5nxst8fruw4z.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
+||dzcx04lyk9hjp.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
@@ -606,10 +607,12 @@ tinypic.com##script:contains(ClientProfilingLog)
 ||otakumode.com/widget$important,third-party
 
 ! just using umatrix for this
-animenewsnetwork.com##a[href*="click.php"]
-animenewsnetwork.com##a[href*="4NN.cx"]
-animenewsnetwork.com##a[href*="rightstufanime.com"]
+animenewsnetwork.com,animenewsnetwork.cc##a[href*="click.php"]
+animenewsnetwork.com,animenewsnetwork.cc##a[href*="4NN.cx"]
+animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
+||animenewsnetwork.cc/images/s/$image
 ||animenewsnetwork.com/images/s/$image
+||animenewsnetwork.cc/logger.pageperf$xmlhttprequest,important
 ||animenewsnetwork.com/logger.pageperf$xmlhttprequest,important
 
 way2earning.com##a[href*="adoverlay.net"]
@@ -662,6 +665,9 @@ anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ! ??
 ||seclists.org$third-party
+
+*.gravity.com/*$important
+||cdn.insights.gravity.com/*$object,important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1141,6 +1147,7 @@ __cspreport__
 /ngx_pagespeed_beacon
 *controller=Optimizely*
 s_retargeting.js$script
+*qualitysocialtargeting*
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
 *security-i0y8kg*$important
