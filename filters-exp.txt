@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-08-08
+! Date: 2017-08-30
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -348,6 +348,7 @@
 ||adskeeper.co.uk$important
 ||mnfclub.com$important
 ||contentabc.com$important
+||contentabc.com$important,popup
 ||klickthru.com$important
 ||lexads.net$important
 ||lexads.com$important
@@ -455,6 +456,40 @@
 ||us.to$important
 ||netvaluator.com$important
 ||siteprice.org$important
+||revdepo.com$script
+||clksite.com$script
+||onclicktop.com$important
+||imrworldwide.com$important
+||nakanohito.jp$important
+||advg.jp$important
+||lijit.com$important
+||genieessp.com$important
+||anxiousapples.com$important
+||beamkite.com$important
+||calmfoot.com$important
+||chickensstation.com $important
+||consciouscabbage.com$important
+||copycarpenter.com$important
+||crownclam.com$important
+||functionalclam.com$important
+||giddycoat.com$important
+||guardedgovernor.com$important
+||jewelcheese.com$important
+||lizardslaugh.com$important
+||loudloss.com$important
+||photographpan.com$important
+||profitrumour.com$important
+||quaintcan.com$important
+||scintillatingspace.com$important
+||scrubsky.com$important
+||shallowschool.com$important
+||shelterstraw.com $important
+||sinceresofa.com$important
+||snakesort.com$important
+||storesurprise.com$important
+||stormyachiever.com$important
+||stormyshock.com$important
+||swimslope.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -601,6 +636,8 @@ tinypic.com##script:contains(ClientProfilingLog)
 
 ||mp3juices.cc/img$important
 ||mp3juices.cc/pa/h/a.html$subdocument
+||mp3juices.cc/tt/d/d.html$subdocument
+mp3juices.cc##iframe[src="tt/r/t/d.html"]
 
 ||rightstufanime.com$important,popup
 ||rightstufanime.com$important,third-party
@@ -1038,6 +1075,9 @@ fc2.com###fc2_bottom_bnr
 ||static.fc2.com/js/blog/ad_ref.js$script,important
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,important
 ||fc2.com/counter*.php$important
+
+!nicovideo.jp##a[href*="https://account.nicovideo.jp/premium/register?"]
+nicovideo.jp##a[href*="/premium/register?"]
 
 !nhentai.net##script:contains(show_popunders)
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
