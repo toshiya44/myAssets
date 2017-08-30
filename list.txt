@@ -1,12 +1,15 @@
 ! https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
+! Lists that are included by default in uBO have been omitted.
 ! Copy paste the following in external filter list area. Comment out the ones you don't need.
+
 https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt
 https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt
 
 ! imports
 https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt
 https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-whlist.txt
-https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt
+! warning: very high rate of false positives
+!https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt
 
 ! adguard https://adguard.com/en/filters.html
 ! https://github.com/gorhill/uBlock/issues/2294
@@ -25,3 +28,7 @@ https://filters.adtidy.org/extension/chromium/filters/15.txt
 
 ! disqus is already part of the main list (filters-exp.txt)
 ! https://gist.githubusercontent.com/gorhill/ef1b62d606473c68d524/raw/f8181faac18cb5172c7c9bca8e5a3b22f0c925d0/gistfile1.txt
+
+https://pgl.yoyo.org/adservers/admiral-domains.txt
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=&showintro=1&startdate%5Bday%5D=&startdate%5Bmonth%5D=&startdate%5Byear%5D=&mimetype=plaintext
+https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt
