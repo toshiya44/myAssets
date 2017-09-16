@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-08-30
+! Date: 2017-09-16
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -11,12 +11,12 @@
 ! https://github.com/gorhill/uBlock/wiki/Firefox-WebExtensions
 ! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
-! Please be cautious and check uBO's logger to see what is getting filtered out,
-! and comment out any problamatic filter.
+! Please be cautious and check uBO's logger to see what is being filtered,
+! and comment out any problamatic filter. Or use the "badfilter" flag.
 ! Almost every network filters here are marked "Important" because filters 
 ! made by/for ABP etc. often whitlists them due to limitation in ABP's filter
-! syntax and other reasons I don't care.
-! Currently trying to use uMatrix to mass filter third-party stuff. 
+! syntax and other reasons I don't care about.
+! Use uMatrix for mass filtering.
 ! ########################################################################### !
 ! --------------------------------------------------------------------------- !
 !
@@ -464,6 +464,11 @@
 ||advg.jp$important
 ||lijit.com$important
 ||genieessp.com$important
+||iawohriotarjetas.net$important
+||eichebasket.net$important
+||ads.doko.jp$important
+||ipv6test.net$important
+||en25.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -489,17 +494,20 @@ answers.com###video_universal-0_caption
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
 reddit.com###siteTable_organic
+reddit.com##.read-next-container
 ||reddit.com/static/pixel.png
-||reddit.com/api/request_promo
+||pixel.redditmedia.com$important
+||reddit.com/api/request_promo$important
 ||reddit.com/api/request_recommended_link$important
 ||redditstatic.com/moat$important
 ||redditstatic.com/recommended-link.*.js$important
 ||redditmedia.com/ads$subdocument,important
+||redditmedia.com/gtm/$subdocument,important
 ||amazonaws.com/redditstatic$important
 ||analytics.slashdotmedia.com$important
 ||slashdotmedia.com/www/delivery/lg.php$important
 ! what
-||e.reddit.com$first-party
+||e.reddit.com$important
 
 ||angelfire.com$important,third-party
 ||fiverr.com$important,third-party
@@ -512,6 +520,7 @@ reddit.com###siteTable_organic
 ||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 ||amazonaws.com/703a80648f8f74c6a637ac48fc23d00ba8dc4bb12ead3d0075872b2d623fe7$important
 
+github.com##.signup-prompt
 github.com##.modal-backdrop
 ||github.com/_private/browser/errors$important
 
@@ -541,10 +550,7 @@ mediafire.com#@#.ico30share
 ||mediafire.com/*.swf$important
 ||mediafire.com$object,important
 ||mediafire.com/templates/linkto$important
-
-! https://github.com/easylist/easylist/issues/270
-! they changed it back
-! @@||mediafireuserupload.com/douploadtoapi/$xmlhttprequest,domain=mediafire.com
+dropbox.com###shared-link-immediate-signup-modal
 
 addons.mozilla.org###promos
 ||mozilla.org/__cspreport__$important
@@ -679,6 +685,8 @@ anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 *.gravity.com/*$important
 ||cdn.insights.gravity.com/*$object,important
 
+stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###herobox
+
 ! ########################################################################### !
 ! Disqus click-to-load
 ! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
@@ -700,6 +708,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||metric.gstatic.com$important
+||gstatic.com/kpui/social/$important
 ||gstatic.com/*/cleardot.gif$important
 ||gstatic.com/docs/common/cleardot.gif$image,domain=google.com,redirect=1x1-transparent.gif
 ||safebrowsing.google.com$important
@@ -979,6 +988,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/script/application.js?$domain=gelbooru.com
+@@||gelbooru.com/index.php$inline-script,first-party
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re|baka-tsuki.org
@@ -1054,6 +1064,7 @@ nicovideo.jp##a[href*="/premium/register?"]
 
 !nhentai.net##script:contains(show_popunders)
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
+||nhentai.net/api/_/popunder$important
 hentaihaven.org##script:contains(Pukka)
 hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
@@ -1065,14 +1076,17 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! images with filename partially matching with a URL fragment filter gets blocked
 @@||baka-tsuki.org$image,first-party
 
-! Owned by ad company :D
+! Owned by an advertisement company :D
 ||nyaatorrents.info$important
 
+@@||nrvnqsr.com^$generichide
 @@||tsundora.com^$generichide
 
 ! --------------------------------------------------------------------------- !
 
-! block fake kiss sites https://redd.it/5jtzj9
+! Block fake Kiss sites. https://redd.it/5jtzj9
+! Not that I support the originals, but the fakes are probably more malicious
+! with their ads and malware.
 ! last checked: 2017-02-12
 
 kissanime.ru##.divCloseBut
@@ -1113,7 +1127,6 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 kissanime.*##script:inject(noeval.js)
 
 ! --------------------------------------------------------------------------- !
-
 
 kobatochan.com###supplementary
 kobatochan.com###mobile-header-left-nav
@@ -1164,6 +1177,7 @@ s_retargeting.js$script
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
 *security-i0y8kg*$important
+Tealeaf*.js$script,important
 ://go.*?zoneid=$popup,important
 adobe_audience_manager$important
 /metrics/s_code*$script,important
@@ -1176,11 +1190,12 @@ adobe-audience-manager.js$important
 ! for blocking some of the redirects in mediafire download pages
 */afr.php?$important
 *write.com$important
-*write.com/Redirect*$important
-*write.com/fp.rb?*$important
-*write.com/*&referrerUrl=*$important
-*write.com/*&res=*$important
-*write.com/*mediafire.com*$important
+*write.com/*$important
+!*write.com/Redirect*$important
+!*write.com/fp.rb?*$important
+!*write.com/*&referrerUrl=*$important
+!*write.com/*&res=*$important
+!*write.com/*mediafire.com*$important
 *coolthing.com$important
 *&referrerUrl=&*mediafire.com*
 *&curl=http%3A%2F%2Fwww.mediafire.com*
@@ -1224,9 +1239,12 @@ fingerprint.js$important
 ||sf.net$third-party,important
 !
 ! ########################################################################### !
-! Huge blocks of malicious/suspicious domains.
+! Huge blocks of malicious/suspicious domains
+! Usually imported from other places.
 
-! related - start
+! need this too https://pgl.yoyo.org/adservers/admiral-domains.txt
+! Admiral anti-adb - start
+||getadmiral.com$important
 ||abandonedclover.com$important
 ||abruptroad.com$important
 ||actuallysheep.com$important
