@@ -1,20 +1,24 @@
 ! https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web
-! Lists that are included by default in uBO have been omitted.
-! Copy paste the following in external filter list area. Comment out the ones you don't need.
+! Lists that are included by default in uBO have been omitted (mostly). 
+! Copy paste the lists you need in the external filter list area.
+! Read the description inside in each list for detailed information.
 
 https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt
 https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt
 
-! imports
+! imports from https://github.com/k2jp/abp-japanese-filters
+! modified to remove/isolate extremely generic filters
 https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt
 https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-whlist.txt
-! warning: very high rate of false positives
 !https://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt
 
 ! adguard https://adguard.com/en/filters.html
 ! https://github.com/gorhill/uBlock/issues/2294
-https://filters.adtidy.org/extension/chromium/filters/1.txt
-https://filters.adtidy.org/extension/chromium/filters/2.txt
+! https://github.com/AdguardTeam/AdguardFilters/issues/5138
+! https://filters.adtidy.org/extension/chromium/filters/1.txt
+! https://filters.adtidy.org/extension/chromium/filters/2.txt
+https://filters.adtidy.org/extension/ublock/filters/1.txt
+https://filters.adtidy.org/extension/ublock/filters/2.txt
 https://filters.adtidy.org/extension/chromium/filters/3.txt
 https://filters.adtidy.org/extension/chromium/filters/4.txt
 https://filters.adtidy.org/extension/chromium/filters/5.txt
@@ -23,12 +27,18 @@ https://filters.adtidy.org/extension/chromium/filters/7.txt
 https://filters.adtidy.org/extension/chromium/filters/8.txt
 https://filters.adtidy.org/extension/chromium/filters/9.txt
 https://filters.adtidy.org/extension/chromium/filters/12.txt
+https://filters.adtidy.org/extension/ublock/filters/13.txt
 https://filters.adtidy.org/extension/chromium/filters/14.txt
 https://filters.adtidy.org/extension/chromium/filters/15.txt
+
+! Adguard English list without the easylist bits
+https://filters.adtidy.org/extension/ublock/filters/2_without_easylist.txt
 
 ! disqus is already part of the main list (filters-exp.txt)
 ! https://gist.githubusercontent.com/gorhill/ef1b62d606473c68d524/raw/f8181faac18cb5172c7c9bca8e5a3b22f0c925d0/gistfile1.txt
 
-https://pgl.yoyo.org/adservers/admiral-domains.txt
-https://pgl.yoyo.org/adservers/serverlist.php?hostformat=&showintro=1&startdate%5Bday%5D=&startdate%5Bmonth%5D=&startdate%5Byear%5D=&mimetype=plaintext
+!https://pgl.yoyo.org/adservers/admiral-domains.txt
+!https://pgl.yoyo.org/adservers/serverlist.php?hostformat=&showintro=1&startdate%5Bday%5D=&startdate%5Bmonth%5D=&startdate%5Byear%5D=&mimetype=plaintext
+
+! https://github.com/IDKwhattoputhere/uBlock-Filters-Plus
 https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt
