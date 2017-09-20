@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-16
+! Date: 2017-09-20
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -469,6 +469,15 @@
 ||ads.doko.jp$important
 ||ipv6test.net$important
 ||en25.com$important
+||report-uri.io$important
+||getclicky.com$important
+||addtoany.com$important
+||broadstreetads.com$important
+||ero-advertising.com$important
+||coin-hive.com$important
+||formstack.com$important
+||smyte.com$important
+||siftscience.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -524,6 +533,9 @@ github.com##.signup-prompt
 github.com##.modal-backdrop
 ||github.com/_private/browser/errors$important
 
+! signup-prompt
+stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###herobox
+
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
@@ -533,9 +545,6 @@ discordapp.com##.message-group-blocked
 ! Curse logs your IP
 ||curse.com^$important
 ||cursecdn.com$important
-
-||paypal.com$third-party,important
-||paypalobjects.com$important,domain=~paypal.com
 
 ||cointelegraph.com/assets/js/script.js$script,important
 ||cointelegraph.com/embed$important
@@ -680,12 +689,11 @@ anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
 @@||who.is/api$xmlhttprequest,first-party
 
 ! ??
-||seclists.org$third-party
+!||seclists.org$third-party
 
-*.gravity.com/*$important
+||.gravity.com/*$important
 ||cdn.insights.gravity.com/*$object,important
 
-stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###herobox
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1015,6 +1023,7 @@ sankakucomplex.com##script:contains(pagespeed)
 ||amazonaws.com$important,domain=sankakucomplex.com
 ||cstats.sankakucomplex.com$important
 ||sankakucomplex.com/*/afr.php$important
+||a.sankakucomplex.com/x/piwik.php$important
 ||sankakucomplex.com/javascripts/ls.12.js$important
 ||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
@@ -1163,6 +1172,7 @@ https:*_ad_$badfilter
 __cspreport__
 */ga.js$script
 /clientprofiler
+/edgemesh$script
 /sponsor/click.php
 /forbes_welcome.js
 *?zoneid=*$important
