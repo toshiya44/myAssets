@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-20
+! Date: 2017-09-23
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -474,10 +474,17 @@
 ||addtoany.com$important
 ||broadstreetads.com$important
 ||ero-advertising.com$important
+||cnhv.co$important
 ||coin-hive.com$important
+||jsecoin.com$important
+||coinbase.com$important
 ||formstack.com$important
 ||smyte.com$important
 ||siftscience.com$important
+||fancybar.net$important
+||freestar.io$important
+||ywxi.net$important
+||ipify.org$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -1171,6 +1178,7 @@ https:*_ad_$badfilter
 /lumbar.gif?
 __cspreport__
 */ga.js$script
+coins.js$script
 /clientprofiler
 /edgemesh$script
 /sponsor/click.php
@@ -1185,6 +1193,7 @@ __cspreport__
 s_retargeting.js$script
 *qualitysocialtargeting*
 ^img-dot.gif$third-party
+coinhive.min.js$important
 1x1_transparent.gif$image
 *security-i0y8kg*$important
 Tealeaf*.js$script,important
