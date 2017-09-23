@@ -485,6 +485,10 @@
 ||freestar.io$important
 ||ywxi.net$important
 ||ipify.org$important
+||ad-maven.com$important
+||exashare.com$important
+||bidgear.com$important
+||adk2x.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -679,8 +683,8 @@ businessinsider.com##script:contains(setAdblockerCookie)
 dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/389
-anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
-||anilinkz.io/count.php$important
+anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
+||anilinkz.*/count.php$important
 
 ! generic cosmetic filters hiding random stuff.
 @@||crunchyroll.com^$generichide
@@ -844,7 +848,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/ajax/browse/null_state.php$important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$important
 ||facebook.com/ajax/mutual_friends/tooltip.php$important
-||facebook.com/pages/presence$important
+||facebook.com/ajax/presence/*$important
+||facebook.com/pages/presence/*$important
 ||facebook.com/pages/show_live_insights/?trigger_surface*$important
 ||facebook.com/pages/profile/cover_video_data/*$important
 ||facebook.com/pubcontent/feed_chaining$important
@@ -852,8 +857,12 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||facebook.com/video/channel/view/async/*/?caller=channel_view_from_page_video_tab$important
 ||facebook.com/rtc/callability$important
 ||fbcdn.net/safe_image.php$important
+||fbcdn.net/security/hsts-pixel.gif$important
+||facebook.com/security/hsts-pixel.gif$important
 !||ct-m-fbx.fbsbx.com$important
 ||fbsbx.com$important
+!||staticxx.facebook.com/common/referer_frame.php$important
+||facebook.com/common/referer_frame.php$important
 
 ||facebook.com/xti.php$important
 ||facebook.com/*/logging/$important
@@ -899,6 +908,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||i.ntere.st^$third-party,important
 ||spot.im$third-party,important
 ||chatango.com$third-party,important
+||optinchat.com$third-party,important
 
 ||twitter.com^$important,~first-party
 ||twimg.com^$important,~first-party,domain=~behind-the-scene|~twitter.com
