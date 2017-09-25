@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-24
+! Date: 2017-09-25
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -493,6 +493,10 @@
 ||hlserve.com$important
 ||flixfacts.com$important
 ||myregistry.com$important
+||iesnare.com$important
+||kissmetrics.com$script
+||s.ntv.io$important
+
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -515,6 +519,7 @@ answers.com###video_universal-0_caption
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
 
+reddit.com###hsts_pixel
 reddit.com###ad_main_top
 reddit.com##.survey-overlay
 reddit.com###siteTable_organic
@@ -677,8 +682,9 @@ whosampled.com##script:contains(detectAdBlocker)
 itpro.co.uk###dennis-newsletter-newsletter-form
 itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
 
-||ooyala.com$subdocument,important
 ||openload.co$object,important
+||ora.tv$subdocument,important
+||ooyala.com$subdocument,important
 
 businessinsider.com##script:contains(setAdblockerCookie)
 ||businessinsider.com$inline-script
@@ -1093,7 +1099,7 @@ nicovideo.jp##a[href*="/premium/register?"]
 
 !nhentai.net##script:contains(show_popunders)
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
-||nhentai.net/api/_/popunder$important
+||nhentai.net/api/_/popunder*$important
 hentaihaven.org##script:contains(Pukka)
 hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
