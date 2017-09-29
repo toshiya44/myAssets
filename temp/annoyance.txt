@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-09-20
-! Expires: 30 days
+! Date: 2017-09-29
+! Expires: 15 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
 ! Also includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
@@ -90,7 +90,6 @@ breitbart.com##.Hmobi.ad
 
 reddit.com##.grippy
 reddit.com###header-img
-reddit.com###hsts_pixel
 !reddit.com##.initialized
 reddit.com##.promotedlink
 reddit.com##.hohoho-header
@@ -217,6 +216,16 @@ dreamfilmhd.sh##script:inject(abort-on-property-read.js, _gunggo)
 
 ! semi transparent text + colorful bg = eyecancer
 ||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
+
+pastebin.com###notice
+pastebin.com###steadfast
+||pastebin.com/i/steadfast_1.png$image
+
+wikipedia.org###wlm-banner
+stackexchange.com###noscript-warning
+||redditstatic.com/author-tooltip.*$important
+||redditstatic.com/sprite-author-tooltip.*$important
+||reddit.com/user/*/about.json$xmlhttprequest,important
 
 !###########################################################################!
 ! wikia script fractions
