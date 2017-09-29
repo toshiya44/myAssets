@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-25
+! Date: 2017-09-29
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -496,7 +496,9 @@
 ||iesnare.com$important
 ||kissmetrics.com$script
 ||s.ntv.io$important
-
+||mollom.com$important
+||adroll.com$important
+||microad.jp$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -521,9 +523,11 @@ answers.com###video_universal-0_caption
 
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
+reddit.com##.geopopularbar
 reddit.com##.survey-overlay
 reddit.com###siteTable_organic
 reddit.com##.read-next-container
+reddit.com##.trending-subreddits
 ||reddit.com/static/pixel.png
 ||pixel.redditmedia.com$important
 ||reddit.com/api/request_promo$important
@@ -555,6 +559,7 @@ github.com##.modal-backdrop
 
 ! signup-prompt
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###herobox
+stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com##.hero-container
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
@@ -714,6 +719,9 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 
 ||costco.com/akam$important
 ||channeladvisor.com$important,third-party
+
+! some filterlists have this and it causes a lot of breakage
+!com#@#[class^="ad-"]
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1260,6 +1268,9 @@ fingerprint.js$important
 /bugsnag-2.js
 /bugsnag.min.js
 /bugsnag-2.min.js
+
+/mollom/$script
+/mollom/$xmlhttprequest
 
 ! --------------------------------------------------------------------------- !
 ! Maleware/Junkware distribution sites
