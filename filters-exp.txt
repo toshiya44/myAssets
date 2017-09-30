@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-29
+! Date: 2017-09-30
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -21,7 +21,7 @@
 ! --------------------------------------------------------------------------- !
 !
 ! List of general malicious and tracking domains.
-
+!
 ||dpb3g4kqr8xz.cloudfront.net$important
 ||d5nxst8fruw4z.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
@@ -102,8 +102,6 @@
 ||fastly.net$important
 ||moat.com$important
 ||moatads.com$important
-||bitcoinchain.com$important,third-party
-||coinser.in$script,important
 ||alxsite.com$important
 ||alxsite.com$important,popup
 ||ravenjs.com^$important
@@ -264,7 +262,6 @@
 ||linkbucks.com$important,popup
 ||2mdnsys.com$important
 ||adclerks.com$important
-||coinzilla.io$important
 ||fuglekos.com$important
 ||adsplay.net$important
 ||gigya.com$important
@@ -475,9 +472,6 @@
 ||broadstreetads.com$important
 ||ero-advertising.com$important
 ||cnhv.co$important
-||coin-hive.com$important
-||jsecoin.com$important
-||coinbase.com$important
 ||formstack.com$important
 ||smyte.com$important
 ||siftscience.com$important
@@ -499,7 +493,33 @@
 ||mollom.com$important
 ||adroll.com$important
 ||microad.jp$important
+||edgeno.de$important
+||edgemesh.com$important
 
+! -----------------------------------Coins----------------------------------- !
+!
+! New-top-tier internet bullshit
+
+coin*.js$script
+coinhive*.js$important
+coinhive.min.js$important
+
+cointelegraph.com###popup-wagga
+cointelegraph.com##.modal-backdrop
+cointelegraph.com##iframe[src*="/Hashing24_"]
+cointelegraph.com##iframe[src*="/img/banners/"]
+||cointelegraph.com/embed$important
+||cointelegraph.com/storage/uploads/view$image
+||cointelegraph.com/assets/js/script.js$important
+||bitcoinchain.com$important,third-party
+
+||coinser.in$important
+||jsecoin.com$important
+||coinzilla.io$important
+||coinbase.com$important
+||coinhive.com$important
+||coin-hive.com$important
+||minemytraffic.com$important
 ! -----------------------------------Misc------------------------------------ !
 
 0calc.com##.altad
@@ -570,14 +590,6 @@ discordapp.com##.message-group-blocked
 ! Curse logs your IP
 ||curse.com^$important
 ||cursecdn.com$important
-
-||cointelegraph.com/assets/js/script.js$script,important
-||cointelegraph.com/embed$important
-||cointelegraph.com/storage/uploads/view$image,first-party
-cointelegraph.com##iframe[src*="/img/banners/"]
-cointelegraph.com##iframe[src*="/Hashing24_"]
-cointelegraph.com###popup-wagga
-cointelegraph.com##.modal-backdrop
 
 mediafire.com#@##shareMenu
 mediafire.com#@#.ico30share
@@ -783,6 +795,10 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||youtube.com/set_awesome$important
 ||youtube.com/api/stats$important
 
+! usually this thing is not used for any good reason. if you run into this filter,
+! assume that your computer is infected.
+||cse.google.com^$important
+
 ! -------------------------------Wikia filters------------------------------- !
 ! fandumb
 ||fandom.wikia.com^$important,~first-party
@@ -876,8 +892,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||fbcdn.net/safe_image.php$important
 ||fbcdn.net/security/hsts-pixel.gif$important
 ||facebook.com/security/hsts-pixel.gif$important
-!||ct-m-fbx.fbsbx.com$important
-||fbsbx.com$important
+||ct-m-fbx.fbsbx.com$important
 !||staticxx.facebook.com/common/referer_frame.php$important
 ||facebook.com/common/referer_frame.php$important
 
@@ -908,6 +923,9 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 
 ! need this to view page stats and other stuff
 @@||graph.facebook.com/*?access_token=$first-party
+
+! blocking this breaks file download frames
+!||fbsbx.com$important
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -1205,7 +1223,6 @@ https:*_ad_$badfilter
 /lumbar.gif?
 __cspreport__
 */ga.js$script
-coins.js$script
 /clientprofiler
 /edgemesh$script
 /sponsor/click.php
@@ -1220,7 +1237,6 @@ coins.js$script
 s_retargeting.js$script
 *qualitysocialtargeting*
 ^img-dot.gif$third-party
-coinhive.min.js$important
 1x1_transparent.gif$image
 *security-i0y8kg*$important
 Tealeaf*.js$script,important
