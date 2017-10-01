@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-09-30
+! Date: 2017-10-01
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -121,7 +121,6 @@
 ||emetriq.de$important
 ||kenduktur.com$important
 ||clmbtech.com$important,third-party,script
-||gravatar.com^$important,third-party
 ||trkgt.com^$important
 ||trkgt.com^$document,important
 ||otaserve.net$important
@@ -471,7 +470,6 @@
 ||addtoany.com$important
 ||broadstreetads.com$important
 ||ero-advertising.com$important
-||cnhv.co$important
 ||formstack.com$important
 ||smyte.com$important
 ||siftscience.com$important
@@ -495,10 +493,19 @@
 ||microad.jp$important
 ||edgeno.de$important
 ||edgemesh.com$important
+||sentry.io$important
+||sentry.com$important
+||heatmap.it^$important
+||53229de00c41609ce.com^$important
+||histats.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
 ! New-top-tier internet bullshit
+! https://archive.is/mwxek
+! disabling workers would help stop these as well. 
+! uBO webext is not sufficient for blocking them as it's not as powerful as
+! before, so putting these domains in your hosts file would be much safer.
 
 coin*.js$script
 coinhive*.js$important
@@ -513,13 +520,16 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||cointelegraph.com/assets/js/script.js$important
 ||bitcoinchain.com$important,third-party
 
+||cnhv.co$important
 ||coinser.in$important
 ||jsecoin.com$important
 ||coinzilla.io$important
 ||coinbase.com$important
 ||coinhive.com$important
 ||coin-hive.com$important
+||minecrunch.co$important
 ||minemytraffic.com$important
+
 ! -----------------------------------Misc------------------------------------ !
 
 0calc.com##.altad
@@ -957,6 +967,11 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||twitter.com/i/cards/*?advertiser_name$important
 ||twitter.com/i/promoted_content$important
 ||ads-twitter.com$important
+
+! https://meta.stackexchange.com/questions/44717/is-gravatar-a-privacy-risk
+! https://archive.is/4xPzZ		https://archive.is/zos2O
+||gravatar.com^$important,third-party
+||signavatar.com^$third-party,important
 
 ! ########################################################################### !
 
