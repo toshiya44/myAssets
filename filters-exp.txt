@@ -36,10 +36,6 @@
 ||d3ir0rz7vxwgq5.cloudfront.net$important
 ||d2wy8f7a9ursnm.cloudfront.net$important
 ||d1z2jf7jlzjs58.cloudfront.net$important
-||185.2.83.87$important
-||192.168.*$important
-||104.198.198.188$important
-||5.39.27.226*$important
 ||com.com$important
 ||beyondsecurity.com^$important
 ||oasgames.com$important
@@ -414,7 +410,6 @@
 ||quierest.com$important
 ||oscarlosun.com$important
 ||planniver.com$important
-||roughted.com$important
 ||adsend.de$important
 ||adsend.info$important
 ||trellian.com$important
@@ -537,6 +532,7 @@ jolinfile.com###bd74
 strawpoll.me##.featured
 4shared.com##.space-3260
 4shared.com##.d1AdsWrapper
+microsoft.com##.dlc_mwftop
 bloomberg.com##bb-mini-player
 answers.yahoo.com###yset-upsell-div
 secure.politico.com##.story-related
@@ -550,6 +546,8 @@ answers.com###video_universal-0_caption
 ||i.imgur.com/*.gif|$inline-script,important
 ||imgur.com/min/runSlots.js$script,important
 ||imgur.com/min/advertising.js$script,important
+||csp.flickr.com$important
+||flickr.com/beacon*$important
 
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
@@ -585,6 +583,7 @@ reddit.com##.trending-subreddits
 
 github.com##.signup-prompt
 github.com##.modal-backdrop
+github.com##.js-mobile-preference-form
 ||github.com/_private/browser/errors$important
 
 ! signup-prompt
@@ -742,8 +741,11 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||costco.com/akam$important
 ||channeladvisor.com$important,third-party
 
-! some filterlists have this and it causes a lot of breakage
-!com#@#[class^="ad-"]
+! i don't know if these filters work
+||185.2.83.87$important
+||192.168.*$important
+||104.198.198.188$important
+||5.39.27.226*$important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1138,6 +1140,7 @@ fc2.com###fc2_bottom_bnr
 !nicovideo.jp##a[href*="https://account.nicovideo.jp/premium/register?"]
 nicovideo.jp##a[href*="/premium/register?"]
 
+muchohentai.com###__eq2281__
 !nhentai.net##script:contains(show_popunders)
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 ||nhentai.net/api/_/popunder*$important
@@ -2017,6 +2020,7 @@ fingerprint.js$important
 ! https://gist.github.com/malwareinfosec/73d10721cdb9868a05baff6a59a6bcbc
 ! https://blog.malwarebytes.com/cybercrime/2017/05/roughted-the-anti-ad-blocker-malvertiser/
 &tid=6[0-9]{5}&(status|red)=[0-9]{1,2}&(info|ref|subid|abt|v)
+||roughted.com$important
 ||accouncil.info$important
 ||accouncilist.com$important
 ||accumulator4u.top$important
@@ -2227,7 +2231,6 @@ fingerprint.js$important
 ||quierest.com$important
 ||reachested.info$important
 ||recruining.info$important
-||roughted.com$important
 ||roundtripall.work$important
 ||saturalist.com$important
 ||scripmode.info$important
