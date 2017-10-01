@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-09-29
+! Date: 2017-10-01
 ! Expires: 15 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -162,6 +162,9 @@ kissmanga.com##a[href="#"]
 !@@discordapp.com/$popup,first-party
 ||discordapp.com/avatars/*.gif$first-party
 ||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
+||discordapp.com/assets/*.worker.js$important
+!||discordapp.com/games/games.json$important
+||discordapp.com/games/*$important
 
 ! I'll post this thing as a userscript.
 !discordapp.com##img[src*="/emojis/"].emoji:style(min-height: 2.8em !important;  min-width: 3.2em !important; )
