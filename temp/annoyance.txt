@@ -1,12 +1,13 @@
 ! Title: Toshiya's Filter List - Annoyance 
 ! Date: 2017-10-01
-! Expires: 15 days
+! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
 ! Also includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
 ! This list is not maintained and no support is availble. I myself just disable it if I'm having any issues.
 ! Many filters in here are completely unnecessary but I made them anyway. Use whatever you like.
-!---------------------------------------------------------------------------!
+!-----------------------------------------------------------------------------!
+!-----------------------------------------------------------------------------!
 
 theweathernetwork.com###cbc_widget_container
 theweathernetwork.com###news-slider
@@ -45,8 +46,6 @@ theweathernetwork.com###editors_choice_news
 ||twnmm.com/*/coffee-break.css$important
 ||twnmm.com/*/video-gallery.css$important
 
-!---------------------------------------------------------------------------!
-
 breitbart.com###ROS-1x1-Pixel
 breitbart.com###isc_front_takeover_div
 breitbart.com###BBOnAirSide
@@ -58,8 +57,6 @@ breitbart.com##.Hmobi.ad
 ||breitbart.com/*/on-air$image,first-party
 ||breitbart.com/*assets*/takeover$first-party
 ||breitbart.com/*/bb-*$image,domain=breitbart.com
-
-!---------------------------------------------------------------------------!
 
 ||indiatimes.com/featuredblock_travel_slide.cms$important
 ||indiatimes.com/js/pgtrackingV8.js$important
@@ -74,8 +71,6 @@ breitbart.com##.Hmobi.ad
 ||indiatimes.com/*/pgtrack.js$script,important
 ||indiatimes.com/*/breakingnews$important
 ||indiatimes.com/toiyfn/notify.htm$important
-
-!---------------------------------------------------------------------------!
 
 ||quora.com/up$important
 ||quora.com/security_reports$important
@@ -101,14 +96,16 @@ reddit.com##.goldvertisement
 reddit.com##.give-gold-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
+reddit.com##[data-author="PCMRBot"]
+reddit.com##[data-author="AutoModerator"]
 
 boards.4chan.org###bannerCnt
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
+4chan.org###boardNavDesktopFoot
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
 github.com##.js-notice.octofication
-github.com##.js-mobile-preference-form
 developer.mozilla.org##.notification-tray
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 web.archive.org###__wb_record_content_done
@@ -117,11 +114,6 @@ encyclopediadramatica.rs##a[href*="torguard.net"]
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
 myanimelist.net##script:contains(amzn_assoc_tracking_id)
-!myanimelist.net###menu:style(width: 100% !important;)
-!myanimelist.net###myanimelist:style(width: 99% !important;)
-!myanimelist.net###topSearchText:style(width: 400px !important;)
-!myanimelist.net###content:style(background-color: grey !important;)
-!myanimelist.net##html:style(background-color: white !important; border: 1px solid grey !important)
 ||myanimelist.cdn-dena.com/images/event$image
 
 ||facebook.com/ads*$important
@@ -144,7 +136,6 @@ imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
 ||imgur.com/gallery/hot$important
-!||imgur.com$websocket,important
 
 ! 2017-01-27 tumblr.com
 ||tumblr.com/services/cslog$xmlhttprequest,important
@@ -156,10 +147,6 @@ kissmanga.com##a[href="#"]
 ||kissanime.*/Scripts/google.js$script,first-party
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
 
-||addons-discovery.cdn.mozilla.net$media,domain=mozilla.org,important
-||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
-
-!@@discordapp.com/$popup,first-party
 ||discordapp.com/avatars/*.gif$first-party
 ||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
 ||discordapp.com/assets/*.worker.js$important
@@ -167,6 +154,7 @@ kissmanga.com##a[href="#"]
 ||discordapp.com/games/*$important
 
 ! I'll post this thing as a userscript.
+! here https://github.com/toshiya44/ff-stuff/blob/master/userscripts/DiscordJumboEmoji.user.js
 !discordapp.com##img[src*="/emojis/"].emoji:style(min-height: 2.8em !important;  min-width: 3.2em !important; )
 !discordapp.com##img[src*="/emojis/"].emoji.jumboable:style(min-height: 6.2em !important;  min-width: 6.8em !important; )
 !discordapp.com##img[src*="/assets/"].emoji:style(max-height: 0.8em !important; max-width: 1em !important; width: auto; height: auto;)
@@ -178,7 +166,8 @@ kissmanga.com##a[href="#"]
 ||urlchecker.org/*/proxy-checker.js$important
 
 ||sankakucomplex.com/logo.png$image
-! The expand button is broken for some reason, so I'm manually doing it. 
+
+! The expand button is broken for some reason, so I'm manually doing "pressing" it. 
 ! this is not a bypass btw. it is equivalent to clicking the spoiler tag
 jcafe24.net##.sp-body:style(display: block !important;)
 
@@ -190,10 +179,11 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||typekit.net$important
 
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
+||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
 
 ! it seems to block the first popup ----- doesn't actually work
 !||mediafire.com$popup,domain=~mediafire.com
-||mediafire.com/images/icons/1x1_transparent.gif$image,domain=mediafire.com,redirect=1x1-transparent.gif
+!||mediafire.com/images/icons/1x1_transparent.gif$image,domain=mediafire.com,redirect=1x1-transparent.gif
 
 ||giphy.com/static/js/site/third_party.js$script,first-party
 ||giphy.com/static/js/site/footer.js$script,first-party
@@ -207,7 +197,7 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
 ! https://github.com/gorhill/uBlock/issues/3027#issuecomment-330053832
-dreamfilmhd.sh##script:inject(abort-on-property-read.js, _gunggo)
+!dreamfilmhd.sh##script:inject(abort-on-property-read.js, _gunggo)
 ||onesignal.com^$script,domain=dreamfilmhd.sh
 
 ! yes, this would break cross site payments
@@ -230,7 +220,10 @@ stackexchange.com###noscript-warning
 ||redditstatic.com/sprite-author-tooltip.*$important
 ||reddit.com/user/*/about.json$xmlhttprequest,important
 
-!###########################################################################!
+! some filterlists have this and it causes a lot of breakage
+.com#@#[class^="ad-"]
+
+!#############################################################################!
 ! wikia script fractions
 ! moved here because they'll probably break the site.
 @@/oasis_$script,domain=wikia.com
@@ -246,8 +239,7 @@ adengine2_tracking_js$script,domain=wikia.com,important
 optimizely_blocking_js$script,domain=wikia.com,important
 qualaroo_blocking_js$script,domain=wikia.com,important
 !
-!###########################################################################!
-!###########################################################################!
+!#############################################################################!
 ! piperun's iplogger filter
 ! https://raw.githubusercontent.com/piperun/iploggerfilter/master/filterlist
 ||2no.co^
@@ -314,6 +306,5 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||embed.ly$important
 ||sh.st$important
 !
-!###########################################################################!
-!################################## END ####################################!
-! iu – nu – fb – a – wuh – ei – kx – eu – pl – vjz
+!#############################################################################!
+!################################### END #####################################!
