@@ -1326,6 +1326,7 @@ fingerprint.js$important
 ! Usually imported from other places.
 ! --------------------------------------------------------------------------- !
 ! need this too https://pgl.yoyo.org/adservers/admiral-domains.txt
+! and https://github.com/CHEF-KOCH/BarbBlock-filter-list/blob/master/uBlock.txt
 ! Admiral anti-adb - start
 ||getadmiral.com$important
 ||abandonedclover.com$important
@@ -1469,7 +1470,67 @@ fingerprint.js$important
 ||chickensstation.com$important
 ||scintillatingspace.com$important
 ||swimslope.com$important
-! related - end
+||btez8.xyz$important
+||agreeableprice.com$important
+||aheadday.com$important
+||ar1nvz5.com$important
+||attractiveafternoon.com$important
+||axiomaticalley.com$important
+||balancebreath.com$important
+||bhcumsc.com$important
+||breezybath.com$important
+||broaddoor.com$important
+||businessbells.com$important
+||chairscrack.com$important
+||clearcomb.com$important
+||commoncannon.com$important
+||consciouschairs.com$important
+||decisivedrawer.com$important
+||delegatediscussion.com$important
+||detectdiscovery.com$important
+||dq95d35.com$important
+||ejyymghi.com$important
+||familiarfloor.com$important
+||fanaticalfly.com$important
+||faultyfowl.com$important
+||fearfulflag.com$important
+||feebleshock.com$important
+||flakyfeast.com$important
+||frailoffer.com$important
+||foamybox.com$important
+||dcma.com$important
+||hammerhearing.com$important
+||hardtofindmilk.com$important
+||impossibleexpansion.com$important
+||innocentwax.com$important
+||instrumentsponge.com$important
+||jadeitite.com$important
+||lettucelimit.com$important
+||loudlunch.com$important
+||metapelite.com$important
+||nervoussummer.com$important
+||omniscientspark.com$important
+||paleleaf.com$important
+||perceivequarter.com$important
+||petiteumbrella.com$important
+||previousplayground.com$important
+||puffyloss.com$important
+||puzzlingfall.com$important
+||ritzykey.com$important
+||ritzysponge.com$important
+||scarcesign.com$important
+||smilingsock.com$important
+||spottysense.com$important
+||sugarcurtain.com$important
+||tdzvm.pw$important
+||tedioustooth.com$important
+||teethfan.com$important
+||teschenite.com$important
+||truthfulturn.com$important
+||tzwaw.pw$important
+||ultraoranges.com$important
+||zlp6s.pw$important
+! Admiral - end
 ! --------------------------------------------------------------------------- !
 ! propellerads - start
 ! https://forums.lanik.us/viewtopic.php?f=62&t=37414
