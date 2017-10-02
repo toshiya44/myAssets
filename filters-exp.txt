@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-01
+! Date: 2017-10-02
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -1092,7 +1092,8 @@ sankakucomplex.com##script:contains(pagespeed)
 ||amazonaws.com$important,domain=sankakucomplex.com
 ||cstats.sankakucomplex.com$important
 ||sankakucomplex.com/*/afr.php$important
-||a.sankakucomplex.com/x/piwik.php$important
+||sankakucomplex.com/x/piwik.js$important
+||sankakucomplex.com/x/piwik.php$important
 ||sankakucomplex.com/javascripts/ls.12.js$important
 ||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
