@@ -37,7 +37,7 @@
 ||d2wy8f7a9ursnm.cloudfront.net$important
 ||d1z2jf7jlzjs58.cloudfront.net$important
 ||com.com$important
-||beyondsecurity.com^$important
+||beyondsecurity.com$important
 ||oasgames.com$important
 ||ad-arata.com$important
 ||servebom.com$important
@@ -75,6 +75,7 @@
 ||owlads.io$important
 ||i.po.st$important
 ||sharethis.com$important
+||exosrv.com$important
 ||exoclick.com$important
 ||exoclick.com$important,popup
 ||erito.com$important
@@ -322,7 +323,7 @@
 ||eibiuaeronoticias.net$important
 ||thenexxus.org$important
 ||clicksor.$important
-||cleverdata.
+||cleverdata.*
 ||cleverdata.ru$important
 ||cleverdata.io$important
 ||cleverdata.is$important
@@ -359,7 +360,6 @@
 ||app.link$important
 ||dynsrvaba.com$important
 ||mywot.com$important
-||dynsrvaba.com$important
 ||revcontent.com$important
 ||i-mobile.co.jp$important
 ||concernrain.com$important
@@ -440,7 +440,6 @@
 ||anothing.info$important
 ||unformse.com$important
 ||dlyads.com$important
-||exosrv.com$important
 ||noadblock.net$important
 ||bounceexchange.com$important
 ||about.com$important
@@ -493,6 +492,9 @@
 ||heatmap.it^$important
 ||53229de00c41609ce.com^$important
 ||histats.com^$important
+||verotel.com$important
+||spider.ad^$important$important
+
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1026,7 +1028,8 @@ archiveofsins.com##script:contains(BlockAdblock)
 
 ! boorus and stuff 
 
-! imported some filters from kowith337's GelboLube list https://github.com/kowith337/GelboLube
+! imported some filters from kowith337's GelboLube list
+! https://github.com/kowith337/GelboLube
 ! https://github.com/toshiya44/myAssets/issues/1
 
 @@||gelbooru.com$generichide
@@ -1056,16 +1059,22 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
 ||thedoujin.com/bload.php$important
+
 ||gelbooru.com^$first-party,image,badfilter
 @@||gelbooru.com/thumbnails/*$image,first-party
-@@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
+
+!||gelbooru.com/script/license.gelbooru.js$important
+||gelbooru.com/script/license$important
+||gelbooru.com/script/miscJs$important
 
 ! honeypot (as of 2017-04-24)
 @@||gelbooru.com/ads.js?$script
 
 ! unbreak tl bubbles and other functionality
-@@||gelbooru.com/script/application.js?$domain=gelbooru.com
 @@||gelbooru.com/index.php$inline-script,first-party
+@@||gelbooru.com/script/application.js?$domain=gelbooru.com
+@@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
+!@@||maxcdn.bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re|baka-tsuki.org
@@ -1074,16 +1083,14 @@ gelbooru.com#@#span[class]:last-child > a img[src]
 gelbooru.com#@#a[href*="//gelbooru.com/redirect.php?"]
 gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
-!gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
-!gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
 gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
 
 ! yes
 ||youhate.us$important
 
-chan.sankakucomplex.com###headerlogo
-chan.sankakucomplex.com###headerthumbs
-chan.sankakucomplex.com##cloudflare-app
+chan.sankakucomplex.com,idol.sankakucomplex.com###headerlogo
+chan.sankakucomplex.com,idol.sankakucomplex.com###headerthumbs
+chan.sankakucomplex.com,idol.sankakucomplex.com##cloudflare-app
 danbooru.donmai.us###upgrade-account-notice
 danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
@@ -1097,7 +1104,7 @@ sankakucomplex.com##script:contains(pagespeed)
 ||sankakucomplex.com/javascripts/ls.12.js$important
 ||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
-||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com
+||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com|idol.sankakucomplex.com
 ||isshiki.donmai.us$important,domain=danbooru.donmai.us
 
 ! possible fake/scam/phishing site "danbooru.idanbooru.com"
@@ -1129,7 +1136,10 @@ mangastream.com###reader-sky
 ||mangastream.com/assets/img/block_sky.png$image
 ||mangastream.com/assets/img/block_sky_dark.png$image
 ||raw.senmanga.com/media/img/block_square.png$image
-!mangastream.com##.hidden-xs.pull-right.message-sq
+
+mangashost.net##.clearfix.ads
+mangashost.net##script:inject(bab-defuser.js)
+||mangashost.net/b3o.js$script,first-party
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
@@ -1142,13 +1152,13 @@ fc2.com###fc2_bottom_bnr
 nicovideo.jp##a[href*="/premium/register?"]
 
 muchohentai.com###__eq2281__
-!nhentai.net##script:contains(show_popunders)
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 ||nhentai.net/api/_/popunder*$important
+
+@@||hentaihaven.org$generichide
 hentaihaven.org##script:contains(Pukka)
 hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
-@@||hentaihaven.org$generichide
 @@||hentaihaven.org/basement/js/adshow.js$script,first-party
 
 ! blocking baka-tsuki's logo
@@ -1227,12 +1237,13 @@ kobatochan.com##script:contains(WPGroHo)
 kobatochan.com##script:contains(randpubc)
 
 ! ############################## Bad filters ################################ !
-
+! just very bad filters
+!
 https:*_ad_$badfilter
 |https:*^ad^$badfilter
 |https:*^ad-$badfilter
 ^ad^$badfilter
-
+!
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections.
 ! may case false positives. 
