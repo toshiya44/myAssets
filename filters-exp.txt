@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-02
+! Date: 2017-10-05
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -507,6 +507,7 @@
 coin*.js$script
 coinhive*.js$important
 coinhive.min.js$important
+/cryptonight.wasm$script
 
 cointelegraph.com###popup-wagga
 cointelegraph.com##.modal-backdrop
@@ -526,6 +527,13 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||coin-hive.com$important
 ||minecrunch.co$important
 ||minemytraffic.com$important
+||miner.pr0gramm.com$important
+||gus.hostimportant
+||xbasfbno.info$important
+||azvjudwr.info$important
+||jroqvbvw.info$important
+||jyhfuqoh.info$important
+||kdowqlpt.info$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -1061,7 +1069,8 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||thedoujin.com/bload.php$important
 
 ||gelbooru.com^$first-party,image,badfilter
-@@||gelbooru.com/thumbnails/*$image,first-party
+@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg$image,first-party
+!@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg?$image,first-party
 
 !||gelbooru.com/script/license.gelbooru.js$important
 ||gelbooru.com/script/license$important
@@ -1072,7 +1081,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/index.php$inline-script,first-party
-@@||gelbooru.com/script/application.js?$domain=gelbooru.com
+@@||gelbooru.com/script/application.js?$first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 !@@||maxcdn.bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 
