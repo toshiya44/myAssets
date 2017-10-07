@@ -505,9 +505,19 @@
 ! before, so putting these domains in your hosts file would be much safer.
 
 coin*.js$script
+miner*.js$script
 coinhive*.js$important
 coinhive.min.js$important
 /cryptonight.wasm$script
+/hive.js$script
+/c-hive.js$script
+/coinhive.min.js$script
+/jsecoin.*$script
+/miner-ui.js$script
+/miner.min.js$script
+/projectpoi.min.js$script
+/xminer.js$script
+/xminer.min.js$script
 
 cointelegraph.com###popup-wagga
 cointelegraph.com##.modal-backdrop
@@ -534,6 +544,9 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||jroqvbvw.info$important
 ||jyhfuqoh.info$important
 ||kdowqlpt.info$important
+||crypto-loot.com$important
+||ppoi.org$important
+||projectpoi.com$important
 
 ! -----------------------------------Misc------------------------------------ !
 
