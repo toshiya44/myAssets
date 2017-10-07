@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-05
+! Date: 2017-10-07
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -480,7 +480,7 @@
 ||flixfacts.com$important
 ||myregistry.com$important
 ||iesnare.com$important
-||kissmetrics.com$script
+||kissmetrics.com$important
 ||s.ntv.io$important
 ||mollom.com$important
 ||adroll.com$important
@@ -490,11 +490,11 @@
 ||sentry.io$important
 ||sentry.com$important
 ||heatmap.it^$important
-||53229de00c41609ce.com^$important
+||53229de00c41609ce.com$important
 ||histats.com^$important
 ||verotel.com$important
-||spider.ad^$important$important
-
+||spider.ad$important
+||bugsnag.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -563,6 +563,8 @@ reddit.com###hsts_pixel
 reddit.com###ad_main_top
 reddit.com##.geopopularbar
 reddit.com##.survey-overlay
+reddit.com##.commentsignupbar
+reddit.com##.listingsignupbar
 reddit.com###siteTable_organic
 reddit.com##.read-next-container
 reddit.com##.trending-subreddits
@@ -1069,8 +1071,9 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||thedoujin.com/bload.php$important
 
 ||gelbooru.com^$first-party,image,badfilter
-@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg$image,first-party
+!@@||gelbooru.com/thumbnails/*$image,first-party
 !@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg?$image,first-party
+@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg$image,first-party
 
 !||gelbooru.com/script/license.gelbooru.js$important
 ||gelbooru.com/script/license$important
