@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-07
+! Date: 2017-10-08
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -500,6 +500,8 @@
 ||b54m4qbmt0b9.com$important
 ||gscontxt.net$important
 ||hentai-heroes.com$important
+||voluumtrk3.com$important
+||mmoframes.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
