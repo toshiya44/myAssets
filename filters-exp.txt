@@ -510,6 +510,11 @@
 ! disabling workers would help stop these as well. 
 ! uBO webext is not sufficient for blocking them as it's not as powerful as
 ! before, so putting these domains in your hosts file would be much safer.
+! This section is meant to be a stricter version of various other similar lists
+! https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt
+! https://github.com/keraf/NoCoin
+! Note: Due to webext API limitations, uBO can't reach scripts executed by 
+!		other addons. So, be careful when you install addons.
 
 coin*.js$script
 miner*.js$script
@@ -544,16 +549,22 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||coin-hive.com$important
 ||minecrunch.co$important
 ||minemytraffic.com$important
+||pr0gramm.com$important
 ||miner.pr0gramm.com$important
-||gus.hostimportant
+||crypto-loot.com$important
+||gus.host$important
 ||xbasfbno.info$important
 ||azvjudwr.info$important
 ||jroqvbvw.info$important
 ||jyhfuqoh.info$important
 ||kdowqlpt.info$important
-||crypto-loot.com$important
 ||ppoi.org$important
 ||projectpoi.com$important
+||webmine.cz$important
+||reasedoper.pw$important
+||mataharirama.xyz$important
+||listat.biz$important
+||lmodr.biz$important
 
 ! -----------------------------------Misc------------------------------------ !
 
