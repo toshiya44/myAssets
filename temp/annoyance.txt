@@ -85,7 +85,6 @@ breitbart.com##.Hmobi.ad
 
 reddit.com##.grippy
 reddit.com###header-img
-!reddit.com##.initialized
 reddit.com##.promotedlink
 reddit.com##.hohoho-header
 reddit.com##.res-show-link
@@ -102,6 +101,7 @@ reddit.com##[data-author="AutoModerator"]
 boards.4chan.org###bannerCnt
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
+motherboard.vice.com##.up-next
 4chan.org###boardNavDesktopFoot
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
@@ -215,13 +215,17 @@ pastebin.com###steadfast
 ||pastebin.com/i/steadfast_1.png$image
 
 wikipedia.org###wlm-banner
-stackexchange.com###noscript-warning
+stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
 ||redditstatic.com/author-tooltip.*$important
 ||redditstatic.com/sprite-author-tooltip.*$important
 ||reddit.com/user/*/about.json$xmlhttprequest,important
 
 ! some filterlists have this and it causes a lot of breakage
 .com#@#[class^="ad-"]
+
+! ??
+||bbthat.com/assets/v1.4.0/that.js$script,domain=www.bloomberg.com
+||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=www.bloomberg.com
 
 !#############################################################################!
 ! wikia script fractions
@@ -308,3 +312,4 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 !
 !#############################################################################!
 !################################### END #####################################!
+! iu – nu – fb – a – wuh – ei – kx – eu – pl – vjz
