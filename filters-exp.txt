@@ -495,6 +495,11 @@
 ||verotel.com$important
 ||spider.ad$important
 ||bugsnag.com$important
+||poredii.com$important
+||freemmo2017.com$important
+||b54m4qbmt0b9.com$important
+||gscontxt.net$important
+||hentai-heroes.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -780,13 +785,13 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||disqus.com/count.js$script,important
 ||referrer.disqus.com$important
 @@||disqus.com/embed.js?_=1457540*$script
-
+!
 ! ########################################################################### !
 
 ! Google, GOOGLE EVERYWHERE
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
-! Use https://google.com/ncr to make google use .com always
+
 google.*##.gb_g.gb_Bc.gb_8cx
 /searchdomaincheck$important
 ||google-analytics.*$important,domain=~behind-the-scene
@@ -866,7 +871,6 @@ wikia.com##.wds-is-tv.wds-global-navigation__link
 ! Nice ad placeholders you have there! 
 ! It'd be a shame if someone hides them.
 ! Note: have to remove "behind-the-scene" fron whitelists to block service worker.
-! Note2: Disable service worker entirely => user_pref("dom.serviceWorkers.enabled",			false);
 
 @@||myanimelist.net$generichide
 myanimelist.net##.mauto
@@ -1177,6 +1181,9 @@ fc2.com###fc2_bottom_bnr
 nicovideo.jp##a[href*="/premium/register?"]
 
 muchohentai.com###__eq2281__
+||muchohentai.com/*/gapro.js$script
+muchohentai.com##script:inject(noeval.js)
+
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 ||nhentai.net/api/_/popunder*$important
 
@@ -1271,13 +1278,13 @@ https:*_ad_$badfilter
 !
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections.
-! may case false positives. 
+! may case false positives. Let me know if you want me to move them elsewhere.
 
 /atrk.js
 /cspreport
 /lumbar.gif?
 __cspreport__
-*/ga.js$script
+/ga.js$script
 /clientprofiler
 /edgemesh$script
 /sponsor/click.php
@@ -1345,7 +1352,7 @@ fingerprint.js$important
 
 ! --------------------------------------------------------------------------- !
 ! Maleware/Junkware distribution sites
-! Always download softwares from the actual site of the developer (official site, repository etc)
+! Always download softwares from the actual site/repository of the developer.
 ! 
 ||tucows.com$important
 ||filehippo.com$important
@@ -1353,7 +1360,8 @@ fingerprint.js$important
 ||cnet.com$third-party,important
 ||download.cnet.com$important
 ||nonags.com$important
-! apparently they're trying to imporove (?) need more compelling evidence than what their PR says.
+! apparently they're trying to imporove (?). I need more compelling evidence 
+! than what their PR preson's words.
 ! leaving these at third party for now in order to browse the site and evaluate.
 ||sourceforge.net$third-party,important
 ||sf.net$third-party,important
