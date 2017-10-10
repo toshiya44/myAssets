@@ -1,14 +1,22 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
 ! Date: 2017-10-10
-! Expires: 4 days
+! Expires: 4 days (update frequency)
+! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
-! Recommended: Firefox 54+ (Regular/Dev/Nightly)
-! Get uBlock Origin from github https://github.com/gorhill/uBlock
+! Recommended: Firefox 54+ (Regular/Dev)
+!              Waterfox 55+
+!              uBlock Origin Legacy 1.14.14+
+! --------------------------------------------------------------------------- !
+! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
-! Note, "Expires n days" means that uBO will check for updates every n days.
-! Upcoming uBO/webext changes (some filters will not work and stuff)
+!
+! Notice: Upcoming uBO/webext changes (some filters will not work and stuff)
+! As of writing, the legacy version is still supported. However, you will have
+! to use a non-release version of firefox to use it. It works pretty well on
+! Waterfox 55. 
 ! https://github.com/gorhill/uBlock/wiki/Firefox-WebExtensions
+! https://github.com/JustOff/ublock0-updater
 ! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is being filtered,
