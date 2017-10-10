@@ -502,6 +502,7 @@
 ||hentai-heroes.com$important
 ||voluumtrk3.com$important
 ||mmoframes.com$important
+||cliqz.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
