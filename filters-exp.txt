@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-08
+! Date: 2017-10-10
 ! Expires: 4 days
 ! Requirement: uBlock Origin 1.13.8+
 ! Recommended: Firefox 54+ (Regular/Dev/Nightly)
@@ -565,6 +565,9 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||mataharirama.xyz$important
 ||listat.biz$important
 ||lmodr.biz$important
+||adtech.de$important
+||bf-ad.net$important
+||contentpass.net$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -605,6 +608,7 @@ reddit.com##.trending-subreddits
 ||reddit.com/api/request_recommended_link$important
 ||redditstatic.com/moat$important
 ||redditstatic.com/recommended-link.*.js$important
+||redditstatic.com/js/prebid.js$important
 ||redditmedia.com/ads$subdocument,important
 ||redditmedia.com/gtm/$subdocument,important
 ||amazonaws.com/redditstatic$important
@@ -927,6 +931,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 /facebook_client_xfbml_js$third-party
 /xfbml.ad.js$important
 
+||error.facebook.com$important
 ||pixel.facebook.com$important
 ||facebook.com/ads
 ||facebook.com/*/record_basic_metrics.php$important
@@ -1293,6 +1298,7 @@ https:*_ad_$badfilter
 ! fragments that doesn't really belong in other sections.
 ! may case false positives. Let me know if you want me to move them elsewhere.
 
+/iam.js
 /atrk.js
 /cspreport
 /lumbar.gif?
