@@ -1,16 +1,16 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-10
+! Date: 2017-10-14
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
-! Recommended: Firefox 54+ (Regular/Dev)
-!              Waterfox 55+
+! Recommended: Firefox 56+ (Release/Dev)
+!              Waterfox 55+ (Release)
 !              uBlock Origin Legacy 1.14.14+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
-!
+! --------------------------------------------------------------------------- !
 ! Notice: Upcoming uBO/webext changes (some filters will not work and stuff)
 ! As of writing, the legacy version is still supported. However, you will have
 ! to use a non-release version of firefox to use it. It works pretty well on
@@ -25,8 +25,8 @@
 ! made by/for ABP etc. often whitlists them due to limitation in ABP's filter
 ! syntax and other reasons I don't care about.
 ! Use uMatrix for mass filtering.
-! ########################################################################### !
 ! --------------------------------------------------------------------------- !
+! ########################################################################### !
 !
 ! List of general malicious and tracking domains.
 !
@@ -511,12 +511,19 @@
 ||voluumtrk3.com$important
 ||mmoframes.com$important
 ||cliqz.com$important
+||liveinternet.ru$important
+||yadro.ru$important
+||newcyclevaults.com^$important
+||centerbluray.info^$important
+||betrad.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
-! New-top-tier internet bullshit
+! Various bitcoin related filters.
+!
+! Cryptominers In The Web: New-Top-Tier Internet Bullshit
 ! https://archive.is/mwxek
-! disabling workers would help stop these as well. 
+! Disabling workers might help to stop them.
 ! uBO webext is not sufficient for blocking them as it's not as powerful as
 ! before, so putting these domains in your hosts file would be much safer.
 ! This section is meant to be a stricter version of various other similar lists
@@ -539,15 +546,6 @@ coinhive.min.js$important
 /projectpoi.min.js$script
 /xminer.js$script
 /xminer.min.js$script
-
-cointelegraph.com###popup-wagga
-cointelegraph.com##.modal-backdrop
-cointelegraph.com##iframe[src*="/Hashing24_"]
-cointelegraph.com##iframe[src*="/img/banners/"]
-||cointelegraph.com/embed$important
-||cointelegraph.com/storage/uploads/view$image
-||cointelegraph.com/assets/js/script.js$important
-||bitcoinchain.com$important,third-party
 
 ||cnhv.co$important
 ||coinser.in$important
@@ -577,6 +575,32 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||adtech.de$important
 ||bf-ad.net$important
 ||contentpass.net$important
+
+! scam/phishing
+! https://redd.it/74sj7q
+||blockchfain.info^$important
+||bitprimus.com^$important
+||btcaddress.net^$important
+||bitaddrcss.org^$important
+||bitaddress.co^$important
+||bitaddress.live^$important
+||ibittreix.com$important
+||electurm.org^$important
+||coinafult.com^$important
+||shiapeshift.*
+||shiapeshift.io^$important
+||shiapeshift.in^$important
+||shapeshifth.*
+||shapeshifth.io^$important
+||lucksupply.club^$important
+
+cointelegraph.com###popup-wagga
+cointelegraph.com##.modal-backdrop
+cointelegraph.com##iframe[src*="/Hashing24_"]
+cointelegraph.com##iframe[src*="/img/banners/"]
+||cointelegraph.com/embed$important
+||cointelegraph.com/storage/uploads/view$image
+||cointelegraph.com/assets/js/script.js$important
 
 ! -----------------------------------Misc------------------------------------ !
 
@@ -802,6 +826,8 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||192.168.*$important
 ||104.198.198.188$important
 ||5.39.27.226*$important
+
+||equifax.*$important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1079,12 +1105,12 @@ archiveofsins.com##script:contains(BlockAdblock)
 @@/jquery.js$script,first-party,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
 
 ! --------------------------------------------------------------------------- !
-
 ! boorus and stuff 
 
-! imported some filters from kowith337's GelboLube list
+! Imported some filters from kowith337's GelboLube list
 ! https://github.com/kowith337/GelboLube
 ! https://github.com/toshiya44/myAssets/issues/1
+! Note: gelbooru updates frequently
 
 @@||gelbooru.com$generichide
 gelbooru.com#@#center > a[href]
@@ -1326,6 +1352,7 @@ __cspreport__
 *controller=Optimizely*
 s_retargeting.js$script
 *qualitysocialtargeting*
+*zeroredirect*$important
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
 *security-i0y8kg*$important
