@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-10-01
+! Date: 2017-10-14
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -98,13 +98,15 @@ reddit.com##.profilebetabar.infobar
 reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
 
-boards.4chan.org###bannerCnt
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
+boards.4chan.org###bannerCnt
+symbolab.com##.tooltipster-box
 motherboard.vice.com##.up-next
 4chan.org###boardNavDesktopFoot
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
+mozilla.org##.notification-banner
 github.com##.js-notice.octofication
 developer.mozilla.org##.notification-tray
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
@@ -167,8 +169,8 @@ kissmanga.com##a[href="#"]
 
 ||sankakucomplex.com/logo.png$image
 
-! The expand button is broken for some reason, so I'm manually doing "pressing" it. 
-! this is not a bypass btw. it is equivalent to clicking the spoiler tag
+! The expand button is broken for some reason, so I'm manually "pressing" it. 
+! i.e. this is equivalent to clicking the spoiler tag
 jcafe24.net##.sp-body:style(display: block !important;)
 
 ! Note: Cancer.
@@ -195,10 +197,6 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||fufufu.moe/js/bee.js$script,first-party
 ||nicovideo.cdn.nimg.jp/*/uad.mp3$media
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
-
-! https://github.com/gorhill/uBlock/issues/3027#issuecomment-330053832
-!dreamfilmhd.sh##script:inject(abort-on-property-read.js, _gunggo)
-||onesignal.com^$script,domain=dreamfilmhd.sh
 
 ! yes, this would break cross site payments
 ||paypal.com$third-party,important
