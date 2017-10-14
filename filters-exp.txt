@@ -516,6 +516,10 @@
 ||newcyclevaults.com^$important
 ||centerbluray.info^$important
 ||betrad.com^$important
+||demdex.net^$important
+||bluehornet.com^$important
+||nekudo.com^$important
+||cbsi.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -828,6 +832,12 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||5.39.27.226*$important
 
 ||equifax.*$important
+
+||stats.storied.co^$important
+||storied.co/lib/trck-v2.js$important
+||storied.co/lib/appshell-trk.js$important
+||stats.storied.co/trck.php$important
+||appshell-trk.s3.amazonaws.com^$important
 
 ! ########################################################################### !
 ! Disqus click-to-load
