@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-14
+! Date: 2017-10-17
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -520,6 +520,11 @@
 ||bluehornet.com^$important
 ||nekudo.com^$important
 ||cbsi.com^$important
+||minute.ly^$important
+||segment.com^$important
+||tiqcdn.com^$important
+||timeinc.net^$important
+||.2o7.net^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -907,6 +912,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ! fandumb
 ||fandom.wikia.com^$important,~first-party
 ||wikia.com/wikia.php?controller=RecirculationApi$important
+||bits.wikimedia.org$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 ||wikia.com/wikia.php?controller=PageShare
@@ -1357,6 +1363,7 @@ __cspreport__
 *&zoneid=*$important
 *?zone_id=*$important
 *&zone_id=*$important
+/netseerads.js$script
 /svg4everybody$script
 /ngx_pagespeed_beacon
 *controller=Optimizely*
