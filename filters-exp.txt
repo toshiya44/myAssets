@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-17
+! Date: 2017-10-18
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -468,6 +468,7 @@
 ||ipv6test.net$important
 ||en25.com$important
 ||report-uri.io$important
+||report-uri.com$important
 ||getclicky.com$important
 ||addtoany.com$important
 ||broadstreetads.com$important
@@ -584,6 +585,7 @@ coinhive.min.js$important
 ||adtech.de$important
 ||bf-ad.net$important
 ||contentpass.net$important
+||authedmine.com$important
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -743,7 +745,8 @@ mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
 ||mirrorcreator.com/images/MBTAnimateddownloadbutton.gif$image
 
 ||typekit.net
-||p.typekit.net/p.gif$important
+!||p.typekit.net/p.gif$important
+||p.typekit.net$important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/262
 ||watchers.to/code15.html$important
@@ -767,13 +770,22 @@ mp3juices.cc##iframe[src="tt/r/t/d.html"]
 ||otakumode.com/widget$important,third-party
 
 ! just using umatrix for this
+animenewsnetwork.com,animenewsnetwork.cc##.iab
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="click.php"]
+animenewsnetwork.com,animenewsnetwork.cc##a[href*="4nn.cx"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="4NN.cx"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
 ||animenewsnetwork.cc/images/s/$image
 ||animenewsnetwork.com/images/s/$image
-||animenewsnetwork.cc/logger.pageperf$xmlhttprequest,important
-||animenewsnetwork.com/logger.pageperf$xmlhttprequest,important
+||animenewsnetwork.cc/logger.pageperf$important
+||animenewsnetwork.com/logger.pageperf$important
+
+! covers the page with inline ads
+||animenewsnetwork.cc/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
+||animenewsnetwork.com/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
+||animenewsnetwork.cc/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
+||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
+
 
 way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
@@ -1403,6 +1415,7 @@ adobe-audience-manager.js$important
 ||ox-d.*
 ||seal.*.com^
 *.com.com$important
+.report-uri.
 
 /munchkin.$important
 /urchin.$important
@@ -1438,6 +1451,8 @@ fingerprint.js$important
 ||sourceforge.net$third-party,important
 ||sf.net$third-party,important
 !
+! ########################################################################### !
+! ######################_Start_of_imported_domain_lists_##################### !
 ! ########################################################################### !
 ! Huge blocks of malicious/suspicious domains
 ! Usually imported from other places.
