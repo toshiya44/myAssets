@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-18
+! Date: 2017-10-21
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -526,6 +526,14 @@
 ||tiqcdn.com^$important
 ||timeinc.net^$important
 ||.2o7.net^$important
+||pardot.com$important
+||exct.net$important
+||dianomi.com$important
+||omnitagjs.com$important
+||7eeb1f163a4.com^$important
+||onclasrv.com^$important
+||2d.net.co^$third-party
+||delivery.2d.net.co^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1215,7 +1223,8 @@ sankakucomplex.com##script:contains(pagespeed)
 ||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com|idol.sankakucomplex.com
-||isshiki.donmai.us$important,domain=danbooru.donmai.us
+||isshiki.donmai.us$third-party
+||isshiki.donmai.us/hits$important
 
 ! possible fake/scam/phishing site "danbooru.idanbooru.com"
 ||idanbooru.*$important
@@ -1267,6 +1276,7 @@ muchohentai.com##script:inject(noeval.js)
 
 nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 ||nhentai.net/api/_/popunder*$important
+||nhentai.net^$popup
 
 @@||hentaihaven.org$generichide
 hentaihaven.org##script:contains(Pukka)
