@@ -534,6 +534,11 @@
 ||onclasrv.com^$important
 ||2d.net.co^$third-party
 ||delivery.2d.net.co^$important
+||1105media.com$important
+||findbetterresults.com$important
+||mykings.pw$important
+||abplusz.hu$important
+||worldstream.nl$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -564,6 +569,9 @@ coinhive.min.js$important
 /projectpoi.min.js$script
 /xminer.js$script
 /xminer.min.js$script
+/xmr.js$script
+/xmr.min.js$script
+/cryptonight.wasm$script
 
 ||cnhv.co$important
 ||coinser.in$important
@@ -572,6 +580,9 @@ coinhive.min.js$important
 ||coinbase.com$important
 ||coinhive.com$important
 ||coin-hive.com$important
+||coinerra.com$important
+||coinblind.com$important
+||coinnebula.com$important
 ||minecrunch.co$important
 ||minemytraffic.com$important
 ||pr0gramm.com$important
@@ -1069,6 +1080,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
 ||licdn.com^$domain=~linkedin.com
+||platform.linkedin.com$third-party,important
 ||mixi.jp^$third-party,important
 ||i.ntere.st^$third-party,important
 ||spot.im$third-party,important
@@ -1441,6 +1453,8 @@ fingerprint.js$important
 /bugsnag-2.js
 /bugsnag.min.js
 /bugsnag-2.min.js
+/madads160.aspx
+/madads300.aspx
 
 /mollom/$script
 /mollom/$xmlhttprequest
