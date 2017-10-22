@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-21
+! Date: 2017-10-22
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -539,6 +539,8 @@
 ||mykings.pw$important
 ||abplusz.hu$important
 ||worldstream.nl$important
+||dpmsrv.com$important
+||pub.network$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -647,7 +649,8 @@ wordpress.com###wordads-preview-parent
 answers.com###video_universal-0_display
 answers.com###video_universal-0_caption
 
-||sen.imgur.com$first-party
+imgur.com##.social-icon
+||sen.imgur.com$important
 ||i.imgur.com/*.jpg$inline-script,important
 ||i.imgur.com/*.png$inline-script,important
 ||i.imgur.com/*.gif|$inline-script,important
@@ -940,16 +943,19 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||cse.google.com^$important
 
 ! -------------------------------Wikia filters------------------------------- !
+
 ! fandumb
 ||fandom.wikia.com^$important,~first-party
-||wikia.com/wikia.php?controller=RecirculationApi$important
+
 ||bits.wikimedia.org$important
+||beacon.wikia-services.com$important
+||spotlights-revive.wikia.net$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 ||wikia.com/index.php?title=SocialIcons$script,important
-||spotlights-revive.wikia.net/spc.php$important
+||wikia.com/wikia.php?controller=RecirculationApi$important
 
 wikia.com##.wikia-ad
 wikia.com###WikiaFooter
