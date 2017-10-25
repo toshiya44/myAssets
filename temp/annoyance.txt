@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-10-14
+! Date: 2017-10-25
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -98,6 +98,8 @@ reddit.com##.profilebetabar.infobar
 reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
 
+github.com##.js-notice
+anidb.net###layout-hint
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
 boards.4chan.org###bannerCnt
@@ -120,20 +122,25 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
-||facebook.com/images/emoji.php$first-party,important
-||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,first-party,important
-||facebook.com/ajax/photos/logging/session_logging.php$xmlhttprequest,important
-||facebook.com/ajax/mercury/change_read_status.php$xmlhttprequest,first-party
+||facebook.com/images/emoji.php$important
+||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,important
+||facebook.com/ajax/photos/logging/session_logging.php$important
+||facebook.com/ajax/mercury/change_read_status.php$first-party
 !||facebook.com/ajax/ads/media/log$important
+||facebook.com/pages_reaction_units/*$first-party
 
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys$image
 ||twitter.com/*/recommendations$important
-||clients2.google.com$important
 ||plus.google.com$subdocument,important
 ||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
 
+!apparently they use to update extensions as well
+!like https://clients2.google.com/service/update2/crx?(longlistofparameters)
+!||clients2.google.com$important
+
+imgur.com###side-gallery
 imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
@@ -154,6 +161,7 @@ kissmanga.com##a[href="#"]
 ||discordapp.com/assets/*.worker.js$important
 !||discordapp.com/games/games.json$important
 ||discordapp.com/games/*$important
+||discordapp.com/api/v6/games
 
 ! I'll post this thing as a userscript.
 ! here https://github.com/toshiya44/ff-stuff/blob/master/userscripts/DiscordJumboEmoji.user.js
@@ -179,6 +187,9 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||fandom.wikia.com$important
 ||scribd.com$important
 ||typekit.net$important
+
+||cdn.jsdelivr.net/gh/kenwheeler/slick
+||cdnjs.com/libraries/slick-carousel
 
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
@@ -224,6 +235,10 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 ! ??
 ||bbthat.com/assets/v1.4.0/that.js$script,domain=www.bloomberg.com
 ||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=www.bloomberg.com
+
+newstatesman.com###donate
+newstatesman.com###donate-toggle
+||verdict.co.uk/brexit-tracker-embed/*$important
 
 !#############################################################################!
 ! wikia script fractions
