@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-22
+! Date: 2017-10-25
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -541,6 +541,7 @@
 ||worldstream.nl$important
 ||dpmsrv.com$important
 ||pub.network$important
+||channel1vids.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1192,6 +1193,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
+||gelbooru.com/bed2.php$important
 ||thedoujin.com/bload.php$important
 
 ||gelbooru.com^$first-party,image,badfilter
