@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-25
+! Date: 2017-10-26
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.13.8+
@@ -542,6 +542,9 @@
 ||dpmsrv.com$important
 ||pub.network$important
 ||channel1vids.com$important
+||plista.com$important
+||aticdn.net$important
+||arsdev.net^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -809,12 +812,10 @@ animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
 ||animenewsnetwork.cc/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 ||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 
-
 way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
 ||way2earning.com/xmlrpc.php$important
 
-! 2017-01-29 http://www.whosampled.com/
 @@||whosampled.com^$generichide
 whosampled.com##script:contains(detectAdBlocker)
 
@@ -826,8 +827,6 @@ whosampled.com##script:contains(detectAdBlocker)
 ||c.msn.com$important
 ||c.bing.com$important
 
-!||itpro.co.uk$inline-script
-!itpro.co.uk##script:contains(_sp_)
 @@||itpro.co.uk$generichide
 itpro.co.uk###dennis-newsletter-newsletter-form
 itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
@@ -878,6 +877,28 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||storied.co/lib/appshell-trk.js$important
 ||stats.storied.co/trck.php$important
 ||appshell-trk.s3.amazonaws.com^$important
+
+! these websites are part of a beacon tracking program.
+! example tracking url: https://www.pitchfork.com/infinityid/beacon?id=UUID
+||condenastdigital.com$third-party
+||wmagazine.com$third-party
+||vogue.com$third-party
+||vanityfair.com$third-party
+||teenvogue.com$third-party
+||self.com$third-party
+||pitchfork.com$third-party
+||gq.com$third-party
+||golfdigest.com$third-party
+||glamour.com$third-party
+||epicurious.com$third-party
+||cntraveler.com$third-party
+||brides.com$third-party
+||bonappetit.com$third-party
+||architecturaldigest.com$third-party
+||allure.com$third-party
+
+wired.com##.hide-med
+||fonts.staticworld.net/dli6mbh.js$important
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1419,6 +1440,7 @@ Tealeaf*.js$script,important
 ://go.*?zoneid=$popup,important
 adobe_audience_manager$important
 /metrics/s_code*$script,important
+/infinityid/beacon?id=*$important
 /ga-activation.js$script,important
 adobe-audience-manager.js$important
 /metrics/s_code_trb.js$script,important
