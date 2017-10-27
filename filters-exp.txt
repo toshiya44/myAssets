@@ -1,9 +1,9 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-26
+! Date: 2017-10-27
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.13.8+
+! Requirement: uBlock Origin 1.14.14+
 ! Recommended: Firefox 56+ (Release/Dev)
 !              Waterfox 55+ (Release)
 !              uBlock Origin Legacy 1.14.14+
@@ -44,6 +44,8 @@
 ||d3ir0rz7vxwgq5.cloudfront.net$important
 ||d2wy8f7a9ursnm.cloudfront.net$important
 ||d1z2jf7jlzjs58.cloudfront.net$important
+||d1agz031tafz8n.cloudfront.net$important
+||d1p7elpjrt6qav.cloudfront.net$important
 ||com.com$important
 ||beyondsecurity.com$important
 ||oasgames.com$important
@@ -104,7 +106,6 @@
 ||opnlttr.com$important
 ||scam.com$important
 ||decenthat.com$important
-||fastly.net$important
 ||moat.com$important
 ||moatads.com$important
 ||alxsite.com$important
@@ -163,7 +164,6 @@
 ||4dbl0ck.info$important
 ||4dbl0ckd3t3ct0r.net$important
 ||popads.net$important
-||amazon-adsystem.com$important
 ||tagboard.com$important
 ||qualtrics.com$important
 ||prizma.tv$important,third-party
@@ -320,6 +320,8 @@
 ||goacestnzgrd.com$important
 ||sfzcbcrwxhic.com$important
 ||fnkyyrgraizy.com$important
+||ttxqfeuiakgn.bid$important
+||xfgpmvlacsojy.bid$important
 ||amung.us$important
 ||puhtml.com$important
 ||vindicosuite.com$important
@@ -545,6 +547,14 @@
 ||plista.com$important
 ||aticdn.net$important
 ||arsdev.net^$important
+||manualupdatenotification.com$important
+||rlcdn.com^$important
+||jyanet.com^$important
+||adxxx.com$important
+||adxxx.org$important
+||civicscience.com^$important
+||omtrdc.net^$important
+||theporndude.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -569,7 +579,8 @@ coinhive.min.js$important
 /hive.js$script
 /c-hive.js$script
 /coinhive.min.js$script
-/jsecoin.*$script
+/jsecoin.$script
+/minero.$script
 /miner-ui.js$script
 /miner.min.js$script
 /projectpoi.min.js$script
@@ -611,6 +622,7 @@ coinhive.min.js$important
 ||bf-ad.net$important
 ||contentpass.net$important
 ||authedmine.com$important
+||.now.sh$important
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -684,7 +696,6 @@ reddit.com##.trending-subreddits
 ||amazonaws.com/redditstatic$important
 ||analytics.slashdotmedia.com$important
 ||slashdotmedia.com/www/delivery/lg.php$important
-! what
 ||e.reddit.com$important
 
 ||angelfire.com$important,third-party
@@ -737,11 +748,6 @@ addons.mozilla.org###promos
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
-
-! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
-androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-! https://github.com/uBlockOrigin/uAssets/issues/303#issuecomment-284150097
-firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
 
 ||theguardian.com$subdocument,first-party,important
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
@@ -816,9 +822,6 @@ way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
 ||way2earning.com/xmlrpc.php$important
 
-@@||whosampled.com^$generichide
-whosampled.com##script:contains(detectAdBlocker)
-
 ||dictionary.com/proxy$important
 ||yahoo.com$third-party,important
 ||bat.bing.com/bat.js$script
@@ -827,23 +830,13 @@ whosampled.com##script:contains(detectAdBlocker)
 ||c.msn.com$important
 ||c.bing.com$important
 
-@@||itpro.co.uk$generichide
-itpro.co.uk###dennis-newsletter-newsletter-form
-itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
-
 ||openload.co$object,important
 ||ora.tv$subdocument,important
 ||ooyala.com$subdocument,important
+||anilinkz.*/count.php$important
 
 businessinsider.com##script:contains(setAdblockerCookie)
 ||businessinsider.com$inline-script
-
-! https://github.com/uBlockOrigin/uAssets/issues/312
-dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
-
-! https://github.com/uBlockOrigin/uAssets/issues/389
-anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
-||anilinkz.*/count.php$important
 
 ! generic cosmetic filters hiding random stuff.
 @@||crunchyroll.com^$generichide
@@ -865,10 +858,10 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 ||channeladvisor.com$important,third-party
 
 ! i don't know if these filters work
+||192.168.$important
+||5.39.27.226$important
 ||185.2.83.87$important
-||192.168.*$important
 ||104.198.198.188$important
-||5.39.27.226*$important
 
 ||equifax.*$important
 
@@ -899,6 +892,12 @@ anilinkz.*##script:inject(abort-on-property-write.js, Fingerprint2)
 
 wired.com##.hide-med
 ||fonts.staticworld.net/dli6mbh.js$important
+
+||fls-na.amazon.ca^$important
+||amazon-adsystem.com$important
+||amazon.ca/gp/uedata?$important
+||images-na.ssl-images-amazon.com/images/G/01/ads/advertising/*$script,important
+||beyond-branding.com^$important,third-party
 
 ! ########################################################################### !
 ! Disqus click-to-load
@@ -1149,12 +1148,13 @@ boards.4chan.org##script:contains(window.upManager)
 @@||4chan.org^*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval'
 
 desuarchive.org##script:contains(_qevents)
+archiveofsins.com##script:contains(BlockAdblock)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(ExoLoader)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(TyxoObject)
+
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(noeval.js)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(bab-defuser.js)
-archiveofsins.com##script:contains(BlockAdblock)
-!||cu.cc/main.php$important,first-party
+
 ||4archive.org/neverBme.php$important
 ||4archive.org/nbme_main.php$important
 ||4archive.org/nevaaaaah.js$important
@@ -1170,9 +1170,6 @@ archiveofsins.com##script:contains(BlockAdblock)
 
 ! The following filter from easylist breaks site functionality (such as backlinks)
 !|https://$script,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
-! easy fix
-!@@||4archive.org/js/$script,first-party
-!@@||4archive.org/stats/js/$script,first-party
 ! specific fix
 @@||4archive.org/js/extension.min.js$script,first-party
 @@||4archive.org/js/linkify-jquery.min.js$script,first-party
@@ -1219,7 +1216,6 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 
 ||gelbooru.com^$first-party,image,badfilter
 !@@||gelbooru.com/thumbnails/*$image,first-party
-!@@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg?$image,first-party
 @@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg$image,first-party
 
 !||gelbooru.com/script/license.gelbooru.js$important
@@ -1233,7 +1229,6 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 @@||gelbooru.com/index.php$inline-script,first-party
 @@||gelbooru.com/script/application.js?$first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
-!@@||maxcdn.bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re|baka-tsuki.org
@@ -1343,6 +1338,7 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! with their ads and malware.
 ! last checked: 2017-02-12
 
+kissanime.*##script:inject(noeval.js)
 kissanime.ru##.divCloseBut
 kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
 
@@ -1378,7 +1374,7 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
-kissanime.*##script:inject(noeval.js)
+||kisshentai.net/Content/js/c-hive.js
 
 ! --------------------------------------------------------------------------- !
 
@@ -1451,11 +1447,6 @@ adobe-audience-manager.js$important
 */afr.php?$important
 *write.com$important
 *write.com/*$important
-!*write.com/Redirect*$important
-!*write.com/fp.rb?*$important
-!*write.com/*&referrerUrl=*$important
-!*write.com/*&res=*$important
-!*write.com/*mediafire.com*$important
 *coolthing.com$important
 *&referrerUrl=&*mediafire.com*
 *&curl=http%3A%2F%2Fwww.mediafire.com*
@@ -2904,3 +2895,31 @@ fingerprint.js$important
 !
 ! ########################################################################### !
 ! ################################## END #################################### !
+! Various commented out filters, just in case I need them again.
+! Will be removed once I'm sure that they're obsolete.
+! Replaced with a more generic filter for pixiv
+! pixiv.net##a[href^="/premium.php"]
+! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
+! ||thebarchive.com/neverRBb.php$important
+! ||thebarchive.com/neverRBb.js$important
+! ||gelbooru.com/r18/manga.$important
+! ||pix.nbcuni.com$important
+! ||youtube.com/api/stats/watchtime$important
+! gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
+! gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
+! ||fastly.net$important it's a cdn
+!filters already exist in other lists[/]alternative solution exists
+!removing in next update
+!@@||itpro.co.uk$generichide
+!itpro.co.uk###dennis-newsletter-newsletter-form
+!itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
+!@@||whosampled.com^$generichide
+!whosampled.com##script:contains(detectAdBlocker)
+!anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
+!https://github.com/uBlockOrigin/uAssets/issues/312
+!dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
+! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
+!androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
+! https://github.com/uBlockOrigin/uAssets/issues/303#issuecomment-284150097
+!firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
+! ########################################################################### !
