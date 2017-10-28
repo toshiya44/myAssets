@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-27
+! Date: 2017-10-28
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
@@ -13,10 +13,9 @@
 ! --------------------------------------------------------------------------- !
 ! Notice: Upcoming uBO/webext changes (some filters will not work and stuff)
 ! As of writing, the legacy version is still supported. However, you will have
-! to use a non-release version of firefox to use it. It works pretty well on
-! Waterfox 55. 
+! to use a non-release version of firefox to use it. 
+! It works pretty well on Waterfox 55. 
 ! https://github.com/gorhill/uBlock/wiki/Firefox-WebExtensions
-! https://github.com/JustOff/ublock0-updater
 ! --------------------------------------------------------------------------- !
 ! I'm sure a few of the filters here will break some sites.
 ! Please be cautious and check uBO's logger to see what is being filtered,
@@ -126,7 +125,7 @@
 ||bebi.com$important
 ||emetriq.de$important
 ||kenduktur.com$important
-||clmbtech.com$important,third-party,script
+||clmbtech.com$important
 ||trkgt.com^$important
 ||trkgt.com^$document,important
 ||otaserve.net$important
@@ -194,7 +193,6 @@
 ||rubiconproject.com$important
 ||play-asia.com$important,third-party
 ||*.mail.ru$script,important,third-party
-||aolcdn.com$script,important
 ||bluekai.com$important
 ||casalemedia.com$important
 ||contextweb.com$important
@@ -320,8 +318,6 @@
 ||goacestnzgrd.com$important
 ||sfzcbcrwxhic.com$important
 ||fnkyyrgraizy.com$important
-||ttxqfeuiakgn.bid$important
-||xfgpmvlacsojy.bid$important
 ||amung.us$important
 ||puhtml.com$important
 ||vindicosuite.com$important
@@ -554,7 +550,11 @@
 ||adxxx.org$important
 ||civicscience.com^$important
 ||omtrdc.net^$important
-||theporndude.com$important
+||theporndude.com$important,third-party
+||ttxqfeuiakgn.bid$important
+||clonsvyhy.bid$important
+||kyieflmhiekvrr.bid$important
+||xfgpmvlacsojy.bid$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -563,8 +563,8 @@
 ! Cryptominers In The Web: New-Top-Tier Internet Bullshit
 ! https://archive.is/mwxek
 ! Disabling workers might help to stop them.
-! uBO webext is not sufficient for blocking them as it's not as powerful as
-! before, so putting these domains in your hosts file would be much safer.
+! uBO webext is NOT sufficient for blocking them as it's not as powerful as
+! legacy ver., so putting these domains in your hosts file would be much safer.
 ! This section is meant to be a stricter version of various other similar lists
 ! https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt
 ! https://github.com/keraf/NoCoin
@@ -589,6 +589,7 @@ coinhive.min.js$important
 /xmr.js$script
 /xmr.min.js$script
 /cryptonight.wasm$script
+||.now.sh$important
 
 ||cnhv.co$important
 ||coinser.in$important
@@ -622,7 +623,7 @@ coinhive.min.js$important
 ||bf-ad.net$important
 ||contentpass.net$important
 ||authedmine.com$important
-||.now.sh$important
+||shekel.link$important
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -721,7 +722,8 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
-||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
+!||discordapp.com/api/v6/channels/*/typing$xmlhttprequest,first-party
+||discordapp.com/api/*/typing$xmlhttprequest,first-party
 ||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ! Curse logs your IP
@@ -1242,14 +1244,14 @@ gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thum
 ! yes
 ||youhate.us$important
 
+! ---------------------------------------
+
 chan.sankakucomplex.com,idol.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com,idol.sankakucomplex.com###headerthumbs
 chan.sankakucomplex.com,idol.sankakucomplex.com##cloudflare-app
-danbooru.donmai.us###upgrade-account-notice
-danbooru.com##script:contains(errorBeacon)
 sankakucomplex.com##script:contains(pagespeed)
+sankakucomplex.com##script:inject(bab-defuser.js)
 
-||konachan.net$subdocument,important
 ||amazonaws.com$important,domain=sankakucomplex.com
 ||cstats.sankakucomplex.com$important
 ||sankakucomplex.com/*/afr.php$important
@@ -1259,11 +1261,16 @@ sankakucomplex.com##script:contains(pagespeed)
 ||sankakucomplex.com/javascripts/ps.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com|idol.sankakucomplex.com
-||isshiki.donmai.us$third-party
-||isshiki.donmai.us/hits$important
 
 ! possible fake/scam/phishing site "danbooru.idanbooru.com"
-||idanbooru.*$important
+||idanbooru.com$important
+
+danbooru.donmai.us###upgrade-account-notice
+danbooru.com##script:contains(errorBeacon)
+
+||konachan.net$subdocument,important
+||isshiki.donmai.us$third-party
+||isshiki.donmai.us/hits$important
 
 hitomi.la##.hitomi-vertical
 hitomi.la##.hitomi-horizontal
@@ -1320,9 +1327,8 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! honeypots used to detect blockers
 @@||hentaihaven.org/basement/js/adshow.js$script,first-party
 
-! blocking baka-tsuki's logo
+! unblocking baka-tsuki's logo and image (fragment filter issue)
 @@||baka-tsuki.org^$generichide
-! images with filename partially matching with a URL fragment filter gets blocked
 @@||baka-tsuki.org$image,first-party
 
 ! Owned by an advertisement company :D
@@ -1423,7 +1429,6 @@ __cspreport__
 *?zone_id=*$important
 *&zone_id=*$important
 /netseerads.js$script
-/svg4everybody$script
 /ngx_pagespeed_beacon
 *controller=Optimizely*
 s_retargeting.js$script
@@ -1457,7 +1462,7 @@ adobe-audience-manager.js$important
 ||p.d.*$script
 ||ox-d.*
 ||seal.*.com^
-*.com.com$important
+.com.com$important
 .report-uri.
 
 /munchkin.$important
@@ -2908,18 +2913,5 @@ fingerprint.js$important
 ! gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
 ! gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
 ! ||fastly.net$important it's a cdn
-!filters already exist in other lists[/]alternative solution exists
-!removing in next update
-!@@||itpro.co.uk$generichide
-!itpro.co.uk###dennis-newsletter-newsletter-form
-!itpro.co.uk##script:inject(abort-on-property-write.js, window._sp_)
-!@@||whosampled.com^$generichide
-!whosampled.com##script:contains(detectAdBlocker)
-!anilinkz.io##script:inject(abort-on-property-write.js, Fingerprint2)
-!https://github.com/uBlockOrigin/uAssets/issues/312
-!dobreprogramy.pl##script:inject(abort-on-property-write.js, String.prototype.trunc)
-! https://github.com/uBlockOrigin/uAssets/issues/239#issuecomment-269103792
-!androidcentral.com,crackberry.com,windowscentral.com##script:inject(setTimeout-defuser.js, checkBlocked, 100)
-! https://github.com/uBlockOrigin/uAssets/issues/303#issuecomment-284150097
-!firstonetv.eu##script:inject(abort-on-property-write.js, AdFuckBlock)
+! cdn ||aolcdn.com$script,important
 ! ########################################################################### !
