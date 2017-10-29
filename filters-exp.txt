@@ -555,6 +555,7 @@
 ||clonsvyhy.bid$important
 ||kyieflmhiekvrr.bid$important
 ||xfgpmvlacsojy.bid$important
+||madadsmedia.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -685,6 +686,7 @@ reddit.com##.listingsignupbar
 reddit.com###siteTable_organic
 reddit.com##.read-next-container
 reddit.com##.trending-subreddits
+||e.reddit.com$important
 ||reddit.com/static/pixel.png
 ||pixel.redditmedia.com$important
 ||reddit.com/api/request_promo$important
@@ -693,11 +695,12 @@ reddit.com##.trending-subreddits
 ||redditstatic.com/recommended-link.*.js$important
 ||redditstatic.com/js/prebid.js$important
 ||redditmedia.com/ads$subdocument,important
-||redditmedia.com/gtm/$subdocument,important
+||redditmedia.com/gtm/$important
 ||amazonaws.com/redditstatic$important
+
+||kiwifarms.net/proxy.php$important
 ||analytics.slashdotmedia.com$important
 ||slashdotmedia.com/www/delivery/lg.php$important
-||e.reddit.com$important
 
 ||angelfire.com$important,third-party
 ||fiverr.com$important,third-party
@@ -738,6 +741,7 @@ mediafire.com#@#.ico30share
 dropbox.com###shared-link-immediate-signup-modal
 
 addons.mozilla.org###promos
+mozilla.org###announce-geoip-suggestion
 ||mozilla.org/__cspreport__$important
 
 ! to block add-ons' behind the scene activity.
