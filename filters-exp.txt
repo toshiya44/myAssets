@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-28
+! Date: 2017-10-29
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
@@ -658,6 +658,7 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 jolinfile.com###bd74
 strawpoll.me##.featured
 4shared.com##.space-3260
+netrunner.com##.preloader
 4shared.com##.d1AdsWrapper
 microsoft.com##.dlc_mwftop
 bloomberg.com##bb-mini-player
@@ -905,6 +906,10 @@ wired.com##.hide-med
 ||images-na.ssl-images-amazon.com/images/G/01/ads/advertising/*$script,important
 ||beyond-branding.com^$important,third-party
 
+pastebin.com###notice
+pastebin.com###steadfast
+||pastebin.com/i/steadfast_1.png$image
+
 ! ########################################################################### !
 ! Disqus click-to-load
 ! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
@@ -932,8 +937,8 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||safebrowsing.google.com$important
 ||safebrowsing-cache.google.com$important
 ||plus.google.*^$third-party,important
-||apis.google.com/js/plusone.js
-||imasdk.googleapis.com$important
+||apis.google.com/js/plusone.js$important,third-party
+||imasdk.googleapis.com$important,third-party
 ||googleapis.com/*/swfobject$script,important
 ||fonts.googleapis.com$stylesheet,domain=~google.com|~youtube.com
 ||translate.google.com/translate_a/element.js$important,third-party
