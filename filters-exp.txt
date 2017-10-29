@@ -1226,7 +1226,6 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 
 !||gelbooru.com/script/license.gelbooru.js$important
 ||gelbooru.com/script/license$important
-||gelbooru.com/script/miscJs$important
 
 ! honeypot (as of 2017-04-24)
 @@||gelbooru.com/ads.js?$script
@@ -2906,18 +2905,3 @@ fingerprint.js$important
 !
 ! ########################################################################### !
 ! ################################## END #################################### !
-! Various commented out filters, just in case I need them again.
-! Will be removed once I'm sure that they're obsolete.
-! Replaced with a more generic filter for pixiv
-! pixiv.net##a[href^="/premium.php"]
-! pixiv.net##a[href^="http://www.pixiv.net/premium.php"]
-! ||thebarchive.com/neverRBb.php$important
-! ||thebarchive.com/neverRBb.js$important
-! ||gelbooru.com/r18/manga.$important
-! ||pix.nbcuni.com$important
-! ||youtube.com/api/stats/watchtime$important
-! gelbooru.com###post-list #content a:has(img:not([src*="assets.gelbooru.com/thumbnails/"]))
-! gelbooru.com##a[href*="redirect.php"]:not(img[src*="/thumbnail_"])
-! ||fastly.net$important it's a cdn
-! cdn ||aolcdn.com$script,important
-! ########################################################################### !
