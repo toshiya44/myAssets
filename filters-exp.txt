@@ -1234,6 +1234,8 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ! unbreak tl bubbles and other functionality
 @@||gelbooru.com/index.php$inline-script,first-party
 @@||gelbooru.com/script/application.js?$first-party
+@@||gelbooru.com/script/lazyload.js?$script,first-party
+@@||gelbooru.com/script/miscJs.js?$script,first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! due to url fragment filters, images with /ad/ in the url gets blocked.
