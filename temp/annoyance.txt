@@ -1,84 +1,12 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-10-25
+! Date: 2017-10-29
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
-! Also includes various filters accumulated as a result of trying to solve issues (where I often go overboard).
 ! This list is not maintained and no support is availble. I myself just disable it if I'm having any issues.
 ! Many filters in here are completely unnecessary but I made them anyway. Use whatever you like.
 !-----------------------------------------------------------------------------!
 !-----------------------------------------------------------------------------!
-
-theweathernetwork.com###cbc_widget_container
-theweathernetwork.com###news-slider
-theweathernetwork.com###sidebar
-theweathernetwork.com###main-footer
-theweathernetwork.com###gallery
-theweathernetwork.com###news
-theweathernetwork.com###map-view
-theweathernetwork.com###videos_brightcove-popular-right-now
-theweathernetwork.com###leaderboard
-theweathernetwork.com###fby-tab-6089
-theweathernetwork.com##.toolbar
-theweathernetwork.com###main-header
-theweathernetwork.com###videos_brightcove-multiple-playlist-3-video-homepage
-theweathernetwork.com###editors_choice_news
-
-||twnmm.com/js/*/news_slider.js$important
-||twnmm.com/thumb$important
-||twnmm.com/js/*/jquery.cookie.js$important
-||twnmm.com/js/*/web/modules/gps_location.js$important
-||twnmm.com/storage.filemobile.com$important
-||twnmm.com/js/*/lib/maps/detectizr.js$important
-||twnmm.com/js/*/web/modules/awrr$important
-||twnmm.com/js/*/video_player.js$important
-||twnmm.com/js/*/latest_news_slider.js$important
-||twnmm.com/js/*/gallery.js$important
-||twnmm.com/js/*/maps-mLgoogle.js$important
-||twnmm.com/js/*/maps/google.js$important
-||twnmm.com/js/*/getplayerevents.js$important
-||twnmm.com/js/*/getplaylist.js$important
-||twnmm.com/js/*/notifications.js$important
-||twnmm.com/js/*/recent_locations.js$important
-||twnmm.com/js/*/favorite_locations.js$important
-||twnmm.com/js/*/mylocations.js$important
-||twnmm.com/js/*/profiled.js$important
-||twnmm.com/*/coffee-break.css$important
-||twnmm.com/*/video-gallery.css$important
-
-breitbart.com###ROS-1x1-Pixel
-breitbart.com###isc_front_takeover_div
-breitbart.com###BBOnAirSide
-breitbart.com###BBStoreMinDesk
-breitbart.com###BBStoreLead
-breitbart.com###breitbartpodcasts
-breitbart.com##.Hmobi.ad
-||breitbart.com/*assets*/store*$image
-||breitbart.com/*/on-air$image,first-party
-||breitbart.com/*assets*/takeover$first-party
-||breitbart.com/*/bb-*$image,domain=breitbart.com
-
-||indiatimes.com/featuredblock_travel_slide.cms$important
-||indiatimes.com/js/pgtrackingV8.js$important
-||indiatimes.com/mitr.cms$script,important
-||indiatimes.com/breakingnews$xmlhttprequest,important
-||indiatimes.com/videos/geocode.cms$important
-||indiatimes.com/toi_js/version-49,minify-1.cms$script,important
-||indiatimes.com/*/analytics$script,important
-||indiatimes.com/*/logger.js$script,important
-||indiatimes.com/*/cookie.js$script,important
-||indiatimes.com/*/lazy.js$script,important
-||indiatimes.com/*/pgtrack.js$script,important
-||indiatimes.com/*/breakingnews$important
-||indiatimes.com/toiyfn/notify.htm$important
-
-||quora.com/up$important
-||quora.com/security_reports$important
-||quora.com/ajax/batched_log_POST$important
-||quora.com/webnode2/server_call_POST$important
-||quora.com/ajax/log_errors_3RD_PARTY_POST$important
-
-!---------------------------------------------------------------------------!
 
 ##.donate-banner
 ###donate-banner
@@ -89,6 +17,7 @@ reddit.com##.promotedlink
 reddit.com##.hohoho-header
 reddit.com##.res-show-link
 reddit.com##.embed-comment
+reddit.com##.multi-selector
 reddit.com##.listing-chooser
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
@@ -102,16 +31,13 @@ github.com##.js-notice
 anidb.net###layout-hint
 addons.mozilla.org##.avatar
 addons.mozilla.org###promos
-boards.4chan.org###bannerCnt
 symbolab.com##.tooltipster-box
 motherboard.vice.com##.up-next
-4chan.org###boardNavDesktopFoot
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
 mozilla.org##.notification-banner
 github.com##.js-notice.octofication
 developer.mozilla.org##.notification-tray
-crunchyroll.com##.left.container-shadow-dark.portrait-desc
 web.archive.org###__wb_record_content_done
 encyclopediadramatica.rs##a[href*="torguard.net"]
 
@@ -126,8 +52,8 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,important
 ||facebook.com/ajax/photos/logging/session_logging.php$important
 ||facebook.com/ajax/mercury/change_read_status.php$first-party
-!||facebook.com/ajax/ads/media/log$important
 ||facebook.com/pages_reaction_units/*$first-party
+!||facebook.com/ajax/ads/media/log$important
 
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys$image
@@ -136,41 +62,27 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
 
-!apparently they use to update extensions as well
-!like https://clients2.google.com/service/update2/crx?(longlistofparameters)
-!||clients2.google.com$important
-
 imgur.com###side-gallery
 imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
 ||imgur.com/gallery/hot$important
 
-! 2017-01-27 tumblr.com
-||tumblr.com/services/cslog$xmlhttprequest,important
-!||tumblr.com/hsts$first-party,important
+||tumblr.com/services/cslog$important
 
 animenewsnetwork.com##fieldset
+crunchyroll.com##.left.container-shadow-dark.portrait-desc
 kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
 ||kissanime.*/Scripts/google.js$script,first-party
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
 
-||discordapp.com/avatars/*.gif$first-party
-||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
-||discordapp.com/assets/*.worker.js$important
-!||discordapp.com/games/games.json$important
-||discordapp.com/games/*$important
 ||discordapp.com/api/v6/games
+||discordapp.com/games/*$important
+||discordapp.com/avatars/*.gif$first-party
+||discordapp.com/assets/*.worker.js$important
+||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
 
-! I'll post this thing as a userscript.
-! here https://github.com/toshiya44/ff-stuff/blob/master/userscripts/DiscordJumboEmoji.user.js
-!discordapp.com##img[src*="/emojis/"].emoji:style(min-height: 2.8em !important;  min-width: 3.2em !important; )
-!discordapp.com##img[src*="/emojis/"].emoji.jumboable:style(min-height: 6.2em !important;  min-width: 6.8em !important; )
-!discordapp.com##img[src*="/assets/"].emoji:style(max-height: 0.8em !important; max-width: 1em !important; width: auto; height: auto;)
-!discordapp.com##img[src*="/assets/"].emoji.jumboable:style(max-height: 1em !important; max-width: 1em !important; width: auto; height: auto;)
-
-! 2016-12-26, urlchecker.org
 ||urlchecker.org/ajax/proxy_parser.php$first-party
 ||urlchecker.org/ajax/proxy_limit.php$first-party
 ||urlchecker.org/*/proxy-checker.js$important
@@ -188,15 +100,18 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||scribd.com$important
 ||typekit.net$important
 
-||cdn.jsdelivr.net/gh/kenwheeler/slick
-||cdnjs.com/libraries/slick-carousel
+||quora.com/up$important
+||quora.com/security_reports$important
+||quora.com/ajax/batched_log_POST$important
+||quora.com/webnode2/server_call_POST$important
+||quora.com/ajax/log_errors_3RD_PARTY_POST$important
+
+!this'll probably break any site that uses it. so, removing.
+!||cdn.jsdelivr.net/gh/kenwheeler/slick
+!||cdnjs.com/libraries/slick-carousel
 
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
-
-! it seems to block the first popup ----- doesn't actually work
-!||mediafire.com$popup,domain=~mediafire.com
-!||mediafire.com/images/icons/1x1_transparent.gif$image,domain=mediafire.com,redirect=1x1-transparent.gif
 
 ||giphy.com/static/js/site/third_party.js$script,first-party
 ||giphy.com/static/js/site/footer.js$script,first-party
@@ -205,40 +120,41 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||giphy.com/gifs/*/related/
 ||giphy.com/static/img/loading_bar.gif$image,first-party
 
-||fufufu.moe/js/bee.js$script,first-party
 ||nicovideo.cdn.nimg.jp/*/uad.mp3$media
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
-! yes, this would break cross site payments
+! yes, this would break cross site payments.
+! However, due to it's tracking potential, it's worth it to block it
+! until you're actually about to make a purchase. 
 ||paypal.com$third-party,important
 ||paypalobjects.com$third-party,important,domain=~paypal.com
-
-! no clue what this does
-||cdn.sstatic.net/Js/full-anon.en.js$script
 
 ! semi transparent text + colorful bg = eyecancer
 ||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
 
-pastebin.com###notice
-pastebin.com###steadfast
-||pastebin.com/i/steadfast_1.png$image
-
 wikipedia.org###wlm-banner
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
+
+||reddit.com/api/multi/mine$important
 ||redditstatic.com/author-tooltip.*$important
 ||redditstatic.com/sprite-author-tooltip.*$important
 ||reddit.com/user/*/about.json$xmlhttprequest,important
 
-! some filterlists have this and it causes a lot of breakage
-.com#@#[class^="ad-"]
-
 ! ??
+||cdn.sstatic.net/Js/full-anon.en.js$script
 ||bbthat.com/assets/v1.4.0/that.js$script,domain=www.bloomberg.com
 ||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=www.bloomberg.com
 
 newstatesman.com###donate
 newstatesman.com###donate-toggle
 ||verdict.co.uk/brexit-tracker-embed/*$important
+
+||piriform.com/scripts/modernizr-custom.js$script
+
+boards.4chan.org###bannerCnt
+4chan.org###boardNavDesktopFoot
+||fufufu.moe/js/bee.js$script,first-party
+archive.4plebs.org,archive.loveisover.me,archive.nyafuu.org,desuarchive.org,cuckchan.org,4ch.be,arch.b4k.co,fireden.net,archived.moe,archiveofsins.com,thebarchive.com,rbt.asia##.btn-toggle-post:style(background-color:#282A2E !important;color:#EEEEEE!important;border-color:#282A2E !important;)
 
 !#############################################################################!
 ! wikia script fractions
@@ -319,9 +235,9 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||dr.tl^
 ||bit.do^
 ||taveo.net^
-||bit.ly$important
-||embed.ly$important
-||sh.st$important
+||bit.ly^
+||embed.ly^
+||sh.st
 !
 !#############################################################################!
 !################################### END #####################################!
