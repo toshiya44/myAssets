@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-10-29
+! Date: 2017-11-04
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
@@ -556,7 +556,15 @@
 ||kyieflmhiekvrr.bid$important
 ||xfgpmvlacsojy.bid$important
 ||madadsmedia.com$important
-
+||effectivemeasure.net$important
+||edigitalsurvey.com$important
+||cxense.com$important
+||mailerlite.com$important
+||counter.packa2.cz$important
+||smartadserver.com$important
+||theviralizer.com$important
+||infinitytrafficboost.com$important
+||tru.am^$important
 ! -----------------------------------Coins----------------------------------- !
 !
 ! Various bitcoin related filters.
@@ -566,7 +574,8 @@
 ! Disabling workers might help to stop them.
 ! uBO webext is NOT sufficient for blocking them as it's not as powerful as
 ! legacy ver., so putting these domains in your hosts file would be much safer.
-! This section is meant to be a stricter version of various other similar lists
+! This section is meant to be a stricter version of other similar lists.
+! Make sure to have the Resource abuse​​​​​ list checked in uBO.
 ! https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt
 ! https://github.com/keraf/NoCoin
 ! Note: Due to webext API limitations, uBO can't reach scripts executed by 
@@ -599,6 +608,7 @@ coinhive.min.js$important
 ||coinbase.com$important
 ||coinhive.com$important
 ||coin-hive.com$important
+||coin-have.com$important
 ||coinerra.com$important
 ||coinblind.com$important
 ||coinnebula.com$important
@@ -615,7 +625,6 @@ coinhive.min.js$important
 ||kdowqlpt.info$important
 ||ppoi.org$important
 ||projectpoi.com$important
-||webmine.cz$important
 ||reasedoper.pw$important
 ||mataharirama.xyz$important
 ||listat.biz$important
@@ -623,8 +632,8 @@ coinhive.min.js$important
 ||adtech.de$important
 ||bf-ad.net$important
 ||contentpass.net$important
-||authedmine.com$important
 ||shekel.link$important
+||webmine.cz$important,third-party
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -652,7 +661,13 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||cointelegraph.com/storage/uploads/view$image
 ||cointelegraph.com/assets/js/script.js$important
 
+!||authedmine.com
+
 ! -----------------------------------Misc------------------------------------ !
+
+msn.com##.paddle
+dengeki.com##.global-loading
+safelinkconverter.com##.l-preloader
 
 0calc.com##.altad
 jolinfile.com###bd74
@@ -660,7 +675,9 @@ strawpoll.me##.featured
 4shared.com##.space-3260
 netrunner.com##.preloader
 4shared.com##.d1AdsWrapper
+ghacks.net###cookie-notice
 microsoft.com##.dlc_mwftop
+medium.com##.js-stickyFooter
 bloomberg.com##bb-mini-player
 answers.yahoo.com###yset-upsell-div
 secure.politico.com##.story-related
@@ -670,6 +687,7 @@ answers.com###video_universal-0_caption
 
 imgur.com##.social-icon
 ||sen.imgur.com$important
+||s.imgur.com$important,third-party
 ||i.imgur.com/*.jpg$inline-script,important
 ||i.imgur.com/*.png$inline-script,important
 ||i.imgur.com/*.gif|$inline-script,important
@@ -772,8 +790,9 @@ mozilla.org###announce-geoip-suggestion
 ||wordpress.com/pinghub/*$important
 ||wordpress.com/pinghub/*$websocket
 ||faye.getstream.io/faye$websocket,domain=kitsu.io
-||go.com$important,third-party
+||go.com$important,third-party,domain=~abclocal.com|~6abc.com|~7online.com|~abc.go.com|~abc11.com|~abc13.com|~abc30.com|~abc7.com|~abc7chicago.com|~abc7news.com|~ahctv.com
 ||go.com/*/DisneyID.js$important
+||unid.go.com$important
 ||gamer-network.net$important,third-party
 
 ! rightad.js is a honeypot (as of 2017-01-11)
@@ -842,8 +861,11 @@ way2earning.com##a[href*="poptm.com"]
 ||ooyala.com$subdocument,important
 ||anilinkz.*/count.php$important
 
-businessinsider.com##script:contains(setAdblockerCookie)
+businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
+businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
+||businessinsider.jp$inline-script
 ||businessinsider.com$inline-script
+||businessinsider.jp/asset/common/app/popular_posts.js$script,first-party
 
 ! generic cosmetic filters hiding random stuff.
 @@||crunchyroll.com^$generichide
@@ -955,6 +977,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||google.*/jsapi?autoload=*$script,important
 ||mail.google.com/*&view=ad&$important
 ||mail.google.com/mail/*/cleardot.gif$important
+||mail.google.com/mail/*/jserror?$xmlhttprequest,first-party
 ||google.com/setgmail$important
 ||google.com/availability/$important
 
@@ -1124,6 +1147,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||spot.im$third-party,important
 ||chatango.com$third-party,important
 ||optinchat.com$third-party,important
+||platform.vine.co$third-party,important
 
 ||twitter.com^$important,~first-party
 ||twimg.com^$important,~first-party,domain=~behind-the-scene|~twitter.com
