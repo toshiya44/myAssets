@@ -1,10 +1,10 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-04
+! Date: 2017-11-06
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
-! Recommended: Firefox 56+ (Release/Dev)
+! Recommended: Firefox 57+ (Release/Dev)
 !              Waterfox 55+ (Release)
 !              uBlock Origin Legacy 1.14.14+
 ! --------------------------------------------------------------------------- !
@@ -286,6 +286,7 @@
 ||onesignal.com$important
 ||onderlea.info$important
 ||ekansovi.com$important
+||ufraton.com$important
 ||perimeterx.net$important
 ||cedexis.com$important
 ||cedexis.net$important
@@ -565,6 +566,8 @@
 ||theviralizer.com$important
 ||infinitytrafficboost.com$important
 ||tru.am^$important
+||ritogaga.com$important
+
 ! -----------------------------------Coins----------------------------------- !
 !
 ! Various bitcoin related filters.
@@ -634,6 +637,7 @@ coinhive.min.js$important
 ||contentpass.net$important
 ||shekel.link$important
 ||webmine.cz$important,third-party
+||monero-miner.net$important
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -797,14 +801,14 @@ mozilla.org###announce-geoip-suggestion
 
 ! rightad.js is a honeypot (as of 2017-01-11)
 @@||mirrorcreator.com$generichide
-@@||mirrorcreator.com/js/rightad.js$important,domain=mirrorcreator.com
+@@||mirrorcreator.com/js/rightad.js$important
 mirrorcreator.com##script:contains(pageTracker)
 mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
 ||mirrorcreator.com/images/MBTAnimateddownloadbutton.gif$image
 
 ||typekit.net
-!||p.typekit.net/p.gif$important
 ||p.typekit.net$important
+!||p.typekit.net/p.gif$important
 
 ! https://github.com/uBlockOrigin/uAssets/issues/262
 ||watchers.to/code15.html$important
@@ -822,6 +826,10 @@ tinypic.com##script:contains(ClientProfilingLog)
 ||mp3juices.cc/pa/h/a.html$subdocument
 ||mp3juices.cc/tt/d/d.html$subdocument
 mp3juices.cc##iframe[src="tt/r/t/d.html"]
+
+@@||crunchyroll.com^$generichide
+||crunchyroll.com$important,third-party
+||crunchyroll.com/versioned_assets/js/tracking/ga_initial_visit.$script,first-party,important
 
 ||rightstufanime.com$important,popup
 ||rightstufanime.com$important,third-party
@@ -868,7 +876,6 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 ||businessinsider.jp/asset/common/app/popular_posts.js$script,first-party
 
 ! generic cosmetic filters hiding random stuff.
-@@||crunchyroll.com^$generichide
 @@||adblock.mozdev.org$generichide
 
 ! The urls can have long string of characters that sometimes get blocked by fragment filters
@@ -947,9 +954,13 @@ pastebin.com###steadfast
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
 
-google.*##.gb_g.gb_Bc.gb_8cx
+! google.*##.gb_g.gb_Bc.gb_8cx
+!                                            .......let's be specific, for fun.
+! https://github.com/Rob--W/dont-track-me-google/blob/master/manifest.json
+google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.al,google.am,google.co.ao,google.com.ar,google.as,google.at,google.com.au,google.az,google.ba,google.com.bd,google.be,google.bf,google.bg,google.com.bh,google.bi,google.bj,google.com.bn,google.com.bo,google.com.br,google.bs,google.bt,google.co.bw,google.by,google.com.bz,google.ca,google.cd,google.cf,google.cg,google.ch,google.ci,google.co.ck,google.cl,google.cm,google.cn,google.com.co,google.co.cr,google.com.cu,google.cv,google.com.cy,google.cz,google.de,google.dj,google.dk,google.dm,google.com.do,google.dz,google.com.ec,google.ee,google.com.eg,google.es,google.com.et,google.fi,google.com.fj,google.fm,google.fr,google.ga,google.ge,google.gg,google.com.gh,google.com.gi,google.gl,google.gm,google.gp,google.gr,google.com.gt,google.gy,google.com.hk,google.hn,google.hr,google.ht,google.hu,google.co.id,google.ie,google.co.il,google.im,google.co.in,google.iq,google.is,google.it,google.je,google.com.jm,google.jo,google.co.jp,google.co.ke,google.com.kh,google.ki,google.kg,google.co.kr,google.com.kw,google.kz,google.la,google.com.lb,google.li,google.lk,google.co.ls,google.lt,google.lu,google.lv,google.com.ly,google.co.ma,google.md,google.me,google.mg,google.mk,google.ml,google.com.mm,google.mn,google.ms,google.com.mt,google.mu,google.mv,google.mw,google.com.mx,google.com.my,google.co.mz,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.ne,google.nl,google.no,google.com.np,google.nr,google.nu,google.co.nz,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.pl,google.pn,google.com.pr,google.ps,google.pt,google.com.py,google.com.qa,google.ro,google.ru,google.rw,google.com.sa,google.com.sb,google.sc,google.se,google.com.sg,google.sh,google.si,google.sk,google.com.sl,google.sn,google.so,google.sm,google.sr,google.st,google.com.sv,google.td,google.tg,google.co.th,google.com.tj,google.tk,google.tl,google.tm,google.tn,google.to,google.com.tr,google.tt,google.com.tw,google.co.tz,google.com.ua,google.co.ug,google.co.uk,google.com.uy,google.co.uz,google.com.vc,google.co.ve,google.vg,google.co.vi,google.com.vn,google.vu,google.ws,google.rs,google.co.za,google.co.zm,google.co.zw,google.cat,google.ng##.gb_g.gb_Bc.gb_8cx
+
 /searchdomaincheck$important
-||google-analytics.*$important,domain=~behind-the-scene
+||google-analytics.*$important
 ||doubleclick.net$important
 ||csi.gstatic.com$important
 ||metric.gstatic.com$important
@@ -960,9 +971,8 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||safebrowsing-cache.google.com$important
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js$important,third-party
-||imasdk.googleapis.com$important,third-party
+||imasdk.googleapis.com$third-party
 ||googleapis.com/*/swfobject$script,important
-||fonts.googleapis.com$stylesheet,domain=~google.com|~youtube.com
 ||translate.google.com/translate_a/element.js$important,third-party
 ||googletagmanager.com$important
 ||googleadservices.com$important
@@ -980,6 +990,9 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||mail.google.com/mail/*/jserror?$xmlhttprequest,first-party
 ||google.com/setgmail$important
 ||google.com/availability/$important
+
+! This might break a lot of sites.
+!||fonts.googleapis.com$stylesheet,domain=~google.com|~youtube.com
 
 ! the request is sometimes blocked by url fragment filters
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
@@ -1019,7 +1032,8 @@ wikia.com##.wds-global-footer
 wikia.com###RECIRCULATION_RAIL
 wikia.com##.community-page-entry-point-module
 
-! looks like they changed the layout a bit. here's the current one (as of 2016-11-20)
+! looks like they changed the layout a bit. 
+! here's the current one (as of 2016-11-20)
 wikia.com##.wds-global-navigation__logo
 wikia.com##.wds-global-navigation__logo-fandom
 wikia.com##.wds-is-games.wds-global-navigation__link
@@ -1030,7 +1044,7 @@ wikia.com##.wds-is-tv.wds-global-navigation__link
 
 ! Nice ad placeholders you have there! 
 ! It'd be a shame if someone hides them.
-! Note: have to remove "behind-the-scene" fron whitelists to block service worker.
+! Note: disable service-worker.
 
 @@||myanimelist.net$generichide
 myanimelist.net##.mauto
@@ -1050,7 +1064,6 @@ myanimelist.net##.banner-header-anime-straming
 ||myanimelist.cdn-dena.com/images/membership$important
 ||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/signature/*
-||crunchyroll.com$important,domain=myanimelist.net
 
 ! ---------------------------------social----------------------------------- !
 ! facebook
@@ -1150,17 +1163,18 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||platform.vine.co$third-party,important
 
 ||twitter.com^$important,~first-party
-||twimg.com^$important,~first-party,domain=~behind-the-scene|~twitter.com
+||ads-twitter.com$important
 ||o.twimg.com$important
-||twimg.com/*/proxy.jpg$important
 ||ton.twimg.com$important
+||twimg.com/*/proxy.jpg$important
+||twitter.com/*/trends$important
 ||twitter.com/*/csp_report$important
 ||twitter.com/*/toast_poll$important
-||twitter.com/*/trends$important
+||twitter.com/*/recommendations$important
 ||twitter.com/*/live_video_home_module$important
-||twitter.com/i/cards/*?advertiser_name$important
 ||twitter.com/i/promoted_content$important
-||ads-twitter.com$important
+||twitter.com/i/cards/*?advertiser_name$important
+||twimg.com^$important,~first-party,domain=~twitter.com|~moz-extension-scheme|~blank.about-scheme|~behind-the-scene
 
 ! https://meta.stackexchange.com/questions/44717/is-gravatar-a-privacy-risk
 ! https://archive.is/4xPzZ		https://archive.is/zos2O
@@ -1168,9 +1182,11 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||signavatar.com^$third-party,important
 
 ! ########################################################################### !
+! Various chan filters.
 
 ! 4chan filters 
 @@||4chan.org$generichide
+@@||s.4cdn.org/image/favicon.ico$image,domain=4chan.org
 boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
 boards.4chan.org##.middlead
@@ -1211,6 +1227,12 @@ archiveofsins.com##script:contains(BlockAdblock)
 @@||4archive.org/js/jquery.min.js$script,first-party
 @@||4archive.org/js/linkify.min.js$script,first-party
 @@/jquery.js$script,first-party,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
+
+! real one is 4cdn.org
+||4cdns.org$important
+||8chan.pw$important
+
+@@||krautchan.net^$image,first-party
 
 ! --------------------------------------------------------------------------- !
 ! boorus and stuff 
