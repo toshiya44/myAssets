@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-10-29
+! Date: 2017-11-10
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -12,6 +12,7 @@
 ###donate-banner
 
 reddit.com##.grippy
+reddit.com##.hohoho
 reddit.com###header-img
 reddit.com##.promotedlink
 reddit.com##.hohoho-header
@@ -21,6 +22,7 @@ reddit.com##.multi-selector
 reddit.com##.listing-chooser
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
+reddit.com##.listingsignupbar
 reddit.com##.give-gold-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
@@ -57,7 +59,6 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 
 ||twimg.com/emoji$important
 ||jcafe24.net/Smileys$image
-||twitter.com/*/recommendations$important
 ||plus.google.com$subdocument,important
 ||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
@@ -106,10 +107,6 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-!this'll probably break any site that uses it. so, removing.
-!||cdn.jsdelivr.net/gh/kenwheeler/slick
-!||cdnjs.com/libraries/slick-carousel
-
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
 
@@ -120,6 +117,8 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||giphy.com/gifs/*/related/
 ||giphy.com/static/img/loading_bar.gif$image,first-party
 
+pixiv.net##a[href*="premium.php"]
+pixiv.net##.popular-introduction-overlay
 ||nicovideo.cdn.nimg.jp/*/uad.mp3$media
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
