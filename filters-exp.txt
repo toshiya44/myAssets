@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-06
+! Date: 2017-11-10
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
@@ -33,6 +33,7 @@
 ||d5nxst8fruw4z.cloudfront.net$important
 ||d7x5nblzs94me.cloudfront.net$important
 ||dzcx04lyk9hjp.cloudfront.net$important
+||dthq3mor50viz.cloudfront.net$important
 ||d2bnxibecyz4h5.cloudfront.net$important
 ||d2mrcwg3epew1i.cloudfront.net$important
 ||d3pkae9owd2lcf.cloudfront.net$important
@@ -567,6 +568,16 @@
 ||infinitytrafficboost.com$important
 ||tru.am^$important
 ||ritogaga.com$important
+||gagaluka.com$important
+||ratkalol.com$important
+||ujieva.com$important
+||wywy.com$important
+||fetchback.com$important
+||crowdtwist.com$important
+||mplxtms.com$important
+||algovid.com^$important
+||ezoic.net^$important
+||tynt.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -670,6 +681,7 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ! -----------------------------------Misc------------------------------------ !
 
 msn.com##.paddle
+tampermonkey.net###curtain
 dengeki.com##.global-loading
 safelinkconverter.com##.l-preloader
 
@@ -778,11 +790,11 @@ mozilla.org###announce-geoip-suggestion
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
 
-||theguardian.com$subdocument,first-party,important
+dailymail.co.uk##.has-button-share-facebook
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
 ||dailymail.co.uk/weather.html?$important
-||i.dailymail.co.uk/i/pix$image,first-party
-||cdn.arstechnica.net/*ads.*.js$script,domain=arstechnica.com
+||scripts.dailymail.co.uk/static/mol-adverts/$important
+||cdn.arstechnica.net/*ads.*.js$script,first-party
 ||fng-ads.fox.com$important
 ||fox.com$important,third-party
 ||tpfeed.cbc.ca$xmlhttprequest,important
@@ -1168,13 +1180,15 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||ton.twimg.com$important
 ||twimg.com/*/proxy.jpg$important
 ||twitter.com/*/trends$important
-||twitter.com/*/csp_report$important
+||twitter.com/i/csp_report$important
 ||twitter.com/*/toast_poll$important
 ||twitter.com/*/recommendations$important
 ||twitter.com/*/live_video_home_module$important
 ||twitter.com/i/promoted_content$important
 ||twitter.com/i/cards/*?advertiser_name$important
 ||twimg.com^$important,~first-party,domain=~twitter.com|~moz-extension-scheme|~blank.about-scheme|~behind-the-scene
+
+||abs.twimg.com/k/en/5.pages_who_to_follow.en.$script
 
 ! https://meta.stackexchange.com/questions/44717/is-gravatar-a-privacy-risk
 ! https://archive.is/4xPzZ		https://archive.is/zos2O
@@ -1269,6 +1283,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 ||gelbooru.com/intermission.php$subdocument,important
 ||gelbooru.com/v.php$important
 ||gelbooru.com/bed2.php$important
+||gelbooru.com/bluet.php$important
 ||thedoujin.com/bload.php$important
 
 ||gelbooru.com^$first-party,image,badfilter
@@ -1339,7 +1354,6 @@ hitomi.la##.hitomi-horizontal
 pixiv.net#@#.bookmark-container
 pixiv.net##.share-button
 pixiv.net##.ads-top-info
-pixiv.net##a[href*="premium.php"]
 /pre-login.min.js$script,domain=pixiv.net
 @@||accounts.pixiv.net$popup,domain=pawoo.net
 
@@ -1489,7 +1503,7 @@ __cspreport__
 *controller=Optimizely*
 s_retargeting.js$script
 *qualitysocialtargeting*
-*zeroredirect*$important
+.zeroredirect.$important
 ^img-dot.gif$third-party
 1x1_transparent.gif$image
 *security-i0y8kg*$important
