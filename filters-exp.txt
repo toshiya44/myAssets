@@ -712,10 +712,12 @@ imgur.com##.social-icon
 ||csp.flickr.com$important
 ||flickr.com/beacon*$important
 
+reddit.com###ad_1
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
 reddit.com##.geopopularbar
 reddit.com##.survey-overlay
+reddit.com##.dfp-ad-container
 reddit.com##.commentsignupbar
 reddit.com##.listingsignupbar
 reddit.com###siteTable_organic
@@ -1180,18 +1182,21 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||ton.twimg.com$important
 ||twimg.com/*/proxy.jpg$important
 ||twitter.com/*/trends$important
-||twitter.com/i/csp_report$important
 ||twitter.com/*/toast_poll$important
 ||twitter.com/*/recommendations$important
 ||twitter.com/*/live_video_home_module$important
+||twitter.com/i/csp_report$important
 ||twitter.com/i/promoted_content$important
 ||twitter.com/i/cards/*?advertiser_name$important
+
+! in order allow Ank Pixiv and other extensions to download images.
 ||twimg.com^$important,~first-party,domain=~twitter.com|~moz-extension-scheme|~blank.about-scheme|~behind-the-scene
 
 ||abs.twimg.com/k/en/5.pages_who_to_follow.en.$script
 
 ! https://meta.stackexchange.com/questions/44717/is-gravatar-a-privacy-risk
-! https://archive.is/4xPzZ		https://archive.is/zos2O
+! https://archive.is/4xPzZ
+! https://archive.is/zos2O
 ||gravatar.com^$important,third-party
 ||signavatar.com^$third-party,important
 
