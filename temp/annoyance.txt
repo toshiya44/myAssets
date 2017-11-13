@@ -155,10 +155,18 @@ newstatesman.com###donate-toggle
 
 ||piriform.com/scripts/modernizr-custom.js$script
 
+boards.4chan.org###blotter
 boards.4chan.org###bannerCnt
-4chan.org###boardNavDesktopFoot
-||fufufu.moe/js/bee.js$script,first-party
+boards.4chan.org###globalMessage
+boards.4chan.org###boardNavDesktopFoot
 archive.4plebs.org,archive.loveisover.me,archive.nyafuu.org,desuarchive.org,cuckchan.org,4ch.be,arch.b4k.co,fireden.net,archived.moe,archiveofsins.com,thebarchive.com,rbt.asia##body.midnight button.btn-toggle-post:style(background-color:#282A2E !important;color:#EEEEEE!important;border-color:#282A2E !important;)
+
+support.microsoft.com##.survey-tab
+support.microsoft.com##.skylight-entry
+support.microsoft.com##.content-survey
+
+! this was required for dl to work, last time i tried
+!@@||downloader.disk.yandex.ru^$domain=yadi.sk
 
 !#############################################################################!
 ! wikia script fractions
@@ -221,7 +229,6 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||files.uploads.ws
 ||cubeupload.com
 ||media-bo.appspot.com
-
 ||orcahub.com
 ||vbooter.org
 ||orboot.pw
@@ -229,11 +236,8 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||restresser.com
 ||networkstresser.com
 ||vdos-s.com
-
-! Third party
-||aruljohn.com/widget/ip/ip.php
-||aruljohn.com/widget/zip/zip.js
-
+||aruljohn.com$third-party
+!
 ! Url shorteners
 ||go.budurl.co^
 ||dr.tl^
@@ -241,7 +245,7 @@ qualaroo_blocking_js$script,domain=wikia.com,important
 ||taveo.net^
 ||bit.ly^
 ||embed.ly^
-||sh.st
+||sh.st^
 !
 !#############################################################################!
 !################################### END #####################################!
