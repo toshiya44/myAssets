@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-10
+! Date: 2017-11-12
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.14+
@@ -578,6 +578,8 @@
 ||algovid.com^$important
 ||ezoic.net^$important
 ||tynt.com$important
+||com-supporthelp155.site$important
+||greatoffer4upgrades.date$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1190,7 +1192,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||twitter.com/i/cards/*?advertiser_name$important
 
 ! in order allow Ank Pixiv and other extensions to download images.
-||twimg.com^$important,~first-party,domain=~twitter.com|~moz-extension-scheme|~blank.about-scheme|~behind-the-scene
+||twimg.com^$important,~first-party,domain=~twitter.com|~moz-extension-scheme|~about-scheme|~behind-the-scene
 
 ||abs.twimg.com/k/en/5.pages_who_to_follow.en.$script
 
@@ -1524,9 +1526,8 @@ adobe-audience-manager.js$important
 /js/tracking/ga_initial_visit*.js$script,important
 
 ! for blocking some of the redirects in mediafire download pages
-*/afr.php?$important
+/afr.php?$important
 *write.com$important
-*write.com/*$important
 *coolthing.com$important
 *&referrerUrl=&*mediafire.com*
 *&curl=http%3A%2F%2Fwww.mediafire.com*
@@ -1577,7 +1578,7 @@ fingerprint.js$important
 ||sf.net$third-party,important
 !
 ! ########################################################################### !
-! ######################_Start_of_imported_domain_lists_##################### !
+! ######################_START_OF_IMPORTED_DOMAIN_LISTS_##################### !
 ! ########################################################################### !
 ! Huge blocks of malicious/suspicious domains
 ! Usually imported from other places.
