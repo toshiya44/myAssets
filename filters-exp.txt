@@ -580,6 +580,8 @@
 ||tynt.com$important
 ||com-supporthelp155.site$important
 ||greatoffer4upgrades.date$important
+||embed.air.tv^$third-party
+||media.complex.com^$third-party
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1359,9 +1361,11 @@ hitomi.la##.hitomi-horizontal
 @@||pixiv.net^$generichide
 @@||pawoo.net^$generichide
 pixiv.net#@#.bookmark-container
+pixiv.net##.ad-footer
+pixiv.net##.adsbygoogle
 pixiv.net##.share-button
 pixiv.net##.ads-top-info
-/pre-login.min.js$script,domain=pixiv.net
+!/pre-login.min.js$script,domain=pixiv.net
 @@||accounts.pixiv.net$popup,domain=pawoo.net
 
 readms.net###reader-sky
