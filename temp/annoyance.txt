@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-11-10
+! Date: 2017-11-12
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -65,9 +65,9 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 
 imgur.com###side-gallery
 imgur.com###cta-container
+||imgur.com/gallery/hot$important
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
-||imgur.com/gallery/hot$important
 
 ||tumblr.com/services/cslog$important
 
@@ -88,7 +88,9 @@ kissmanga.com##a[href="#"]
 ||urlchecker.org/ajax/proxy_limit.php$first-party
 ||urlchecker.org/*/proxy-checker.js$important
 
+gelbooru.com###motdTempPermanent
 ||sankakucomplex.com/logo.png$image
+||gelbooru.com/script/try.js$important
 
 ! The expand button is broken for some reason, so I'm manually "pressing" it. 
 ! i.e. this is equivalent to clicking the spoiler tag
@@ -107,6 +109,7 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
+independent.co.uk##.inline-block-left
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
 ||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
 
@@ -117,8 +120,10 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||giphy.com/gifs/*/related/
 ||giphy.com/static/img/loading_bar.gif$image,first-party
 
+comic.pixiv.net###pauser
 pixiv.net##a[href*="premium.php"]
 pixiv.net##.popular-introduction-overlay
+||public-img-comic.pximg.net/c!$image,domain=www.pixiv.net
 ||nicovideo.cdn.nimg.jp/*/uad.mp3$media
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
@@ -153,7 +158,7 @@ newstatesman.com###donate-toggle
 boards.4chan.org###bannerCnt
 4chan.org###boardNavDesktopFoot
 ||fufufu.moe/js/bee.js$script,first-party
-archive.4plebs.org,archive.loveisover.me,archive.nyafuu.org,desuarchive.org,cuckchan.org,4ch.be,arch.b4k.co,fireden.net,archived.moe,archiveofsins.com,thebarchive.com,rbt.asia##.btn-toggle-post:style(background-color:#282A2E !important;color:#EEEEEE!important;border-color:#282A2E !important;)
+archive.4plebs.org,archive.loveisover.me,archive.nyafuu.org,desuarchive.org,cuckchan.org,4ch.be,arch.b4k.co,fireden.net,archived.moe,archiveofsins.com,thebarchive.com,rbt.asia##body.midnight button.btn-toggle-post:style(background-color:#282A2E !important;color:#EEEEEE!important;border-color:#282A2E !important;)
 
 !#############################################################################!
 ! wikia script fractions
