@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-16
+! Date: 2017-11-20
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -581,6 +581,10 @@
 ||greatoffer4upgrades.date$important
 ||embed.air.tv^$third-party
 ||media.complex.com^$third-party
+||springboardplatform.com$important
+||redonetype.com$important
+||gorillanation.com$important
+||evolveplatform.net$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -775,7 +779,7 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/api/*/typing$xmlhttprequest,first-party
-||discordapp.com/*/widget.json$xmlhttprequest,third-party,important,domain=~discordapp.net|~discordapp.com|~discord.gg
+||discordapp.com/*/widget.json$xmlhttprequest,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ! Curse logs your IP
 ||curse.com^$important
