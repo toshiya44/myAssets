@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-20
+! Date: 2017-11-23
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -585,6 +585,10 @@
 ||redonetype.com$important
 ||gorillanation.com$important
 ||evolveplatform.net$important
+||atgsvcs.com$important
+||estara.com$important
+||rnengage.com$important
+||custhelp.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1163,7 +1167,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||twitter.com^$important,~first-party
 ||ads-twitter.com$important
 ||o.twimg.com$important
-||ton.twimg.com$important
+!||ton.twimg.com$important
 ||twimg.com/*/proxy.jpg$important
 ||twitter.com/*/trends$important
 ||twitter.com/*/toast_poll$important
@@ -1497,7 +1501,8 @@ https:*_ad_$badfilter
 |https:*^ad^$badfilter
 |https:*^ad-$badfilter
 ^ad^$badfilter
-!
+! ||asia^$third-party,xmlhttprequest found in: RUS: RU AdList
+||asia^$third-party,xmlhttprequest,badfilter
 ! --------------------------------fragments---------------------------------- !
 ! fragments that doesn't really belong in other sections.
 ! may case false positives. Let me know if you want me to move them elsewhere.
