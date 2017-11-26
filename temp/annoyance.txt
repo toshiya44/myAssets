@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-11-12
+! Date: 2017-11-26
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -11,8 +11,10 @@
 ##.donate-banner
 ###donate-banner
 
+!reddit.com###chat
 reddit.com##.grippy
 reddit.com##.hohoho
+reddit.com##.giftgold
 reddit.com###header-img
 reddit.com##.promotedlink
 reddit.com##.hohoho-header
@@ -26,8 +28,9 @@ reddit.com##.listingsignupbar
 reddit.com##.give-gold-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
-reddit.com##[data-author="PCMRBot"]
-reddit.com##[data-author="AutoModerator"]
+!reddit.com##[data-author="PCMRBot"]
+!reddit.com##[data-author="AutoModerator"]
+!reddit.com##blockquote:style(color:green !important;)
 
 github.com##.js-notice
 anidb.net###layout-hint
@@ -63,6 +66,8 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 ||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
 
+||abs.twimg.com/k/en/5.pages_who_to_follow.en.$script
+
 imgur.com###side-gallery
 imgur.com###cta-container
 ||imgur.com/gallery/hot$important
@@ -78,6 +83,7 @@ kissmanga.com##a[href="#"]
 ||kissanime.*/Scripts/google.js$script,first-party
 ||kissanime.ru/Content/images/tpl_box_shading2.png$image
 
+discordapp.com##.notice
 ||discordapp.com/api/v6/games
 ||discordapp.com/games/*$important
 ||discordapp.com/avatars/*.gif$first-party
@@ -130,6 +136,7 @@ pixiv.net##.popular-introduction-overlay
 ! yes, this would break cross site payments.
 ! However, due to it's tracking potential, it's worth it to block it
 ! until you're actually about to make a purchase. 
+||flattr.com^$third-party,important
 ||paypal.com$third-party,important
 ||paypalobjects.com$third-party,important,domain=~paypal.com
 
@@ -140,14 +147,17 @@ wikipedia.org###wlm-banner
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
 
 ||reddit.com/api/multi/mine$important
+!||reddit.com/chat/minimize$inline-script
+||reddit.com/user/*/about.json$xmlhttprequest,important
+!||redditstatic.com/_chat*.js
+!||redditstatic.com/desktop2x/Chat*.js$script
 ||redditstatic.com/author-tooltip.*$important
 ||redditstatic.com/sprite-author-tooltip.*$important
-||reddit.com/user/*/about.json$xmlhttprequest,important
 
 ! ??
 ||cdn.sstatic.net/Js/full-anon.en.js$script
-||bbthat.com/assets/v1.4.0/that.js$script,domain=www.bloomberg.com
-||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=www.bloomberg.com
+||bbthat.com/assets/v1.4.0/that.js$script,domain=bloomberg.com
+||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=bloomberg.com
 
 newstatesman.com###donate
 newstatesman.com###donate-toggle
@@ -167,6 +177,9 @@ support.microsoft.com##.content-survey
 
 ! this was required for dl to work, last time i tried
 !@@||downloader.disk.yandex.ru^$domain=yadi.sk
+
+medium.com##.postActionsBar
+medium.com##.u-bottom0.u-fixed.u-sizeFullWidth
 
 !#############################################################################!
 ! wikia script fractions
