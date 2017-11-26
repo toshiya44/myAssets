@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-23
+! Date: 2017-11-26
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -589,6 +589,12 @@
 ||estara.com$important
 ||rnengage.com$important
 ||custhelp.com$important
+||content-ad.net^$important
+||hotjar.com$important
+||7dee28afeb8c939d8.com$important
+||oclasrv.com$important
+||bitcasino.io$important
+||pubnub.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -826,10 +832,16 @@ dailymail.co.uk##.has-button-share-facebook
 ||nbcuni.com$important
 ||gamer-network.net$important,third-party
 
+wordpress.com##.wpcnt
+wordpress.com##.wpmrec.wpa
 wordpress.com###wordads-preview-parent
 ||pixel.wp.com$important
 ||wordpress.com/pinghub/*$important
 ||wordpress.com/pinghub/*$websocket
+
+||widgets.wp.com/likes/$third-party,badfilter
+||widgets.wp.com/likes/$third-party,domain=~wordpress.com
+
 
 ||unid.go.com$important
 ||go.com/*/DisneyID.js$important
@@ -897,7 +909,6 @@ way2earning.com##a[href*="poptm.com"]
 ||openload.co$object,important
 ||ora.tv$subdocument,important
 ||ooyala.com$subdocument,important
-||anilinkz.*/count.php$important
 
 businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
 businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
@@ -1402,7 +1413,9 @@ hentaihaven.org##script:contains(BetterJsPop)
 
 pantsu.cat###cookie-warning
 
-! ||faye.getstream.io/faye$websocket,domain=kitsu.io
+||anime8.*$important
+||anilinkz.*/count.php$important
+||9anime.is/clear.gif$important,redirect=1x1-transparent.gif
 
 ! --------------------------------MAL filters-------------------------------- !
 
@@ -1468,7 +1481,6 @@ kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##scri
 ||kissmanga.ru$important
 ||kissmanga.ro$important
 ||kissmanga.pro$important
-||anime8.*$important
 
 ||kisshentai.net/Error$script
 ||kisshentai.net/Content/script/swfobject.js$script
@@ -1518,9 +1530,13 @@ __cspreport__
 /sponsor/click.php
 /forbes_welcome.js
 *?zoneid=*$important
+*?zoneid=*$important,popup
 *&zoneid=*$important
+*&zoneid=*$important,popup
 *?zone_id=*$important
+*?zone_id=*$important,popup
 *&zone_id=*$important
+*&zone_id=*$important,popup
 /netseerads.js$script
 /ngx_pagespeed_beacon
 *controller=Optimizely*
