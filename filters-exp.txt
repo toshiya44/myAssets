@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-26
+! Date: 2017-11-27
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -595,6 +595,9 @@
 ||oclasrv.com$important
 ||bitcasino.io$important
 ||pubnub.com$important
+||livehelpnow.net$important
+||clashfun.com$important
+||carbonads.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -877,7 +880,7 @@ mp3juices.cc##iframe[src="tt/r/t/d.html"]
 ||rightstufanime.com$important,third-party
 ||otakumode.com/widget$important,third-party
 
-! just using umatrix for this
+! just using uMatrix for this
 animenewsnetwork.com,animenewsnetwork.cc##.iab
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="click.php"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="4nn.cx"]
@@ -1038,8 +1041,9 @@ google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
 
 ! I think, this will break embeded videos.
-||youtube.com*$third-party,important,domain=~google.com
-||ytimg.com*$important,domain=~youtube.com|~google.com
+! Nevermind, too much breakage within Google's sites as well. Use uMatrix.
+! ||youtube.com*$third-party,important,domain=~google.com|~googlevideo.com
+! ||ytimg.com*$important,domain=~youtube.com|~google.com
 
 ||youtube.com/csi_204$important
 ||youtube.com/ptracking$important
@@ -1157,11 +1161,12 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
-||facebook.*^$third-party,important
-||fbcdn.*^$third-party,important,domain=~facebook.com
-||fb.com^$third-party,important,domain=~facebook.com
+! facebook == instagram
+||facebook.*^$third-party,important,domain=~instagram.com
+||fbcdn.*^$third-party,important,domain=~facebook.com|~instagram.com
+||fb.com^$third-party,important,domain=~facebook.com|~instagram.com
 ||pinterest.com^$third-party,important
-||instagram.com^$third-party,important
+||instagram.com^$third-party,important,domain=~facebook.com
 ||tumblr.com^$third-party,important,domain=~media.tumblr.com
 ||px.srvcs.tumblr.com/impixu?
 ||vk.com^$third-party,important
