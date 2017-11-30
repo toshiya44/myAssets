@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-11-27
+! Date: 2017-11-30
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -598,6 +598,8 @@
 ||livehelpnow.net$important
 ||clashfun.com$important
 ||carbonads.com^$important
+||veohclick.net^$important
+||getupdateff.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -615,8 +617,7 @@
 ! Note: Due to webext API limitations, uBO can't reach scripts executed by 
 !		other addons. So, be careful when you install addons.
 
-coin*.js$script
-miner*.js$script
+/miner*.js$script
 coinhive*.js$important
 coinhive.min.js$important
 /cryptonight.wasm$script
@@ -1396,9 +1397,11 @@ muchohentai.com###__eq2281__
 ||muchohentai.com/*/gapro.js$script
 muchohentai.com##script:inject(noeval.js)
 
-nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
-||nhentai.net/api/_/popunder*$important
+!nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
+!nhentai.net##script:contains(show_popunders)
 ||nhentai.net^$popup
+||nhentai.net/api/_/popunder?$important
+||nhentai.net/api/_/popunder?$important,popup
 
 @@||hentaihaven.org$generichide
 hentaihaven.org##script:contains(Pukka)
