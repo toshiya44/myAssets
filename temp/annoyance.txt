@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-11-26
+! Date: 2017-12-04
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -25,11 +25,12 @@ reddit.com##.listing-chooser
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
 reddit.com##.listingsignupbar
+reddit.com##.pinnable-content
 reddit.com##.give-gold-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
-!reddit.com##[data-author="PCMRBot"]
-!reddit.com##[data-author="AutoModerator"]
+reddit.com##[data-author="PCMRBot"]
+reddit.com##[data-author="AutoModerator"]
 !reddit.com##blockquote:style(color:green !important;)
 
 github.com##.js-notice
@@ -90,9 +91,9 @@ discordapp.com##.notice
 ||discordapp.com/assets/*.worker.js$important
 ||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
 
-||urlchecker.org/ajax/proxy_parser.php$first-party
-||urlchecker.org/ajax/proxy_limit.php$first-party
-||urlchecker.org/*/proxy-checker.js$important
+!||urlchecker.org/ajax/proxy_parser.php$first-party
+!||urlchecker.org/ajax/proxy_limit.php$first-party
+!||urlchecker.org/*/proxy-checker.js$important
 
 gelbooru.com###motdTempPermanent
 ||sankakucomplex.com/logo.png$image
@@ -155,7 +156,7 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 ||redditstatic.com/sprite-author-tooltip.*$important
 
 ! ??
-||cdn.sstatic.net/Js/full-anon.en.js$script
+!||cdn.sstatic.net/Js/full-anon.en.js$script
 ||bbthat.com/assets/v1.4.0/that.js$script,domain=bloomberg.com
 ||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=bloomberg.com
 
@@ -180,6 +181,7 @@ support.microsoft.com##.content-survey
 
 medium.com##.postActionsBar
 medium.com##.u-bottom0.u-fixed.u-sizeFullWidth
+instagram.com##._6in6f._j8mem
 
 !#############################################################################!
 ! wikia script fractions
