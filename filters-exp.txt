@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-04
+! Date: 2017-12-06
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.18+
@@ -205,6 +205,7 @@
 ||sharethrough.com$important
 ||openx.net$important
 ||truste.com$important
+||digitru.st$important
 ||tyxo.com$important
 ||outbrain.com$important
 ||rackcdn.com$important
@@ -601,6 +602,17 @@
 ||veohclick.net^$important
 ||getupdateff.com^$important
 ||addroplet.com^$important
+||adsrvr.org$important
+||teads.tv$important
+||spot.im$important
+||vemba.io$important
+||proper.io$important
+||carambo.la$important
+||adiode.com$important
+||pixel.watch$important
+||xpanama.net$important
+||tout.com$important
+||analytics.tout.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
