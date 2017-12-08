@@ -1,12 +1,12 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-06
+! Date: 2017-12-08
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.14.18+
-! Recommended: Firefox 57+ (Release/Dev)
-!              Waterfox 55+ (Release)
-!              uBlock Origin Legacy 1.14.18+
+! Requirement: uBlock Origin 1.14.20+
+! Recommended: Firefox 58+ (Release/Dev)
+!              Waterfox 56+ (Release)
+!              uBlock Origin Legacy 1.14.20+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -613,6 +613,11 @@
 ||xpanama.net$important
 ||tout.com$important
 ||analytics.tout.com$important
+||getjaco.com$important
+||adjust.com$important
+||firebase.com$important
+||leanplum.com$important
+||intercom.io$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -631,8 +636,8 @@
 !		other addons. So, be careful when you install addons.
 
 /miner*.js$script
-coinhive*.js$important
-coinhive.min.js$important
+/coinhive*.js$important
+/coinhive.min.js$important
 /cryptonight.wasm$script
 /hive.js$script
 /c-hive.js$script
@@ -682,8 +687,12 @@ coinhive.min.js$important
 ||bf-ad.net$important
 ||contentpass.net$important
 ||shekel.link$important
-||webmine.cz$important,third-party
+||webmine.cz$important
 ||monero-miner.net$important
+||authedmine.com$important,third-party
+||api.inwemo.com$important
+||rocks.io$important
+||adminer.com$important
 
 ! scam/phishing
 ! https://redd.it/74sj7q
@@ -711,8 +720,6 @@ cointelegraph.com##iframe[src*="/img/banners/"]
 ||cointelegraph.com/storage/uploads/view$image
 ||cointelegraph.com/assets/js/script.js$important
 
-! ||authedmine.com
-
 ! -----------------------------------Misc------------------------------------ !
 
 msn.com##.paddle
@@ -735,6 +742,7 @@ answers.yahoo.com###yset-upsell-div
 secure.politico.com##.story-related
 
 imgur.com##.social-icon
+||p.imgur.com$important
 ||sen.imgur.com$important
 ||s.imgur.com$important,third-party
 ||i.imgur.com/*.jpg$inline-script,important
@@ -751,6 +759,7 @@ tinypic.com##script:contains(PopSettings)
 tinypic.com##script:contains(ClientProfilingLog)
 
 reddit.com###ad_1
+reddit.com###ad_2
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
 reddit.com##.geopopularbar
@@ -763,15 +772,18 @@ reddit.com##.read-next-container
 reddit.com##.trending-subreddits
 ||e.reddit.com$important
 ||reddit.com/static/pixel.png
+||stats.redditmedia.com$important
 ||pixel.redditmedia.com$important
+||redditmedia.com/gtm/$important
+||redditmedia.com/ads$important
+||redditmedia.com/ads$important,subdocument
+||redditstatic.com/moat$important
+||redditstatic.com/js/prebid.js$important
+||redditstatic.com/recommended-link.*.js$important
+||reddit.com/web/log/
+||reddit.com/web/log/error.json$important
 ||reddit.com/api/request_promo$important
 ||reddit.com/api/request_recommended_link$important
-||redditstatic.com/moat$important
-||redditstatic.com/recommended-link.*.js$important
-||redditstatic.com/js/prebid.js$important
-||redditmedia.com/ads$subdocument,important
-||redditmedia.com/gtm/$important
-! ||amazonaws.com/redditstatic$important
 
 ||kiwifarms.net/proxy.php$important
 ||analytics.slashdotmedia.com$important
@@ -829,6 +841,7 @@ mozilla.org###announce-geoip-suggestion
 ! ||kkapsner.de
 ! ||fasezero.com
 ! ||redditenhancementsuite.com
+! ||analytics.feeder.co
 
 ||cloudfront.net^$domain=moviex.in|moviex.org
 ||cloudflare.com^$domain=moviex.in|moviex.org
@@ -1122,6 +1135,7 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||error.facebook.com$important
 ||pixel.facebook.com$important
 ||facebook.com/ads
+||facebook.com/plugins/like.php$important
 ||facebook.com/*/record_basic_metrics.php$important
 ||facebook.com/ajax/ads$important
 ||facebook.com/ajax/bz$important
