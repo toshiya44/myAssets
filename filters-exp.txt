@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-08
+! Date: 2017-12-09
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.20+
@@ -618,6 +618,7 @@
 ||firebase.com$important
 ||leanplum.com$important
 ||intercom.io$important
+||ml-attr.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -789,11 +790,12 @@ reddit.com##.trending-subreddits
 ||analytics.slashdotmedia.com$important
 ||slashdotmedia.com/www/delivery/lg.php$important
 
-||angelfire.com$important,third-party
-||fiverr.com$important,third-party
-||fiverrcdn.com$important,third-party,domain=~fiverr.com
-||danshihack.com$important,third-party
-||fukugan.com$important,third-party
+! likely obsolete/false flagged
+!||angelfire.com$important,third-party
+!||fiverr.com$important,third-party
+!||fiverrcdn.com$important,third-party,domain=~fiverr.com
+!||danshihack.com$important,third-party
+!||fukugan.com$important,third-party
 
 ||fls-na.amazon.ca^$important
 ||amazon-adsystem.com$important
@@ -908,11 +910,10 @@ mp3juices.cc##iframe[src="tt/r/t/d.html"]
 ||rightstufanime.com$important,third-party
 ||otakumode.com/widget$important,third-party
 
-! just using uMatrix for this
 animenewsnetwork.com,animenewsnetwork.cc##.iab
-animenewsnetwork.com,animenewsnetwork.cc##a[href*="click.php"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="4nn.cx"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="4NN.cx"]
+animenewsnetwork.com,animenewsnetwork.cc##a[href*="click.php"]
 animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
 ||animenewsnetwork.cc/images/s/$image
 ||animenewsnetwork.com/images/s/$image
@@ -920,13 +921,13 @@ animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
 ||animenewsnetwork.com/logger.pageperf$important
 
 ! covers the page with inline ads
-||animenewsnetwork.cc/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
-||animenewsnetwork.com/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
 ||animenewsnetwork.cc/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
 ||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
+||animenewsnetwork.cc/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
+||animenewsnetwork.com/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
 
-way2earning.com##a[href*="adoverlay.net"]
 way2earning.com##a[href*="poptm.com"]
+way2earning.com##a[href*="adoverlay.net"]
 ||way2earning.com/xmlrpc.php$important
 
 ||c.msn.com$important
@@ -950,7 +951,7 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 ! generic cosmetic filters hiding random stuff.
 @@||adblock.mozdev.org$generichide
 
-! The urls can have long string of characters that sometimes get blocked by fragment filters
+! The URLs can have long string of characters that sometimes get blocked by fragment filters
 @@||mega.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
 @@||mega.co.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
 @@||userstorage.mega.co.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
@@ -979,7 +980,7 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 ||stats.storied.co/trck.php$important
 
 ! these websites are part of a beacon tracking program.
-! example tracking url: https://www.pitchfork.com/infinityid/beacon?id=UUID
+! example tracking URL: https://www.pitchfork.com/infinityid/beacon?id=UUID
 ||condenastdigital.com$third-party
 ||wmagazine.com$third-party
 ||vogue.com$third-party
@@ -1004,8 +1005,7 @@ pastebin.com###notice
 pastebin.com###steadfast
 ||pastebin.com/i/steadfast_1.png$image
 
-||dapxl.com/dapx.gif$important
-
+||dapxl.com$important
 ||pixel.archive.is$important
 ||pixel.archive.fo$important
 
@@ -1065,13 +1065,8 @@ google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.
 ! This might break a lot of sites.
 ! ||fonts.googleapis.com$stylesheet,domain=~google.com|~youtube.com
 
-! the request is sometimes blocked by url fragment filters
+! the request is sometimes blocked by URL fragment filters
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
-
-! I think, this will break embeded videos.
-! Nevermind, too much breakage within Google's sites as well. Use uMatrix.
-! ||youtube.com*$third-party,important,domain=~google.com|~googlevideo.com
-! ||ytimg.com*$important,domain=~youtube.com|~google.com
 
 ||youtube.com/csi_204$important
 ||youtube.com/ptracking$important
@@ -1135,26 +1130,25 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||error.facebook.com$important
 ||pixel.facebook.com$important
 ||facebook.com/ads
+||facebook.com/rtc/callability$important
 ||facebook.com/plugins/like.php$important
 ||facebook.com/*/record_basic_metrics.php$important
-||facebook.com/ajax/ads$important
 ||facebook.com/ajax/bz$important
-||facebook.com/ajax/browse/null_state.php$important
-||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$important
-||facebook.com/ajax/mutual_friends/tooltip.php$important
+||facebook.com/ajax/ads$important
 ||facebook.com/ajax/presence/*$important
+||facebook.com/ajax/browse/null_state.php$important
+||facebook.com/ajax/mutual_friends/tooltip.php$important
+||facebook.com/ajax/pagelet/generic.php/WebEgoPane*$important
 ||facebook.com/pages/presence/*$important
-||facebook.com/pages/show_live_insights/?trigger_surface*$important
 ||facebook.com/pages/profile/cover_video_data/*$important
+||facebook.com/pages/show_live_insights/?trigger_surface*$important
 ||facebook.com/pubcontent/feed_chaining$important
 ||facebook.com/video/autoplay$important
 ||facebook.com/video/channel/view/async/*/?caller=channel_view_from_page_video_tab$important
-||facebook.com/rtc/callability$important
 ||fbcdn.net/safe_image.php$important
 ||fbcdn.net/security/hsts-pixel.gif$important
 ||facebook.com/security/hsts-pixel.gif$important
 ||ct-m-fbx.fbsbx.com$important
-||facebook.com/common/referer_frame.php$important
 
 ||facebook.com/xti.php$important
 ||facebook.com/*/logging/$important
@@ -1183,10 +1177,6 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 
 ! need this to view page stats and other stuff
 @@||graph.facebook.com/*?access_token=$first-party
-
-! blocking this breaks file download
-! ||fbsbx.com$important
-! ||staticxx.facebook.com/common/referer_frame.php$important
 
 ! ---------------------------------
 ! Remove third-party ""social networking"" sites.
@@ -1340,7 +1330,7 @@ gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
 @@||gelbooru.com/script/miscJs.js?$script,first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
-! due to url fragment filters, images with /ad/ in the url gets blocked.
+! due to URL fragment filters, images with /ad/ in the URL gets blocked.
 @@/ad/$image,domain=gelbooru.com|konachan.com|sankakucomplex.com|yande.re|baka-tsuki.org
 
 gelbooru.com#@#span[class]:last-child > a img[src]
