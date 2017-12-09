@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-12-08
+! Date: 2017-12-09
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -11,7 +11,25 @@
 ##.donate-banner
 ###donate-banner
 
-!reddit.com###chat
+github.com##.js-notice
+anidb.net###layout-hint
+wikipedia.org###wlm-banner
+symbolab.com##.tooltipster-box
+motherboard.vice.com##.up-next
+giphy.com##.festive-mode-toggle
+wordpress.com###prompt-new-editor
+github.com##.js-notice.octofication
+robert.ocallahan.org##.body-fauxcolumns
+web.archive.org###__wb_record_content_done
+encyclopediadramatica.rs##a[href*="torguard.net"]
+
+addons.mozilla.org##.avatar
+addons.mozilla.org###promos
+mozilla.org##.notification-banner
+addons.mozilla.org###try-new-frontend
+developer.mozilla.org##.notification-tray
+stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
+
 reddit.com##.grippy
 reddit.com##.hohoho
 reddit.com##.giftgold
@@ -33,22 +51,19 @@ reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
 !reddit.com##blockquote:style(color:green !important;)
 
-github.com##.js-notice
-anidb.net###layout-hint
-symbolab.com##.tooltipster-box
-motherboard.vice.com##.up-next
-giphy.com##.festive-mode-toggle
-wordpress.com###prompt-new-editor
-github.com##.js-notice.octofication
-robert.ocallahan.org##.body-fauxcolumns
-web.archive.org###__wb_record_content_done
-encyclopediadramatica.rs##a[href*="torguard.net"]
+||reddit.com/api/multi/mine$important
+||reddit.com/user/*/about.json$xmlhttprequest,important
+||redditstatic.com/author-tooltip.*$important
+||redditstatic.com/sprite-author-tooltip.*$important
 
-addons.mozilla.org##.avatar
-addons.mozilla.org###promos
-mozilla.org##.notification-banner
-addons.mozilla.org###try-new-frontend
-developer.mozilla.org##.notification-tray
+reddit.com###chat
+reddit.com###chat+span
+||chat.redditmedia.com$important
+||sendbird.reddit.com$important
+||reddit.com/chat$important
+||reddit.com/chat/minimize$inline-script
+||redditstatic.com/_chat*.js$script,important
+||redditstatic.com/desktop2x/Chat*.js$script,important
 
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
@@ -144,24 +159,8 @@ pixiv.net##.popular-introduction-overlay
 ||paypal.com$third-party,important
 ||paypalobjects.com$third-party,important,domain=~paypal.com
 
-! semi transparent text + colorful bg = eyecancer
+! semi transparent text bg + colorful bg img = eyecancer
 ||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
-
-wikipedia.org###wlm-banner
-stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
-
-||reddit.com/api/multi/mine$important
-!||reddit.com/chat/minimize$inline-script
-||reddit.com/user/*/about.json$xmlhttprequest,important
-!||redditstatic.com/_chat*.js
-!||redditstatic.com/desktop2x/Chat*.js$script
-||redditstatic.com/author-tooltip.*$important
-||redditstatic.com/sprite-author-tooltip.*$important
-
-! ??
-!||cdn.sstatic.net/Js/full-anon.en.js$script
-||bbthat.com/assets/v1.4.0/that.js$script,domain=bloomberg.com
-||bbthat.com/assets/v1.4.0/that.css$stylesheet,domain=bloomberg.com
 
 newstatesman.com###donate
 newstatesman.com###donate-toggle
@@ -178,9 +177,6 @@ archive.4plebs.org,archive.loveisover.me,archive.nyafuu.org,desuarchive.org,cuck
 support.microsoft.com##.survey-tab
 support.microsoft.com##.skylight-entry
 support.microsoft.com##.content-survey
-
-! this was required for dl to work, last time i tried
-!@@||downloader.disk.yandex.ru^$domain=yadi.sk
 
 medium.com##.postActionsBar
 medium.com##.u-bottom0.u-fixed.u-sizeFullWidth
