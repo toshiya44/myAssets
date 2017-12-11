@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-09
+! Date: 2017-12-11
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.20+
@@ -619,6 +619,8 @@
 ||leanplum.com$important
 ||intercom.io$important
 ||ml-attr.com$important
+||onetrust.com$important
+||posttv.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -763,16 +765,23 @@ reddit.com###ad_1
 reddit.com###ad_2
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
+reddit.com##.promotedlink
 reddit.com##.geopopularbar
+reddit.com##.ProfileVoiceAd
 reddit.com##.survey-overlay
+reddit.com##.listing-chooser
 reddit.com##.dfp-ad-container
 reddit.com##.commentsignupbar
 reddit.com##.listingsignupbar
 reddit.com###siteTable_organic
 reddit.com##.read-next-container
 reddit.com##.trending-subreddits
+reddit.com##.TrendingProfilesSidebar
 ||e.reddit.com$important
 ||reddit.com/static/pixel.png
+||reddit.com/errors$important
+||reddit.com/timings/rum$important
+||oops.redditmedia.com$important
 ||stats.redditmedia.com$important
 ||pixel.redditmedia.com$important
 ||redditmedia.com/gtm/$important
@@ -780,22 +789,16 @@ reddit.com##.trending-subreddits
 ||redditmedia.com/ads$important,subdocument
 ||redditstatic.com/moat$important
 ||redditstatic.com/js/prebid.js$important
-||redditstatic.com/recommended-link.*.js$important
+||redditstatic.com/recommended-link.$important
 ||reddit.com/web/log/
 ||reddit.com/web/log/error.json$important
 ||reddit.com/api/request_promo$important
 ||reddit.com/api/request_recommended_link$important
+||reddit.com/api/trending_profiles.$important
 
 ||kiwifarms.net/proxy.php$important
 ||analytics.slashdotmedia.com$important
 ||slashdotmedia.com/www/delivery/lg.php$important
-
-! likely obsolete/false flagged
-!||angelfire.com$important,third-party
-!||fiverr.com$important,third-party
-!||fiverrcdn.com$important,third-party,domain=~fiverr.com
-!||danshihack.com$important,third-party
-!||fukugan.com$important,third-party
 
 ||fls-na.amazon.ca^$important
 ||amazon-adsystem.com$important
@@ -845,13 +848,11 @@ mozilla.org###announce-geoip-suggestion
 ! ||redditenhancementsuite.com
 ! ||analytics.feeder.co
 
-||cloudfront.net^$domain=moviex.in|moviex.org
-||cloudflare.com^$domain=moviex.in|moviex.org
-
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
 
+wired.com##.hide-med
 dailymail.co.uk##.has-button-share-facebook
 ||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
 ||dailymail.co.uk/weather.html?$important
@@ -864,6 +865,20 @@ dailymail.co.uk##.has-button-share-facebook
 ||newsvine.com$important,third-party
 ||nbcuni.com$important
 ||gamer-network.net$important,third-party
+||fonts.staticworld.net/dli6mbh.js$important
+
+independent.co.uk##.inline-block-left
+washingtonpost.com##.top-sharebar-wrapper
+||targeting.washpost.nile.works$important
+||recommendation-hybrid.wpdigital.net$important
+||recommendation-newsletter.wpdigital.net$important
+||scripts.dailymail.co.uk/static/videoplayer$important
+
+businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
+businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
+||businessinsider.jp$inline-script
+||businessinsider.com$inline-script
+||businessinsider.jp/asset/common/app/popular_posts.js$script,first-party
 
 wordpress.com##.wpcnt
 wordpress.com##.wpmrec.wpa
@@ -874,7 +889,6 @@ wordpress.com###wordads-preview-parent
 
 ||widgets.wp.com/likes/$third-party,badfilter
 ||widgets.wp.com/likes/$third-party,domain=~wordpress.com
-
 
 ||unid.go.com$important
 ||go.com/*/DisneyID.js$important
@@ -942,12 +956,6 @@ way2earning.com##a[href*="adoverlay.net"]
 ||ora.tv$subdocument,important
 ||ooyala.com$subdocument,important
 
-businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
-businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
-||businessinsider.jp$inline-script
-||businessinsider.com$inline-script
-||businessinsider.jp/asset/common/app/popular_posts.js$script,first-party
-
 ! generic cosmetic filters hiding random stuff.
 @@||adblock.mozdev.org$generichide
 
@@ -955,10 +963,6 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 @@||mega.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
 @@||mega.co.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
 @@||userstorage.mega.co.nz$xmlhttprequest,domain=mega.nz|mega.co.nz
-
-! request got blocked due to fragments
-@@||hosts-file.net/ad_servers.txt
-@@||who.is/api$xmlhttprequest,first-party
 
 ||.gravity.com/*$important
 ||cdn.insights.gravity.com/*$object,important
@@ -997,9 +1001,6 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 ||bonappetit.com$third-party
 ||architecturaldigest.com$third-party
 ||allure.com$third-party
-
-wired.com##.hide-med
-||fonts.staticworld.net/dli6mbh.js$important
 
 pastebin.com###notice
 pastebin.com###steadfast
