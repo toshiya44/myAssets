@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-12-09
+! Date: 2017-12-11
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -31,30 +31,24 @@ developer.mozilla.org##.notification-tray
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
 
 reddit.com##.grippy
-reddit.com##.hohoho
 reddit.com##.pinned
+reddit.com##.hohoho
 reddit.com##.giftgold
 reddit.com###header-img
-reddit.com##.promotedlink
 reddit.com##.hohoho-header
 reddit.com##.res-show-link
 reddit.com##.embed-comment
 reddit.com##.multi-selector
-reddit.com##.listing-chooser
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
-reddit.com##.listingsignupbar
 reddit.com##.give-gold-button
+reddit.com##.crosspost-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
+
 reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
 !reddit.com##blockquote:style(color:green !important;)
-
-||reddit.com/api/multi/mine$important
-||reddit.com/user/*/about.json$xmlhttprequest,important
-||redditstatic.com/author-tooltip.*$important
-||redditstatic.com/sprite-author-tooltip.*$important
 
 reddit.com###chat
 reddit.com###chat+span
@@ -64,6 +58,12 @@ reddit.com###chat+span
 ||reddit.com/chat/minimize$inline-script
 ||redditstatic.com/_chat*.js$script,important
 ||redditstatic.com/desktop2x/Chat*.js$script,important
+
+||redditstatic.com/avatars/$important
+||reddit.com/api/multi/mine$important
+||reddit.com/user/*/about.json$important
+||redditstatic.com/author-tooltip.$important
+||redditstatic.com/sprite-author-tooltip.$important
 
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
@@ -130,8 +130,6 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-||scripts.dailymail.co.uk/static/videoplayer$first-party,important
-
 ||giphy.com/static/js/site/third_party.js$script,first-party
 ||giphy.com/static/js/site/footer.js$script,first-party
 ||media.giphy.com/channel_assets$first-party
@@ -156,10 +154,6 @@ pixiv.net##.popular-introduction-overlay
 ! semi transparent text bg + colorful bg img = eyecancer
 ||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
 
-newstatesman.com###donate
-newstatesman.com###donate-toggle
-||verdict.co.uk/brexit-tracker-embed/*$important
-
 ||piriform.com/scripts/modernizr-custom.js$script
 
 boards.4chan.org###blotter
@@ -175,6 +169,10 @@ support.microsoft.com##.content-survey
 medium.com##.postActionsBar
 medium.com##.u-bottom0.u-fixed.u-sizeFullWidth
 instagram.com##._6in6f._j8mem
+
+newstatesman.com###donate
+newstatesman.com###donate-toggle
+||verdict.co.uk/brexit-tracker-embed/*$important
 
 !#############################################################################!
 ! wikia script fractions
