@@ -43,7 +43,6 @@ reddit.com##.listing-chooser
 reddit.com###thing_t3_44tasx
 reddit.com##.goldvertisement
 reddit.com##.listingsignupbar
-reddit.com##.pinnable-content
 reddit.com##.give-gold-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
@@ -109,10 +108,6 @@ discordapp.com##.notice
 ||discordapp.com/assets/*.worker.js$important
 ||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
 
-!||urlchecker.org/ajax/proxy_parser.php$first-party
-!||urlchecker.org/ajax/proxy_limit.php$first-party
-!||urlchecker.org/*/proxy-checker.js$important
-
 gelbooru.com###motdTempPermanent
 ||sankakucomplex.com/logo.png$image
 ||gelbooru.com/script/try.js$important
@@ -134,9 +129,7 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-independent.co.uk##.inline-block-left
 ||scripts.dailymail.co.uk/static/videoplayer$first-party,important
-||recommendation-newsletter.wpdigital.net/Newsletter/api/newsletter$xmlhttprequest
 
 ||giphy.com/static/js/site/third_party.js$script,first-party
 ||giphy.com/static/js/site/footer.js$script,first-party
