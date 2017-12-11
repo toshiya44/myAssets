@@ -1,6 +1,6 @@
 {
-  "timeStamp": 1506400000000,
-  "version": "1.14.11",
+  "timeStamp": 1513020700000,
+  "version": "1.14.21",
   "userSettings": {
     "advancedUserEnabled": true,
     "alwaysDetachLogger": false,
@@ -10,43 +10,40 @@
     "colorBlindFriendly": false,
     "contextMenuEnabled": true,
     "dynamicFilteringEnabled": true,
-    "externalLists": "https://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://filters.adtidy.org/extension/chromium/filters/6.txt\nhttps://filters.adtidy.org/extension/chromium/filters/7.txt\nhttps://filters.adtidy.org/extension/chromium/filters/9.txt\nhttps://github.com/toshiya44/myAssets/raw/master/imports/abp-jp-fragment.txt\nhttps://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt\nhttps://mirror1.malwaredomains.com/files/immortal_domains.txt\nhttps://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt",
+    "externalLists": "https://easylist-downloads.adblockplus.org/bitblock.txt\nhttps://filters.adtidy.org/extension/chromium/filters/15.txt\nhttps://filters.adtidy.org/extension/chromium/filters/4.txt\nhttps://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt\nhttps://mirror1.malwaredomains.com/files/immortal_domains.txt\nhttps://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt\nhttps://raw.githubusercontent.com/StevenBlack/hosts/master/hosts\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt\nhttps://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt",
     "firewallPaneMinimized": false,
     "hyperlinkAuditingDisabled": true,
-    "ignoreGenericCosmeticFilters": false,
+    "ignoreGenericCosmeticFilters": true,
     "largeMediaSize": 50,
     "parseAllABPHideFilters": true,
     "prefetchingDisabled": true,
-    "requestLogMaxEntries": 1000,
+    "requestLogMaxEntries": 500,
     "showIconBadge": false,
     "tooltipsDisabled": false,
     "webrtcIPAddressHidden": true
   },
   "selectedFilterLists": [
+    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt",
     "https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt",
     "https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt",
-    "https://filters.adtidy.org/extension/chromium/filters/9.txt",
     "https://filters.adtidy.org/extension/chromium/filters/4.txt",
     "https://filters.adtidy.org/extension/chromium/filters/15.txt",
-    "https://filters.adtidy.org/extension/chromium/filters/7.txt",
-    "https://filters.adtidy.org/extension/chromium/filters/6.txt",
-    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt",
+    "https://easylist-downloads.adblockplus.org/bitblock.txt",
     "https://mirror1.malwaredomains.com/files/immortal_domains.txt",
-    "VIE-0",
+    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt",
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "TUR-0",
     "SWE-0",
     "SVN-0",
     "spa-0",
+    "spa-1",
     "RUS-0",
     "RUS-2",
-    "POL-0",
     "NLD-0",
     "LVA-0",
-    "KOR-1",
     "KOR-0",
-    "KOR-2",
+    "JPN-1",
     "ITA-0",
-    "ITA-1",
     "ISR-0",
     "ISL-0",
     "IDN-0",
@@ -57,13 +54,10 @@
     "DEU-0",
     "CZE-0",
     "CHN-0",
-    "CHN-2",
     "BGR-0",
     "ara-0",
     "plowe-0",
-    "mvps-0",
     "hphosts",
-    "dpollock-0",
     "adguard-annoyance",
     "spam404-0",
     "disconnect-malware",
@@ -74,28 +68,29 @@
     "adguard-spyware",
     "easylist",
     "adguard-generic",
+    "awrl-0",
     "ublock-unbreak",
+    "ublock-abuse",
     "ublock-privacy",
     "ublock-experimental",
     "ublock-badware",
     "ublock-filters",
-    "user-filters",
-    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt"
+    "user-filters"
   ],
-  "hiddenSettingsString": "assetFetchTimeout 30\nautoUpdateAssetFetchPeriod 120\nautoUpdatePeriod 7\nignoreRedirectFilters false\nignoreScriptInjectFilters false\nmanualUpdateAssetFetchPeriod 2000\npopupFontSize unset\nsuspendTabsUntilReady false\nuserResourcesLocation unset",
+  "hiddenSettingsString": "assetFetchTimeout 30\nautoUpdateAssetFetchPeriod 120\nautoUpdatePeriod 7\nignoreRedirectFilters false\nignoreScriptInjectFilters false\nmanualUpdateAssetFetchPeriod 2000\npopupFontSize unset\nsuspendTabsUntilReady true\nuserResourcesLocation unset",
   "netWhitelist": "behind-the-scene",
   "dynamicFilteringString": "",
   "urlFilteringString": "",
-  "hostnameSwitchesString": "no-remote-fonts: * true",
+  "hostnameSwitchesString": "no-remote-fonts: * true\nno-csp-reports: * true",
   "userFilters": "",
   "filterLists": {
+    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt": {
+      "off": false
+    },
     "https://raw.githubusercontent.com/toshiya44/myAssets/master/filters-exp.txt": {
       "off": false
     },
     "https://raw.githubusercontent.com/toshiya44/myAssets/master/temp/annoyance.txt": {
-      "off": false
-    },
-    "https://filters.adtidy.org/extension/chromium/filters/9.txt": {
       "off": false
     },
     "https://filters.adtidy.org/extension/chromium/filters/4.txt": {
@@ -104,19 +99,16 @@
     "https://filters.adtidy.org/extension/chromium/filters/15.txt": {
       "off": false
     },
-    "https://filters.adtidy.org/extension/chromium/filters/7.txt": {
-      "off": false
-    },
-    "https://filters.adtidy.org/extension/chromium/filters/6.txt": {
-      "off": false
-    },
-    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt": {
+    "https://easylist-downloads.adblockplus.org/bitblock.txt": {
       "off": false
     },
     "https://mirror1.malwaredomains.com/files/immortal_domains.txt": {
       "off": false
     },
-    "https://www.fanboy.co.nz/fanboy-vietnam.txt": {
+    "https://github.com/toshiya44/myAssets/raw/master/imports/modified_abp_jpf.txt": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts": {
       "off": false
     },
     "https://adguard.com/filter-rules.html?id=13": {
@@ -131,13 +123,13 @@
     "https://easylist-downloads.adblockplus.org/easylistspanish.txt": {
       "off": false
     },
+    "spa-1": {
+      "off": false
+    },
     "https://easylist-downloads.adblockplus.org/advblock.txt": {
       "off": false
     },
     "https://adguard.com/en/filter-rules.html?id=1": {
-      "off": false
-    },
-    "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt": {
       "off": false
     },
     "https://easylist-downloads.adblockplus.org/easylistdutch.txt": {
@@ -146,19 +138,13 @@
     "https://notabug.org/latvian-list/adblock-latvian/raw/master/lists/latvian-list.txt": {
       "off": false
     },
-    "https://raw.githubusercontent.com/yous/YousList/master/youslist.txt": {
-      "off": false
-    },
     "https://raw.githubusercontent.com/gfmaster/adblock-korea-contrib/master/filter.txt": {
       "off": false
     },
-    "https://www.fanboy.co.nz/fanboy-korean.txt": {
+    "JPN-1": {
       "off": false
     },
     "https://easylist-downloads.adblockplus.org/easylistitaly.txt": {
-      "off": false
-    },
-    "https://dl.dropboxusercontent.com/u/1289327/abpxfiles/filtri.txt": {
       "off": false
     },
     "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt": {
@@ -191,9 +177,6 @@
     "https://easylist-downloads.adblockplus.org/easylistchina.txt": {
       "off": false
     },
-    "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt": {
-      "off": false
-    },
     "http://stanev.org/abp/adblock_bg.txt": {
       "off": false
     },
@@ -203,13 +186,7 @@
     "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
       "off": false
     },
-    "http://winhelp2002.mvps.org/hosts.txt": {
-      "off": false
-    },
     "http://hosts-file.net/.%5Cad_servers.txt": {
-      "off": false
-    },
-    "http://someonewhocares.org/hosts/hosts": {
       "off": false
     },
     "adguard-annoyance": {
@@ -242,7 +219,13 @@
     "adguard-generic": {
       "off": false
     },
+    "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt": {
+      "off": false
+    },
     "assets/ublock/unbreak.txt": {
+      "off": false
+    },
+    "ublock-abuse": {
       "off": false
     },
     "assets/ublock/privacy.txt": {
@@ -258,9 +241,6 @@
       "off": false
     },
     "assets/user/filters.txt": {
-      "off": false
-    },
-    "https://raw.githubusercontent.com/IDKwhattoputhere/uBlock-Filters-Plus/master/uBlock-Filters-Plus.txt": {
       "off": false
     }
   }
