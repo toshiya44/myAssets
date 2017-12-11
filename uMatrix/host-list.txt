@@ -1,4 +1,6 @@
 # Global scope blacklist for uMatrix
+# stevenblack
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # hpHosts https://hosts-file.net/?s=Download
 https://hosts-file.net/ad_servers.txt
 # Exploit
@@ -16,5 +18,5 @@ https://hosts-file.net/mmt.txt
 https://hosts-file.net/hjk.txt
 # Fraud
 https://hosts-file.net/fsa.txt
-# stevenblack
-https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# PUP
+https://hosts-file.net/pup.txt
