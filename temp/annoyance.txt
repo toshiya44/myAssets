@@ -32,6 +32,7 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 
 reddit.com##.grippy
 reddit.com##.hohoho
+reddit.com##.pinned
 reddit.com##.giftgold
 reddit.com###header-img
 reddit.com##.promotedlink
