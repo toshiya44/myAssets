@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-11
+! Date: 2017-12-14
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.20+
@@ -621,6 +621,8 @@
 ||ml-attr.com$important
 ||onetrust.com$important
 ||posttv.com$important
+||antivirustoolext.com$important
+||tooladblockerext.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -778,9 +780,9 @@ reddit.com##.read-next-container
 reddit.com##.trending-subreddits
 reddit.com##.TrendingProfilesSidebar
 ||e.reddit.com$important
-||reddit.com/static/pixel.png
 ||reddit.com/errors$important
 ||reddit.com/timings/rum$important
+||reddit.com/static/pixel.png$important
 ||oops.redditmedia.com$important
 ||stats.redditmedia.com$important
 ||pixel.redditmedia.com$important
@@ -823,7 +825,7 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
 ||discordapp.com/*/track$xmlhttprequest,important
-||discordapp.com/api/*/typing$xmlhttprequest,first-party
+||discordapp.com/api/*/typing$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,important,domain=~discordapp.net|~discordapp.com|~discord.gg
 
 ! Curse logs your IP
@@ -838,7 +840,10 @@ mediafire.com#@#.ico30share
 dropbox.com###shared-link-immediate-signup-modal
 
 addons.mozilla.org###promos
+mozilla.org##.notification-banner
+addons.mozilla.org###try-new-frontend
 mozilla.org###announce-geoip-suggestion
+developer.mozilla.org##.notification-tray
 ||mozilla.org/__cspreport__$important
 
 ! to block add-ons' behind the scene activity.
@@ -872,7 +877,7 @@ washingtonpost.com##.top-sharebar-wrapper
 ||targeting.washpost.nile.works$important
 ||recommendation-hybrid.wpdigital.net$important
 ||recommendation-newsletter.wpdigital.net$important
-||scripts.dailymail.co.uk/static/videoplayer$important
+!||scripts.dailymail.co.uk/static/videoplayer$important
 
 businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
 businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
@@ -1056,7 +1061,6 @@ google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.
 ||google.*/gen_204?$important
 ||google.*/cspreport$important
 ||google.*/logImpressions?$important
-||google.*/jsapi?autoload=*$script,important
 ||mail.google.com/*&view=ad&$important
 ||mail.google.com/mail/*/cleardot.gif$important
 ||mail.google.com/mail/*/jserror?$xmlhttprequest,first-party
@@ -1065,14 +1069,15 @@ google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.
 
 ! This might break a lot of sites.
 ! ||fonts.googleapis.com$stylesheet,domain=~google.com|~youtube.com
+! apparently breaks yt ||google.*/jsapi?autoload=*$script,important
 
 ! the request is sometimes blocked by URL fragment filters
 @@||mail.google.com/mail/$xmlhttprequest,domain=mail.google.com
 
 ||youtube.com/csi_204$important
 ||youtube.com/ptracking$important
-||youtube.com/set_awesome$important
 ||youtube.com/api/stats$important
+||youtube.com/set_awesome$important
 
 ! usually this thing is not used for any good reason
 ||cse.google.com^$important
@@ -1188,7 +1193,8 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ||pinterest.com^$third-party,important
 ||instagram.com^$third-party,important,domain=~facebook.com
 ||tumblr.com^$third-party,important,domain=~media.tumblr.com
-||px.srvcs.tumblr.com/impixu?
+||px.srvcs.tumblr.com/impixu?$important
+||tumblr.com/services/cslog$important
 ||vk.com^$third-party,important
 ||linkedin.com^$third-party
 ||licdn.com^$third-party,domain=~linkedin.com
@@ -1445,7 +1451,7 @@ pantsu.cat###cookie-warning
 ||9anime.is/clear.gif$important,redirect=1x1-transparent.gif
 
 ! --------------------------------MAL filters-------------------------------- !
-
+!
 ! Nice ad placeholders you have there! 
 ! It'd be a shame if someone hides them.
 ! Note: disable service-worker.
@@ -1465,12 +1471,12 @@ myanimelist.net##.banner-header-anime-straming
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
 ||myanimelist.cdn-dena.com/images/footer$image,important
-||myanimelist.cdn-dena.com/images/membership$important
+||myanimelist.cdn-dena.com/images/membership$image,important
 ||myanimelist.net/images/stream_banner/*
 ||myanimelist.cdn-dena.com/signature/*
 
 ! --------------------------------------------------------------------------- !
-
+!
 ! Block fake Kiss sites. https://redd.it/5jtzj9
 ! Not that I support the originals, but the fakes are probably more malicious
 ! with their ads and malware.
