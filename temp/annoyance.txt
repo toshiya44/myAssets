@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-12-11
+! Date: 2017-12-14
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -24,17 +24,15 @@ web.archive.org###__wb_record_content_done
 encyclopediadramatica.rs##a[href*="torguard.net"]
 
 addons.mozilla.org##.avatar
-addons.mozilla.org###promos
-mozilla.org##.notification-banner
-addons.mozilla.org###try-new-frontend
-developer.mozilla.org##.notification-tray
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
 
+reddit.com##.nub
 reddit.com##.grippy
 reddit.com##.pinned
 reddit.com##.hohoho
 reddit.com##.giftgold
 reddit.com###header-img
+reddit.com##.trophy-icon
 reddit.com##.hohoho-header
 reddit.com##.res-show-link
 reddit.com##.embed-comment
@@ -90,10 +88,8 @@ myanimelist.net##script:contains(amzn_assoc_tracking_id)
 imgur.com###side-gallery
 imgur.com###cta-container
 ||imgur.com/gallery/hot$important
-||imgur.com/images/house-cta/cta-icymi-form.png$image
 ||imgur.com/images/OverCapacity*$image,first-party
-
-||tumblr.com/services/cslog$important
+||imgur.com/images/house-cta/cta-icymi-form.png$image
 
 animenewsnetwork.com##fieldset
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
@@ -144,7 +140,7 @@ pixiv.net##.popular-introduction-overlay
 ||nicovideo.cdn.nimg.jp/*/uad.mp3$media
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
-! yes, this would break cross site payments.
+! Yes, this would break cross site payments.
 ! However, due to it's tracking potential, it's worth it to block it
 ! until you're actually about to make a purchase. 
 ||flattr.com^$third-party,important
