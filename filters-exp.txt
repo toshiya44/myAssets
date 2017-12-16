@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-14
+! Date: 2017-12-16
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.20+
@@ -623,6 +623,8 @@
 ||posttv.com$important
 ||antivirustoolext.com$important
 ||tooladblockerext.com$important
+||grvcdn.com$important
+||flipboard.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -884,6 +886,10 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 ||businessinsider.jp$inline-script
 ||businessinsider.com$inline-script
 ||businessinsider.jp/asset/common/app/popular_posts.js$script,first-party
+
+techcrunch.com##.ad-cluster-container
+techcrunch.com##.popped.section.toaster
+||aolcdn.com^$domain=techcrunch.com,important
 
 wordpress.com##.wpcnt
 wordpress.com##.wpmrec.wpa
@@ -1445,6 +1451,7 @@ hentaihaven.org##script:contains(BetterJsPop)
 @@||tsundora.com^$generichide
 
 pantsu.cat###cookie-warning
+||imgur.com^$domain=tsumino.com,important
 
 ||anime8.*$important
 ||anilinkz.*/count.php$important
