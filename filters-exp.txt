@@ -3,10 +3,10 @@
 ! Date: 2017-12-18
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.14.20+
+! Requirement: uBlock Origin 1.14.22+
 ! Recommended: Firefox 58+ (Release/Dev)
 !              Waterfox 56+ (Release)
-!              uBlock Origin Legacy 1.14.20+
+!              uBlock Origin Legacy 1.14.22+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -140,7 +140,6 @@
 ||cricbuzz.com$important
 ||gadgetsnow.com$important
 ||azurewebsites.net$important
-||adglare.net$important
 ||owlanalytics.io$important
 ||liveperson.net$important
 ||4nn.cx$popup,important
@@ -287,7 +286,6 @@
 ||purch.com$important,third-party
 ||onesignal.com$important
 ||onderlea.info$important
-||ekansovi.com$important
 ||ufraton.com$important
 ||perimeterx.net$important
 ||cedexis.com$important
@@ -629,6 +627,9 @@
 ||smcheck.org$important
 ||amgload.net$important
 ||piguiqproxy.com$important
+||ekansovi.com$important
+||adglare.net$important
+||adglare.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1254,6 +1255,11 @@ boards.4chan.org##script:contains(window.upManager)
 
 ! https://github.com/ccd0/4chan-x/issues/1417
 @@||4chan.org^*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval'
+
+!*$third-party,css,domain=4chan.org|4cdn.org|github.io|github.com
+!*$third-party,script,domain=4chan.org|4cdn.org|github.io|github.com
+!*$third-party,websocket,domain=4chan.org|4cdn.org|github.io|github.com
+!*$third-party,xmlhttprequest,domain=4chan.org|4cdn.org|github.io|github.com
 
 desuarchive.org##script:contains(_qevents)
 archiveofsins.com##script:contains(BlockAdblock)
