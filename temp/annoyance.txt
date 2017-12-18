@@ -1,5 +1,5 @@
 ! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-12-14
+! Date: 2017-12-18
 ! Expires: 7 days
 ! Requirement: Patience 
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
@@ -11,19 +11,19 @@
 ##.donate-banner
 ###donate-banner
 
+archive.org###wm-share
 github.com##.js-notice
 anidb.net###layout-hint
 wikipedia.org###wlm-banner
+addons.mozilla.org##.avatar
 symbolab.com##.tooltipster-box
 motherboard.vice.com##.up-next
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
 github.com##.js-notice.octofication
+archive.org###__wb_record_content_done
 robert.ocallahan.org##.body-fauxcolumns
-web.archive.org###__wb_record_content_done
 encyclopediadramatica.rs##a[href*="torguard.net"]
-
-addons.mozilla.org##.avatar
 stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.net,stackapps.com,askubuntu.com###noscript-warning
 
 reddit.com##.nub
@@ -43,6 +43,7 @@ reddit.com##.give-gold-button
 reddit.com##.crosspost-button
 reddit.com##.happening-now-wrap
 reddit.com##.profilebetabar.infobar
+reddit.com##.ProfileSidebar__usericon-image
 
 reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
