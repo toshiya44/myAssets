@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-16
+! Date: 2017-12-18
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.20+
@@ -26,6 +26,7 @@
 ! Use uMatrix for mass filtering.
 ! --------------------------------------------------------------------------- !
 ! ########################################################################### !
+! ##################################-GENERAL-################################ !
 !
 ! List of general malicious and tracking domains.
 !
@@ -625,6 +626,9 @@
 ||tooladblockerext.com$important
 ||grvcdn.com$important
 ||flipboard.com$important
+||smcheck.org$important
+||amgload.net$important
+||piguiqproxy.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -848,13 +852,6 @@ mozilla.org###announce-geoip-suggestion
 developer.mozilla.org##.notification-tray
 ||mozilla.org/__cspreport__$important
 
-! to block add-ons' behind the scene activity.
-! Notice: Not reliable. Go to hosts file.
-! ||kkapsner.de
-! ||fasezero.com
-! ||redditenhancementsuite.com
-! ||analytics.feeder.co
-
 ! what are these for? i see them in a lot of places.
 ||cloudflare.com/cdn-cgi/nexp/dok3v=088620b277$important
 ||cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1$important,domain=~jcafe24.net
@@ -890,6 +887,13 @@ businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js,
 techcrunch.com##.ad-cluster-container
 techcrunch.com##.popped.section.toaster
 ||aolcdn.com^$domain=techcrunch.com,important
+
+||thedailybeast.com/rtl$xmlhttprequest,important
+||api-prod.thedailybeast.com^$xmlhttprequest,important
+||thedailybeast.com/progressive-scroll$xmlhttprequest,important
+
+haydenjames.io##.sw-click-to-tweet
+haydenjames.io##a[href*="https://haydenjames.io/linkout/"]
 
 wordpress.com##.wpcnt
 wordpress.com##.wpmrec.wpa
