@@ -108,6 +108,7 @@ kissmanga.com##a[href="#"]
 discordapp.com##.notice
 ||discordapp.com/api/v6/games
 ||discordapp.com/games/*$important
+||discordapp.com/emojis/*.gif$first-party
 ||discordapp.com/avatars/*.gif$first-party
 ||discordapp.com/assets/*.worker.js$important
 
