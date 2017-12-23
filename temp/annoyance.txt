@@ -1,7 +1,10 @@
-! Title: Toshiya's Filter List - Annoyance 
-! Date: 2017-12-18
+! Title: Toshiya's Filter List - Annoyance
+! Author: Toshiya
+! Date: 2017-12-23
 ! Expires: 7 days
-! Requirement: Patience 
+! Requirement: Patience
+! Requirement: "Toshiya's Filter List - Experimental"
+! Requirement: uBlock Origin 1.14.22+
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
 ! This list is not maintained and no support is availble. I myself just disable it if I'm having any issues.
 ! Many filters in here are completely unnecessary but I made them anyway. Use whatever you like.
@@ -16,11 +19,13 @@ github.com##.js-notice
 anidb.net###layout-hint
 wikipedia.org###wlm-banner
 addons.mozilla.org##.avatar
+bugzilla.mozilla.org###message
 symbolab.com##.tooltipster-box
 motherboard.vice.com##.up-next
 giphy.com##.festive-mode-toggle
 wordpress.com###prompt-new-editor
 github.com##.js-notice.octofication
+trello.com##.mod-warning.header-banner
 archive.org###__wb_record_content_done
 robert.ocallahan.org##.body-fauxcolumns
 encyclopediadramatica.rs##a[href*="torguard.net"]
@@ -49,6 +54,13 @@ reddit.com##[data-author="PCMRBot"]
 reddit.com##[data-author="AutoModerator"]
 !reddit.com##blockquote:style(color:green !important;)
 
+||redditstatic.com/avatars/$important
+||reddit.com/api/multi/mine$important
+||reddit.com/user/*/about.json$important
+||redditstatic.com/author-tooltip.$important
+||redditstatic.com/sprite-author-tooltip.$important
+
+! Remove chat
 reddit.com###chat
 reddit.com###chat+span
 ||chat.redditmedia.com$important
@@ -57,12 +69,6 @@ reddit.com###chat+span
 ||reddit.com/chat/minimize$inline-script
 ||redditstatic.com/_chat*.js$script,important
 ||redditstatic.com/desktop2x/Chat*.js$script,important
-
-||redditstatic.com/avatars/$important
-||reddit.com/api/multi/mine$important
-||reddit.com/user/*/about.json$important
-||redditstatic.com/author-tooltip.$important
-||redditstatic.com/sprite-author-tooltip.$important
 
 myanimelist.net##script:contains(googletag)
 myanimelist.net##script:contains(targetFrameId)
@@ -104,7 +110,6 @@ discordapp.com##.notice
 ||discordapp.com/games/*$important
 ||discordapp.com/avatars/*.gif$first-party
 ||discordapp.com/assets/*.worker.js$important
-||discordapp.com/assets/53ef346458017da2062aca5c7955946b.svg
 
 gelbooru.com###motdTempPermanent
 ||sankakucomplex.com/logo.png$image
