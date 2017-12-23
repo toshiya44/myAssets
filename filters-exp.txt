@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-18
+! Date: 2017-12-23
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.22+
@@ -205,6 +205,7 @@
 ||sharethrough.com$important
 ||openx.net$important
 ||truste.com$important
+||trustx.org$important
 ||digitru.st$important
 ||tyxo.com$important
 ||outbrain.com$important
@@ -630,6 +631,7 @@
 ||ekansovi.com$important
 ||adglare.net$important
 ||adglare.com$important
+||addcpm.com$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1255,11 +1257,14 @@ boards.4chan.org##script:contains(window.upManager)
 
 ! https://github.com/ccd0/4chan-x/issues/1417
 @@||4chan.org^*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval'
+! https://rbt.asia/g/thread/63902030/
+! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode)
+4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
 
-!*$third-party,css,domain=4chan.org|4cdn.org|github.io|github.com
-!*$third-party,script,domain=4chan.org|4cdn.org|github.io|github.com
-!*$third-party,websocket,domain=4chan.org|4cdn.org|github.io|github.com
-!*$third-party,xmlhttprequest,domain=4chan.org|4cdn.org|github.io|github.com
+! *$third-party,css,domain=4chan.org|4cdn.org|github.io|github.com
+! *$third-party,script,domain=4chan.org|4cdn.org|github.io|github.com
+! *$third-party,websocket,domain=4chan.org|4cdn.org|github.io|github.com
+! *$third-party,xmlhttprequest,domain=4chan.org|4cdn.org|github.io|github.com
 
 desuarchive.org##script:contains(_qevents)
 archiveofsins.com##script:contains(BlockAdblock)
@@ -1453,7 +1458,6 @@ hentaihaven.org##script:contains(BetterJsPop)
 ! unblocking baka-tsuki's logo and image (fragment filter issue)
 @@||baka-tsuki.org^$generichide
 @@||baka-tsuki.org$image,first-party
-
 ! Owned by an advertisement company :D
 ||nyaatorrents.info$important
 
@@ -1462,6 +1466,7 @@ hentaihaven.org##script:contains(BetterJsPop)
 
 pantsu.cat###cookie-warning
 ||imgur.com^$domain=tsumino.com,important
+||tsumino.com/static/*.gif$image
 
 ||anime8.*$important
 ||anilinkz.*/count.php$important
