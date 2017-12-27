@@ -1,3 +1,6 @@
+! Title: Misc Filters - TWN/BB/IT
+! Author: Toshiya
+
 theweathernetwork.com###news
 theweathernetwork.com###sidebar
 theweathernetwork.com###gallery
