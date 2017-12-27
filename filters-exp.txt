@@ -625,10 +625,15 @@
 ||tooladblockerext.com$important
 ||grvcdn.com$important
 ||flipboard.com$important
+||smcheck.*
 ||smcheck.org$important
+||amgload.*
 ||amgload.net$important
+||piguiqproxy.*
 ||piguiqproxy.com$important
+||ekansovi.*
 ||ekansovi.com$important
+||adglare.*
 ||adglare.net$important
 ||adglare.com$important
 ||addcpm.com$important
@@ -1261,6 +1266,7 @@ boards.4chan.org##script:contains(window.upManager)
 ! leave these filters to be handled by "uBlock filters" for now.
 ! or copy paste them to "My Filters" tab.
 ! https://rbt.asia/g/thread/63902030/
+! https://github.com/gorhill/uBlock/issues/3374
 ! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode)
 ! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
 
