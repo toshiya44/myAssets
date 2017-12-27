@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-23
+! Date: 2017-12-27
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.22+
@@ -1257,9 +1257,12 @@ boards.4chan.org##script:contains(window.upManager)
 
 ! https://github.com/ccd0/4chan-x/issues/1417
 @@||4chan.org^*$csp=default-src 'self' * data: 'unsafe-inline' 'unsafe-eval'
+
+! leave these filters to be handled by "uBlock filters" for now.
+! or copy paste them to "My Filters" tab.
 ! https://rbt.asia/g/thread/63902030/
 ! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode)
-4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
+! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
 
 ! *$third-party,css,domain=4chan.org|4cdn.org|github.io|github.com
 ! *$third-party,script,domain=4chan.org|4cdn.org|github.io|github.com
