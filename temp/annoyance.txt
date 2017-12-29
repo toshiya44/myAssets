@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2017-12-23
+! Date: 2017-12-29
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -51,6 +51,9 @@ reddit.com##.profilebetabar.infobar
 reddit.com##.ProfileSidebar__usericon-image
 
 reddit.com##[data-author="PCMRBot"]
+reddit.com##[data-author="AutoSticky"]
+reddit.com##[data-author="WholesomeBot"]
+reddit.com##[data-author="historymodbot"]
 reddit.com##[data-author="AutoModerator"]
 !reddit.com##blockquote:style(color:green !important;)
 
@@ -99,6 +102,7 @@ imgur.com###cta-container
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
 
 animenewsnetwork.com##fieldset
+animenewsnetwork.com###prompt-message
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
