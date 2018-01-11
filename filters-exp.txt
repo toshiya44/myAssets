@@ -1,12 +1,12 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-12-27
+! Date: 2017-01-10
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.14.22+
+! Requirement: uBlock Origin 1.14.23+
 ! Recommended: Firefox 58+ (Release/Dev)
 !              Waterfox 56+ (Release)
-!              uBlock Origin Legacy 1.14.22+
+!              uBlock Origin Legacy 1.14.23+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -772,10 +772,10 @@ imgur.com##.social-icon
 
 ||csp.flickr.com$important
 ||flickr.com/beacon*$important
-tinypic.com##script:contains(renderAd)
-tinypic.com##script:contains(SWFObject)
-tinypic.com##script:contains(PopSettings)
-tinypic.com##script:contains(ClientProfilingLog)
+tinypic.com##^script:has-text(renderAd)
+tinypic.com##^script:has-text(SWFObject)
+tinypic.com##^script:has-text(PopSettings)
+tinypic.com##^script:has-text(ClientProfilingLog)
 
 reddit.com###ad_1
 reddit.com###ad_2
@@ -886,7 +886,7 @@ washingtonpost.com##.top-sharebar-wrapper
 ||recommendation-newsletter.wpdigital.net$important
 !||scripts.dailymail.co.uk/static/videoplayer$important
 
-businessinsider.com,businessinsider.jp##script:contains(setAdblockerCookie)
+businessinsider.com,businessinsider.jp##^script:has-text(setAdblockerCookie)
 businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
 ||businessinsider.jp$inline-script
 ||businessinsider.com$inline-script
@@ -920,7 +920,7 @@ wordpress.com###wordads-preview-parent
 ! rightad.js is a honeypot (as of 2017-01-11)
 @@||mirrorcreator.com$generichide
 @@||mirrorcreator.com/js/rightad.js$important
-mirrorcreator.com##script:contains(pageTracker)
+mirrorcreator.com##^script:has-text(pageTracker)
 mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
 ||mirrorcreator.com/images/MBTAnimateddownloadbutton.gif$image
 
@@ -929,9 +929,9 @@ mirrorcreator.com##a[href^="//www.mirrorcreator.com/df.php"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/262
 ||watchers.to/code15.html$important
-watchers.to##script:contains(ppu_main)
-watchers.to##script:contains(ActiveXObject)
-watchers.to##script:contains(beginMainCheckerAB)
+watchers.to##^script:has-text(ppu_main)
+watchers.to##^script:has-text(ActiveXObject)
+watchers.to##^script:has-text(beginMainCheckerAB)
 watchers.to##[onclick*="mainWidget_globalTm"]
 
 ||mp3juices.cc/img$important
@@ -1033,6 +1033,8 @@ pastebin.com###steadfast
 ||pixel.archive.is$important
 ||pixel.archive.fo$important
 
+rapidvideo.com#@#a[style]
+
 ! ########################################################################### !
 ! Disqus click-to-load
 ! From https://gist.github.com/gorhill/ef1b62d606473c68d524 with some additions
@@ -1048,10 +1050,7 @@ pastebin.com###steadfast
 ! Other popular filter lists most likely block them, but just in case they
 ! whitelist these for whatever reason I couldn't care less.
 
-! google.*##.gb_g.gb_Bc.gb_8cx
-!                                            .......let's be specific, for fun.
-! https://github.com/Rob--W/dont-track-me-google/blob/master/manifest.json
-google.com,google.ad,google.ae,google.com.af,google.com.ag,google.com.ai,google.al,google.am,google.co.ao,google.com.ar,google.as,google.at,google.com.au,google.az,google.ba,google.com.bd,google.be,google.bf,google.bg,google.com.bh,google.bi,google.bj,google.com.bn,google.com.bo,google.com.br,google.bs,google.bt,google.co.bw,google.by,google.com.bz,google.ca,google.cd,google.cf,google.cg,google.ch,google.ci,google.co.ck,google.cl,google.cm,google.cn,google.com.co,google.co.cr,google.com.cu,google.cv,google.com.cy,google.cz,google.de,google.dj,google.dk,google.dm,google.com.do,google.dz,google.com.ec,google.ee,google.com.eg,google.es,google.com.et,google.fi,google.com.fj,google.fm,google.fr,google.ga,google.ge,google.gg,google.com.gh,google.com.gi,google.gl,google.gm,google.gp,google.gr,google.com.gt,google.gy,google.com.hk,google.hn,google.hr,google.ht,google.hu,google.co.id,google.ie,google.co.il,google.im,google.co.in,google.iq,google.is,google.it,google.je,google.com.jm,google.jo,google.co.jp,google.co.ke,google.com.kh,google.ki,google.kg,google.co.kr,google.com.kw,google.kz,google.la,google.com.lb,google.li,google.lk,google.co.ls,google.lt,google.lu,google.lv,google.com.ly,google.co.ma,google.md,google.me,google.mg,google.mk,google.ml,google.com.mm,google.mn,google.ms,google.com.mt,google.mu,google.mv,google.mw,google.com.mx,google.com.my,google.co.mz,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.ne,google.nl,google.no,google.com.np,google.nr,google.nu,google.co.nz,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.pl,google.pn,google.com.pr,google.ps,google.pt,google.com.py,google.com.qa,google.ro,google.ru,google.rw,google.com.sa,google.com.sb,google.sc,google.se,google.com.sg,google.sh,google.si,google.sk,google.com.sl,google.sn,google.so,google.sm,google.sr,google.st,google.com.sv,google.td,google.tg,google.co.th,google.com.tj,google.tk,google.tl,google.tm,google.tn,google.to,google.com.tr,google.tt,google.com.tw,google.co.tz,google.com.ua,google.co.ug,google.co.uk,google.com.uy,google.co.uz,google.com.vc,google.co.ve,google.vg,google.co.vi,google.com.vn,google.vu,google.ws,google.rs,google.co.za,google.co.zm,google.co.zw,google.cat,google.ng##.gb_g.gb_Bc.gb_8cx
+google.*##.gb_g.gb_Bc.gb_8cx
 
 /searchdomaincheck
 ||googleanalytics.*$important
@@ -1252,11 +1251,10 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 ! 4chan filters 
 @@||4chan.org$generichide
 @@||s.4cdn.org/image/favicon.ico$image,domain=4chan.org
-boards.4chan.org##.adg-rects
 boards.4chan.org##.topad
-boards.4chan.org##.middlead
+boards.4chan.org##.adg-rects
 boards.4chan.org##[class^="ad-"]
-boards.4chan.org##script:contains(window.upManager)
+boards.4chan.org##^script:has-text(window.upManager)
 ||youtube.com/embed/$subdocument,domain=4chan.org
 ||googleapis.com/youtube$xmlhttprequest,domain=4chan.org
 
@@ -1270,15 +1268,10 @@ boards.4chan.org##script:contains(window.upManager)
 ! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode)
 ! 4chan.org##script:inject(abort-current-inline-script.js, String.fromCharCode, /[0-9a-f]{40}..$/)
 
-! *$third-party,css,domain=4chan.org|4cdn.org|github.io|github.com
-! *$third-party,script,domain=4chan.org|4cdn.org|github.io|github.com
-! *$third-party,websocket,domain=4chan.org|4cdn.org|github.io|github.com
-! *$third-party,xmlhttprequest,domain=4chan.org|4cdn.org|github.io|github.com
-
-desuarchive.org##script:contains(_qevents)
-archiveofsins.com##script:contains(BlockAdblock)
-4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(ExoLoader)
-4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:contains(TyxoObject)
+desuarchive.org##^script:has-text(_qevents)
+archiveofsins.com##^script:has-text(BlockAdblock)
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##^script:has-text(ExoLoader)
+4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##^script:has-text(TyxoObject)
 
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(noeval.js)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(bab-defuser.js)
@@ -1326,13 +1319,13 @@ gelbooru.com##.twitter-share-button
 gelbooru.com##a[href^="http://gelbooru.com/redirect.html"]
 gelbooru.com##div[style*="width:1000px"]:has(script)
 gelbooru.com,thedoujin.com##noscript
-gelbooru.com,thedoujin.com##script:contains(adnOpt)
-gelbooru.com,thedoujin.com##script:contains(abvertDar)
-gelbooru.com,thedoujin.com##script:contains(advertVar)
-gelbooru.com,thedoujin.com##script:contains(ad_idzone)
-gelbooru.com,thedoujin.com##script:contains(ExoLoader)
-gelbooru.com,thedoujin.com##script:contains(trw_domain)
-gelbooru.com,thedoujin.com##script:contains(adsbyjuicy)
+gelbooru.com,thedoujin.com##^script:has-text(adnOpt)
+gelbooru.com,thedoujin.com##^script:has-text(abvertDar)
+gelbooru.com,thedoujin.com##^script:has-text(advertVar)
+gelbooru.com,thedoujin.com##^script:has-text(ad_idzone)
+gelbooru.com,thedoujin.com##^script:has-text(ExoLoader)
+gelbooru.com,thedoujin.com##^script:has-text(trw_domain)
+gelbooru.com,thedoujin.com##^script:has-text(adsbyjuicy)
 ||gelbooru.com/x/$important
 ||gelbooru.com/y/$important
 ||gelbooru.com/z/$important
@@ -1383,7 +1376,7 @@ gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thum
 chan.sankakucomplex.com,idol.sankakucomplex.com###headerlogo
 chan.sankakucomplex.com,idol.sankakucomplex.com###headerthumbs
 chan.sankakucomplex.com,idol.sankakucomplex.com##cloudflare-app
-sankakucomplex.com##script:contains(pagespeed)
+sankakucomplex.com##^script:has-text(pagespeed)
 sankakucomplex.com##script:inject(bab-defuser.js)
 
 ||amazonaws.com$important,domain=sankakucomplex.com
@@ -1400,7 +1393,7 @@ sankakucomplex.com##script:inject(bab-defuser.js)
 ||idanbooru.com$important
 
 danbooru.donmai.us###upgrade-account-notice
-danbooru.com##script:contains(errorBeacon)
+danbooru.com##^script:has-text(errorBeacon)
 
 ||konachan.net$subdocument,important
 ||isshiki.donmai.us$third-party
@@ -1453,14 +1446,14 @@ muchohentai.com###__eq2281__
 muchohentai.com##script:inject(noeval.js)
 
 !nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
-!nhentai.net##script:contains(show_popunders)
+!nhentai.net##^script:has-text(show_popunders)
 ||nhentai.net^$popup
 ||nhentai.net/api/_/popunder?$important
 ||nhentai.net/api/_/popunder?$important,popup
 
 @@||hentaihaven.org$generichide
-hentaihaven.org##script:contains(Pukka)
-hentaihaven.org##script:contains(BetterJsPop)
+hentaihaven.org##^script:has-text(Pukka)
+hentaihaven.org##^script:has-text(BetterJsPop)
 ! honeypots used to detect blockers
 @@||hentaihaven.org/basement/js/adshow.js$script,first-party
 
@@ -1515,7 +1508,7 @@ myanimelist.net##.banner-header-anime-straming
 
 kissanime.*##script:inject(noeval.js)
 kissanime.ru##.divCloseBut
-kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##script:contains(DoAdsPosition)
+kissanime.ru,kissmanga.com,kissasian.com,kisscartoon.se,readcomiconline.to##^script:has-text(DoAdsPosition)
 
 ||ad.kissanime.*$important
 ||kissanime.*/ads$important
@@ -1562,13 +1555,13 @@ gravitytales.com##.widget:if(.widget-title:has-text(Advert))
 kobatochan.com##script:inject(bab-defuser.js)
 kobatochan.com##script:inject(abort-on-property-write.js, KillAdBlock)
 
-kobatochan.com##script:contains(KillAdBlock)
-kobatochan.com##script:contains(logHuman)
-kobatochan.com##script:contains(_stq)
-kobatochan.com##script:contains(_gaq)
-kobatochan.com##script:contains(clickTrackerInit)
-kobatochan.com##script:contains(WPGroHo)
-kobatochan.com##script:contains(randpubc)
+kobatochan.com##^script:has-text(KillAdBlock)
+kobatochan.com##^script:has-text(logHuman)
+kobatochan.com##^script:has-text(_stq)
+kobatochan.com##^script:has-text(_gaq)
+kobatochan.com##^script:has-text(clickTrackerInit)
+kobatochan.com##^script:has-text(WPGroHo)
+kobatochan.com##^script:has-text(randpubc)
 
 ! ############################## Bad filters ################################ !
 ! just very bad filters
