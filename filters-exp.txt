@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2017-01-10
+! Date: 2018-01-10
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.14.23+
@@ -750,6 +750,7 @@ safelinkconverter.com##.l-preloader
 jolinfile.com###bd74
 strawpoll.me##.featured
 4shared.com##.space-3260
+ezgif.com##.social-button
 netrunner.com##.preloader
 4shared.com##.d1AdsWrapper
 ghacks.net###cookie-notice
