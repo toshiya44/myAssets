@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-01-10
+! Date: 2018-01-28
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -14,9 +14,9 @@
 ##.donate-banner
 ###donate-banner
 
-archive.org###wm-share
 github.com##.js-notice
 anidb.net###layout-hint
+ezgif.com##.social-button
 wikipedia.org###wlm-banner
 addons.mozilla.org##.avatar
 bugzilla.mozilla.org###message
@@ -28,7 +28,6 @@ wordpress.com###prompt-new-editor
 github.com##.js-notice.octofication
 zdnet.com##p:has-text(/Read also: /)
 trello.com##.mod-warning.header-banner
-archive.org###__wb_record_content_done
 robert.ocallahan.org##.body-fauxcolumns
 howtogeek.com###htg-content-inline-block
 hackernoon.com##.u-fixed.js-metabar.metabar
@@ -77,10 +76,10 @@ reddit.com###chat+span
 ||redditstatic.com/_chat*.js$script,important
 ||redditstatic.com/desktop2x/Chat*.js$script,important
 
-myanimelist.net##^script:has-text(googletag)
-myanimelist.net##^script:has-text(targetFrameId)
-myanimelist.net##^script:has-text(amzn_assoc_tracking_id)
+myanimelist.net##.js-btn-top.btn-top
 ||myanimelist.cdn-dena.com/images/event$image
+||myanimelist.cdn-dena.com/images/useravatars/*.gif$image
+||myanimelist.cdn-dena.com/images/icon-pulldown4.png$image
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
@@ -101,6 +100,7 @@ myanimelist.net##^script:has-text(amzn_assoc_tracking_id)
 
 imgur.com###side-gallery
 imgur.com###cta-container
+imgur.com##.animation-finished.animate.fixed.post-header
 ||imgur.com/gallery/hot$important
 ||imgur.com/images/OverCapacity*$image,first-party
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
@@ -166,6 +166,8 @@ pixiv.net##.popular-introduction-overlay
 ||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
 
 ||piriform.com/scripts/modernizr-custom.js$script
+||mp3juices.cc/ac/d/d.html$subdocument,important
+||mp3juices.cc/ac/r/d.html$subdocument,important
 
 boards.4chan.org###blotter
 boards.4chan.org##.middlead
@@ -188,6 +190,16 @@ instagram.com##._6in6f._j8mem
 newstatesman.com###donate
 newstatesman.com###donate-toggle
 ||verdict.co.uk/brexit-tracker-embed/*$important
+
+archive.org###wm-share
+archive.org###__wb_record_content_done
+||archive.org/static/logging.html$xmlhttprequest,first-party
+||archive.org/web/*//www.google.com/recaptcha/*$script,first-party
+||archive.org/web/*//www.gstatic.com/recaptcha/*$script,first-party
+||archive.org/web/*//www.googletagservices.com/*$script,first-party
+||archive.org/web/*//apis.google.com/js/platform.js$script,first-party
+||archive.org/web/*//assets.pinterest.com/js/pinit.js$script,first-party
+||archive.org/web/*//myanimelist.cdn-dena.com/static/assets/js/pc/header-*$script,first-party
 
 !#############################################################################!
 ! wikia script fractions
