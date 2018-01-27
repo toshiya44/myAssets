@@ -1,12 +1,12 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2018-01-10
+! Date: 2018-01-28
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.14.23+
+! Requirement: uBlock Origin 1.14.25+
 ! Recommended: Firefox 58+ (Release/Dev)
 !              Waterfox 56+ (Release)
-!              uBlock Origin Legacy 1.14.23+
+!              uBlock Origin Legacy 1.14.25+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -637,6 +637,11 @@
 ||adglare.net$important
 ||adglare.com$important
 ||addcpm.com$important
+||native.ai^$important
+||webwidgets.wsi.com^$third-party
+||babator.com^$important
+||exelator.com^$important
+||summerhamster.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -839,6 +844,7 @@ stackexchange.com,stackoverflow.com,serverfault.com,superuser.com,mathoverflow.n
 
 ! Hides the blocked message button in discord
 discordapp.com##.message-group-blocked
+discordapp.com##.noticeFacebook-1eAoSW
 ||discordapp.com/*/track$xmlhttprequest,important
 ||discordapp.com/api/*/typing$xmlhttprequest,important
 ||discordapp.com/*/widget.json$xmlhttprequest,important,domain=~discordapp.net|~discordapp.com|~discord.gg
@@ -879,6 +885,10 @@ dailymail.co.uk##.has-button-share-facebook
 ||nbcuni.com$important
 ||gamer-network.net$important,third-party
 ||fonts.staticworld.net/dli6mbh.js$important
+
+nzherald.co.nz##.onscreen.site-logo-wrapper
+cbslocal.com##.adhesive-on.anvato.video-wrapper
+||nvcdn.nbcnews.com/_elliott/jenga?widgets=newsletter$important
 
 independent.co.uk##.inline-block-left
 washingtonpost.com##.top-sharebar-wrapper
@@ -1482,23 +1492,27 @@ pantsu.cat###cookie-warning
 ! Note: disable service-worker.
 
 @@||myanimelist.net$generichide
+myanimelist.net##._unit
 myanimelist.net##.mauto
 myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
-myanimelist.net##._unit
 myanimelist.net##.btn-mal-service
 myanimelist.net##.js-share-button-popup
 myanimelist.net##.footer-link-icon-block
 myanimelist.net##.banner-header-anime-straming
 
+myanimelist.net##^script:has-text(googletag)
+myanimelist.net##^script:has-text(targetFrameId)
+myanimelist.net##^script:has-text(amzn_assoc_tracking_id)
+
 ||myanimelist.net/log/bot_filter.php
 ||myanimelist.net/static/logging.html$important
 ||myanimelist.net/manga_translation*$important
 ||myanimelist.net/service-worker.js$important
+||myanimelist.net/images/stream_banner/*$image
+||myanimelist.cdn-dena.com/signature/*$image
 ||myanimelist.cdn-dena.com/images/footer$image,important
 ||myanimelist.cdn-dena.com/images/membership$image,important
-||myanimelist.net/images/stream_banner/*
-||myanimelist.cdn-dena.com/signature/*
 
 ! --------------------------------------------------------------------------- !
 !
