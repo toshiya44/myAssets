@@ -1,12 +1,12 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2018-01-28
+! Date: 2018-02-07
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
-! Requirement: uBlock Origin 1.14.25+
-! Recommended: Firefox 58+ (Release/Dev)
+! Requirement: uBlock Origin 1.15.3+
+! Recommended: Firefox  59+ (Dev)
 !              Waterfox 56+ (Release)
-!              uBlock Origin Legacy 1.14.25+
+!              uBlock Origin Legacy 1.15.3+
 ! --------------------------------------------------------------------------- !
 ! Get uBlock Origin from github https://github.com/gorhill/uBlock/releases/
 ! or, the AMO https://addons.mozilla.org/en-US/firefox/addon/ublock-origin
@@ -826,12 +826,12 @@ reddit.com##.TrendingProfilesSidebar
 ||amazon-adsystem.com$important
 ||amazon.ca/gp/uedata?$important
 ||appshell-trk.s3.amazonaws.com^$important
-||images-na.ssl-images-amazon.com/images/G/01/ads/advertising/*$script,important
+||ssl-images-amazon.com/images/G/01/ads/advertising/*$script,important
 ||beyond-branding.com^$important,third-party
 ||surveygizmobeacon.s3.amazonaws.com$important
 ||s3.amazonaws.com/*/secure.js$script,important
-||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 ||amazonaws.com/703a80648f8f74c6a637ac48fc23d00ba8dc4bb12ead3d0075872b2d623fe7$important
+||amazonaws.com/6f271238cde78a5adc1fc74fba471f3edc035aeab4a2b5c6a168682ae324f14$important
 
 github.com##.signup-prompt
 github.com##.modal-backdrop
@@ -895,7 +895,6 @@ washingtonpost.com##.top-sharebar-wrapper
 ||targeting.washpost.nile.works$important
 ||recommendation-hybrid.wpdigital.net$important
 ||recommendation-newsletter.wpdigital.net$important
-!||scripts.dailymail.co.uk/static/videoplayer$important
 
 businessinsider.com,businessinsider.jp##^script:has-text(setAdblockerCookie)
 businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
@@ -1456,11 +1455,12 @@ muchohentai.com###__eq2281__
 ||muchohentai.com/*/gapro.js$script
 muchohentai.com##script:inject(noeval.js)
 
-!nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 !nhentai.net##^script:has-text(show_popunders)
+!nhentai.net##script:inject(abort-on-property-write.js, show_popunders)
 ||nhentai.net^$popup
 ||nhentai.net/api/_/popunder?$important
 ||nhentai.net/api/_/popunder?$important,popup
+||nhentai.net/api/inventory$xmlhttprequest,important
 
 @@||hentaihaven.org$generichide
 hentaihaven.org##^script:has-text(Pukka)
@@ -1503,6 +1503,7 @@ myanimelist.net##.banner-header-anime-straming
 
 myanimelist.net##^script:has-text(googletag)
 myanimelist.net##^script:has-text(targetFrameId)
+myanimelist.net##^script:has-text(GoogleAnalyticsObject)
 myanimelist.net##^script:has-text(amzn_assoc_tracking_id)
 
 ||myanimelist.net/log/bot_filter.php
