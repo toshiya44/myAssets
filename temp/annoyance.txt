@@ -1,10 +1,10 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-01-28
+! Date: 2018-02-07
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
-! Requirement: uBlock Origin 1.14.22+
+! Requirement: uBlock Origin 1.15.3+
 ! Removing pointles and annoying things that are not relevant enough for the general filter.
 ! This list is not maintained and no support is availble. I myself just disable it if I'm having any issues.
 ! Many filters in here are completely unnecessary but I made them anyway. Use whatever you like.
@@ -104,14 +104,17 @@ imgur.com##.animation-finished.animate.fixed.post-header
 ||imgur.com/gallery/hot$important
 ||imgur.com/images/OverCapacity*$image,first-party
 ||imgur.com/images/house-cta/cta-icymi-form.png$image
+||imgur.com/*.gif$image,domain=forums.nrvnqsr.com
 
+nyaa.si##.alert-info.alert
+mangadex.com###announcement
 animenewsnetwork.com##fieldset
 animenewsnetwork.com###prompt-message
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 kissmanga.com##a[href="#"]
 ||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
 ||kissanime.*/Scripts/google.js$script,first-party
-||kissanime.ru/Content/images/tpl_box_shading2.png$image
+||kissanime.*/Content/images/tpl_box_shading2.png$image
 
 discordapp.com##.notice
 ||discordapp.com/api/v6/games
@@ -130,10 +133,10 @@ jcafe24.net##.sp-body:style(display: block !important;)
 
 ! Note: Cancer.
 ||zamimg.com$important
-||wowhead.com$important
-||fandom.wikia.com$important
 ||scribd.com$important
+||wowhead.com$important
 ||typekit.net$important
+||fandom.wikia.com$important
 
 ||quora.com/up$important
 ||quora.com/security_reports$important
@@ -141,12 +144,12 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-||giphy.com/static/js/site/third_party.js$script,first-party
-||giphy.com/static/js/site/footer.js$script,first-party
-||media.giphy.com/channel_assets$first-party
-||giphy.com/api/*/favorite-milestones/
 ||giphy.com/gifs/*/related/
+||giphy.com/api/*/favorite-milestones/
+||media.giphy.com/channel_assets$first-party
+||giphy.com/static/js/site/footer.js$script,first-party
 ||giphy.com/static/img/loading_bar.gif$image,first-party
+||giphy.com/static/js/site/third_party.js$script,first-party
 
 comic.pixiv.net###pauser
 pixiv.net##a[href*="premium.php"]
@@ -174,6 +177,7 @@ boards.4chan.org##.middlead
 boards.4chan.org###bannerCnt
 boards.4chan.org###globalMessage
 boards.4chan.org###boardNavDesktopFoot
+||s.4cdn.org/js/prettify*
 ! ||4cdn.org/image/title$image
 ! ||4cdn.org/image/contest_banners/$image
 
@@ -190,10 +194,12 @@ instagram.com##._6in6f._j8mem
 newstatesman.com###donate
 newstatesman.com###donate-toggle
 ||verdict.co.uk/brexit-tracker-embed/*$important
+!||scripts.dailymail.co.uk/static/videoplayer$important
 
 archive.org###wm-share
 archive.org###__wb_record_content_done
 ||archive.org/static/logging.html$xmlhttprequest,first-party
+
 ||archive.org/web/*//www.google.com/recaptcha/*$script,first-party
 ||archive.org/web/*//www.gstatic.com/recaptcha/*$script,first-party
 ||archive.org/web/*//www.googletagservices.com/*$script,first-party
