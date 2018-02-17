@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-02-07
+! Date: 2018-02-17
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -76,10 +76,16 @@ reddit.com###chat+span
 ||redditstatic.com/_chat*.js$script,important
 ||redditstatic.com/desktop2x/Chat*.js$script,important
 
+myanimelist.net##.sig
 myanimelist.net##.js-btn-top.btn-top
 ||myanimelist.cdn-dena.com/images/event$image
+||myanimelist.cdn-dena.com/images/signature/$image
 ||myanimelist.cdn-dena.com/images/useravatars/*.gif$image
 ||myanimelist.cdn-dena.com/images/icon-pulldown4.png$image
+
+myanimelist.net##.cover-block
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-6b19ce62d01ef05368166ff6db661484.png$image
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1518002453-4a51f1223e65a87e438d26795d09b724.jpeg$image
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
@@ -121,7 +127,7 @@ discordapp.com##.notice
 ||discordapp.com/games/*$important
 ||discordapp.com/emojis/*.gif$first-party
 ||discordapp.com/avatars/*.gif$first-party
-||discordapp.com/assets/*.worker.js$important
+!||discordapp.com/assets/*.worker.js$important
 
 gelbooru.com###motdTempPermanent
 ||sankakucomplex.com/logo.png$image
@@ -206,6 +212,8 @@ archive.org###__wb_record_content_done
 ||archive.org/web/*//apis.google.com/js/platform.js$script,first-party
 ||archive.org/web/*//assets.pinterest.com/js/pinit.js$script,first-party
 ||archive.org/web/*//myanimelist.cdn-dena.com/static/assets/js/pc/header-*$script,first-party
+
+||bookwalker.jp/bob/img/newUserCampaign/*$image
 
 !#############################################################################!
 ! wikia script fractions
