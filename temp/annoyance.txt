@@ -202,6 +202,11 @@ newstatesman.com###donate-toggle
 ||verdict.co.uk/brexit-tracker-embed/*$important
 !||scripts.dailymail.co.uk/static/videoplayer$important
 
+inc.com##.Inner
+inc.com##.NextButton
+inc.com##.PreviousButton
+inc.com###newsletter-flyin
+
 archive.org###wm-share
 archive.org###__wb_record_content_done
 ||archive.org/static/logging.html$xmlhttprequest,first-party
