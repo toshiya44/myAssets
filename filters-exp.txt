@@ -642,6 +642,7 @@
 ||babator.com^$important
 ||exelator.com^$important
 ||summerhamster.com^$important
+||app.alertme.news^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -1076,6 +1077,7 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ||safebrowsing-cache.google.com$important
 ||plus.google.*^$third-party,important
 ||apis.google.com/js/plusone.js$important,third-party
+||apis.google.com/js/client:plusone.js$important,third-party
 ||imasdk.googleapis.com$third-party
 ||googleapis.com/*/swfobject$script,important
 ||translate.google.com/translate_a/element.js$important,third-party
@@ -1495,6 +1497,7 @@ pantsu.cat###cookie-warning
 @@||myanimelist.net$generichide
 myanimelist.net##._unit
 myanimelist.net##.mauto
+myanimelist.net##.fb-page
 myanimelist.net##.right_top_ad
 myanimelist.net##.left_bottom_ad
 myanimelist.net##.btn-mal-service
