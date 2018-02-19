@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-02-17
+! Date: 2018-02-18
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -72,32 +72,32 @@ reddit.com###chat+span
 ||chat.redditmedia.com$important
 ||sendbird.reddit.com$important
 ||reddit.com/chat$important
-||reddit.com/chat/minimize$inline-script
 ||redditstatic.com/_chat*.js$script,important
+||reddit.com/chat/minimize$inline-script,important
 ||redditstatic.com/desktop2x/Chat*.js$script,important
 
 myanimelist.net##.sig
 myanimelist.net##.js-btn-top.btn-top
-||myanimelist.cdn-dena.com/images/event$image
-||myanimelist.cdn-dena.com/images/signature/$image
-||myanimelist.cdn-dena.com/images/useravatars/*.gif$image
-||myanimelist.cdn-dena.com/images/icon-pulldown4.png$image
+||myanimelist.cdn-dena.com/images/event$image,important
+||myanimelist.cdn-dena.com/images/signature/$image,important
+||myanimelist.cdn-dena.com/images/useravatars/*.gif$image,important
+||myanimelist.cdn-dena.com/images/icon-pulldown4.png$image,important
 
 myanimelist.net##.cover-block
-||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-6b19ce62d01ef05368166ff6db661484.png$image
-||myanimelist.cdn-dena.com/s/common/uploaded_files/1518002453-4a51f1223e65a87e438d26795d09b724.jpeg$image
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-6b19ce62d01ef05368166ff6db661484.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1518002453-4a51f1223e65a87e438d26795d09b724.jpeg$image,important
 
 ||facebook.com/ads*$important
 ||facebook.com/*kappa*$important
 ||facebook.com/images/emoji.php$important
-||facebook.com/ajax/feed/ticker/resize$xmlhttprequest,important
+||facebook.com/ajax/feed/ticker/resize$important
 ||facebook.com/ajax/photos/logging/session_logging.php$important
-||facebook.com/ajax/mercury/change_read_status.php$first-party
-||facebook.com/pages_reaction_units/*$first-party
+||facebook.com/ajax/mercury/change_read_status.php$important
+||facebook.com/pages_reaction_units/*$important
 !||facebook.com/ajax/ads/media/log$important
 
 ||twimg.com/emoji$important
-||jcafe24.net/Smileys$image
+||jcafe24.net/Smileys$image,important
 ||plus.google.com$subdocument,important
 ||hangouts.google.com$subdocument,important
 ||contributor.google.com/scripts/*/loader.js$domain=wikia.com,important
@@ -108,9 +108,9 @@ imgur.com###side-gallery
 imgur.com###cta-container
 imgur.com##.animation-finished.animate.fixed.post-header
 ||imgur.com/gallery/hot$important
-||imgur.com/images/OverCapacity*$image,first-party
-||imgur.com/images/house-cta/cta-icymi-form.png$image
-||imgur.com/*.gif$image,domain=forums.nrvnqsr.com
+||imgur.com/images/OverCapacity*$image,first-party,important
+||imgur.com/images/house-cta/cta-icymi-form.png$image,important
+||imgur.com/*.gif$image,important,domain=forums.nrvnqsr.com
 
 nyaa.si##.alert-info.alert
 mangadex.com###announcement
@@ -118,20 +118,20 @@ animenewsnetwork.com##fieldset
 animenewsnetwork.com###prompt-message
 crunchyroll.com##.left.container-shadow-dark.portrait-desc
 kissmanga.com##a[href="#"]
-||kissanime.*/CheckHasUnread$xmlhttprequest,first-party
-||kissanime.*/Scripts/google.js$script,first-party
-||kissanime.*/Content/images/tpl_box_shading2.png$image
+||kissanime.*/CheckHasUnread$important
+||kissanime.*/Scripts/google.js$important
+||kissanime.*/Content/images/tpl_box_shading2.png$image,important
 
 discordapp.com##.notice
-||discordapp.com/api/v6/games
 ||discordapp.com/games/*$important
-||discordapp.com/emojis/*.gif$first-party
-||discordapp.com/avatars/*.gif$first-party
+||discordapp.com/api/v6/games$important
+||discordapp.com/emojis/*.gif$first-party,important
+||discordapp.com/avatars/*.gif$first-party,important
 !||discordapp.com/assets/*.worker.js$important
 
 gelbooru.com###motdTempPermanent
-||sankakucomplex.com/logo.png$image
 ||gelbooru.com/script/try.js$important
+||sankakucomplex.com/logo.png$image,important
 
 ! The expand button is broken for some reason, so I'm manually "pressing" it. 
 ! i.e. this is equivalent to clicking the spoiler tag
@@ -150,29 +150,29 @@ jcafe24.net##.sp-body:style(display: block !important;)
 ||quora.com/webnode2/server_call_POST$important
 ||quora.com/ajax/log_errors_3RD_PARTY_POST$important
 
-||giphy.com/gifs/*/related/
-||giphy.com/api/*/favorite-milestones/
-||media.giphy.com/channel_assets$first-party
-||giphy.com/static/js/site/footer.js$script,first-party
-||giphy.com/static/img/loading_bar.gif$image,first-party
-||giphy.com/static/js/site/third_party.js$script,first-party
+||giphy.com/gifs/*/related/$important
+||giphy.com/api/*/favorite-milestones/$important
+||media.giphy.com/channel_assets$first-party,important
+||giphy.com/static/js/site/footer.js$script,first-party,important
+||giphy.com/static/img/loading_bar.gif$image,first-party,important
+||giphy.com/static/js/site/third_party.js$script,first-party,important
 
 comic.pixiv.net###pauser
 pixiv.net##a[href*="premium.php"]
 pixiv.net##.popular-introduction-overlay
-||public-img-comic.pximg.net/c!$image,domain=www.pixiv.net
-||nicovideo.cdn.nimg.jp/*/uad.mp3$media
+||public-img-comic.pximg.net/c!$image,important,domain=www.pixiv.net
+||nicovideo.cdn.nimg.jp/*/uad.mp3$media,important
 ||nicovideo.cdn.nimg.jp/web/js/nicoheader/resources/loading.gif
 
 ! Yes, this would break cross site payments.
 ! However, due to it's tracking potential, it's worth it to block it
 ! until you're actually about to make a purchase. 
-||flattr.com^$third-party,important
+||flattr.com$third-party,important
 ||paypal.com$third-party,important
 ||paypalobjects.com$third-party,important,domain=~paypal.com
 
 ! semi transparent text bg + colorful bg img = eyecancer
-||wikia.nocookie.net/*/Background.jpg$image,domain=wikia.com
+||wikia.nocookie.net/*/Background.jpg$important,domain=wikia.com
 
 ||piriform.com/scripts/modernizr-custom.js$script
 ||mp3juices.cc/ac/d/d.html$subdocument,important
