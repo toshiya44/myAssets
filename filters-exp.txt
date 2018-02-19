@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2018-02-17
+! Date: 2018-02-18
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.15.3+
@@ -78,9 +78,6 @@
 ||newrelic.com^$important
 ||nr-data.net$important
 ||optimizely.com$important
-||speed.wikia.net$important
-||wikia-beacon.com$important
-||fandommetrics.com$important
 ||qualaroo.com$important
 ||onesite.com$important
 ||owlads.io$important
@@ -643,6 +640,7 @@
 ||exelator.com^$important
 ||summerhamster.com^$important
 ||app.alertme.news^$important
+||petametrics.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
@@ -661,22 +659,20 @@
 !		other addons. So, be careful when you install addons.
 
 /miner*.js$script
-/coinhive*.js$important
-/coinhive.min.js$important
-/cryptonight.wasm$script
-/hive.js$script
-/c-hive.js$script
-/coinhive.min.js$script
-/jsecoin.$script
-/minero.$script
 /miner-ui.js$script
 /miner.min.js$script
+/coinhive*.js$important
+/coinhive.min.js$important
+/cryptonight.wasm$important
+/hive.js$script
+/c-hive.js$script,important
+/jsecoin.$script,important
+/minero.$script,important
 /projectpoi.min.js$script
-/xminer.js$script
-/xminer.min.js$script
+/xminer.js$script,important
+/xminer.min.js$important
 /xmr.js$script
 /xmr.min.js$script
-/cryptonight.wasm$script
 ||.now.sh$important
 
 ||cnhv.co$important
@@ -898,6 +894,7 @@ washingtonpost.com##.top-sharebar-wrapper
 ||recommendation-hybrid.wpdigital.net$important
 ||recommendation-newsletter.wpdigital.net$important
 
+! site has hard anti-adb
 businessinsider.com,businessinsider.jp##^script:has-text(setAdblockerCookie)
 businessinsider.com,businessinsider.jp##script:inject(abort-on-property-read.js, stop)
 ||businessinsider.jp$inline-script
@@ -970,10 +967,10 @@ animenewsnetwork.com,animenewsnetwork.cc##a[href*="rightstufanime.com"]
 ||animenewsnetwork.com/logger.pageperf$important
 
 ! covers the page with inline ads
-||animenewsnetwork.cc/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
-||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js
-||animenewsnetwork.cc/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
-||animenewsnetwork.com/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet
+||animenewsnetwork.cc/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js$important
+||animenewsnetwork.com/assets/576e7c3ec9e51cb2d0164b9a051933ce9475a029.js$important
+||animenewsnetwork.cc/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet,important
+||animenewsnetwork.com/assets/98f7e2a620fc57b8c95794a88666d69ff3dc045c.css$stylesheet,important
 
 way2earning.com##a[href*="poptm.com"]
 way2earning.com##a[href*="adoverlay.net"]
@@ -982,8 +979,8 @@ way2earning.com##a[href*="adoverlay.net"]
 ||c.msn.com$important
 ||c.bing.com$important
 ||otf.msn.com$important
-||bat.bing.com/bat.js$script
-||s.yimg.com/wi/ytc.js$script
+||bat.bing.com/bat.js$script,important
+||s.yimg.com/wi/ytc.js$script,important
 ||dictionary.com/proxy$important
 ||yahoo.com$third-party,important
 
@@ -1112,22 +1109,24 @@ google.*##.gb_g.gb_Bc.gb_8cx
 ! usually this thing is not used for any good reason
 ||cse.google.com^$important
 
-! -------------------------------Wikia filters------------------------------- !
-
-! fandumb
-||fandom.wikia.com^$important,~first-party
+! -------------------------------Wiki filters-------------------------------- !
 
 ||bits.wikimedia.org$important
-||beacon.wikia-services.com$important
-||spotlights-revive.wikia.net$important
 ||wikimedia.org/geoiplookup$important
 ||geoiplookup.wikimedia.org$important
+
+||speed.wikia.net$important
+||wikia-beacon.com$important
+||fandommetrics.com$important
+||beacon.wikia-services.com$important
+||spotlights-revive.wikia.net$important
 ||wikia.com/wikia.php?controller=PageShare
 ||wikia.com/wikia.php?controller=Optimizely
 ||wikia.com/index.php?title=SocialIcons$script,important
 ||wikia.com/wikia.php?controller=RecirculationApi$important
 
 wikia.com##.wikia-ad
+wikia.com###WikiaTopAds
 wikia.com###WikiaFooter
 wikia.com###ShareEntryPoint
 wikia.com##.wds-global-footer
@@ -1145,22 +1144,22 @@ wikia.com##.wds-is-tv.wds-global-navigation__link
 ! facebook
 ! their site updates frequently, so filters get outdated fast.
 facebook.com###build_audience
-facebook.com###pages_manager_boosted_website_card
-facebook.com###aymt_homepage_panel_tip
-facebook.com###GroupsRHCSuggestionSection
 facebook.com###fbSearchResultsBox
 facebook.com###megaphone_story_3012
 facebook.com###mobile_mirror_banner
+facebook.com###aymt_homepage_panel_tip
+facebook.com###GroupsRHCSuggestionSection
 facebook.com###work_mobile_upsell_pagelet
-facebook.com###pagelet_advertiser_panel
-facebook.com###pagelet_rhc_footer
 facebook.com###pagelet_ego_pane
-facebook.com###pagelet_trending_tags_and_topics
+facebook.com###pagelet_rhc_footer
+facebook.com###pagelet_advertiser_panel
 facebook.com###pagelet_growth_expanding_cta
+facebook.com###pagelet_trending_tags_and_topics
+facebook.com###pages_manager_boosted_website_card
 facebook.com##._5hn6:has(div a[role="button"][href^="/r.php?"])
 facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
-/facebook_client_fbtags_js$third-party
 /facebook_client_xfbml_js$third-party
+/facebook_client_fbtags_js$third-party
 /xfbml.ad.js$important
 
 ||error.facebook.com$important
@@ -1192,22 +1191,22 @@ facebook.com##._5hn6:has(div a[role="button"][href^="/login/?"])
 
 ! https://github.com/toshiya44/myAssets/issues/3
 ! To allow saving Facebook ad preferences.
-@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
-@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
+@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
+@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest,first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
 @@||facebook.com/ads/preferences/edit_sensitive_topics$xmlhttprequest,first-party
-@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest,first-party
 
 ! counter the exception to prevent accidentally (re)added/undo.
-||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
+||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 
 ! https://github.com/toshiya44/myAssets/issues/3#issuecomment-317239095
-||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/video/tahoe/upnext/$important
 ||facebook.com/video/quality_survey$important
+||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/pubcontent/related_share$important
 ||facebook.com/pubcontent/local_news_chaining$important
 
@@ -1289,26 +1288,26 @@ archiveofsins.com##^script:has-text(BlockAdblock)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(noeval.js)
 4archive.org,randomarchive.com,thebarchive.com,archived.moe,archiveofsins.com##script:inject(bab-defuser.js)
 
+||4archive.org/616020.js$important
+||4archive.org/nevaaaaah.js$important
 ||4archive.org/neverBme.php$important
 ||4archive.org/nbme_main.php$important
-||4archive.org/nevaaaaah.js$important
-||4archive.org/616020.js$important
 ||thebarchive.com/neverRBb.$important
 ||randomarchive.com/nbme_main.php$important
 
-/nbme_main.php$script
 /neverRBb.js$script
 /neverRBb.php$script
 /neverBme.php$script
+/nbme_main.php$script
 .php$script,domain=4archive.org|randomarchive.com|thebarchive.com|archiveofsins.com
 
 ! The following filter from easylist breaks site functionality (such as backlinks)
 !|https://$script,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
 ! specific fix
-@@||4archive.org/js/extension.min.js$script,first-party
-@@||4archive.org/js/linkify-jquery.min.js$script,first-party
 @@||4archive.org/js/jquery.min.js$script,first-party
 @@||4archive.org/js/linkify.min.js$script,first-party
+@@||4archive.org/js/extension.min.js$script,first-party
+@@||4archive.org/js/linkify-jquery.min.js$script,first-party
 @@/jquery.js$script,first-party,domain=4archive.org|4chanarchives.cu.cc|randomarchive.com|thebarchive.com
 
 ! real one is 4cdn.org
@@ -1367,10 +1366,10 @@ gelbooru.com,thedoujin.com##^script:has-text(adsbyjuicy)
 @@||gelbooru.com/ads.js?$script
 
 ! unbreak tl bubbles and other functionality
-@@||gelbooru.com/index.php$inline-script,first-party
 @@||gelbooru.com/script/application.js?$first-party
-@@||gelbooru.com/script/lazyload.js?$script,first-party
+@@||gelbooru.com/index.php$inline-script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
+@@||gelbooru.com/script/lazyload.js?$script,first-party
 @@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
 
 ! due to URL fragment filters, images with /ad/ in the URL gets blocked.
@@ -1397,8 +1396,8 @@ sankakucomplex.com##script:inject(bab-defuser.js)
 ||sankakucomplex.com/*/afr.php$important
 ||sankakucomplex.com/x/piwik.js$important
 ||sankakucomplex.com/x/piwik.php$important
-||sankakucomplex.com/javascripts/ls.12.js$important
 ||sankakucomplex.com/javascripts/ps.js$important
+||sankakucomplex.com/javascripts/ls.12.js$important
 ||sankakucomplex.com/ngx_pagespeed_beacon$important
 ||img.sankakucomplex.com/tn/$image,domain=chan.sankakucomplex.com|idol.sankakucomplex.com
 
@@ -1415,8 +1414,8 @@ danbooru.com##^script:has-text(errorBeacon)
 hitomi.la##.hitomi-vertical
 hitomi.la##.hitomi-horizontal
 ||hitomi.la/hitomi.js$important
-||hitomi.la/hitomi-horizontal.js$important
 ||hitomi.la/hitomi-vertical.js$important
+||hitomi.la/hitomi-horizontal.js$important
 
 @@||pixiv.net^$generichide
 @@||pawoo.net^$generichide
@@ -1446,10 +1445,10 @@ mangashost.net##script:inject(bab-defuser.js)
 
 ! fc2 site banners
 fc2.com###fc2_bottom_bnr
-||static.fc2.com/js/blog/headbar_ad_rotate.js$script,important
+||fc2.com/counter*.php$important
 ||static.fc2.com/js/blog/ad_ref.js$script,important
 ||static.fc2.com/js/blog/headbar_ad_load.js$script,important
-||fc2.com/counter*.php$important
+||static.fc2.com/js/blog/headbar_ad_rotate.js$script,important
 
 ! nicovideo.jp##a[href*="https://account.nicovideo.jp/premium/register?"]
 nicovideo.jp##a[href*="/premium/register?"]
