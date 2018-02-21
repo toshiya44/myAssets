@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-02-18
+! Date: 2018-02-20
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -84,7 +84,13 @@ myanimelist.net##.js-btn-top.btn-top
 ||myanimelist.cdn-dena.com/images/icon-pulldown4.png$image,important
 
 myanimelist.net##.cover-block
+!||myanimelist.cdn-dena.com/s/common/uploaded_files/*-*.$image
 ||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-6b19ce62d01ef05368166ff6db661484.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-b2e2bf20e11b68631e8439b44d9a51c7.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-5f76ce04dfc45e9c0105e1c2af4e0957.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-54d52d172309b9ecc6128e2332da76ad.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-d4b3dd88c1698368b0785718e27d6e06.png$image,important
+||myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-b66f6044b9e39aff3f1b0cd333df0c79.png$image,important
 ||myanimelist.cdn-dena.com/s/common/uploaded_files/1518002453-4a51f1223e65a87e438d26795d09b724.jpeg$image,important
 
 ||facebook.com/ads*$important
