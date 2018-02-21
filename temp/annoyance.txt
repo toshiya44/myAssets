@@ -179,6 +179,7 @@ pixiv.net##.popular-introduction-overlay
 
 ! semi transparent text bg + colorful bg img = eyecancer
 ||wikia.nocookie.net/*/Background.jpg$important,domain=wikia.com
+||wikia.nocookie.net/*/Wiki-background/revision/$important,domain=wikia.com
 
 ||piriform.com/scripts/modernizr-custom.js$script
 ||mp3juices.cc/ac/d/d.html$subdocument,important
