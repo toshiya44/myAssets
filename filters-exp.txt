@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2018-02-18
+! Date: 2018-02-20
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.15.3+
@@ -641,6 +641,7 @@
 ||summerhamster.com^$important
 ||app.alertme.news^$important
 ||petametrics.com^$important
+||defpush.com^$important
 
 ! -----------------------------------Coins----------------------------------- !
 !
