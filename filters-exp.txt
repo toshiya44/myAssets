@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Experimental
 ! Author: Toshiya
-! Date: 2018-02-20
+! Date: 2018-02-22
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/toshiya44/myAssets
 ! Requirement: uBlock Origin 1.15.3+
@@ -798,6 +798,7 @@ reddit.com##.read-next-container
 reddit.com##.trending-subreddits
 reddit.com##.TrendingProfilesSidebar
 ||e.reddit.com$important
+||events.reddit.com$important
 ||reddit.com/errors$important
 ||reddit.com/timings/rum$important
 ||reddit.com/static/pixel.png$important
@@ -872,22 +873,25 @@ developer.mozilla.org##.notification-tray
 
 wired.com##.hide-med
 dailymail.co.uk##.has-button-share-facebook
-||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
 ||dailymail.co.uk/weather.html?$important
-||scripts.dailymail.co.uk/static/mol-adverts/$important
-||cdn.arstechnica.net/*ads.*.js$script,first-party
+||dailymail.co.uk/static/mol-adverts/$important
+||dailymail.co.uk/abe/esi/control/display_ads.js$script,important
 ||fng-ads.fox.com$important
 ||fox.com$important,third-party
-||tpfeed.cbc.ca$xmlhttprequest,important
-||howtogeek.com/*/blank.gif$important
 ||newsvine.com$important,third-party
 ||nbcuni.com$important
+||tpfeed.cbc.ca$xmlhttprequest,important
 ||gamer-network.net$important,third-party
 ||fonts.staticworld.net/dli6mbh.js$important
+||nvcdn.nbcnews.com/_elliott/jenga?widgets=newsletter$important
+
+howtogeek.com###floating-sidebar-area
+||howtogeek.com/*/blank.gif$important
+||reviewgeek.com$important,third-party
+||cdn.arstechnica.net/*ads.*.js$script,first-party
 
 nzherald.co.nz##.onscreen.site-logo-wrapper
 cbslocal.com##.adhesive-on.anvato.video-wrapper
-||nvcdn.nbcnews.com/_elliott/jenga?widgets=newsletter$important
 
 independent.co.uk##.inline-block-left
 washingtonpost.com##.top-sharebar-wrapper
