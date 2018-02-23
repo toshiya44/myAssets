@@ -1,6 +1,6 @@
 ! Title: Toshiya's Filter List - Annoyance
 ! Author: Toshiya
-! Date: 2018-02-20
+! Date: 2018-02-22
 ! Expires: 7 days
 ! Requirement: Patience
 ! Requirement: "Toshiya's Filter List - Experimental"
@@ -130,10 +130,13 @@ kissmanga.com##a[href="#"]
 
 discordapp.com##.notice
 ||discordapp.com/games/*$important
-||discordapp.com/api/v6/games$important
+||discordapp.com/api/*/games$important
+||discordapp.com/api/*/science$important
 ||discordapp.com/emojis/*.gif$first-party,important
 ||discordapp.com/avatars/*.gif$first-party,important
 !||discordapp.com/assets/*.worker.js$important
+!||discordapp.com/api/v6/games$important
+!||discordapp.com/api/v6/science$important
 
 gelbooru.com###motdTempPermanent
 ||gelbooru.com/script/try.js$important
