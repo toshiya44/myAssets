@@ -783,10 +783,13 @@ tinypic.com##^script:has-text(ClientProfilingLog)
 
 reddit.com###ad_1
 reddit.com###ad_2
+reddit.com##.infobar
 reddit.com###hsts_pixel
 reddit.com###ad_main_top
+reddit.com##.subscribebar
 reddit.com##.promotedlink
 reddit.com##.geopopularbar
+reddit.com##.onboardingbar
 reddit.com##.ProfileVoiceAd
 reddit.com##.survey-overlay
 reddit.com##.listing-chooser
